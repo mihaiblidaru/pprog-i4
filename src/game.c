@@ -895,12 +895,11 @@ STATUS game_callback_take(Game* game, Command* cmd) {
     }
 
     if (space_contains_object(space, objId) && object_Get_Mobile(object) == TRUE) {
-        if(player_Add_Object(game->player, objId) == ERROR){
-            return ERROR;        
-        }
+        if(player_Add_Object(game->player, objId) == OK){
         space_remove_object(space, objId);
-        object_Set_Moved(object, TRUE);
+        object_Set_Moved(object, TRUE);    
         return OK;
+        }
     }
     return ERROR;
 }

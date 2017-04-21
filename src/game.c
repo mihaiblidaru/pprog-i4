@@ -899,6 +899,7 @@ STATUS game_callback_take(Game* game, Command* cmd) {
             return ERROR;        
         }
         space_remove_object(space, objId);
+        object_Set_Moved(object, TRUE);
         return OK;
     }
     return ERROR;

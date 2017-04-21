@@ -396,6 +396,42 @@ Object* game_get_Object_byName(Game* game, char* name) {
     return NULL;
 }
 
+/**
+ * @brief Devuelve el link que tiene el nombre igual al pasado como parametro
+ * @author Javier Bernardo
+ * @param game Un puntero a la estructura del juego
+ * @param name Nombre del link a buscar
+ * @private
+ * @return El link que ha encontrado o NULL en caso contrario
+ */
+Link* game_get_link_byName(Game* game, char* name) {
+    int i = 0, j = 0;
+    char copy[20];/* Copia para no modificar el nombre del link */
+    
+
+    if (!game || !name)
+        return NULL;
+    
+    for (i = 0; name[i]; i++) {
+            name[i] = toupper(name[i]);
+    }
+    
+    for (i = 0; i < MAX_LINK && game->links[i] != NULL; i++) {
+        strcpy(copy, link_get_name(game->links[i]));
+        
+        for (j = 0; copy[j]; j++) {
+            copy[j] = toupper(copy[j]);
+        }
+        
+        if (strcmp(copy, name) == 0) {
+            return game->links[i];
+        }
+    }
+
+    return NULL;
+}
+
+
 /* 
  * @brief Develve el objeto una posición dada.
  *  
@@ -1063,10 +1099,8 @@ STATUS game_callback_open(Game* game, Command* cmd){
     char* link_name = NULL;
     char* object_name = NULL;
     Object* object = NULL;
-    BOOL link_found = FALSE;
-    
-    
-    Id space_id = NO_ID, link_id = NO_ID;
+    Id link_ids[6] = {NO_ID}, link_id = NO_ID;
+    int i;
     
     if(!game || !cmd)
         return ERROR;
@@ -1077,54 +1111,34 @@ STATUS game_callback_open(Game* game, Command* cmd){
     if(strcmp(Command_get_cmd_arg(cmd,1), "with"))
         return ERROR;
     
-    space_id = game_get_player_location(game);
-    space = game_get_space(game, space_id);
+    link = game_get_link_byName(game, link_name);
+    if(!link)
+        return ERROR;
+    link_id = link_get_id(link);
     
     object = game_get_Object_byName(game, object_name);
     
     if(!object)
         return ERROR;
-    
-    if((link_id = space_get_north(space)) != NO_ID){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
-    }else if(link_found == FALSE && ((link_id = space_get_south(space)) != NO_ID)){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
-    }else if(link_found == FALSE && ((link_id = space_get_east(space)) != NO_ID)){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
-    }else if(link_found == FALSE && ((link_id = space_get_west(space)) != NO_ID)){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
-    }else if(link_found == FALSE && ((link_id = space_get_up(space)) != NO_ID)){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
-    }else if(link_found == FALSE && ((link_id = space_get_down(space)) != NO_ID)){
-        link = game_get_link(game, link_id);
-        if(!link && !strcmp(link_name, link_get_name(link))){
-            link_found = TRUE;
-        }
+        
+    space = game_get_space(game, game_get_player_location(game));
+    if(space){
+        link_ids[0] = space_get_south(space);
+        link_ids[1] = space_get_north(space);
+        link_ids[2] = space_get_east(space);
+        link_ids[3] = space_get_west(space);
+        link_ids[4] = space_get_up(space);
+        link_ids[5] = space_get_down(space);
+        
+        for(i=0; i < 6; i++){
+            if(link_ids[i] == link_id){
+                if(object_Get_Open(object) == link_id){
+                    link_set_state(link, OPENED);
+                    return OK;
+                }
+            }
+        }    
     }
-    
-    if(!link)
-        return ERROR;
-    
-    if(object_Get_Open(object) == link_get_id(link)){
-        link_set_state(link, OPENED);
-        return OK;
-    }
-    
     
     return ERROR;
 }

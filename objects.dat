@@ -1,0 +1,7 @@
+* El formato de cada linea es:
+* #o: id, name, location, description1, description2, mobile, moved, hidden, opens, illuminates, light_on
+* cualquier linea que no empieza por #o: es ignorada
+
+
+#o:1|Lantern| 1|Descripcion 2|Descripcion 1|1|0|0|12|1|0|
+

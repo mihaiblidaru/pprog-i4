@@ -1,10 +1,12 @@
-#include "game.h"
-#include "space.h"
-#include "game_management.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#include "game.h"
+#include "space.h"
+#include "game_management.h"
+
+/* Funciones privadas */
 STATUS game_load_object(Game* game, char* line);
 STATUS game_load_player(Game* game, char* line);
 STATUS game_load_space(Game* game, char* line);
@@ -27,6 +29,7 @@ STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objec
     return OK;
 }
 
+/* Guarda los datos de la partida con el mismo formato que los ficheros de carga */
 STATUS game_management_save(Game* game, char* filename){
     FILE* fp = NULL;
     Space* space = NULL;
@@ -73,7 +76,7 @@ STATUS game_management_save(Game* game, char* filename){
         state = link_get_state(link);
         fprintf(fp, "#l:%ld|%s|%ld|%ld|%d|\n", id, name, space1, space2, state);
     }
-    
+    /* Guarda los objetos */
     for(i=0; (object = game_get_object_at(game, i)) != NULL; i++){
         id = object_Get_Id(object);
         name = object_Get_Name(object);
@@ -89,9 +92,8 @@ STATUS game_management_save(Game* game, char* filename){
         fprintf(fp, "#o:%ld|%s|%ld|%s|%s|%d|%d|%d|%ld|%d|%d|\n", id, name, location, description, longDescription, mobile, moved, hidden, open, illuminates, iluminated);
     }
     
-    
+    /* Guarda el jugador */
     player = game_get_player(game);
-    
     id = player_Get_Id(player);
     name = player_Get_Name(player);
     location = player_Get_Location(player);

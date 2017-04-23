@@ -12,7 +12,7 @@
 #include <string.h>
 
 #include "test.h"
-#include "player_test.h"
+#include "tests/player_test.h"
 #include "player.h"
 
 /**

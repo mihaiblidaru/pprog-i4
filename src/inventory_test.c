@@ -17,7 +17,7 @@
 
 /* Cabeceras Propias */
 #include "test.h"
-#include "inventory_test.h"
+#include "tests/inventory_test.h"
 #include "inventory.h"
 
 /**

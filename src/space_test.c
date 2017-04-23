@@ -12,7 +12,7 @@
 #include <stdlib.h> 
 #include <string.h> 
 #include "space.h"
-#include "space_test.h"
+#include "tests/space_test.h"
 #include "test.h"
 
 /**

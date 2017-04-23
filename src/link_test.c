@@ -8,7 +8,7 @@
 #include <stdlib.h> 
 #include <string.h> 
 #include "link.h"
-#include "link_test.h"
+#include "tests/link_test.h"
 #include "test.h"
 /**
  * Número máximo de tests

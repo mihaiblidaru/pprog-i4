@@ -142,7 +142,7 @@ STATUS game_add_player(Game* game, Player* player);
  */
 Link* game_get_link(Game* game, Id link_id);
 
-/* 
+/** 
  * @brief Develve el link en una posición dada.
  *  
  * @author Mihai Blidaru
@@ -164,7 +164,7 @@ Link* game_get_link_at(Game* game, int index);
  */
 Space* game_get_space(Game* game, Id space_id);
 
-/* 
+/** 
  * @brief Develve el espacop una posición dada.
  *  
  * @author Mihai Blidaru
@@ -175,8 +175,6 @@ Space* game_get_space(Game* game, Id space_id);
  * @return El espacio en la posición dada.Null si la posición es invalida.
  */
 Space* game_get_space_at(Game* game, int index);
-
-
 
 
 /** 

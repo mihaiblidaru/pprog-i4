@@ -12,15 +12,26 @@ STATUS game_load_player(Game* game, char* line);
 STATUS game_load_space(Game* game, char* line);
 STATUS game_load_link(Game* game, char* line);
 
+/* @brief Carga los datos del juego desde un archivo 
+
+ * @author Javier Bernardo
+ * 
+ * @param game Puntero a la estructura del juego.
+ * @param spacesFile Nombre del archivo desde donde hay que cargar los espacios
+ * @param objectsFile Nombre del archivo desde donde hay que cargar los objetos
+ * @param linksfile Nombre del archivo desde donde hay que cargar los links
+ * @param playersFile Nombre del archivo desde donde hay que cargar los datos del jugador
+ * @return OK si todo ha ido bien. ERROR en caso contrario.
+ */
 STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objectsFile, char* linksfile, char* playersFile) {
 
+    if (game_management_load(game, playersFile) == ERROR)
+        return ERROR;
+        
     if (game_management_load(game, linksfile) == ERROR)
         return ERROR;
         
     if (game_management_load(game, spacesFile) == ERROR)
-        return ERROR;
-
-    if (game_management_load(game, playersFile) == ERROR)
         return ERROR;
     
     if (game_management_load(game, objectsFile) == ERROR)
@@ -29,7 +40,11 @@ STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objec
     return OK;
 }
 
-/* Guarda los datos de la partida con el mismo formato que los ficheros de carga */
+/** @brief Guarda los datos de la partida con el mismo formato que los ficheros de carga
+ * @param game Un puntero al game desde donde se quieren guardar los datos
+ * @param filename Archivo donde guardar los datos
+ * @return OK si ha guardado correctamente o ERROR en caso contrario
+ */
 STATUS game_management_save(Game* game, char* filename){
     FILE* fp = NULL;
     Space* space = NULL;
@@ -105,6 +120,12 @@ STATUS game_management_save(Game* game, char* filename){
     return OK;
 }
 
+/* 
+ * @brief Carga los datos del juego desde un archivo
+ * @param game Un puntero al juego donde cargar los datos
+ * @param filename nombre del archivo desde donde cargar los datos
+ * @return OK si se ha cargado correctamente o ERROR en caso contrario
+ */
 STATUS game_management_load(Game* game, char* filename){
     FILE* fp = NULL;
     char line[WORD_SIZE] = "\0";
@@ -135,12 +156,12 @@ STATUS game_management_load(Game* game, char* filename){
 }
 
 /*
- * @brief Carga los espacio del juego y los objetos de cada espacio
+ * @brief Carga los espacio del juego 
  *  
  * @author Mihai Blidaru
  * 
  * @param game Un puntero a la estructura del juego
- * @param filename El nombre del archivo 
+ * @param line La linea que contiene los datos de la casilla
  * @return ERROR si se ha cargado mal los espacio u OK si se ha cargado bien los espacios.
  */
 STATUS game_load_space(Game* game, char* line) {
@@ -221,13 +242,13 @@ STATUS game_load_space(Game* game, char* line) {
 }
 
 /*
- * @brief Carga los objetos de cada espacio
+ * @brief Carga los objetos del juego
  *  
  * @author Javier Bernardo
  * 
  * @param game Un puntero a la estructura del juego
- * @param filename El nombre del archivo 
- * @return ERROR si se ha cargado mal los espacio u OK si se ha cargado bien los espacios.
+ * @param line La linea que contiene los datos del objeto
+ * @return ERROR si se ha cargado mal u OK si se ha cargado bien los espacios.
  */
 STATUS game_load_object(Game* game, char* line) {
     Id id = NO_ID, location = NO_ID, opens = NO_ID;
@@ -300,10 +321,10 @@ STATUS game_load_object(Game* game, char* line) {
     return OK;
 }
 
-/* @brief Carga los enlaces desde un archivo
+/* @brief Carga los enlaces
  *  @author Mihai Blidaru
  *  @param game Un juego
- *  @param filename Nombre del archivo desde el cual se cargan los enlaces
+ *  @param line Linea del archivo que contiene los datos del link
  *  
  *  @return OK si ha conseguido cargar correctamente o ERROR en caso contrario.
  */
@@ -348,10 +369,10 @@ STATUS game_load_link(Game* game, char* line) {
     return OK;
 }
 
-/* @brief Carga los datos del jugador desde un archivo
+/* @brief Carga los datos del jugador
 *  @author Mihai Blidaru
 *  @param game Un juego
-*  @param filename Nombre del archivo desde el cual se cargan los datos del jugador
+*  @param line Linea del archivo que contiene los datos del jugador
 *  
 *  @return OK si ha conseguido cargar correctamente o ERROR en caso contrario.
 */

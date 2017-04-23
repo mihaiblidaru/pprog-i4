@@ -70,10 +70,11 @@ STATUS Command_destroy(Command* cmdManager);
 STATUS Command_set_cmd(Command* cmdManager, T_Command cmd);
 
 /** 
- * @brief Guarda el parametro de un comando en la estructura
+ * @brief Guarda un parametro de un comando en la estructura en una posición dada
  * @author Mihai Blidaru
  * @param cmdManager Una estructura tipo command
  * @param arg El parametro a guardar
+ * @param index La posición donde se quiere guardar el parametro
  * @return OK si se ha guardado correctamente o error en caso contrario
  */
 STATUS Command_set_cmd_arg(Command* cmdManager, char* arg, int index);
@@ -86,9 +87,10 @@ STATUS Command_set_cmd_arg(Command* cmdManager, char* arg, int index);
  */
 T_Command Command_get_cmd(Command* cmdManager);
 
-/** @brief Devuelve el parametro del comando guardado en la estructura
+/** @brief Devuelve un parametro del comando guardado en la estructura en una posición dada
  *  @author Mihai Blidaru
  *  @param cmdManager La estructura Command de la cual leer los datos
+ *  @param index El indice del parametro que se quiere leer
  *  @return El parametro del comando guardado
  */
 char* Command_get_cmd_arg(Command* cmdManager, int index);

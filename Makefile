@@ -22,7 +22,9 @@ SRC = $(wildcard $(SRC_DIR)*.c)
 
 EXES = $(GAME_EXE) $(INVENTORY_TEST_EXE) $(LINK_TEST_EXE) $(PLAYER_TEST_EXE) $(SET_TEST_EXE) $(SPACE_TEST_EXE) $(DIE_TEST_EXE)
 
-GAME_OBJ           = $(patsubst %.o,$(OBJ_DIR)%.o, command.o game.o game_loop.o graphic_engine.o screen.o space.o player.o object.o die.o set.o link.o inventory.o game_management.o)
+GAME_OBJ           = $(patsubst %.o,$(OBJ_DIR)%.o, command.o game.o game_loop.o graphic_engine.o \
+								screen.o space.o player.o object.o die.o set.o link.o inventory.o game_management.o \
+								game_rules.o dialogue.o)
 INVENTORY_TEST_OBJ = $(patsubst %.o,$(OBJ_DIR)%.o, inventory_test.o inventory.o set.o)
 LINK_TEST_OBJ      = $(patsubst %.o,$(OBJ_DIR)%.o, link_test.o link.o)
 PLAYER_TEST_OBJ    = $(patsubst %.o,$(OBJ_DIR)%.o, player_test.o player.o set.o inventory.o )

@@ -12,7 +12,30 @@
 #ifndef GAMEMANAGEMENT_H
 #define GAMEMANAGEMENT_H
 
-STATUS game_management_save(Game* game, char* filename);
+/**
+ * @brief Define los estados que puede devolver la función Save
+ */
+typedef enum {
+    PROTECTED_FILE,       /*!< EL archivo donde se quiere guardar es un archivo protegido */
+    SAVE_OK,              /*!< Se ha gaurdado todo sin problemas */
+    WRITE_FAILED,         /*!< No se puede escribir en ese archivo */
+    BAD_ARGUMENTS         /*!< Los argumentos de la función no son validos */
+} SAVE_STATUS;
+
+/**
+ * @brief Define los estados que puede devolver la función LOAD
+ */
+typedef enum {
+    LOAD_OK,    /*!< Se han cargado los datos correctamente*/
+    IO_ERROR,   /*!< Error IO*/
+    NO_PLAYER,  /*!< No se han encontrado datos del jugador en los archivo de entrada*/
+    NO_SPACES,  /*!< No se han encontrado casillas en el archivo de entrada */
+    NO_LINKS    /*!< No se han encontrado enlaces en el archivo de entrada */
+} LOAD_STATUS;
+
+
+
+SAVE_STATUS game_management_save(Game* game, char* filename);
 
 /** 
  * @brief Carga los datos del juego desde un archivo
@@ -33,25 +56,6 @@ STATUS game_management_load(Game* game, char* filename);
  * @return OK si todo ha ido bien. ERROR en caso contrario.
  */
 STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objectsFile, char* linksfile, char* playersFile);
-/**
- * @brief Define los estados que puede devolver la función Save
- */
-typedef enum {
-    PROTECTED_FILE,       /*!< EL archivo donde se quiere guardar es un archivo protegido */
-    SAVE_OK,              /*!< Se ha gaurdado todo sin problemas */
-    WRITE_FAILED          /*!< No se puede escribir en ese archivo */
-} SAVE_STATUS;
-
-/**
- * @brief Define los estados que puede devolver la función LOAD
- */
-typedef enum {
-    LOAD_OK,    /*!< Se han cargado los datos correctamente*/
-    IO_ERROR,   /*!< Error IO*/
-    NO_PLAYER,  /*!< No se han encontrado datos del jugador en los archivo de entrada*/
-    NO_SPACES,  /*!< No se han encontrado casillas en el archivo de entrada */
-    NO_LINKS    /*!< No se han encontrado enlaces en el archivo de entrada */
-} LOAD_STATUS;
 
 
 #endif

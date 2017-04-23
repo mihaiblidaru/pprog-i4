@@ -1152,16 +1152,15 @@ STATUS game_callback_open(Game* game, Command* cmd){
  */ 
 STATUS game_callback_save(Game* game, Command* cmd){
     char* name = NULL;
+    SAVE_STATUS status = -1;
     if(!game || !cmd)
         return ERROR;
-    name = Command_get_cmd_arg(cmd, 0);
-    if(strlen(name)>0){
-        game_management_save(game, name);
-    } else{
-        return ERROR;    
-    }
     
-    return OK;
+    name = Command_get_cmd_arg(cmd, 0);
+    status = game_management_save(game, name);
+    if(status == SAVE_OK)
+        return OK;
+    return ERROR;
 }
 
 /*

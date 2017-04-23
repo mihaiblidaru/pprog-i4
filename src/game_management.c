@@ -54,7 +54,7 @@ STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objec
  * @param filename Archivo donde guardar los datos
  * @return OK si ha guardado correctamente o ERROR en caso contrario
  */
-STATUS game_management_save(Game* game, char* filename){
+SAVE_STATUS game_management_save(Game* game, char* filename){
     FILE* fp = NULL;
     Space* space = NULL;
     Link* link = NULL;
@@ -69,16 +69,16 @@ STATUS game_management_save(Game* game, char* filename){
     BOOL mobile = FALSE, moved = FALSE, hidden = FALSE, illuminates = FALSE, iluminated = FALSE;
     int i;
     if(!game || !filename)
-        return ERROR;
+        return BAD_ARGUMENTS;
     
     for(i = 0; i < 4; i++){
         if(strcmp(protected_files[i], filename) == 0)
-            return ERROR;
+            return PROTECTED_FILE;
     }
     
     fp = fopen(filename, "w");
     if(fp == NULL)
-        return ERROR;
+        return WRITE_FAILED;
     /* Guardar datos de los espacios */
     for(i=0; (space = game_get_space_at(game, i)) != NULL; i++){
         id = space_get_id(space);
@@ -132,7 +132,7 @@ STATUS game_management_save(Game* game, char* filename){
     
     fclose(fp);
     
-    return OK;
+    return SAVE_OK;
 }
 
 /* 

@@ -68,7 +68,7 @@ Graphic_engine *graphic_engine_create() {
     ge->descript = screen_area_init(54, 1, 25, 15);
     ge->banner = screen_area_init(28, 17, 25, 1);
     ge->help = screen_area_init(1, 18, 78, 2);
-    ge->feedback = screen_area_init(1, 21, 78, 1);
+    ge->feedback = screen_area_init(1, 21, 78, 2);
 
     return ge;
 }

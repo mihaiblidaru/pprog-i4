@@ -179,7 +179,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
     for (i=0; (aux_obj = game_get_object_at(game,i)); i++) {
         objLoc = game_get_object_location(game, aux_obj);
-        if (objLoc != NO_ID) {
+        if (objLoc != NO_ID && objLoc != PLAYER_INV_LOCATION) {
             sprintf(str, "   O%ld(%s):%ld ",object_Get_Id(aux_obj), object_Get_Name(aux_obj), objLoc);
             screen_area_puts(ge->descript, str);
         }

@@ -79,6 +79,25 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
     fp = fopen(filename, "w");
     if(fp == NULL)
         return WRITE_FAILED;
+    
+    /* Guarda el jugador */
+    player = game_get_player(game);
+    id = player_Get_Id(player);
+    name = player_Get_Name(player);
+    location = player_Get_Location(player);
+    max_objects = player_Get_Max_Objects(player);
+    fprintf(fp, "#p:%ld|%s|%ld|%d|", id, name, location, max_objects);    
+    
+    /* Guardar los links */
+    for(i=0; (link = game_get_link_at(game, i)) != NULL; i++){
+        id = link_get_id(link);
+        name = link_get_name(link);
+        space1 = link_get_space1(link);
+        space2 = link_get_space2(link);
+        state = link_get_state(link);
+        fprintf(fp, "#l:%ld|%s|%ld|%ld|%d|\n", id, name, space1, space2, state);
+    }
+    
     /* Guardar datos de los espacios */
     for(i=0; (space = game_get_space_at(game, i)) != NULL; i++){
         id = space_get_id(space);
@@ -97,15 +116,7 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
                                             graphics[0], graphics[1], graphics[2], description, longDescription);
     }
     
-    /* Guardar los links */
-    for(i=0; (link = game_get_link_at(game, i)) != NULL; i++){
-        id = link_get_id(link);
-        name = link_get_name(link);
-        space1 = link_get_space1(link);
-        space2 = link_get_space2(link);
-        state = link_get_state(link);
-        fprintf(fp, "#l:%ld|%s|%ld|%ld|%d|\n", id, name, space1, space2, state);
-    }
+    
     /* Guarda los objetos */
     for(i=0; (object = game_get_object_at(game, i)) != NULL; i++){
         id = object_Get_Id(object);
@@ -121,14 +132,6 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
         iluminated = object_Get_Light(object);
         fprintf(fp, "#o:%ld|%s|%ld|%s|%s|%d|%d|%d|%ld|%d|%d|\n", id, name, location, description, longDescription, mobile, moved, hidden, open, illuminates, iluminated);
     }
-    
-    /* Guarda el jugador */
-    player = game_get_player(game);
-    id = player_Get_Id(player);
-    name = player_Get_Name(player);
-    location = player_Get_Location(player);
-    max_objects = player_Get_Max_Objects(player);
-    fprintf(fp, "#p:%ld|%s|%ld|%d|", id, name, location, max_objects);
     
     fclose(fp);
     
@@ -331,8 +334,13 @@ STATUS game_load_object(Game* game, char* line) {
         object_destroy(object);
         return ERROR;
     }
-    space = game_get_space(game, location);
-    space_add_object(space, id);
+    if(location != PLAYER_INV_LOCATION){
+        space = game_get_space(game, location);
+        space_add_object(space, id);    
+    }else{
+        player_Add_Object(game_get_player(game), id);        
+    }
+    
     return OK;
 }
 

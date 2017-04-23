@@ -18,6 +18,8 @@
 #include "set.h"
 #include "inventory.h"
 
+#define PLAYER_INV_LOCATION -65535
+
 /**
  * @brief Definicion de la estructura player
  */

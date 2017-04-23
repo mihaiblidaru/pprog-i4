@@ -587,7 +587,10 @@ Id game_get_object_location(Game* game, Object* object) {
             return space_get_id(game->spaces[i]);
         }
     }
-
+    
+    if(player_Has_Object(game->player, objId));
+        return PLAYER_INV_LOCATION;
+        
     return NO_ID;
 }
 

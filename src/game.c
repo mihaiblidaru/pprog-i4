@@ -1175,31 +1175,77 @@ STATUS game_callback_save(Game* game, Command* cmd){
  */ 
 STATUS game_callback_load(Game* game, Command* cmd){
     int i;
+    int numSpaces, numLinks, numObjects;
+    Object **objects;
+    Space **spaces;
+    Link **links;
+    Player* player;
+
     char* name = NULL;
     if(!game || !cmd)
         return ERROR;
         
     name = Command_get_cmd_arg(cmd, 0);
     if(strlen(name)>0){
+        for(numSpaces = 0; game->spaces[numSpaces] != NULL; numSpaces++);
+        for(numLinks = 0; game->links[numLinks] != NULL; numLinks++);
+        for(numObjects = 0; game->objects[numObjects] != NULL; numObjects++);
+        
+        spaces = calloc(numSpaces, sizeof(Space*));
+        objects = calloc(numObjects, sizeof(Object*));
+        links = calloc(numLinks, sizeof(Link*));
+                
         for(i=0; game->spaces[i] != NULL; i++){
-            space_destroy(game->spaces[i]);
+            spaces[i] = game->spaces[i];
             game->spaces[i] = NULL;
         }
         
         for(i=0; game->links[i] != NULL; i++){
-            link_destroy(game->links[i]);
+            links[i] = game->links[i];
             game->links[i] = NULL;
         }
         
         for(i=0; game->objects[i] != NULL; i++){
-            object_destroy(game->objects[i]);
+            objects[i] = game->objects[i];
             game->objects[i] = NULL;
         }
         
-        player_destroy(game->player);
+        player = game->player;
         game->player = NULL;
-        
-        game_management_load(game, name);
+        if(game_management_load(game, name) == OK){
+            for(i=0; i < numSpaces; i++){
+                space_destroy(spaces[i]);
+            }
+            
+            for(i=0; i < numObjects; i++){
+                object_destroy(objects[i]);
+            }
+            
+            for(i=0; i < numLinks; i++){
+                link_destroy(links[i]);
+            }
+            player_destroy(player);
+            free(links);
+            free(objects);
+            free(spaces);
+        }else{
+            for(i=0; i < numSpaces; i++){
+                game->spaces[i] = spaces[i];
+            }
+            
+            for(i=0; i < numObjects; i++){
+                game->objects[i] = objects[i];
+            }
+            
+            for(i=0; i < numLinks; i++){
+                game->links[i] = links[i];
+            }
+            game->player = player;
+            free(links);
+            free(objects);
+            free(spaces);
+            return ERROR;
+        }
     } else{
         return ERROR;    
     }   

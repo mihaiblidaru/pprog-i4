@@ -67,7 +67,7 @@ $(OBJ_DIR)%.d: ;
 
 .PRECIOUS: $(OBJ_DIR)/%.d
 
-.PHONY: clean clear doxygen dist 
+.PHONY: clean clear doxygen dist runv
 
 doxygen:
 	doxygen Doxyfile
@@ -80,5 +80,6 @@ clean:
 
 clear:
 	$(RM) -f $(OBJ_DIR)*.o
-	
-	
+
+runv:
+	valgrind --leak-check=full --track-origins=yes -v ./$(GAME_EXE) spaces.dat objects.dat links.dat player.dat

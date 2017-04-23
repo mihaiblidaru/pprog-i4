@@ -12,6 +12,8 @@ STATUS game_load_player(Game* game, char* line);
 STATUS game_load_space(Game* game, char* line);
 STATUS game_load_link(Game* game, char* line);
 
+char protected_files[4][100];
+
 /* @brief Carga los datos del juego desde un archivo 
 
  * @author Javier Bernardo
@@ -24,7 +26,14 @@ STATUS game_load_link(Game* game, char* line);
  * @return OK si todo ha ido bien. ERROR en caso contrario.
  */
 STATUS game_management_start_from_file(Game* game, char* spacesFile, char* objectsFile, char* linksfile, char* playersFile) {
-
+    if(!game || !spacesFile || !objectsFile || !linksfile || !playersFile)
+        return ERROR;
+    
+    strncpy(protected_files[0], spacesFile, 100);
+    strncpy(protected_files[1], objectsFile, 100);
+    strncpy(protected_files[2], linksfile, 100);
+    strncpy(protected_files[3], playersFile, 100);
+    
     if (game_management_load(game, playersFile) == ERROR)
         return ERROR;
         
@@ -58,8 +67,14 @@ STATUS game_management_save(Game* game, char* filename){
     Id location = NO_ID;
     char* name = NULL, *description = NULL, *longDescription = NULL;
     BOOL mobile = FALSE, moved = FALSE, hidden = FALSE, illuminates = FALSE, iluminated = FALSE;
-    
     int i;
+    if(!game || !filename)
+        return ERROR;
+    
+    for(i = 0; i < 4; i++){
+        if(strcmp(protected_files[i], filename) == 0)
+            return ERROR;
+    }
     
     fp = fopen(filename, "w");
     if(fp == NULL)

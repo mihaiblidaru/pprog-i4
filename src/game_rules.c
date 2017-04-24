@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "game.h"
+
 #define N_RULES 1
 
 typedef STATUS(*game_rule)(Game* game);

@@ -35,7 +35,16 @@ SPACE_TEST_OBJ     = $(patsubst %.o,$(OBJ_DIR)%.o, space_test.o space.o link.o s
 $(shell mkdir -p $(OBJ_DIR))
 $(shell mkdir -p $(BIN_DIR))
 
-all: $(EXES)
+
+all: $(EXES) help
+
+help: 
+	@printf "Compilar todo el proyecto:\t\t\33[1;32m make all\33[0m \n"
+	@printf "Compilar solo los tests:\t\t\33[1;32m make test\33[0m \n"
+	@printf "Crear documentación html y latex:\t\33[1;32m make doc \33[0m \n"
+	@printf "Borrar objetos y ejecutables:\t\t\33[1;32m make clean \33[0m \n"
+	@printf "Borrar solo los objetos:\t\t\33[1;32m make clear \33[0m \n"
+	@printf "Crear tar con los fuentes:\t\t\33[1;32m make dist \33[0m \n"
 
 tests: $(TESTS)
 

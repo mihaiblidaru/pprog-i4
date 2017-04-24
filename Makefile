@@ -18,12 +18,13 @@ SET_TEST_EXE       = $(BIN_DIR)set_test
 SPACE_TEST_EXE     = $(BIN_DIR)space_test
 DIE_TEST_EXE       = $(BIN_DIR)die_test
 COMMAND_TEST_EXE   = $(BIN_DIR)command_test
+OBJECT_TEST_EXE	   = $(BIN_DIR)object_test
 
 SRC = $(wildcard $(SRC_DIR)*.c)
 
 EXES = $(GAME_EXE) $(INVENTORY_TEST_EXE) $(LINK_TEST_EXE) $(PLAYER_TEST_EXE) \
        $(SET_TEST_EXE) $(SPACE_TEST_EXE) $(DIE_TEST_EXE) \
-       $(COMMAND_TEST_EXE)
+       $(COMMAND_TEST_EXE) $(OBJECT_TEST_EXE)
 
 GAME_OBJ           = $(patsubst %.o,$(OBJ_DIR)%.o, command.o game.o game_loop.o graphic_engine.o \
 								screen.o space.o player.o object.o die.o set.o link.o inventory.o game_management.o \
@@ -35,6 +36,7 @@ SET_TEST_OBJ       = $(patsubst %.o,$(OBJ_DIR)%.o, set_test.o set.o)
 DIE_TEST_OBJ       = $(patsubst %.o,$(OBJ_DIR)%.o, die_test.o die.o)
 SPACE_TEST_OBJ     = $(patsubst %.o,$(OBJ_DIR)%.o, space_test.o space.o link.o set.o)
 COMMAND_TEST_OBJ   = $(patsubst %.o,$(OBJ_DIR)%.o, command_test.o command.o)
+OBJECT_TEST_OBJ	   = $(patsubst %.o,$(OBJ_DIR)%.o, object_test.o object.o)
 
 $(shell mkdir -p $(OBJ_DIR))
 $(shell mkdir -p $(BIN_DIR))
@@ -65,6 +67,9 @@ $(PLAYER_TEST_EXE): $(PLAYER_TEST_OBJ)
 	gcc $^ -o $@
 
 $(COMMAND_TEST_EXE): $(COMMAND_TEST_OBJ)
+	gcc $^ -o $@
+	
+$(OBJECT_TEST_EXE): $(OBJECT_TEST_OBJ)
 	gcc $^ -o $@
 
 $(SET_TEST_EXE): $(SET_TEST_OBJ)

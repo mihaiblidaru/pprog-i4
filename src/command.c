@@ -90,7 +90,7 @@ STATUS Command_destroy(Command* cmdManager) {
  * @return OK si se ha guardado correctamente o error en caso contrario
  */
 STATUS Command_set_cmd(Command* cmdManager, T_Command cmd) {
-    if (!cmdManager)
+    if (!cmdManager || cmd < NO_CMD || cmd > LOAD)
         return ERROR;
 
     cmdManager->cmd = cmd;
@@ -106,7 +106,7 @@ STATUS Command_set_cmd(Command* cmdManager, T_Command cmd) {
  * @return OK si se ha guardado correctamente o error en caso contrario
  */
 STATUS Command_set_cmd_arg(Command* cmdManager, char* arg, int index) {
-    if (!cmdManager || !arg)
+    if (!cmdManager || !arg || index > 3 || index < 0)
         return ERROR;
 
     strcpy(cmdManager->arg[index], arg);

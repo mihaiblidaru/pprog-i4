@@ -3,5 +3,7 @@
 * cualquier linea que no empieza por #o: es ignorada
 
 
-#o:1|Lantern| 5|Descripcion 2|Descripcion 1|1|0|0|25|1|0|
+#o:1|Antorcha| 1|Descripcion 2|Descripcion 1|1|0|0|25|1|0|
+#o:2|Llave magica| 1|Permite abrir puertas mágicas|Desc2|1|0|0|2|0|
+
 

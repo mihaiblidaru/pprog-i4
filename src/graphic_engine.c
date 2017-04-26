@@ -1,3 +1,4 @@
+
 /** 
  * @brief It defines a textual graphic engine
  * 
@@ -106,11 +107,17 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     Id id_act = NO_ID;
     Id id_back = NO_ID;
     Id id_next = NO_ID;
-    
+    Id id_east = NO_ID;
+    Id id_west = NO_ID;
+    Id id_up = NO_ID;
+    Id id_down = NO_ID;
     
     Id south_link = NO_ID;
     Id north_link = NO_ID;
-
+    Id east_link = NO_ID;
+    Id west_link  = NO_ID;
+	Id up_link = NO_ID;
+	Id down_link = NO_ID;
     Space* space_act = NULL;
     Space* space_back = NULL;
     Space* space_next = NULL;
@@ -122,7 +129,10 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     Id objLoc = NO_ID;
     char str[WORD_SIZE];
     char aux[WORD_SIZE];
+    char dir_left[5] = "    ";
+    char dir_right[5] = "    ";
     char* description = NULL;
+    char* obj;
 
     T_Command last_cmd = UNKNOWN;
     extern char *cmd_to_str[];
@@ -135,6 +145,72 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     screen_area_clear(ge->map);
     if ((id_act = game_get_player_location(game)) != NO_ID) {
         space_act = game_get_space(game, id_act);
+        north_link = space_get_north(space_act);
+        east_link = space_get_east(space_act);
+        west_link = space_get_west(space_act);
+        up_link = space_get_up(space_act);
+        down_link = space_get_down(space_act);
+        id_east = link_get_dest_from(game_get_link(game,east_link), id_act);
+        id_west = link_get_dest_from(game_get_link(game,west_link), id_act);
+        id_up = link_get_dest_from(game_get_link(game,up_link), id_act);
+        id_down = link_get_dest_from(game_get_link(game,down_link), id_act);
+        link = game_get_link(game, north_link);
+        obj = game_get_obj_list_as_str(game, space_act);
+        screen_area_puts(ge->map, " ");
+        if(link){
+            sprintf(str,"                       ^ %2ld ^ ", link_get_dest_from(link, id_act));
+        }else{
+            sprintf(str," ");
+        }
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        *----------------------------------*");
+        screen_area_puts(ge->map, str);
+        if(id_up != NO_ID)
+        	sprintf(str,"        |            Up ^: %2ld           %2ld |", id_up, id_act);
+        else
+        	sprintf(str,"        |                               %2ld |", id_act);
+        screen_area_puts(ge->map, str);
+        if(player_Has_Object(game_get_player(game), 7)){
+            sprintf(str,"        | _|'v'|_                          |");
+        }else{
+            sprintf(str,"        |  .,,,.                           |");
+        }
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        |  | oo|                           |");
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        |  \\- /                            |");
+        screen_area_puts(ge->map, str);
+        
+        if(id_west != NO_ID)
+        	sprintf(dir_left,"%2ld <", id_west);
+        if(id_east != NO_ID)
+        	sprintf(dir_right,"> %2ld ", id_east);
+        	
+        sprintf(str,"   %s |  '||'                            |  %s", dir_left, dir_right);
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        | ' || '                           |");
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        |  _/\\_                            |");
+        screen_area_puts(ge->map, str);
+        if(id_down != NO_ID)
+        	sprintf(str,"        |             Down v: %2ld           |", id_down);
+        else
+        	sprintf(str,"        |                                  |");
+        
+        screen_area_puts(ge->map, str);
+        sprintf(str,"        |%s                     |",obj);
+        screen_area_puts(ge->map, str);
+                sprintf(str,"        *----------------------------------*");
+        screen_area_puts(ge->map, str);
+        south_link = space_get_south(space_act);
+        link = game_get_link(game, south_link);
+        if(link){
+            sprintf(str,"                       v %2ld v ", link_get_dest_from(link, id_act));
+        }else{
+            sprintf(str," ");
+        }
+        screen_area_puts(ge->map, str);
+        /*
         north_link = space_get_north(space_act);
         south_link = space_get_south(space_act);
         link = game_get_link(game, north_link);
@@ -167,7 +243,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         if (id_next != NO_ID) {
             space_next = game_get_space(game, id_next);
             graphic_engine_paint_spaces(ge, game, space_next);
-        }
+        }*/
     }
 
     /* Paint the in the description area */
@@ -243,6 +319,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         }else{
             strcat(aux, space_get_description(inspected_space));
         }
+        
         for(i=0, j = 0; aux[i] != 0; i++,  j = (j + 1) % 21 ){
             if(j == 15){
                 for(i=i; aux[i] != ' '; i--);

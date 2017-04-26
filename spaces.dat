@@ -2,5 +2,13 @@
 * #s: [id del espacio] | [nombre] | [norte] | [este] | [sur] | [oeste] | [grafico linea 1] | [grafico linea 2] | [grafico linea 3]
 * Cualquier otra linea que no empiece con #s: es ignorada
 
-#s:1|Entrada|  1|-1|-1| 1|-1|-1|-1|       |       |       |Entrada en la piramide|descripción larga|
-#s:2|Casilla2| 1| 1|-1|-1|-1|-1|-1| _____ |(o   o)| \ m / |Muerte|La cueva del dragon|Cuidado con el dragon, si pasas mucho tiempo aqui te matara. Al oeste hay una puerta magica cerrada|
+#s:1|Entrada|               1|11|2|-1|  1|-1|3|       |       |       |Entrada en la piramide|Aqui empieza tu aventura. Tienes una puerta magica al oeste|
+#s:2|Sala de Armas|         1|-1|-1| 1|-1|-1|-1|,____, |//'    |~       |Para armarte|Aqui encuentras las armas necesarias para sobrevivir a la aventura.|
+#s:3|Tumba del faraon|      1|-1|-1|-1|2|-1|7|.......|.......|.......|Aqui descansa el faraon|Encuentras unas escaleras para bajar ¡CUIDADO!|
+#s:4|Sala de los misterios| 1|5|-1|-1|4|3|6|.......|.......|.......|Acabas de llegar a la segunda planta.|Ni te imaginas lo que hay detras de la puerta.|
+#s:5|Sala magica|           1|-1|4|-1|-1|-1|-1|.......|.......|.......|El laborario de Merlin|Hay un monton de objetos embrujados en esta sala. Cuidado con lo que tocas|
+#s:6|Sala del futuro|       1|-1|-1|5|-1|-1|-1|.......|.......|.......|Parece que no hay nada aqui|Si miras atentamente encuentras una bola de cristal que predice el futuro|
+#s:7|Warning Zone|          1|-1|-1|8|-1|7|-1|.......|.......|.......|Peligro| Parece que aqui hubo una batalla, no resbales con la sangre|
+#s:8|Sala del Guardian|     1|8|9|-1|-1|-1|-1|.......|.......|.......|El guardian no te va a dejar avanzar|Si quieres cruzar el puente debes derrotar al guardian(no sirve cualquier arma)|
+#s:9|Sala|                  1|-1|10|-1|9|-1|-1|.......|.......|.......|Coge la cuerda|Coge la cuerda rapido|
+#s:10|Sala del tesoro|      1|-1|-1|-1|-1|-1|-1|.......|.......|.......|Enhorabuena|Has encontrado el arca perdida|

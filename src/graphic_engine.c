@@ -29,6 +29,7 @@
 #include "game.h"
 #include "link.h"
 #include "die.h"
+#include "set.h"
 
 /**
  * @cond
@@ -44,7 +45,8 @@ struct _Graphic_engine {
     Area *feedback;             /*!< Puntero al area */
 };
 
-STATUS graphic_engine_paint_spaces(Graphic_engine*, Game*, Space*);
+STATUS graphic_engine_print_inspect_object(Graphic_engine *ge, Object* inspected_object);
+STATUS graphic_engine_print_inspect_space(Graphic_engine* ge, Game* game);
 
 /**
  * @endcond
@@ -65,11 +67,11 @@ Graphic_engine *graphic_engine_create() {
     screen_init();
     ge = (Graphic_engine *) malloc(sizeof (Graphic_engine));
 
-    ge->map = screen_area_init(1, 1, 52, 15);
-    ge->descript = screen_area_init(54, 1, 25, 15);
-    ge->banner = screen_area_init(28, 17, 25, 1);
-    ge->help = screen_area_init(1, 18, 78, 2);
-    ge->feedback = screen_area_init(1, 21, 78, 2);
+    ge->map = screen_area_init(1, 1, 52, 14);
+    ge->descript = screen_area_init(54, 1, 25, 14);
+    ge->banner = screen_area_init(28, 16, 25, 1);
+    ge->help = screen_area_init(1, 17, 78, 2);
+    ge->feedback = screen_area_init(1, 20, 78, 2);
 
     return ge;
 }
@@ -105,8 +107,6 @@ void graphic_engine_destroy(Graphic_engine *ge) {
  */
 void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     Id id_act = NO_ID;
-    Id id_back = NO_ID;
-    Id id_next = NO_ID;
     Id id_east = NO_ID;
     Id id_west = NO_ID;
     Id id_up = NO_ID;
@@ -119,10 +119,6 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 	Id up_link = NO_ID;
 	Id down_link = NO_ID;
     Space* space_act = NULL;
-    Space* space_back = NULL;
-    Space* space_next = NULL;
-    Space* inspected_space = NULL;
-    Object* inspected_object = NULL;
     Object* aux_obj = NULL;
     Link* link = NULL;
     
@@ -131,7 +127,6 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     char aux[WORD_SIZE];
     char dir_left[5] = "    ";
     char dir_right[5] = "    ";
-    char* description = NULL;
     char* obj;
 
     T_Command last_cmd = UNKNOWN;
@@ -140,7 +135,14 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     int i, j;
 
     STATUS last_status = ERROR;
-
+    
+    if((game_get_last_inspected_object(game))){
+    	graphic_engine_print_inspect_object(ge, game_get_last_inspected_object(game));
+    }
+	
+	if((game_get_last_inspected_space(game))){
+    	graphic_engine_print_inspect_space(ge, game);
+    }
     /* Paint the in the map area */
     screen_area_clear(ge->map);
     if ((id_act = game_get_player_location(game)) != NO_ID) {
@@ -201,6 +203,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         sprintf(str,"        |%s                     |",obj);
         screen_area_puts(ge->map, str);
                 sprintf(str,"        *----------------------------------*");
+        free(obj);
         screen_area_puts(ge->map, str);
         south_link = space_get_south(space_act);
         link = game_get_link(game, south_link);
@@ -210,43 +213,8 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
             sprintf(str," ");
         }
         screen_area_puts(ge->map, str);
-        /*
-        north_link = space_get_north(space_act);
-        south_link = space_get_south(space_act);
-        link = game_get_link(game, north_link);
-        if(link_get_space1(link) == id_act)
-            id_back = link_get_space2(link);
-        if(link_get_space2(link) == id_act)
-            id_back = link_get_space1(link);
-        
-        link = game_get_link(game, south_link);
-        if(link_get_space1(link) == id_act)
-            id_next = link_get_space2(link);
-        if(link_get_space2(link) == id_act)
-            id_next = link_get_space1(link);
-        
-        if (id_back != NO_ID) {
-            space_back = game_get_space(game, id_back);
-            graphic_engine_paint_spaces(ge, game, space_back);
-
-        }
-
-        if (id_act != NO_ID) {
-            if (id_back != NO_ID)
-                screen_area_puts(ge->map, "                          ^");
-            graphic_engine_paint_spaces(ge, game, space_act);
-
-            if (id_next != NO_ID)
-                screen_area_puts(ge->map, "                          v");
-        }
-
-        if (id_next != NO_ID) {
-            space_next = game_get_space(game, id_next);
-            graphic_engine_paint_spaces(ge, game, space_next);
-        }*/
+       
     }
-
-    /* Paint the in the description area */
 
     /* Imprimir la localizacion de los objetos */
     screen_area_clear(ge->descript);
@@ -288,59 +256,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     screen_area_puts(ge->descript, str);
     
     screen_area_puts(ge->descript, " ");
-    if((inspected_object = game_get_last_inspected_object(game))){
-        strcpy(aux, "Descripcion: ");
-        strcat(aux, object_Get_Description(inspected_object));
-        
-        for(i=0, j = 0; aux[i] != 0; i++,  j = (j + 1) % 21 ){
-            if(j == 15){
-                for(i=i; aux[i] != ' '; i--);
-                aux[i] = '\n';
-            }
-        }
-        
-        description = strtok(aux, "\n");
-        sprintf(str, "  %s", description);
-        screen_area_puts(ge->descript, str);
-        
-        if(description){
-            while((description = strtok(NULL, "\n"))){
-                sprintf(str, "    %s", description);
-                screen_area_puts(ge->descript, str);
-            }
-        }
-        inspected_object = NULL;
-    }
-    
-    if((inspected_space = game_get_last_inspected_space(game))){
-        strcpy(aux, "Descripcion: ");
-        if((space_get_iluminated(inspected_space)) == TRUE){
-            strcat(aux, space_get_long_description(inspected_space));
-        }else{
-            strcat(aux, space_get_description(inspected_space));
-        }
-        
-        for(i=0, j = 0; aux[i] != 0; i++,  j = (j + 1) % 21 ){
-            if(j == 15){
-                for(i=i; aux[i] != ' '; i--);
-                aux[i] = '\n';
-            }
-        }
-        
-        description = strtok(aux, "\n");
-        sprintf(str, "  %s", description);
-        screen_area_puts(ge->descript, str);
-        
-        if(description){
-            while((description = strtok(NULL, "\n"))){
-                sprintf(str, "    %s", description);
-                screen_area_puts(ge->descript, str);
-            }
-        }
-        
-        inspected_space = NULL;
-    }
-    
+
     /* Paint the in the banner area */
     screen_area_puts(ge->banner, " The game of the Goose ");
 
@@ -370,177 +286,291 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     printf("prompt:> ");
 }
 
-/*
- * @brief Se encarga de pintar las casilla 
- *         A partir de una casilla central, pinta esa casilla y las casillas
- *	   adyacentes de la derecha e izquierda
- *  @author Mihai Blidaru
- *  @param ge El motor grafico
- *  @param game La estructura del juego
- *  @param space La casilla central
- *  @return OK si todo ha ido bien o ERROR en caso contrario
- */
-STATUS graphic_engine_paint_spaces(Graphic_engine* ge, Game* game, Space* space) {
-    Id id_act = NO_ID, id_east = NO_ID, id_west = NO_ID;
-    Space* space_act = space, *space_east = NULL, *space_west = NULL;
-    Link* west_link = NULL;
-    Link* east_link = NULL;
-    Id west_link_id = NO_ID;
-    Id east_link_id = NO_ID;
+STATUS graphic_engine_print_inspect_object(Graphic_engine *ge, Object* inspected_object){
+	char* aux;
+	char str[100] = "\0";
+	char graphics[WORD_SIZE];
+	int i;
+	int ngLines = 0;
+	int drawn_lines = 0;
+	if(!ge || !inspected_object)
+		return ERROR;
+		
+	puts("\033[2J"); /*Clear the terminal*/
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("~                                                                              ~\n");
     
-    char graphics_act[G_ROWS][G_COLUMNS] = {
-        {0}
-    };
-    char graphics_east[G_ROWS][G_COLUMNS] = {
-        {0}
-    };
-    char graphics_west[G_ROWS][G_COLUMNS] = {
-        {0}
-    };
-
-    char player[3] = "  ";
-    char str[255] = "\0";
-    char* padding = "                   ";
-    char* obj = NULL, *obj_east = NULL, *obj_west = NULL;
-
-    if (!ge || !game || !space)
-        return ERROR;
-
-    id_act = space_get_id(space);
-    west_link_id = space_get_west(space_act);
-    east_link_id = space_get_east(space_act);
+   	printf("~  Objecto:                                                                    ~\n");	
+	printf("~       Id:           %2ld                                                       ~\n", object_Get_Id(inspected_object));
+	aux = object_Get_Name(inspected_object);
+	printf("~       Nombre:       %s", aux);
+	for(i = 57 - strlen(aux); i > 0; i--, printf(" "));
+	if(object_Get_Moved(inspected_object) == TRUE){
+		aux = object_Get_Description2(inspected_object);
+	}else{
+		aux = object_Get_Description(inspected_object);
+	}
+	printf("~\n~       Descripcion:  %s", aux);
+	for(i = 57 - strlen(aux); i > 0; i--, printf(" "));
+	if(object_Get_Mobile(inspected_object) == TRUE)
+		strcpy(str, "SI");
+	else
+		strcpy(str, "NO");
+		
+	printf("~\n~       Movible:      %s                                                       ~\n", str);
+	
+	if(object_Get_Open(inspected_object) != NO_ID)
+		strcpy(str, "SI");
+	else
+		strcpy(str, "NO");
+		
+	printf("~       Abre:         %s                                                       ~\n", str);
+	
+	if(object_Get_Illuminates(inspected_object) == TRUE)
+		strcpy(str, "SI");
+	else
+		strcpy(str, "NO");
+		
+	printf("~       Ilumina:      %s                                                       ~\n", str);
+	drawn_lines = 9;
+	if(object_Get_Illuminates(inspected_object) == TRUE){
+		if(object_Get_Light(inspected_object)==TRUE)
+			strcpy(str, "SI");
+		else
+			strcpy(str, "NO");
+		printf("~       Encendido:    %s                                                       ~\n", str);
+		drawn_lines++;
+	}
+	
+	printf("~                                                                              ~\n");
+	drawn_lines += 1;	
+	strncpy(graphics, object_Get_Graphics(inspected_object), WORD_SIZE);
+	
+	aux = strtok(graphics, "@");
+	if(aux){
+		printf("~          %s", aux);
+		for(i = 68 - strlen(aux); i > 0; i--, printf(" "));
+		printf("~\n");
+		drawn_lines++;
+		for(i = 1; (aux = strtok(NULL, "@")) != NULL && aux[0] != '\n'; i++){
+			printf("~          %s", aux);
+			for(i = 68 - strlen(aux); i > 0; i--, printf(" "));
+			printf("~\n");
+			ngLines++;
+			drawn_lines++;
+		}
+	}
+	
+	for(i=drawn_lines; i < 22; i ++){
+		printf("~                                                                              ~\n");
+	}
+	
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("Press Enter to continue: ");
+    fgets(str, 100, stdin);
     
-    west_link = game_get_link(game,west_link_id);
-    east_link = game_get_link(game,east_link_id);
-    
-    id_west = link_get_dest_from(west_link, id_act);
-    id_east = link_get_dest_from(east_link, id_act);
-    
-    space_east = game_get_space(game, id_east);
-    space_west = game_get_space(game, id_west);
+   return OK;
+}
 
-    if (id_act == game_get_player_location(game)) {
-        strncpy(player, "8D", 3);
+STATUS graphic_engine_print_inspect_space(Graphic_engine* ge, Game* game){
+	Space* inspected_space = NULL;
+	Object* object = NULL;
+	char* aux;
+	int i, j = 0;
+	char str[100] = "\0";
+	int drawn_lines = 0;
+    if(!ge || !game)
+    	return ERROR;
+    
+    inspected_space = game_get_last_inspected_space(game);
+    	
+    puts("\033[2J"); /*Clear the terminal*/
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("~                                                                              ~\n");
+    printf("~  Casilla:                                                                    ~\n");	
+    printf("~                                                                              ~\n");
+    printf("~       Id:           %2ld                                                       ~\n", space_get_id(inspected_space));
+	aux = (char*) space_get_name(inspected_space);
+	printf("~       Nombre:       %s", aux);
+	for(i = 57 - strlen(aux); i > 0; i--, printf(" "));
+	if(space_get_iluminated(inspected_space) == TRUE){
+		aux = (char*) space_get_long_description(inspected_space);
+	}else{
+		aux = (char*) space_get_description(inspected_space);
+	}
+	printf("~\n~       Descripcion:  %s", aux);
+	for(i = 57 - strlen(aux); i > 0; i--, printf(" "));
+	
+	if(space_get_iluminated(inspected_space) == TRUE)
+		strcpy(str, "SI");
+	else
+		strcpy(str, "NO");
+		
+	printf("~\n~       Iluminado:    %s                                                       ~", str);
+	
+	drawn_lines = 8;
+    
+    printf("\n~       Objetos:      ");
+	for(i = 0; (object = game_get_object_at(game, i)) != NULL; i++){
+		if(object_Get_Hidden(object) == FALSE){
+			if(space_contains_object(inspected_space, object_Get_Id(object))){
+				printf("%s ", object_Get_Name(object));
+				j += strlen(object_Get_Name(object)) + 1;
+			}
+		}
+	}
+	
+	for(i = j+21; i < 78; i++, printf(" "));
+	
+    for(i=drawn_lines; i < 22; i ++){
+		printf("~\n~                                                                              ");
+	}
+    printf("~\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("Press Enter to continue: ");
+    fgets(str, 100, stdin);
+	return OK;
+}
+
+
+STATUS graphic_engine_paint_directions(Game* game){
+	Space* space;
+    Link* north_link = NULL, *south_link = NULL, *east_link = NULL, *west_link = NULL, *up_link = NULL, *down_link = NULL;
+    Id id_act = NO_ID;
+    Id dest_north = NO_ID, dest_south = NO_ID, dest_east = NO_ID, dest_west = NO_ID, dest_up = NO_ID, dest_down = NO_ID;
+    char centered_text[100]="\0";
+    char aux[100] = "\0";
+    int spaces = 0, i;
+    
+    if(!game)
+		return ERROR;
+    
+    id_act = game_get_player_location(game);
+    space = game_get_space(game, id_act);
+    north_link = game_get_link(game, space_get_north(space));
+    south_link = game_get_link(game, space_get_south(space));
+    east_link = game_get_link(game, space_get_east(space));
+    west_link = game_get_link(game, space_get_west(space));
+    up_link = game_get_link(game, space_get_up(space));
+    down_link = game_get_link(game, space_get_down(space));
+    dest_north = link_get_dest_from(north_link, id_act);
+    dest_south = link_get_dest_from(south_link, id_act);
+    dest_east = link_get_dest_from(east_link, id_act);
+    dest_west = link_get_dest_from(west_link, id_act);
+    dest_up = link_get_dest_from(up_link, id_act);
+    dest_down = link_get_dest_from(down_link, id_act);
+    
+    puts("\033[2J"); /*Clear the terminal*/
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    if(dest_up != NO_ID){
+    	sprintf(aux, "%2ld : %s", dest_up, space_get_name(game_get_space(game,dest_up)));
+    	printf("~%s", aux);
+    	for(i=3+strlen(link_get_name(up_link));i < 78; i++, printf(" "));
+    	printf("~\n~   ^                                                                          ~\n");
+    	printf("~   | -> Enlace: %s", link_get_name(up_link));
+    	for(i=16 + strlen(link_get_name(up_link));i < 78; i++, printf(" "));
+    	printf("~\n~   Up                                                                         ~\n");
+    }else{
+	    printf("~                                                                              ~\n");
+	    printf("~                                                                              ~\n");
+	    printf("~                                                                              ~\n");
+	    printf("~                                                                              ~\n");
     }
-
-    if (id_act != NO_ID) {
-        /* Si no hay casillas a la derecha o a la izquierda */
-        if (id_east == NO_ID && id_west == NO_ID) {
-            space_get_graphics(space, graphics_act);
-            obj = game_get_obj_list_as_str(game, space);
-            sprintf(str, "%s+-------------+", padding);
-            screen_area_puts(ge->map, str);
-            sprintf(str, "%s| %s        %2d|", padding, player, (int) id_act);
-            screen_area_puts(ge->map, str);
-
-            if (space_graphics_areEmpty(space_act) == FALSE) {
-                sprintf(str, "%s|   %s   |", padding, graphics_act[0]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "%s|   %s   |", padding, graphics_act[1]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "%s|   %s   |", padding, graphics_act[2]);
-                screen_area_puts(ge->map, str);
-            }
-
-            sprintf(str, "%s|%s|", padding, obj);
-            screen_area_puts(ge->map, str);
-            sprintf(str, "%s+-------------+", padding);
-            screen_area_puts(ge->map, str);
-
-            free(obj);
-
-        } else if (id_east != NO_ID && id_west == NO_ID) {
-            /*Cuando no hay una casilla adyacente a la izquierda y si a la derecha */
-            space_get_graphics(space, graphics_act);
-            space_get_graphics(space_east, graphics_east);
-            obj = game_get_obj_list_as_str(game, space_act);
-            obj_east = game_get_obj_list_as_str(game, space_east);
-
-            sprintf(str, "%s+-------------+ %2ld +-----------+", padding, link_get_id(east_link));
-            screen_area_puts(ge->map, str);
-            sprintf(str, "%s| %s        %2d| -->|%2d         |", padding, player, (int) id_act, (int) id_east);
-            screen_area_puts(ge->map, str);
-
-            if (space_graphics_areEmpty(space_act) == FALSE || space_graphics_areEmpty(space_east) == FALSE) {
-                sprintf(str, "%s|   %s   |    |  %s  |", padding, graphics_act[0], graphics_east[0]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "%s|   %s   |    |  %s  |", padding, graphics_act[1], graphics_east[1]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "%s|   %s   |    |  %s  |", padding, graphics_act[2], graphics_east[2]);
-                screen_area_puts(ge->map, str);
-            }
-            
-            obj_east[10] = '\0';
-            sprintf(str, "%s|%s|    |%s |", padding, obj, obj_east);
-            screen_area_puts(ge->map, str);
-            sprintf(str, "%s+-------------+    +-----------+", padding);
-            screen_area_puts(ge->map, str);
-
-            free(obj);
-            free(obj_east);
-        } else if (id_east == NO_ID && id_west != NO_ID) {
-            /*Cuando hay una casilla adyacente a la izquierda y no a la derecha */
-            space_get_graphics(space, graphics_act);
-            space_get_graphics(space_west, graphics_west);
-            obj = game_get_obj_list_as_str(game, space_act);
-            obj_west = game_get_obj_list_as_str(game, space_west);
-
-            sprintf(str, "  +-----------+ %2ld +-------------+",  link_get_id(west_link));
-            screen_area_puts(ge->map, str);
-            sprintf(str, "  |         %2d|<-- | %s        %2d|", (int) id_west, player, (int) id_act);
-            screen_area_puts(ge->map, str);
-
-            if (space_graphics_areEmpty(space_act) == FALSE || space_graphics_areEmpty(space_west) == FALSE) {
-                sprintf(str, "  |  %s  |    |   %s   |", graphics_west[0], graphics_act[0]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "  |  %s  |    |   %s   |", graphics_west[1], graphics_act[1]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "  |  %s  |    |   %s   |", graphics_west[2], graphics_act[2]);
-                screen_area_puts(ge->map, str);
-            }
-            obj_west[10] = '\0';
-            sprintf(str, "  |%s |    |%s|", obj_west, obj);
-            screen_area_puts(ge->map, str);
-            sprintf(str, "  +-----------+    +-------------+");
-            screen_area_puts(ge->map, str);
-
-            free(obj);
-            free(obj_west);
-        } else {
-
-            /* cuando hay casillas adyacentes a los dos lados */
-            space_get_graphics(space, graphics_act);
-            space_get_graphics(space_east, graphics_east);
-            space_get_graphics(space_west, graphics_west);
-            obj = game_get_obj_list_as_str(game, space_act);
-            obj_east = game_get_obj_list_as_str(game, space_east);
-            obj_west = game_get_obj_list_as_str(game, space_west);
-
-            sprintf(str, "  +-----------+ %2ld +-------------+ %2ld +-----------+", link_get_id(west_link),  link_get_id(east_link));
-            screen_area_puts(ge->map, str);
-            sprintf(str, "  |         %2d|<-- | %s        %2d| -->|         %2d|",
-                    (int) id_west, player, (int) id_act, (int) id_east);
-            screen_area_puts(ge->map, str);
-
-            if (space_graphics_areEmpty(space_act) == FALSE) {
-                sprintf(str, "  |  %s  |    |   %s   |    |  %s  |", graphics_west[0], graphics_act[0], graphics_east[0]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "  |  %s  |    |   %s   |    |  %s  |", graphics_west[1], graphics_act[1], graphics_east[1]);
-                screen_area_puts(ge->map, str);
-                sprintf(str, "  |  %s  |    |   %s   |    |  %s  |", graphics_west[2], graphics_act[2], graphics_east[2]);
-                screen_area_puts(ge->map, str);
-            }
-            
-            obj_west[10] = '\0';
-            obj_east[10] = '\0';
-            sprintf(str, "  |%s |    |%s|    |%s |", obj_west, obj, obj_east);
-            screen_area_puts(ge->map, str);
-            sprintf(str, "  +-----------+    +-------------+    +-----------+");
-            screen_area_puts(ge->map, str);
-            free(obj);
-            free(obj_east);
-            free(obj_west);
-        }
+    if(dest_north != NO_ID){
+	    sprintf(aux, "%2ld : %s", dest_north, space_get_name(game_get_space(game,dest_north)));
+	    spaces = 78 - strlen(aux);
+	    
+	    for(i=0; i< (spaces/2); i++){
+	        centered_text[i] = ' ';
+	    }
+	    strcat(centered_text, aux);
+	    while(strlen(centered_text) < 78){
+	        strcat(centered_text, " ");
+	    }
+	    printf("~%s~\n", centered_text);
+	    printf("~                                      ^                                       ~\n");
+		printf("~                                    . N .-> Enlace: %s", link_get_name(north_link));
+		for(i=52+strlen(link_get_name(north_link));i < 78; i++, printf(" "));
+    }else{
+    	printf("~                                                                              ~\n");
+    	printf("~                                      ^                                       ~\n");
+		printf("~                                    . N .                                     ");
     }
+	printf("~\n~                                  .` )|( `.                                   ~\n~");
+	if(dest_west != NO_ID){
+		sprintf(aux, "Enlace: %s", link_get_name(west_link));
+		for(i = 28- strlen(aux); i > 0 ; i--, printf(" "));
+		printf("%s <- .` )  |  ( `.                                 ~\n", aux);
+		printf("~                              .\\ )    |    ( `.                               ~\n~");
+		sprintf(aux, "%2ld : %s", dest_west, space_get_name(game_get_space(game,dest_west)));
+		for(i = 27- strlen(aux); i > 0 ; i--, printf(" "));
+		
+	}else{
+		strcpy(aux, "                           ");
+		printf("                                .` )  |  ( `.                                 ~\n");
+		printf("~                              .` )    |    ( `.                               ~\n~");
+	}
+	printf("%s <` W)-----O-----(E `> ", aux);
+	
+	if(dest_east != NO_ID){
+		sprintf(aux, "%ld: %s", dest_east, space_get_name(game_get_space(game,dest_east)));
+		printf("%s", aux);
+		for(i=28-strlen(aux); i > 0; i--, printf(" "));
+		printf("~\n~                             `.  )    |    (  \\`                              ~\n");
+	    printf("~                               `.  )  |  (  .` -> Enlace: %s", link_get_name(east_link));	
+	    for(i = 20- strlen(link_get_name(east_link)); i > 0 ; i--, printf(" "));
+	}else{
+		printf("                            ");
+		printf("~\n~                             `.  )    |    (  .`                              ~\n");
+	    printf("~                               `.  )  |  (  .`                                ");
+	}
+	
+	
+	printf("~\n~                                 `.  )|(  .`                                  ~\n");
+	if(dest_south != NO_ID){
+		printf("~                                   `. S .`->Enlace: %s", link_get_name(south_link));
+		
+		for(i=52 + strlen(link_get_name(south_link));i < 78; i++, printf(" "));
+		printf("~\n~                                      v                                       ~\n");
+
+  	   	sprintf(aux, "%2ld : %s", dest_south, space_get_name(game_get_space(game, dest_south)));
+	    spaces = 78 - strlen(aux);
+	    for(i=0; i< 100; i++){
+	        centered_text[i] = '\0';
+	    }
+	    
+	    for(i=0; i< (spaces/2); i++){
+	        centered_text[i] = ' ';
+	    }
+	    strcat(centered_text, aux);
+	    while(strlen(centered_text) < 78){
+	        strcat(centered_text, " ");
+	    }
+	    
+	    printf("~%s~\n", centered_text);
+    }else{
+    	printf("~                                   `. S .`                                    ~\n");
+		printf("~                                      v                                       ~\n");
+		printf("~                                                                              ~\n");
+    }
+    
+     if(dest_down != NO_ID){
+    	printf("~  Down                                                                        ~\n");
+    	printf("~    v -> Enlace: %s", link_get_name(down_link));
+    	for(i=17 +strlen(link_get_name(down_link));i < 78; i++, printf(" "));
+    	sprintf(aux, "%2ld : %s", dest_down, space_get_name(game_get_space(game,dest_down)));
+    	printf("~\n~ %s", aux);
+    	for(i = 1 + strlen(aux);i < 78; i++, printf(" "));
+    }else{
+	    printf("~                                                                              ~\n");
+	    printf("~                                                                              ~\n");
+	    printf("~                                                                              ");
+    }
+    
+    
+    printf("~\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("Press Enter to continue:> ");
+    
+    fgets(aux, 100, stdin);
     return OK;
 }
+	

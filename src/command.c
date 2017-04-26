@@ -32,12 +32,12 @@
 /**
  * Numero maximo de comandos 
  */
-#define N_CMD 13
+#define N_CMD 14
 
 /**
  * Representacion como cadena de los comandos
  */
-char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Quit", "Take", "Leave", "Roll", "Go", "Inspect", "Turn On", "Turn Off", "Open", "Save", "Load"};
+char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Quit", "Take", "Leave", "Roll", "Go", "Inspect", "Turn On", "Turn Off", "Open", "Save", "Load", "Dir"};
 
 /**
  * @brief Estructura del comando
@@ -90,7 +90,7 @@ STATUS Command_destroy(Command* cmdManager) {
  * @return OK si se ha guardado correctamente o error en caso contrario
  */
 STATUS Command_set_cmd(Command* cmdManager, T_Command cmd) {
-    if (!cmdManager || cmd < NO_CMD || cmd > LOAD)
+    if (!cmdManager || cmd < NO_CMD || cmd > DIR)
         return ERROR;
 
     cmdManager->cmd = cmd;
@@ -218,6 +218,8 @@ STATUS get_user_input(Command* cmdManager) {
                 cmd = SAVE;
             } else if (!strncmp(command, "load", CMD_LENGHT)) {
                 cmd = LOAD;
+            }else if (!strncmp(command, "dir", CMD_LENGHT)) {
+                cmd = DIR;
             } else {
                 cmd = UNKNOWN;
             }

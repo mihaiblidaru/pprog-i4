@@ -37,6 +37,7 @@ struct _Object {
     Id open;                  /*!< Id si puede abrir el link, NO_ID en caso contrario */
     BOOL illuminates;         /*!< TRUE si puede iluminar el espacio, FALSE en caso contrario */
     BOOL light_on;            /*!< TRUE si esta encendido, FALSE en caso contrario */
+    char graphics[WORD_SIZE];
 };
 
 /**
@@ -54,6 +55,7 @@ Object* object_create() {
 
     object->id = NO_ID;
     object->name[0] = '\0';
+    object->graphics[0] = '\0';
     object->mobile = FALSE;
     object->moved = FALSE;
     object->hidden = FALSE;
@@ -106,6 +108,19 @@ Object* object_Set_Name(Object* object, char *name) {
     return object;
 
 }
+
+/* Mihai */
+
+Object* object_Set_Graphics(Object* object, char *graphics) {
+    if (!object || !graphics)
+        return NULL;
+    strncpy(object->graphics, graphics, WORD_SIZE);
+    return object;
+}
+
+/* Mihai */
+
+
 
 /*
  * @brief Pone la descripción  del objeto
@@ -247,6 +262,19 @@ char* object_Get_Name(Object* object) {
         return NULL;
     return object->name;
 }
+
+/* Mihai */
+
+char* object_Get_Graphics(Object* object) {
+    if (!object)
+        return NULL;
+    return object->graphics;
+}
+
+/* Mihai */
+
+
+
 
 
 /*

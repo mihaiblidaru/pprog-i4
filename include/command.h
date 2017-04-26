@@ -41,7 +41,8 @@ typedef enum enum_Command {
     TURNOFF,                 /*!< Comando apagar */
     OPEN,                    /*!< Comando abrir */
     SAVE,
-    LOAD
+    LOAD,
+    DIR
 } T_Command;
 
 /**

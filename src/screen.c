@@ -22,7 +22,7 @@
  * @cond
  * @brief Declaracion de la variable ROWS 
  */
-#define ROWS 24
+#define ROWS 23
 
 /**
  * @brief Declaracion de la variable COLUMNS 

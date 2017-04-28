@@ -63,9 +63,9 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
     Id id = NO_ID, north = NO_ID, south = NO_ID, east = NO_ID, west = NO_ID, up = NO_ID, down = NO_ID, open = NO_ID;
     Id space1 = NO_ID, space2 = NO_ID;
     int state = -1, max_objects = 0;
-    char graphics[3][8] = {" ", " ", " "};
+    char graphics[6][24] = {" ", " ", " "};
     Id location = NO_ID;
-    char* name = NULL, *description = NULL, *longDescription = NULL;
+    char* name = NULL, *description = NULL, *longDescription = NULL, *obj_graphics = NULL;
     BOOL mobile = FALSE, moved = FALSE, hidden = FALSE, illuminates = FALSE, iluminated = FALSE;
     int i;
     if(!game || !filename)
@@ -86,7 +86,7 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
     name = player_Get_Name(player);
     location = player_Get_Location(player);
     max_objects = player_Get_Max_Objects(player);
-    fprintf(fp, "#p:%ld|%s|%ld|%d|", id, name, location, max_objects);    
+    fprintf(fp, "#p:%ld|%s|%ld|%d|\n", id, name, location, max_objects);    
     
     /* Guardar los links */
     for(i=0; (link = game_get_link_at(game, i)) != NULL; i++){
@@ -112,8 +112,8 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
         space_get_graphics(space, graphics);
         description = (char*) space_get_description(space);
         longDescription = (char*) space_get_long_description(space);
-        fprintf(fp, "#s:%ld|%s|%d|%ld|%ld|%ld|%ld|%ld|%ld|%s|%s|%s|%s|%s|\n", id, name, iluminated, north, east, south, west, up, down,
-                                            graphics[0], graphics[1], graphics[2], description, longDescription);
+        fprintf(fp, "#s:%ld|%s|%d|%ld|%ld|%ld|%ld|%ld|%ld|%s@%s@%s@%s@%s@%s@%s|%s|\n", id, name, iluminated, north, east, south, west, up, down,
+                                            graphics[0], graphics[1], graphics[2], graphics[3], graphics[4], graphics[5], description, longDescription);
     }
     
     
@@ -130,7 +130,8 @@ SAVE_STATUS game_management_save(Game* game, char* filename){
         open = object_Get_Open(object);
         illuminates = object_Get_Illuminates(object);
         iluminated = object_Get_Light(object);
-        fprintf(fp, "#o:%ld|%s|%ld|%s|%s|%d|%d|%d|%ld|%d|%d|\n", id, name, location, description, longDescription, mobile, moved, hidden, open, illuminates, iluminated);
+        obj_graphics = object_Get_Graphics(object);
+        fprintf(fp, "#o:%ld|%s|%ld|%s|%s|%d|%d|%d|%ld|%d|%d|@@%s", id, name, location, description, longDescription, mobile, moved, hidden, open, illuminates, iluminated, obj_graphics);
     }
     
     fclose(fp);
@@ -186,7 +187,7 @@ STATUS game_load_space(Game* game, char* line) {
     char name[WORD_SIZE] = "";
     char description[WORD_SIZE] = "";
     char long_description[WORD_SIZE] = "";
-    char graphics[3][8] = {" ", " ", " "};
+    char graphics[6][24] = {" ", " ", " "};
     BOOL graphics_loaded = TRUE;
     char* toks = NULL;
     int i, aux = 0;
@@ -220,8 +221,8 @@ STATUS game_load_space(Game* game, char* line) {
     up = atol(toks);
     toks = strtok(NULL, "|");
     down = atol(toks);
-    for (i = 0; i < 3; i++) {
-        toks = strtok(NULL, "|");
+    for (i = 0; i < 6; i++) {
+        toks = strtok(NULL, "@");
         if(!toks){
             graphics_loaded = FALSE;
             break;
@@ -273,6 +274,8 @@ STATUS game_load_object(Game* game, char* line) {
     char name[WORD_SIZE] = "\0";
     char description1[WORD_SIZE] = "\0";
     char description2[WORD_SIZE] = "\0";
+    char graphics[WORD_SIZE];
+    char line_copy[WORD_SIZE] = "\0";
     int aux = 0;
     BOOL mobile = FALSE;
     BOOL moved = FALSE;
@@ -282,6 +285,7 @@ STATUS game_load_object(Game* game, char* line) {
     Object* object = NULL;
     Space* space = NULL;
     char* toks = NULL;
+    strncpy(line_copy, line, WORD_SIZE);
     toks = strtok(line + 3, "|");
     id = atol(toks);
     toks = strtok(NULL, "|");
@@ -313,18 +317,24 @@ STATUS game_load_object(Game* game, char* line) {
     toks = strtok(NULL, "|");
     if((aux = atoi(toks)) == 1) /* encendido */
         light_on = TRUE;
-        
+    
+    
+    for(aux = 0; (line_copy[aux] != '@' || line_copy[aux+1] != '@') ; aux++);
+    strcpy(graphics, line_copy+aux+2);
+
 #ifdef DEBUG 
         printf("Leido: %ld|%s|%ld|%s|%s|%d|%d|%d|%ld|%d|%d|\n", id, name, location, description1, description2, mobile, moved, hidden, opens, illuminates, light_on);
 #endif
     if(!(object = object_create()))
         return ERROR;
+    
         
     object_Set_Id(object, id);
     object_Set_Name(object, name);
     object_Set_Description(object, description1);
     object_Set_Description2(object, description2);
     object_Set_Mobile(object, mobile);
+    object_Set_Graphics(object, graphics);
     object_Set_Moved(object, moved);
     object_Set_Hidden(object, hidden);
     object_Set_Open(object, opens);
@@ -372,7 +382,7 @@ STATUS game_load_link(Game* game, char* line) {
     state = atol(toks);
         
 #ifdef DEBUG 
-    printf("Leido: %ld|%s|%ld|%ld|\n", linkId, linkName, space1, space2);
+    printf("#l:%ld|%s|%ld|%ld|%ld|\n", linkId, linkName, space1, space2, state);
 #endif
 
     if(!(newLink = link_create())){
@@ -419,7 +429,7 @@ STATUS game_load_player(Game* game, char* line){
     maxObj = atol(toks);
             
 #ifdef DEBUG 
-    printf("Leido: %ld|%s|%ld|\n", player_id, playerName, location);
+    printf("#p:%ld|%s|%ld|%d|\n", player_id, playerName, location, maxObj);
 #endif
     if(!(newPlayer = player_create())){
         return ERROR;

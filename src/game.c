@@ -29,6 +29,7 @@
 #include "space.h"
 #include "player.h"
 #include "object.h"
+#include "dialogue.h"
 #include "game_management.h"
 
 /**
@@ -36,7 +37,7 @@
  * Número de funciones callbacks
  * 
  */
-#define N_CALLBACK 12
+#define N_CALLBACK 13
 
 /**
  * @brief Define the function type for the callbacks
@@ -63,6 +64,7 @@ struct _Game {
     STATUS last_status;              /*!< Ultimo status */
     Space* last_space;               /*!< Puntero al ultimo space */
     Object* last_object;             /*!< Puntero al ultimo objeto */
+    Dialogue* dialogue;
 };
 
 /**
@@ -83,6 +85,7 @@ STATUS game_callback_turn_off(Game* game, Command* cmd); /*!< TURNOFF @private *
 STATUS game_callback_open(Game* game, Command* cmd);/*!< OPEN @private */
 STATUS game_callback_save(Game* game, Command* cmd);/*!< SAVE @private */
 STATUS game_callback_load(Game* game, Command* cmd);/*!< LOAD @private */
+STATUS game_callback_dir(Game* game, Command* cmd);
 
 void game_clear_inspect (Game *game); /*!< @private */
 Object* game_get_Object_byName(Game* game, char* name); /*!< @private */
@@ -100,7 +103,8 @@ static callback_fn game_callback_fn_list[N_CALLBACK] = {
     game_callback_turn_off,
     game_callback_open,
     game_callback_save,
-    game_callback_load
+    game_callback_load,
+    game_callback_dir
 };
 
 /* 
@@ -135,7 +139,7 @@ Game* game_create() {
         game->objects[i] = NULL;
     
     /* Inicializar la estructura del jugador */
-
+    game->dialogue = dialogue_ini();
     player_Set_Name(game->player, "Player 1");
     player_Set_Id(game->player, GENERIC_ID);
     game->last_status = -1;
@@ -178,6 +182,7 @@ STATUS game_destroy(Game* game) {
     /* y se libera la memoria usada por el dado y el jugador */
     die_destroy(game->die);
     player_destroy(game->player);
+    dialogue_destroy(game->dialogue);
     free(game);
 
     return OK;
@@ -371,14 +376,15 @@ Object* game_get_object(Game* game, Id id) {
  */
 Object* game_get_Object_byName(Game* game, char* name) {
     int i = 0, j = 0;
+    char find_copy[30] = "\0";
     char copy[20];
     
 
     if (!game || !name)
         return NULL;
-    
-    for (i = 0; name[i]; i++) {
-            name[i] = toupper(name[i]);
+    strcpy(find_copy, name);
+    for (i = 0; find_copy[i]; i++) {
+            find_copy[i] = toupper(find_copy[i]);
     }
     
     for (i = 0; i < MAX_OBJECTS && game->objects[i] != NULL; i++) {
@@ -388,7 +394,7 @@ Object* game_get_Object_byName(Game* game, char* name) {
             copy[j] = toupper(copy[j]);
         }
         
-        if (strcmp(copy, name) == 0) {
+        if (strcmp(copy, find_copy) == 0) {
             return game->objects[i];
         }
     }
@@ -564,6 +570,14 @@ Player* game_get_player(Game* game){
     return game->player;
 }
 
+Dialogue* game_get_dialogue(Game* game){
+    if(!game)
+        return NULL;
+    
+    return game->dialogue;
+}
+
+
 /* 
  * @brief Obtiene la localización  de un objeto.
  * 
@@ -614,8 +628,10 @@ char* game_get_obj_list_as_str(Game* game, Space* space) {
 
     strcat(string, " ");
     for (i = 0; i < MAX_OBJECTS && game->objects[i]; i++) {
-        if (space_contains_object(space,object_Get_Id(game->objects[i]))) {
-            sprintf(string, "%sO%ld ", string, object_Get_Id(game->objects[i]));
+        if(object_Get_Hidden(game->objects[i]) == FALSE){
+            if (space_contains_object(space, object_Get_Id(game->objects[i]))) {
+                sprintf(string, "%sO%ld ", string, object_Get_Id(game->objects[i]));
+            }
         }
     }
 
@@ -787,7 +803,9 @@ STATUS game_update(Game* game, Command* command) {
  * @return ERROR siempre.
  */
 STATUS game_callback_unknown(Game* game, Command* cmd) {
+    dialogue_unknown(game->dialogue);
     return ERROR;
+    
 }
 
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es QUIT.
@@ -819,6 +837,7 @@ STATUS game_callback_go(Game* game, Command* cmd) {
     Link* link = NULL;
     Space* space = NULL;
     Id player_location = NO_ID, dest_id = NO_ID;
+    DIRECTION direction = UNKNOWN_DIRECTION;
     
     if(!game || !cmd)
         return ERROR;
@@ -831,28 +850,42 @@ STATUS game_callback_go(Game* game, Command* cmd) {
     if(!space)
         return ERROR;
     if(!strcmp(dir,"north") || !strcmp(dir,"n")){
-        link = game_get_link(game, space_get_north(space));    
+        link = game_get_link(game, space_get_north(space));   
+        direction = NORTH;
     }else if(!strcmp(dir,"south") || !strcmp(dir,"s")){
         link = game_get_link(game, space_get_south(space));    
+        direction = SOUTH;
     }else if(!strcmp(dir,"east") || !strcmp(dir,"e")){
        link = game_get_link(game, space_get_east(space));    
+       direction = EAST;
     }else if(!strcmp(dir,"west") || !strcmp(dir,"w")){
         link = game_get_link(game, space_get_west(space));    
+        direction = WEST;
     }else if(!strcmp(dir,"up") || !strcmp(dir,"u")){
         link = game_get_link(game, space_get_up(space));    
+        direction = UP;
     }else if(!strcmp(dir,"down") || !strcmp(dir,"d")){
         link = game_get_link(game, space_get_down(space));    
+        direction = DOWN;
     }
     
-    
-    if(!link || link_get_state(link) == CLOSED)
+    if(!link){
+        dialogue_go(game->dialogue, direction, space, ERROR, dir, NULL);
         return ERROR;
+    }
+    
+    if(link_get_state(link) == CLOSED){
+        dialogue_go(game->dialogue, direction, space, ERROR, dir, link);
+        return ERROR;
+    }
     
     dest_id = link_get_dest_from(link, player_location);
-    if(dest_id == NO_ID)
+    if(dest_id == NO_ID){
+        dialogue_go(game->dialogue, direction, space, ERROR, dir, NULL);
         return ERROR;
-        
+    }
     game_set_player_location(game,dest_id);
+    dialogue_go(game->dialogue, direction, game_get_space(game, dest_id), OK, dir, link);
     return OK;
 }
 
@@ -870,7 +903,9 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
     char* dir = NULL;
     Space* space = NULL;
     Object* object = NULL;
+    BOOL player_lights = FALSE;
     Id player_location = NO_ID, object_id = NO_ID;
+    int i = 0;
     if(!game || !cmd)
         return ERROR;
     
@@ -881,20 +916,43 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
         if(!strcmp(dir,"space") || !strcmp(dir,"s")){
             if(space){
                 game->last_space = space;
+                for(i = 0; game->objects[i] != NULL; i++){
+                    if(player_Has_Object(game->player, object_Get_Id(game->objects[i])) == TRUE){
+                        if(object_Get_Light(game->objects[i]) == TRUE){
+                            player_lights = TRUE; /* Si el jugador tiene un objeto que ilumina */
+                            break;
+                        }
+                    }
+                }
+
+            /* Si el jugador tiene un objeto que ilumina puede desocultar objetos */
+            for(i = 0; game->objects[i] != NULL && player_lights;i++){ 
+                if(space_contains_object(space, object_Get_Id(game->objects[i])))
+                    object_Set_Hidden(game->objects[i], FALSE);
+                
+            }
+                dialogue_inspect(game->dialogue, object, space, "space", INSPECT_OK);
                 return OK;
             }
         }else{
             object = game_get_Object_byName(game, dir);
-            if(object == NULL)
+            if(object == NULL){
+                dialogue_inspect(game->dialogue, object, space, dir, INSPECT_NO_OBJ);
                 return ERROR;
-            object_id = object_Get_Id(object);
-            if (player_Has_Object(game->player, object_id) || space_contains_object(space, object_id)){
-                game->last_object = object;
-                return OK;
             }
+            if(object_Get_Hidden(object) == FALSE){   
+                object_id = object_Get_Id(object);
+                if (player_Has_Object(game->player, object_id) || (space_contains_object(space, object_id) && space_get_iluminated(space))){
+                    game->last_object = object;
+                    dialogue_inspect(game->dialogue, object, space, dir, INSPECT_OK);
+                    return OK;
+                }
+            }
+            dialogue_inspect(game->dialogue, object, space, dir, INSPECT_NO_OBJ);
+            return ERROR;
         }
     }
-    
+    dialogue_inspect(game->dialogue, object, space, dir, GLOBAL_NO_ARGS);
     return ERROR;
 }
 
@@ -916,29 +974,46 @@ STATUS game_callback_take(Game* game, Command* cmd) {
         return ERROR;
     arg = Command_get_cmd_arg(cmd, 0);
 
-    if (strlen(arg) < 1)
+    if (strlen(arg) < 1){
+        dialogue_take(game->dialogue, NULL, arg, GLOBAL_NO_ARGS);
         return ERROR;
+    }
     
     space_id = game_get_player_location(game);
     space = game_get_space(game, space_id);
     
     object = game_get_Object_byName(game, arg);
 
-    if (!object)
+    if (!object){
+        dialogue_take(game->dialogue, NULL, arg, NO_OBJ);
         return ERROR;
-
+    }
     objId = object_Get_Id(object);
 
     if (NO_ID == space_id || !space) {
         return ERROR;
     }
 
-    if (space_contains_object(space, objId) && object_Get_Mobile(object) == TRUE) {
-        if(player_Add_Object(game->player, objId) == OK){
-        space_remove_object(space, objId);
-        object_Set_Moved(object, TRUE);    
-        return OK;
+    if (space_contains_object(space, objId)) {
+        if(object_Get_Hidden(object) == FALSE){
+            if(object_Get_Mobile(object) == TRUE){
+                if(player_Add_Object(game->player, objId) == OK){
+                    space_remove_object(space, objId);
+                    object_Set_Moved(object, TRUE);
+                    dialogue_take(game->dialogue, object, object_Get_Name(object), TAKE_OK);
+                    return OK;
+                }else{
+                    dialogue_take(game->dialogue, object, object_Get_Name(object), INVENTORY_FULL);
+                    return ERROR;
+                }
+            }else{
+                dialogue_take(game->dialogue, object, object_Get_Name(object), NOT_MOBILE);
+                return ERROR;
+            }
         }
+    }else{
+        dialogue_take(game->dialogue, object, object_Get_Name(object), NOT_IN_SPACE);
+        return ERROR;
     }
     return ERROR;
 }
@@ -962,35 +1037,23 @@ STATUS game_callback_leave(Game* game, Command* cmd) {
         return ERROR;
     arg = Command_get_cmd_arg(cmd, 0);
 
-    if (strlen(arg) < 1)
+    if (strlen(arg) < 1){
+        dialogue_leave(game->dialogue, NULL, arg, GLOBAL_NO_ARGS);
         return ERROR;
-
-
+    }
 
     space_id = game_get_player_location(game);
     space = game_get_space(game, space_id);
-    if(strlen(arg) < 4){
-        if(arg[0] == 'o' || arg[0] == 'O'){
-            objId = atol(arg+1);
-            if((object = game_get_object(game, objId))){
-                if (player_Has_Object(game->player, objId)) {
-                    player_Remove_Object(game->player, objId);
-                    space_add_object(space, objId);
-                    return OK;
-                }
-            }
-        }
-        
-    }
-
     if (NO_ID == space_id || !space) {
         return ERROR;
     }
 
     object = game_get_Object_byName(game, arg);
 
-    if (!object)
+    if (!object){
+        dialogue_leave(game->dialogue, NULL, arg, NOT_IN_INV);
         return ERROR;
+    }
 
     objId = object_Get_Id(object);
 
@@ -1000,7 +1063,10 @@ STATUS game_callback_leave(Game* game, Command* cmd) {
     if (player_Has_Object(game->player, objId)) {
         player_Remove_Object(game->player, objId);
         space_add_object(space, objId);
+        dialogue_leave(game->dialogue, object, arg, LEAVE_OK);
         return OK;
+    }else{
+        dialogue_leave(game->dialogue, object, arg, NOT_IN_INV);
     }
     return ERROR;
 }
@@ -1039,19 +1105,31 @@ STATUS game_callback_turn_on(Game* game, Command* cmd){
     dir = Command_get_cmd_arg(cmd, 0);
     if(strlen(dir) > 0 ){
         object = game_get_Object_byName(game, dir);
-        if(object == NULL)
+        if(object == NULL){
+            dialogue_turn_on(game->dialogue, object, dir, TURN_NOT_IN_INV);
             return ERROR;
+        }
         object_id = object_Get_Id(object);
         
         if(player_Has_Object(game->player, object_id)){
             if (object_Get_Illuminates(object) == TRUE){
+                if(object_Get_Light(object) == TRUE){
+                    dialogue_turn_on(game->dialogue, object, dir, TURN_ALREADY);
+                    return OK;
+                }
                 object_Set_Light(object, TRUE);
+                dialogue_turn_on(game->dialogue, object, dir, TURN_OK);
                 return OK;
+            }else{
+                dialogue_turn_on(game->dialogue, object, dir, TURN_NO_LIGHT);
+                return ERROR;
             }
+        }else{
+            dialogue_turn_on(game->dialogue, object, dir, TURN_NOT_IN_INV);
+            return ERROR;
         }
-            
     }
-    
+    dialogue_turn_on(game->dialogue, object, dir, GLOBAL_NO_ARGS);
     return ERROR;
 }
 
@@ -1072,19 +1150,31 @@ STATUS game_callback_turn_off(Game* game, Command* cmd){
     dir = Command_get_cmd_arg(cmd, 0);
     if(strlen(dir) > 0 ){
         object = game_get_Object_byName(game, dir);
-        if(object == NULL)
+        if(object == NULL){
+            dialogue_turn_off(game->dialogue, object, dir, TURN_NOT_IN_INV);
             return ERROR;
+        }
         object_id = object_Get_Id(object);
         
         if(player_Has_Object(game->player, object_id)){
             if (object_Get_Illuminates(object) == TRUE){
+                if(object_Get_Light(object) == FALSE){
+                    dialogue_turn_off(game->dialogue, object, dir, TURN_ALREADY);
+                    return OK;
+                }
                 object_Set_Light(object, FALSE);
+                dialogue_turn_off(game->dialogue, object, dir, TURN_OK);
                 return OK;
+            }else{
+                dialogue_turn_off(game->dialogue, object, dir, TURN_NO_LIGHT);
+                return ERROR;
             }
+        }else{
+            dialogue_turn_off(game->dialogue, object, dir, TURN_NOT_IN_INV);
+            return ERROR;
         }
-            
     }
-    
+    dialogue_turn_off(game->dialogue, object, dir, GLOBAL_NO_ARGS);
     return ERROR;
 }
 
@@ -1161,8 +1251,17 @@ STATUS game_callback_save(Game* game, Command* cmd){
     
     name = Command_get_cmd_arg(cmd, 0);
     status = game_management_save(game, name);
-    if(status == SAVE_OK)
+    if(status == SAVE_OK){
+        dialogue_save(game->dialogue, name, SAVE_SAVE_OK);
         return OK;
+    }else if(status == PROTECTED_FILE){
+        dialogue_save(game->dialogue, name, SAVE_PROTECTED_FILE);
+        return ERROR;
+    }else{
+        dialogue_save(game->dialogue, name, SAVE_WRITE_FAILED);
+        return ERROR;
+    }
+        
     return ERROR;
 }
 
@@ -1250,5 +1349,13 @@ STATUS game_callback_load(Game* game, Command* cmd){
         return ERROR;    
     }   
     
+    return OK;
+}
+
+
+STATUS game_callback_dir(Game* game, Command* cmd){
+    if(!game || !cmd)
+        return ERROR;
+    dialogue_dir(game->dialogue);
     return OK;
 }

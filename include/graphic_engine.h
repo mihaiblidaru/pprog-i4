@@ -44,6 +44,7 @@ void graphic_engine_destroy(Graphic_engine* ge);
  */
 void graphic_engine_paint_game(Graphic_engine* ge, Game* game);
 
-STATUS graphic_engine_paint_directions(Game* game);
+STATUS graphic_engine_paint_directions(FILE* fp, Game* game);
+void graphic_engine_paint_help(FILE* fp);
 
 #endif

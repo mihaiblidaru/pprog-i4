@@ -66,4 +66,26 @@ int die_print(Die* die);
  */
 int die_get_number(Die* die);
 
+/** @brief Coloca un numero de caras al dado
+ * 
+ * @author Javier Bernardo
+ * 
+ * @param  die Die que quieres lanzar
+ * @param faces Numero de caras del dado
+ * @return  OK si lo hace bien o ERROR si da algun problema
+ */
+
+STATUS die_set_faces(Die* die, int faces);
+
+/** @brief Coloca un numero de caras al dado
+ * 
+ * @author Javier Bernardo
+ * 
+ * @param  die Die que quieres lanzar
+ * @return  El numero de caras del dado
+ */
+ 
+int die_get_faces(Die *die);
+
+
 #endif

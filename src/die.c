@@ -26,7 +26,7 @@
 struct _Die {
     Id id;                      /*!< Identidad del dado */
 	unsigned short number;		/*!< Valor de la última tirada del dado */
-
+    int faces;                  /*!< Valor del numero de caras*/
 };
 
 /* @brief Crea un nuevo dado
@@ -65,14 +65,14 @@ STATUS die_destroy(Die *die) {
  * @author Javier Bernardo
  * 
  * @param  die Die que quieres lanzar
- * @return Devuelve el valor del dado lanzado con valores entre 1 y 6
+ * @return Devuelve el valor del dado lanzado con valores entre 1 y el numero de caras
  */
 unsigned short die_roll(Die* die) {
     int r = 0;
     if (!die)
         return -1;
     srand(time(NULL));
-    r = rand() % 6;
+    r = rand() % die->faces;
     die->number = (r + 1);
     return (r + 1);
 }
@@ -103,4 +103,33 @@ int die_print(Die* die) {
     return printf("Die %ld has number: %hu\n", die->id, die->number);
 }
 
+/* @brief Coloca un numero de caras al dado
+ * 
+ * @author Javier Bernardo
+ * 
+ * @param  die Die que quieres lanzar
+ * @param faces Numero de caras del dado
+ * @return  OK si lo hace bien o ERROR si da algun problema
+ */
 
+STATUS die_set_faces(Die* die, int faces){
+    if(!die)
+        return ERROR;
+    die->faces = faces;
+    return OK;
+}
+
+/* @brief Coloca un numero de caras al dado
+ * 
+ * @author Javier Bernardo
+ * 
+ * @param  die Die que quieres lanzar
+ * @return  El numero de caras del dado
+ */
+ 
+int die_get_faces(Die *die){
+     if (!die)
+        return -1;
+        
+    return die->faces;
+ }

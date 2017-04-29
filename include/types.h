@@ -44,4 +44,9 @@ typedef enum {
     ERROR, OK, UNDEFINED
 } STATUS;
 
+
+typedef enum {
+    NORTH, SOUTH, EAST, WEST, UP, DOWN, UNKNOWN_DIRECTION
+} DIRECTION;
+
 #endif

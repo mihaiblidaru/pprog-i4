@@ -37,7 +37,7 @@
  * Número de funciones callbacks
  * 
  */
-#define N_CALLBACK 13
+#define N_CALLBACK 15
 
 /**
  * @brief Define the function type for the callbacks
@@ -60,8 +60,6 @@ struct _Game {
     Space* spaces[MAX_SPACES];       /*!< Puntero a la estructura space */
     Link* links[MAX_LINK];           /*!< Puntero a la estructura link */
     Die* die;                        /*!< Puntero a la estructura die */
-    T_Command last_cmd;              /*!< Ultimo comando */
-    STATUS last_status;              /*!< Ultimo status */
     Space* last_space;               /*!< Puntero al ultimo space */
     Object* last_object;             /*!< Puntero al ultimo objeto */
     Dialogue* dialogue;
@@ -86,6 +84,8 @@ STATUS game_callback_open(Game* game, Command* cmd);/*!< OPEN @private */
 STATUS game_callback_save(Game* game, Command* cmd);/*!< SAVE @private */
 STATUS game_callback_load(Game* game, Command* cmd);/*!< LOAD @private */
 STATUS game_callback_dir(Game* game, Command* cmd);
+STATUS game_callback_help(Game* game, Command* cmd);
+STATUS game_callback_attack(Game* game, Command* cmd);
 
 void game_clear_inspect (Game *game); /*!< @private */
 Object* game_get_Object_byName(Game* game, char* name); /*!< @private */
@@ -104,7 +104,9 @@ static callback_fn game_callback_fn_list[N_CALLBACK] = {
     game_callback_open,
     game_callback_save,
     game_callback_load,
-    game_callback_dir
+    game_callback_dir,
+    game_callback_help,
+    game_callback_attack
 };
 
 /* 
@@ -131,7 +133,7 @@ Game* game_create() {
         game_destroy(game);
         return NULL;
     }
-      
+    die_set_faces(game->die, 6);
     game->last_object = NULL;
     game->last_space = NULL;
 
@@ -142,8 +144,6 @@ Game* game_create() {
     game->dialogue = dialogue_ini();
     player_Set_Name(game->player, "Player 1");
     player_Set_Id(game->player, GENERIC_ID);
-    game->last_status = -1;
-    game->last_cmd = NO_CMD;
     return game;
 
 }
@@ -200,7 +200,7 @@ STATUS game_destroy(Game* game) {
 STATUS game_add_space(Game* game, Space* space) {
     int i = 0;
 
-    if (space == NULL) {
+    if (!game || !space) {
         return ERROR;
     }
 
@@ -596,13 +596,13 @@ Id game_get_object_location(Game* game, Object* object) {
     if ((objId = object_Get_Id(object)) == NO_ID)
         return NO_ID;
 
-    for (i = 0; i < MAX_SPACES; i++) {
+    for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
         if (space_contains_object(game->spaces[i], objId)) {
             return space_get_id(game->spaces[i]);
         }
     }
     
-    if(player_Has_Object(game->player, objId));
+    if(player_Has_Object(game->player, objId))
         return PLAYER_INV_LOCATION;
         
     return NO_ID;
@@ -668,36 +668,6 @@ Object* game_get_last_inspected_object(Game* game){
     return game->last_object;
 }
 
-/* 
- * @brief Devuelve el útimo comando recibido.
- * 
- * @author Profesores PPROG
- * 
- * @param game Puntero a la estructura del juego.
- * @return El útimo comando recibido.
- */
-T_Command game_get_last_command(Game* game) {
-    if (!game)
-        return NO_CMD;
-
-    return game->last_cmd;
-}
-
-/* 
- * @brief Devuelve resultado del útimo comando recibido.
- * 
- * @author Mihai Blidaru
- * 
- * @param game Puntero a la estructura del juego.
- * @return El resultado del útimo comando recibido.
- */
-STATUS game_get_last_status(Game* game) {
-    if (!game)
-        return -1;
-
-    return game->last_status;
-}
-
 /*
  * @brief Imprime la información del juego
  * 
@@ -751,7 +721,7 @@ void game_print_data(Game* game) {
  * @return FALSE
  */
 BOOL game_is_over(Game* game) {
-    return FALSE;
+    return (game == NULL);
 }
 
 /*
@@ -784,14 +754,14 @@ void game_clear_inspect (Game *game){
  * @return 
  */
 STATUS game_update(Game* game, Command* command) {
+    STATUS status = UNDEFINED;
     if (!game || !command)
         return ERROR;
 
-    game->last_cmd = Command_get_cmd(command);
     game_clear_inspect(game);
-    game->last_status = (*game_callback_fn_list[Command_get_cmd(command)])(game, command);
+    status = (*game_callback_fn_list[Command_get_cmd(command)])(game, command);
     
-    return game->last_status;
+    return status;
 }
 
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es desconocido.
@@ -926,7 +896,7 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
                 }
 
             /* Si el jugador tiene un objeto que ilumina puede desocultar objetos */
-            for(i = 0; game->objects[i] != NULL && player_lights;i++){ 
+            for(i = 0; game->objects[i] != NULL && (player_lights || space_get_iluminated(space));i++){ 
                 if(space_contains_object(space, object_Get_Id(game->objects[i])))
                     object_Set_Hidden(game->objects[i], FALSE);
                 
@@ -1357,5 +1327,19 @@ STATUS game_callback_dir(Game* game, Command* cmd){
     if(!game || !cmd)
         return ERROR;
     dialogue_dir(game->dialogue);
+    return OK;
+}
+
+STATUS game_callback_help(Game* game, Command* cmd){
+    if(!game || !cmd)
+        return ERROR;
+    dialogue_help(game->dialogue);
+    return OK;
+}
+
+STATUS game_callback_attack(Game* game, Command* cmd){
+    if(!game || !cmd)
+        return ERROR;
+    
     return OK;
 }

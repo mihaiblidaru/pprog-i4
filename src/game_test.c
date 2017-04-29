@@ -433,7 +433,6 @@ void test2_game_get_die(){
 
 void test1_game_get_player(){
     Game* game = NULL;
-    game = game_create();
     Player* player = NULL;
     game = game_create();
     player = player_create();

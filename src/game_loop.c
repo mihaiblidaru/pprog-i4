@@ -35,12 +35,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 /* Cabeceras propias */
 #include "graphic_engine.h"
 #include "game.h"
 #include "game_management.h"
 #include "command.h"
+#include "game_rules.h"
 
 /** @brief Punto de entrada del juego. Se encarga de inicializar y ejecutar el juego
  *
@@ -60,6 +62,7 @@ int main(int argc, char *argv[]) {
     BOOL logging = FALSE;
     BOOL noVerbose = FALSE;
     FILE* logfile = NULL;
+    int game_rules_run = 0;
     
 
     /* Se parsean los argumentos*/
@@ -148,17 +151,32 @@ int main(int argc, char *argv[]) {
         }
     }
     
+    if(noVerbose == FALSE){
+        graphic_engine_play_intro(stdout);
+    }
     while ((Command_get_cmd(command_Manager) != QUIT) && !game_is_over(game)) {
         if(noVerbose == FALSE)
             graphic_engine_paint_game(gengine, game);
         
         Command_clear(command_Manager);
         get_user_input(command_Manager);
+        if(Command_get_cmd(command_Manager) == DIR && noVerbose == FALSE){
+            graphic_engine_paint_directions(stdout, game);
+        }else if(Command_get_cmd(command_Manager) == HELP && noVerbose == FALSE){
+            graphic_engine_paint_help(stdout);
+        }
+        
         result = game_update(game, command_Manager);
+        if(game_rules_run == 2){
+            game_rules_run_random_rule(game);
+            game_rules_run = 0;
+        }
         if (logging){
             fprintf(logfile, "%s %s: %s\n", cmd_to_str[Command_get_cmd(command_Manager) - NO_CMD], Command_get_cmd_arg(command_Manager, 0), stat_to_str[result]);
             fflush(logfile); /* Forzar la escritura despues de cada comando */
-        }    
+        }
+        game_rules_run++;
+        
     }
 
     if (logging)

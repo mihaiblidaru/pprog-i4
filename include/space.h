@@ -24,12 +24,12 @@ typedef struct _Space Space;
 /**
  * Filas que ocupa la descripción grafica 
  */
-#define G_ROWS 3
+#define G_ROWS 6
 
 /**
  * Columnas que ocupa la descripción grafica 
  */
-#define G_COLUMNS 8
+#define G_COLUMNS 24
 
 /**
  * @brief Crea un nuevo espacio y le asigna un Id y unos valores por defecto.

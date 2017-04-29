@@ -9,6 +9,7 @@
 #include "game_management.h"
 #include "object.h"
 #include <stdlib.h>
+#include "game_rules.h"
 
 struct _Dialogue{
     char last_text[WORD_SIZE];
@@ -16,7 +17,9 @@ struct _Dialogue{
 };
 
 
+
 BOOL dialogue_check_consecutive_error(Dialogue* d);
+STATUS dialogue_set_text(Dialogue *d, char* txt);
 
 Dialogue* dialogue_ini(){
     Dialogue *d = NULL;
@@ -122,7 +125,6 @@ STATUS dialogue_dir(Dialogue* d){
     dialogue_set_text(d, "Acabas de ver las conexiones de esta casilla. Si quieres volver a verlas usa el comando \"dir\"");
     strcpy(d->last_text, d->text);
     return OK;
-    
 }
 
 STATUS dialogue_take(Dialogue* d, Object* object, char* name, TAKE_STATUS status){
@@ -267,6 +269,30 @@ STATUS dialogue_turn_off(Dialogue* d, Object*object, char* name, TURN_STATUS sta
     }
     dialogue_check_consecutive_error(d);
     strcpy(d->last_text, d->text);
+    return OK;
+}
+
+STATUS dialogue_help(Dialogue *d){
+    if(!d)
+        return ERROR;
+    dialogue_set_text(d, "Acabas de ver la pantalla de ayuda. Si se te olvida algun comando siempre puedes volver a mirar con \"help\".");
+    strcpy(d->last_text, d->text);
+    return OK;
+}
+
+STATUS dialogue_game_rule(Dialogue *d, int rule){
+    strcat(d->text, "!!ATENCION!! ");
+    if(rule == LIGHT_OBJECT){
+        strcat(d->text, "Hay un objeto que se enciende/apaga solo. A lo mejor hay fantasmas aqui");
+    }else if(rule == LIGHT_SPACE){
+        strcat(d->text, "Alguien está jugando con las luces. A veces la momia hace eso para asustar a los visitantes.");
+    }else if(rule == HIDE_OBJECT){
+        strcat(d->text, "Un objeto acaba de desaparecer, a ver si lo puedes encontrar");
+    }else if(rule == LOSE_OBJECT){
+        strcat(d->text, "Se te acaba de perder un objeto. A ver si para la proxima aventura te compras otra mochila");
+    }else if(rule == CHANGE_LAST_LINK){
+        strcat(d->text, "La entrada a la sala del tesoro ha desaparecido. Encuentrala");
+    }
     return OK;
 }
 

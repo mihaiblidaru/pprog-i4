@@ -32,12 +32,12 @@
 /**
  * Numero maximo de comandos 
  */
-#define N_CMD 14
+#define N_CMD 16
 
 /**
  * Representacion como cadena de los comandos
  */
-char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Quit", "Take", "Leave", "Roll", "Go", "Inspect", "Turn On", "Turn Off", "Open", "Save", "Load", "Dir"};
+char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Quit", "Take", "Leave", "Roll", "Go", "Inspect", "Turn On", "Turn Off", "Open", "Save", "Load", "Dir", "Help", "Attack"};
 
 /**
  * @brief Estructura del comando
@@ -90,7 +90,7 @@ STATUS Command_destroy(Command* cmdManager) {
  * @return OK si se ha guardado correctamente o error en caso contrario
  */
 STATUS Command_set_cmd(Command* cmdManager, T_Command cmd) {
-    if (!cmdManager || cmd < NO_CMD || cmd > DIR)
+    if (!cmdManager || cmd < NO_CMD || cmd > ATTACK)
         return ERROR;
 
     cmdManager->cmd = cmd;
@@ -212,15 +212,19 @@ STATUS get_user_input(Command* cmdManager) {
                 cmd = TURNON;
             } else if (!strncmp(command, "turnoff", CMD_LENGHT)) {
                 cmd = TURNOFF;
-            } else if (!strncmp(command, "open", CMD_LENGHT)) {
+            } else if (!strncmp(command, "o", CMD_LENGHT) ||!strncmp(command, "open", CMD_LENGHT)) {
                 cmd = OPEN;
             } else if (!strncmp(command, "save", CMD_LENGHT)) {
                 cmd = SAVE;
             } else if (!strncmp(command, "load", CMD_LENGHT)) {
                 cmd = LOAD;
-            }else if (!strncmp(command, "dir", CMD_LENGHT)) {
+            } else if (!strncmp(command, "dir", CMD_LENGHT)) {
                 cmd = DIR;
-            } else {
+            } else if (!strncmp(command, "help", CMD_LENGHT)) {
+                cmd = HELP;
+            } else if (!strncmp(command, "a", CMD_LENGHT) || !strncmp(command, "attack", CMD_LENGHT)) {
+                cmd = ATTACK;
+            }else {
                 cmd = UNKNOWN;
             }
         } else {

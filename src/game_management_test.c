@@ -63,12 +63,11 @@ int main(int argc, char** argv){
  */
 void test1_game_management_start_from_file(){
     Game* game = NULL;
-    game = game_create();
     char* spacesFile = "spaces.dat";
     char* objectsFile = "objects.dat";
     char* linksfile = "links.dat";
     char* playersFile = "player.dat";
-    
+    game = game_create();
     PRINT_TEST_RESULT(game_management_start_from_file(game, spacesFile, objectsFile, linksfile, playersFile) == OK);
 }
 

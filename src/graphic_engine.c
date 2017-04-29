@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  * Cabeceras propias 
@@ -107,31 +108,22 @@ void graphic_engine_destroy(Graphic_engine *ge) {
  * @param game Puntero a un juego
  */
 void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
-    Id id_act = NO_ID;
-    Id id_east = NO_ID;
-    Id id_west = NO_ID;
-    Id id_up = NO_ID;
-    Id id_down = NO_ID;
-    Dialogue* dialogue = NULL;
-    
-    Id south_link = NO_ID;
-    Id north_link = NO_ID;
-    Id east_link = NO_ID;
-    Id west_link  = NO_ID;
-	Id up_link = NO_ID;
-	Id down_link = NO_ID;
+    Id id_act = NO_ID, id_east = NO_ID, id_west = NO_ID, id_up = NO_ID, id_down = NO_ID;
+    Id south_link = NO_ID, north_link = NO_ID, east_link = NO_ID, west_link  = NO_ID, up_link = NO_ID, down_link = NO_ID;
+	Link* l_south = NULL, *l_north = NULL, *l_east = NULL, *l_west = NULL;
+	Dialogue* dialogue = NULL;
     Space* space_act = NULL;
     Player* player;
     Object* aux_obj = NULL;
-    Link* link = NULL;
     char graphics[6][24];
     BOOL has_light = FALSE;
-    
     Id objLoc = NO_ID;
     char str[WORD_SIZE];
     char aux[WORD_SIZE];
     char dir_left[5] = "    ";
     char dir_right[5] = "    ";
+    char open_left[3][2] = {"|","|", "|"};
+    char open_right[3][2] = {"|","|", "|"};
     char* obj;
 
 
@@ -151,15 +143,19 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         space_act = game_get_space(game, id_act);
         space_get_graphics(space_act, graphics);
         north_link = space_get_north(space_act);
+        south_link = space_get_south(space_act);
         east_link = space_get_east(space_act);
         west_link = space_get_west(space_act);
         up_link = space_get_up(space_act);
         down_link = space_get_down(space_act);
-        id_east = link_get_dest_from(game_get_link(game,east_link), id_act);
-        id_west = link_get_dest_from(game_get_link(game,west_link), id_act);
+        l_north = game_get_link(game, north_link);
+        l_south  = game_get_link(game, south_link);
+        l_east = game_get_link(game, east_link);
+        l_west = game_get_link(game, west_link);
+        id_east = link_get_dest_from(l_east, id_act);
+        id_west = link_get_dest_from(l_west, id_act);
         id_up = link_get_dest_from(game_get_link(game,up_link), id_act);
         id_down = link_get_dest_from(game_get_link(game,down_link), id_act);
-        link = game_get_link(game, north_link);
         obj = game_get_obj_list_as_str(game, space_act);
         player = game_get_player(game);
         
@@ -171,13 +167,17 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         }
         
         screen_area_puts(ge->map, " ");
-        if(link){
-            sprintf(str,"                       ^ %2ld ^ ", link_get_dest_from(link, id_act));
+        if(l_north){
+            sprintf(str,"                       ^ %2ld ^ ", link_get_dest_from(l_north, id_act));
         }else{
             sprintf(str," ");
         }
         screen_area_puts(ge->map, str);
-        sprintf(str,"        *----------------------------------*");
+        if(link_get_state(l_north) == OPENED && link_get_dest_from(l_north, id_act) != NO_ID){
+        	sprintf(str,"        *--------------/    \\--------------*");
+        }else{
+			sprintf(str,"        *----------------------------------*");        	
+        }
         screen_area_puts(ge->map, str);
         if(id_up != NO_ID)
         	sprintf(str,"        |            Up ^: %2ld           %2ld |", id_up, id_act);
@@ -192,7 +192,19 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         screen_area_puts(ge->map, str);
         sprintf(str,"        |  | oo|   %s |", graphics[1]);
         screen_area_puts(ge->map, str);
-        sprintf(str,"        |  \\- /    %s |", graphics[2]);
+        if(link_get_state(l_west) == OPENED){
+        	open_left[0][0] = '/';
+        	open_left[1][0] = ' ';
+        	open_left[2][0] = '\\';
+        }
+        
+        if(link_get_state(l_east) == OPENED){
+        	open_right[0][0] = '\\';
+        	open_right[1][0] = ' ';
+        	open_right[2][0] = '/';
+        }
+        
+        sprintf(str,"        %s  \\- /    %s %s", open_left[0], graphics[2], open_right[0]);
         screen_area_puts(ge->map, str);
         
         if(id_west != NO_ID)
@@ -200,9 +212,9 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         if(id_east != NO_ID)
         	sprintf(dir_right,"> %2ld ", id_east);
         	
-        sprintf(str,"   %s |  '||'    %s |  %s", dir_left, graphics[3], dir_right);
+        sprintf(str,"   %s %s  '||'    %s %s  %s", dir_left, open_left[1], graphics[3], open_right[1], dir_right);
         screen_area_puts(ge->map, str);
-        sprintf(str,"        | ' || '   %s |", graphics[4]);
+        sprintf(str,"        %s ' || '   %s %s", open_left[2], graphics[4], open_right[2]);
         screen_area_puts(ge->map, str);
         sprintf(str,"        |  _/\\_    %s |", graphics[5]);
         screen_area_puts(ge->map, str);
@@ -218,13 +230,16 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         	sprintf(str,"        |##################################|");
         	
         screen_area_puts(ge->map, str);
-                sprintf(str,"        *----------------------------------*");
+        if(link_get_state(game_get_link(game, south_link)) == OPENED){
+        	sprintf(str,"        *--------------\\    /--------------*");
+        }else{
+			sprintf(str,"        *----------------------------------*");        	
+        }
+        
         free(obj);
         screen_area_puts(ge->map, str);
-        south_link = space_get_south(space_act);
-        link = game_get_link(game, south_link);
-        if(link){
-            sprintf(str,"                       v %2ld v ", link_get_dest_from(link, id_act));
+        if(l_south){
+            sprintf(str,"                       v %2ld v ", link_get_dest_from(l_south, id_act));
         }else{
             sprintf(str," ");
         }
@@ -267,7 +282,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     /* Imprimir el valor de la ultima tirada */
     
     if (die_get_number(game_get_die(game))){
-        sprintf(str, "Last die value: %d", die_get_number(game_get_die(game)));
+        sprintf(str, " Last die value: %d", die_get_number(game_get_die(game)));
     	screen_area_puts(ge->descript, str);
     }
     
@@ -300,14 +315,14 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 				j=0;
 			}
 		}
-	obj = strtok(aux, "\n");
-	
-	sprintf(str, " %s", obj);
-	screen_area_puts(ge->feedback, str);	
-	while((obj = strtok(NULL, "\n"))){
+		obj = strtok(aux, "\n");
+		
 		sprintf(str, " %s", obj);
 		screen_area_puts(ge->feedback, str);	
-	}
+		while((obj = strtok(NULL, "\n"))){
+			sprintf(str, " %s", obj);
+			screen_area_puts(ge->feedback, str);	
+		}
 	
 	}else{
 		sprintf(str, " %s", aux);
@@ -315,9 +330,6 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 	}
 	
 	
-	
-    
-    
     /* Dump to the terminal */
     screen_paint();
     printf("prompt:> ");
@@ -523,7 +535,7 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 }
 
 
-STATUS graphic_engine_paint_directions(FILE* fp, Game* game){
+void graphic_engine_paint_directions(FILE* fp, Game* game){
 	Space* space;
     Link* north_link = NULL, *south_link = NULL, *east_link = NULL, *west_link = NULL, *up_link = NULL, *down_link = NULL;
     Id id_act = NO_ID;
@@ -532,8 +544,8 @@ STATUS graphic_engine_paint_directions(FILE* fp, Game* game){
     char aux[100] = "\0";
     int spaces = 0, i;
     
-    if(!game)
-		return ERROR;
+    if(!fp || !game)
+		return;
     
     id_act = game_get_player_location(game);
     space = game_get_space(game, id_act);
@@ -662,11 +674,13 @@ STATUS graphic_engine_paint_directions(FILE* fp, Game* game){
     fprintf(fp, "Press Enter to continue:> ");
     
     fgets(aux, 100, stdin);
-    return OK;
 }
 
 void graphic_engine_paint_help(FILE* fp){
 	char dummy[2];
+	if(!fp)
+		return;
+	
 	puts("\033[2J"); /*Clear the terminal*/
 	fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	fprintf(fp, "~                                                                              ~\n");
@@ -692,4 +706,38 @@ void graphic_engine_paint_help(FILE* fp){
     fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "Press Enter to continue: ");
     fgets(dummy, 2, stdin);
+}
+
+void graphic_engine_play_intro(FILE* fp){
+	int i;
+	if(!fp)
+		return;
+	for( i = 5; i>0; i--){
+		puts("\033[2J"); /*Clear the terminal*/
+		fprintf(fp, "*******************************************************************************\n");
+		fprintf(fp, "*                                                                             *\n");
+		fprintf(fp, "*                                     m^m                                     *\n");
+		fprintf(fp, "*                                    /\"MMM\\                                   *\n");
+		fprintf(fp, "*                                  /\"\"  MMMM\\                                 *\n");
+		fprintf(fp, "*                                /\"\"     MMMM\\                                *\n");
+		fprintf(fp, "*                              /\"\",,\"\",,,\"XXXXX\\                              *\n");
+		fprintf(fp, "*                     ......./\"\"       \"   MMMMM\\.....                        *\n");
+		fprintf(fp, "*                  ......../\"\"\"\" \"     \"\"   MMMMM\\.......                     *\n");
+		fprintf(fp, "*               ........../\"\" \"  \"  \"\"\"     \"MMMMMM\\.......                   *\n");
+		fprintf(fp, "*              ........./\"      \"          \"  MMMMMMM\\........                *\n");
+		fprintf(fp, "*               ....../\"\"  \"    \"         \"    MMMMMMM\\......                 *\n");
+		fprintf(fp, "*             ....../\"\"     \"\"     \"         \" \"MMMMMMM\\.......               *\n");
+		fprintf(fp, "*            ...../\"\"   \"         \"     \"  \"     MMMMMMMM\\......              *\n");
+		fprintf(fp, "*          ...../\"  \"   \" \"         \"\"     \"   \" \"MMMMMMMMM\\.....             *\n");
+		fprintf(fp, "*         ..../\"\"               \"  \"              \"MMMMMMMMMM\\.....           *\n");
+		fprintf(fp, "*        ..../   \"       \" \" \"         \"        \"  \"MMMMMMMMMM\\...            *\n");
+		fprintf(fp, "*        ../\"             \"   \"  \"  \" \"    \"    \"   \"MMMMMMMMMMM\\..           *\n");
+		fprintf(fp, "*        ./         \"    \"         \"                 MMMMMMMMMMMM\\..          *\n");
+		fprintf(fp, "*          \" \"  \" \" \"     \"\"\"\"   \" \"                                          *\n");
+		fprintf(fp, "*      Indiana Jones 2D: En busca del arca perdida - La piramide maldita      *\n");
+		fprintf(fp, "*                                                                             *\n");
+		fprintf(fp, "******************************* Empezando en %d ********************************", i);
+		fflush(fp);
+		sleep(1);
+	}
 }

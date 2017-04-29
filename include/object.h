@@ -210,4 +210,8 @@ BOOL object_Get_Light(const Object *object);
  */
 STATUS object_print(Object* object);
 
+Object* object_Set_Graphics(Object* object, char *graphics);
+
+char* object_Get_Graphics(Object* object);
+
 #endif

@@ -111,9 +111,9 @@ void test2_dialogue_get_text(){
 
 void test1_dialogue_go(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Space* space = NULL;
     Link* link = NULL;
+    d = dialogue_ini();
     space = space_create(1);
     link = link_create();
     PRINT_TEST_RESULT(dialogue_go(d, NORTH, space, OK, "north", link) == OK);
@@ -171,8 +171,8 @@ void test2_dialogue_help(){
 
 void test1_dialogue_take(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Object* object = NULL;
+    d = dialogue_ini();
     object = object_create();
     PRINT_TEST_RESULT(dialogue_take(d, object, "test", TAKE_OK) == OK);
     object_destroy(object);
@@ -189,8 +189,8 @@ void test2_dialogue_take(){
 
 void test1_dialogue_leave(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Object* object = NULL;
+    d = dialogue_ini();
     object = object_create();
     PRINT_TEST_RESULT(dialogue_leave(d, object, "test", LEAVE_OK) == OK);
     object_destroy(object);
@@ -207,8 +207,8 @@ void test2_dialogue_leave(){
 
 void test1_dialogue_turn_on(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Object* object = NULL;
+    d = dialogue_ini();
     object = object_create();
     PRINT_TEST_RESULT(dialogue_turn_on(d, object, "test", TURN_OK) == OK);
     object_destroy(object);
@@ -225,7 +225,6 @@ void test2_dialogue_turn_on(){
 
 void test1_dialogue_turn_off(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Object* object = NULL;
     object = object_create();
     PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == OK);
@@ -243,9 +242,9 @@ void test2_dialogue_turn_off(){
 
 void test1_dialogue_inspect(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     Object* object = NULL;
     Space* space = NULL;
+    d = dialogue_ini();
     space = space_create(1);
     object = object_create();
     PRINT_TEST_RESULT(dialogue_inspect(d, object, space, "north", INSPECT_NO_OBJ) == OK);
@@ -278,19 +277,3 @@ void test2_dialogue_save(){
     PRINT_TEST_RESULT(dialogue_save(d, "mysave.dat", SAVE_SAVE_OK) == ERROR);
 }
 
-/*
-void plantilla(){
-    Dialogue* d = NULL;
-    d = dialogue_ini();
-    Object* object = NULL;
-    Space* space = NULL;
-    Link* link = NULL;
-    space = space_create(1);
-    link = link_create()
-    object = object_create();
-    PRINT_TEST_RESULT(dialogue_go(d, NORTH, space, OK, "north", link) == OK);
-    link_destroy(link);
-    space_destroy(space);
-    object_destroy(object);
-    dialogue_destroy(d);
-}*/

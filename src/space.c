@@ -180,6 +180,9 @@ Space* space_set_graphics(Space* space, char graphics[][G_COLUMNS]) {
     strcpy(space->graphics[0], graphics[0]);
     strcpy(space->graphics[1], graphics[1]);
     strcpy(space->graphics[2], graphics[2]);
+    strcpy(space->graphics[3], graphics[3]);
+    strcpy(space->graphics[4], graphics[4]);
+    strcpy(space->graphics[5], graphics[5]);
     return space;
 }
 
@@ -337,6 +340,9 @@ Space* space_get_graphics(Space* space, char dest[][G_COLUMNS]) {
     strcpy(dest[0], space->graphics[0]);
     strcpy(dest[1], space->graphics[1]);
     strcpy(dest[2], space->graphics[2]);
+    strcpy(dest[3], space->graphics[3]);
+    strcpy(dest[4], space->graphics[4]);
+    strcpy(dest[5], space->graphics[5]);
 
     return space;
 }

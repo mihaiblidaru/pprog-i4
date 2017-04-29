@@ -22,19 +22,6 @@ typedef enum {
     BAD_ARGUMENTS         /*!< Los argumentos de la función no son validos */
 } SAVE_STATUS;
 
-/**
- * @brief Define los estados que puede devolver la función LOAD
- */
-typedef enum {
-    LOAD_OK,    /*!< Se han cargado los datos correctamente*/
-    IO_ERROR,   /*!< Error IO*/
-    NO_PLAYER,  /*!< No se han encontrado datos del jugador en los archivo de entrada*/
-    NO_SPACES,  /*!< No se han encontrado casillas en el archivo de entrada */
-    NO_LINKS    /*!< No se han encontrado enlaces en el archivo de entrada */
-} LOAD_STATUS;
-
-
-
 SAVE_STATUS game_management_save(Game* game, char* filename);
 
 /** 

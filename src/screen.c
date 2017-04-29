@@ -22,7 +22,7 @@
  * @cond
  * @brief Declaracion de la variable ROWS 
  */
-#define ROWS 23
+#define ROWS 22
 
 /**
  * @brief Declaracion de la variable COLUMNS 
@@ -50,7 +50,7 @@
 #define PROMPT " prompt:> "
 
 /**
- * @brief Declaracion de la variable ACCESS
+ * @brief Declaracion de la macro ACCESS
  */
 #define ACCESS(d, x, y) (d + ((y) * COLUMNS) + (x))
 
@@ -153,7 +153,9 @@ void screen_gets(char *str) {
 Area* screen_area_init(int x, int y, int width, int height) {
     int i = 0;
     Area* area = NULL;
-
+    if(x < 1 || y < 1 || width < 1 || height < 1)
+        return NULL;
+    
     if ((area = (Area*) malloc(sizeof (struct _Area)))) {
         *area = (struct _Area){x, y, width, height, ACCESS(__data, x, y)};
 

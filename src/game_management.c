@@ -149,7 +149,7 @@ STATUS game_management_load(Game* game, char* filename){
     FILE* fp = NULL;
     char line[WORD_SIZE] = "\0";
     STATUS status = UNDEFINED;
-
+    
     if(!(fp = fopen(filename, "r")))
         return ERROR;
     

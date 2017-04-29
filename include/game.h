@@ -23,7 +23,7 @@
 #include "die.h"
 #include "set.h"
 #include "link.h"
-
+#include "dialogue.h"
 /**
  * Numero maximo de objetos 
  */
@@ -257,25 +257,6 @@ Id game_get_player_location(Game* game);
  */
 Id game_get_object_location(Game* game, Object* object);
 
-/** @brief Devuelve el útimo comando recibido.
- * 
- * @author Profesores PPROG
- * 
- * @param game Puntero a la estructura del juego.
- * @return El útimo comando recibido.
- */
-T_Command game_get_last_command(Game* game);
-
-/** 
- * @brief Devuelve resultado del útimo comando recibido.
- * 
- * @author Mihai Blidaru
- * 
- * @param game Puntero a la estructura del juego.
- * @return El resultado del útimo comando recibido.
- */
-STATUS game_get_last_status(Game* game);
-
 /** 
  * @brief Imprime la información del juego
  * 
@@ -286,4 +267,9 @@ STATUS game_get_last_status(Game* game);
  * @return Nada
  */
 void game_print_data(Game* game);
+
+
+Dialogue* game_get_dialogue(Game* game);
+
+
 #endif

@@ -39,6 +39,15 @@ typedef enum{
     TURN_OK
 }TURN_STATUS;
 
+typedef enum{
+    NO_RULE,
+    LIGHT_OBJECT,
+    LIGHT_SPACE,
+    HIDE_OBJECT,
+    LOSE_OBJECT,
+    CHANGE_LAST_LINK
+}GAME_RULES_LIST;
+
 Dialogue* dialogue_ini();
 void dialogue_destroy(Dialogue* d);
 
@@ -52,5 +61,6 @@ STATUS dialogue_turn_on(Dialogue* d, Object*object, char* name, TURN_STATUS stat
 STATUS dialogue_turn_off(Dialogue* d, Object*object, char* name, TURN_STATUS status);
 STATUS dialogue_inspect(Dialogue* d, Object* object, Space* space, char* name, INSPECT_STATUS status);
 STATUS dialogue_save(Dialogue * d, char* name, DIALOGUE_SAVE_STATUS status);
-
+STATUS dialogue_help(Dialogue *d);
+STATUS dialogue_game_rule(Dialogue *d, int rule);
 #endif

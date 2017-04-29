@@ -42,7 +42,9 @@ typedef enum enum_Command {
     OPEN,                    /*!< Comando abrir */
     SAVE,
     LOAD,
-    DIR
+    DIR,
+    HELP,
+    ATTACK
 } T_Command;
 
 /**

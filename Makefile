@@ -4,7 +4,7 @@ CC = gcc
 OBJ_DIR = obj/
 SRC_DIR = src/
 INC_DIR = include/
-BIN_DIR = bin/# Por si se quieren generar los ejecutables dentro de alguna carpeta
+BIN_DIR = # Por si se quieren generar los ejecutables dentro de alguna carpeta
 
 CFLAGS = -c -MMD -MF $(OBJ_DIR)$*.d -g -Wall -ansi -pedantic
 

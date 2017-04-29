@@ -1,18 +1,18 @@
-/** 
+/**
  * @brief It implements the game interface and all the associated callbacks
  * for each command
- * 
+ *
  * @file game.c
  * @author Profesores PPROG
  * @author Javier Bernardo
  * @author Mihai Blidaru
- * @version 2.0 
- * @date 13-01-2015 
+ * @version 2.0
+ * @date 13-01-2015
  * @copyright GNU Public License
  */
 
 /*
- * Cabeceras libc 
+ * Cabeceras libc
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,7 +21,7 @@
 
 
 /*
- * Cabeceras propias 
+ * Cabeceras propias
  */
 #include "die.h"
 #include "game.h"
@@ -35,7 +35,7 @@
 /**
  * @cond HIDDEN_SYMBOLS
  * Número de funciones callbacks
- * 
+ *
  */
 #define N_CALLBACK 15
 
@@ -45,14 +45,14 @@
 typedef STATUS(*callback_fn)(Game* game, Command* cmd);
 
 /**
- * Ancho de una casilla 
+ * Ancho de una casilla
  */
 #define SPACE_DRAW_WIDTH 13
 
 /*
- * 
+ *
  * @brief Estructura de game
- * 
+ *
  */
 struct _Game {
     Player* player;                  /*!< Puntero a la estructura player */
@@ -109,13 +109,13 @@ static callback_fn game_callback_fn_list[N_CALLBACK] = {
     game_callback_attack
 };
 
-/* 
+/*
  * @brief Inicializa los datos del juego
  *      Esta función inicializa los espacios, crea e inicializa
  *      el jugador, los objetos y el dado
- * @author Profesores PPROG 
+ * @author Profesores PPROG
  * @author Mihai Blidaru
- *  
+ *
  * @return OK si todo ha ido bien. En caso contrario ERROR
  */
 Game* game_create() {
@@ -139,7 +139,7 @@ Game* game_create() {
 
     for (i = 0; i < MAX_OBJECTS; i++)
         game->objects[i] = NULL;
-    
+
     /* Inicializar la estructura del jugador */
     game->dialogue = dialogue_ini();
     player_Set_Name(game->player, "Player 1");
@@ -148,14 +148,14 @@ Game* game_create() {
 
 }
 
-/* 
+/*
  * @brief Destruye la estructura game.
  *      Se encarga de liberar la memoria reservada por los elementos del juego
  *      spaces, player, objects y die.
- * 
+ *
  * @author Profesores PPROG
  * @author Mihai Blidaru
- * 
+ *
  * @param game Puntero a la estructura del juego.
  * @return OK si se ha podido hacer todo correctamente. ERROR en caso contrario.
  */
@@ -174,7 +174,7 @@ STATUS game_destroy(Game* game) {
     for (i = 0; i < MAX_OBJECTS; i++) {
         object_destroy(game->objects[i]);
     }
-    
+
     for (i = 0; i < MAX_LINK; i++) {
         link_destroy(game->links[i]);
     }
@@ -192,9 +192,9 @@ STATUS game_destroy(Game* game) {
  * @brief Añade un espacio al juego
  *
  * @author Profesores PPROG
- * 
- * @param game El puntero al juego 
- * @param space Un puntero al espacio 
+ *
+ * @param game El puntero al juego
+ * @param space Un puntero al espacio
  * @return OK si se ha añadido correctamente, sino ERROR
  */
 STATUS game_add_space(Game* game, Space* space) {
@@ -222,9 +222,9 @@ STATUS game_add_space(Game* game, Space* space) {
  * @brief Añade un objeto al juego
  *
  * @author Javier Bernardo
- * 
- * @param game El puntero al juego 
- * @param object Un puntero al objeto 
+ *
+ * @param game El puntero al juego
+ * @param object Un puntero al objeto
  * @return OK si se ha añadido correctamente, sino ERROR
  */
 STATUS game_add_object(Game* game, Object* object) {
@@ -251,9 +251,9 @@ STATUS game_add_object(Game* game, Object* object) {
  * @brief Añade un objeto al juego
  *
  * @author Mihai Blidaru
- * 
- * @param game El puntero al juego 
- * @param link Un puntero al objeto 
+ *
+ * @param game El puntero al juego
+ * @param link Un puntero al objeto
  * @return OK si se ha añaido correctamente, sino ERROR
  */
 STATUS game_add_link(Game* game, Link* link) {
@@ -270,7 +270,7 @@ STATUS game_add_link(Game* game, Link* link) {
     if (i >= MAX_LINK) {
         return ERROR;
     }
- 
+
     game->links[i] = link;
 
     return OK;
@@ -280,8 +280,8 @@ STATUS game_add_link(Game* game, Link* link) {
  * @brief Añade un jugador al juego. Si el jugador ya está inicializado, lo sustituye por otro.
  *
  * @author Mihai Blidaru
- * 
- * @param game El puntero al juego 
+ *
+ * @param game El puntero al juego
  * @param link Un puntero al jugador
  * @return OK si se ha añaido correctamente, sino ERROR
  */
@@ -292,7 +292,7 @@ STATUS game_add_player(Game* game, Player* player) {
 
     if(game->player != NULL)
         player_destroy(game->player);
-    
+
     game->player = player;
 
     return OK;
@@ -301,7 +301,7 @@ STATUS game_add_player(Game* game, Player* player) {
 
 /*
  * @brief Devuelve un puntero al space que tiene el Id igual al Id pasado como parametro.
- * 
+ *
  * @author Profesores PPROG
  * @param game Puntero a la estructura del juego
  * @param space_id Id del espacio
@@ -324,14 +324,14 @@ Space* game_get_space(Game* game, Id space_id) {
     return NULL;
 }
 
-/* 
+/*
  * @brief Develve el espacop una posición dada.
- *  
+ *
  * @author Mihai Blidaru
- *  
+ *
  * @param game Puntero a la estructura del juego
  * @param index La posición de la cual se quiere encontrar el espacio
- *  
+ *
  * @return El espacio en la posición dada.Null si la posición es invalida.
  */
 Space* game_get_space_at(Game* game, int index) {
@@ -343,7 +343,7 @@ Space* game_get_space_at(Game* game, int index) {
     return game->spaces[index];
 }
 
-/** 
+/**
  * @brief Devuelve el objeto que tiene el id igual al pasado como parametro
  * @author Javier Bernardo
  * @param game Un puntero a la estructura del juego
@@ -378,7 +378,7 @@ Object* game_get_Object_byName(Game* game, char* name) {
     int i = 0, j = 0;
     char find_copy[30] = "\0";
     char copy[20];
-    
+
 
     if (!game || !name)
         return NULL;
@@ -386,14 +386,14 @@ Object* game_get_Object_byName(Game* game, char* name) {
     for (i = 0; find_copy[i]; i++) {
             find_copy[i] = toupper(find_copy[i]);
     }
-    
+
     for (i = 0; i < MAX_OBJECTS && game->objects[i] != NULL; i++) {
         strcpy(copy, object_Get_Name(game->objects[i]));
-        
+
         for (j = 0; copy[j]; j++) {
             copy[j] = toupper(copy[j]);
         }
-        
+
         if (strcmp(copy, find_copy) == 0) {
             return game->objects[i];
         }
@@ -413,22 +413,22 @@ Object* game_get_Object_byName(Game* game, char* name) {
 Link* game_get_link_byName(Game* game, char* name) {
     int i = 0, j = 0;
     char copy[20];/* Copia para no modificar el nombre del link */
-    
+
 
     if (!game || !name)
         return NULL;
-    
+
     for (i = 0; name[i]; i++) {
             name[i] = toupper(name[i]);
     }
-    
+
     for (i = 0; i < MAX_LINK && game->links[i] != NULL; i++) {
         strcpy(copy, link_get_name(game->links[i]));
-        
+
         for (j = 0; copy[j]; j++) {
             copy[j] = toupper(copy[j]);
         }
-        
+
         if (strcmp(copy, name) == 0) {
             return game->links[i];
         }
@@ -438,14 +438,14 @@ Link* game_get_link_byName(Game* game, char* name) {
 }
 
 
-/* 
+/*
  * @brief Develve el objeto una posición dada.
- *  
+ *
  * @author Mihai Blidaru
- *  
+ *
  * @param game Puntero a la estructura del juego
  * @param index La posición de la cual se quiere encontrar el objeto
- *  
+ *
  * @return El objeto en la posición dada.Null si la posición es invalida.
  */
 Object* game_get_object_at(Game* game, int index) {
@@ -461,7 +461,7 @@ Object* game_get_object_at(Game* game, int index) {
 
 /*
  * @brief Devuelve un puntero al space que tiene el Id igual al Id pasado como parametro.
- * 
+ *
  * @author Profesores PPROG
  * @param game Puntero a la estructura del juego
  * @param link_id Id del espacio
@@ -484,14 +484,14 @@ Link* game_get_link(Game* game, Id link_id) {
     return NULL;
 }
 
-/* 
+/*
  * @brief Develve el link en una posición dada.
- *  
+ *
  * @author Mihai Blidaru
- *  
+ *
  * @param game Puntero a la estructura del juego
  * @param index La posición de la cual se quiere encontrar el link
- *  
+ *
  * @return El espacio en la posición dada.Null si la posición es invalida.
  */
 Link* game_get_link_at(Game* game, int index) {
@@ -504,9 +504,9 @@ Link* game_get_link_at(Game* game, int index) {
 }
 
 
-/* 
+/*
  * @brief Devuelve el dado del juego
- * 
+ *
  * @author Mihai Blidaru
  * @param game Puntero a la estructura del juego
  * @return Dado del juego.
@@ -514,15 +514,15 @@ Link* game_get_link_at(Game* game, int index) {
 Die* game_get_die(Game* game){
     if(!game)
         return NULL;
-        
+
     return game->die;
 }
 
-/** 
+/**
  * @brief Cambia la localización del jugador a un espacio con el id dado.
- * 
+ *
  * @author Mihai Blidaru
- * 
+ *
  * @param game Puntero a la estructura de l juego.
  * @param player_location La posición donde se quiere colocar al jugador.
  * @private
@@ -543,9 +543,9 @@ STATUS game_set_player_location(Game* game, Id player_location) {
 
 /*
  * @brief Devuelve la localización del jugador.
- * 
+ *
  * @author Mihai Blidaru
- * 
+ *
  * @param game Puntero a la estructura de l juego.
  * @return La localización del jugador. NO_ID si hay algun error.
  */
@@ -558,7 +558,7 @@ Id game_get_player_location(Game* game) {
 
 /*
  * @brief Devuelve el jugador del juego
- * 
+ *
  * @author Mihai Blidaru
  * @param game Puntero a la estructura del juego
  * @return Jugador del juego.
@@ -566,23 +566,23 @@ Id game_get_player_location(Game* game) {
 Player* game_get_player(Game* game){
     if(!game)
         return NULL;
-        
+
     return game->player;
 }
 
 Dialogue* game_get_dialogue(Game* game){
     if(!game)
         return NULL;
-    
+
     return game->dialogue;
 }
 
 
-/* 
+/*
  * @brief Obtiene la localización  de un objeto.
- * 
+ *
  * @author Javier Bernardo
- * 
+ *
  * @param game Puntero a la estructura de el juego.
  * @param object El objeto del que quieres obtener la posicion.
  * @return La posicion del objeto o NO_ID en caso de error
@@ -601,14 +601,14 @@ Id game_get_object_location(Game* game, Object* object) {
             return space_get_id(game->spaces[i]);
         }
     }
-    
+
     if(player_Has_Object(game->player, objId))
         return PLAYER_INV_LOCATION;
-        
+
     return NO_ID;
 }
 
-/* 
+/*
  * @brief Devuelve la lista de objetos de una casilla como cadena
  * @author Mihai Blidaru
  * @param game Un puntero a la estructura game
@@ -642,38 +642,38 @@ char* game_get_obj_list_as_str(Game* game, Space* space) {
     return string;
 }
 
-/* 
+/*
  * @brief Devuelve el último espacio inspeccionado
  * @author Laura Bernal y Sandra Benitez
  * @param game Un puntero a la estructura game
- *  
+ *
  * @return El ultimo espacio inspeccionado
  */
 Space* game_get_last_inspected_space(Game* game){
-    if(!game)   
+    if(!game)
         return NULL;
     return game->last_space;
 }
 
-/* 
+/*
  * @brief Devuelve el ultimo objeto inspeccionado
  * @author Laura Bernal y Sandra Benitez
  * @param game Un puntero a la estructura game
- * 
+ *
  * @return El ultimo objeto inspeccionado
  */
 Object* game_get_last_inspected_object(Game* game){
-    if(!game)   
+    if(!game)
         return NULL;
     return game->last_object;
 }
 
 /*
  * @brief Imprime la información del juego
- * 
+ *
  * @author Profesores PPROG
  * @author Javier Bernardo
- * 
+ *
  * @param game Puntero a la estructura del juego.
  * @return Nada
  */
@@ -711,11 +711,11 @@ void game_print_data(Game* game) {
 
 /*
  * @brief Devuelve si el juego a acabado o no.
- * 
+ *
  *      En esta iteración la función devuelve siempre FALSE ya que no hay
  *      suficiente funcionalidad en el juego como para poder decidir si el juego
  *      ha acabado o no.
- * 
+ *
  * @author Profesores PPROG
  * @param game Puntero a la estructura del juego.
  * @return FALSE
@@ -733,9 +733,9 @@ BOOL game_is_over(Game* game) {
  *  @brief Elimina los ultimos objetos y los ultimos espacios del juego
  *  @author Laura Bernal y Sandra Benitez
  *  @param game Un puntero a la estructura game
- *  
- *  @return 
- *          
+ *
+ *  @return
+ *
  */
 void game_clear_inspect (Game *game){
     if(game){
@@ -744,14 +744,14 @@ void game_clear_inspect (Game *game){
     }
 }
 
-/* 
+/*
  * @brief Ejecuta una de las funciones callback en funcion del comando recibido
- * 
+ *
  * @author Profesores PPROG
- * 
+ *
  * @param game Puntero a la estructura del juego
  * @param command Comando que se tiene que ejecutar
- * @return 
+ * @return
  */
 STATUS game_update(Game* game, Command* command) {
     STATUS status = UNDEFINED;
@@ -760,14 +760,14 @@ STATUS game_update(Game* game, Command* command) {
 
     game_clear_inspect(game);
     status = (*game_callback_fn_list[Command_get_cmd(command)])(game, command);
-    
+
     return status;
 }
 
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es desconocido.
- * 
+ *
  * @author Profesores PPROG
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return ERROR siempre.
@@ -775,15 +775,15 @@ STATUS game_update(Game* game, Command* command) {
 STATUS game_callback_unknown(Game* game, Command* cmd) {
     dialogue_unknown(game->dialogue);
     return ERROR;
-    
+
 }
 
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es QUIT.
  *         La salida del juego no se maneja en esta funciónsino en
  *         game_loop.
- * 
+ *
  * @author Profesores PPROG
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return OK
@@ -795,9 +795,9 @@ STATUS game_callback_quit(Game* game, Command* cmd) {
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es GO.
  *         La salida del juego no se maneja en esta funciónsino en
  *         game_loop.
- * 
+ *
  * @author Profesores PPROG
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return OK
@@ -808,47 +808,47 @@ STATUS game_callback_go(Game* game, Command* cmd) {
     Space* space = NULL;
     Id player_location = NO_ID, dest_id = NO_ID;
     DIRECTION direction = UNKNOWN_DIRECTION;
-    
+
     if(!game || !cmd)
         return ERROR;
-        
+
     dir = Command_get_cmd_arg(cmd, 0);
     player_location = game_get_player_location(game);
-    
+
     space = game_get_space(game, player_location);
-    
+
     if(!space)
         return ERROR;
     if(!strcmp(dir,"north") || !strcmp(dir,"n")){
-        link = game_get_link(game, space_get_north(space));   
+        link = game_get_link(game, space_get_north(space));
         direction = NORTH;
     }else if(!strcmp(dir,"south") || !strcmp(dir,"s")){
-        link = game_get_link(game, space_get_south(space));    
+        link = game_get_link(game, space_get_south(space));
         direction = SOUTH;
     }else if(!strcmp(dir,"east") || !strcmp(dir,"e")){
-       link = game_get_link(game, space_get_east(space));    
+       link = game_get_link(game, space_get_east(space));
        direction = EAST;
     }else if(!strcmp(dir,"west") || !strcmp(dir,"w")){
-        link = game_get_link(game, space_get_west(space));    
+        link = game_get_link(game, space_get_west(space));
         direction = WEST;
     }else if(!strcmp(dir,"up") || !strcmp(dir,"u")){
-        link = game_get_link(game, space_get_up(space));    
+        link = game_get_link(game, space_get_up(space));
         direction = UP;
     }else if(!strcmp(dir,"down") || !strcmp(dir,"d")){
-        link = game_get_link(game, space_get_down(space));    
+        link = game_get_link(game, space_get_down(space));
         direction = DOWN;
     }
-    
+
     if(!link){
         dialogue_go(game->dialogue, direction, space, ERROR, dir, NULL);
         return ERROR;
     }
-    
+
     if(link_get_state(link) == CLOSED){
         dialogue_go(game->dialogue, direction, space, ERROR, dir, link);
         return ERROR;
     }
-    
+
     dest_id = link_get_dest_from(link, player_location);
     if(dest_id == NO_ID){
         dialogue_go(game->dialogue, direction, space, ERROR, dir, NULL);
@@ -862,9 +862,9 @@ STATUS game_callback_go(Game* game, Command* cmd) {
 /* @brief No hace nada. Se ejecuta cuando el comando introducido es INSPECT.
  *         La salida del juego no se maneja en esta función sino en
  *         game_loop.
- * 
+ *
  * @author Profesores PPROG
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return OK
@@ -878,7 +878,7 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
     int i = 0;
     if(!game || !cmd)
         return ERROR;
-    
+
     dir = Command_get_cmd_arg(cmd, 0);
     player_location = game_get_player_location(game);
     space = game_get_space(game, player_location);
@@ -896,10 +896,10 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
                 }
 
             /* Si el jugador tiene un objeto que ilumina puede desocultar objetos */
-            for(i = 0; game->objects[i] != NULL && (player_lights || space_get_iluminated(space));i++){ 
+            for(i = 0; game->objects[i] != NULL && (player_lights || space_get_iluminated(space));i++){
                 if(space_contains_object(space, object_Get_Id(game->objects[i])))
                     object_Set_Hidden(game->objects[i], FALSE);
-                
+
             }
                 dialogue_inspect(game->dialogue, object, space, "space", INSPECT_OK);
                 return OK;
@@ -910,7 +910,7 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
                 dialogue_inspect(game->dialogue, object, space, dir, INSPECT_NO_OBJ);
                 return ERROR;
             }
-            if(object_Get_Hidden(object) == FALSE){   
+            if(object_Get_Hidden(object) == FALSE){
                 object_id = object_Get_Id(object);
                 if (player_Has_Object(game->player, object_id) || (space_contains_object(space, object_id) && space_get_iluminated(space))){
                     game->last_object = object;
@@ -927,9 +927,9 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
 }
 
 /* @brief Hace que el jugador coja el objeto que hay en la casilla en la que está
- * 
+ *
  * @author Mihai Blidaru
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return OK si se ha realizado la operación correctamente o ERROR en caso contrario
@@ -948,10 +948,10 @@ STATUS game_callback_take(Game* game, Command* cmd) {
         dialogue_take(game->dialogue, NULL, arg, GLOBAL_NO_ARGS);
         return ERROR;
     }
-    
+
     space_id = game_get_player_location(game);
     space = game_get_space(game, space_id);
-    
+
     object = game_get_Object_byName(game, arg);
 
     if (!object){
@@ -988,11 +988,11 @@ STATUS game_callback_take(Game* game, Command* cmd) {
     return ERROR;
 }
 
-/* @brief Hace que el jugador suelte el objeto que tiene 
+/* @brief Hace que el jugador suelte el objeto que tiene
  *         en la casilla en la que se encuentra.
- * 
+ *
  * @author Mihai Blidaru
- * 
+ *
  * @param game Puntero a la estructura del Juego.
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @return OK si se ha realizado la operación correctamente o ERROR en caso contrario
@@ -1071,7 +1071,7 @@ STATUS game_callback_turn_on(Game* game, Command* cmd){
     Id object_id = NO_ID;
     if(!game || !cmd)
         return ERROR;
-    
+
     dir = Command_get_cmd_arg(cmd, 0);
     if(strlen(dir) > 0 ){
         object = game_get_Object_byName(game, dir);
@@ -1080,7 +1080,7 @@ STATUS game_callback_turn_on(Game* game, Command* cmd){
             return ERROR;
         }
         object_id = object_Get_Id(object);
-        
+
         if(player_Has_Object(game->player, object_id)){
             if (object_Get_Illuminates(object) == TRUE){
                 if(object_Get_Light(object) == TRUE){
@@ -1116,7 +1116,7 @@ STATUS game_callback_turn_off(Game* game, Command* cmd){
     Id object_id = NO_ID;
     if(!game || !cmd)
         return ERROR;
-    
+
     dir = Command_get_cmd_arg(cmd, 0);
     if(strlen(dir) > 0 ){
         object = game_get_Object_byName(game, dir);
@@ -1125,7 +1125,7 @@ STATUS game_callback_turn_off(Game* game, Command* cmd){
             return ERROR;
         }
         object_id = object_Get_Id(object);
-        
+
         if(player_Has_Object(game->player, object_id)){
             if (object_Get_Illuminates(object) == TRUE){
                 if(object_Get_Light(object) == FALSE){
@@ -1155,7 +1155,7 @@ STATUS game_callback_turn_off(Game* game, Command* cmd){
  * @author Mihai Blidaru
  * @return OK si todo ha ido bien o ERROR en caso contrario
  * @bug FALTA COMPLETAR LA FUNCION
- */ 
+ */
 STATUS game_callback_open(Game* game, Command* cmd){
     Space* space = NULL;
     Link* link = {NULL};
@@ -1164,26 +1164,26 @@ STATUS game_callback_open(Game* game, Command* cmd){
     Object* object = NULL;
     Id link_ids[6] = {NO_ID}, link_id = NO_ID;
     int i;
-    
+
     if(!game || !cmd)
         return ERROR;
-    
+
     link_name = Command_get_cmd_arg(cmd, 0);
     object_name = Command_get_cmd_arg(cmd, 2);
-    
+
     if(strcmp(Command_get_cmd_arg(cmd,1), "with"))
         return ERROR;
-    
+
     link = game_get_link_byName(game, link_name);
     if(!link)
         return ERROR;
     link_id = link_get_id(link);
-    
+
     object = game_get_Object_byName(game, object_name);
-    
+
     if(!object)
         return ERROR;
-        
+
     space = game_get_space(game, game_get_player_location(game));
     if(space){
         link_ids[0] = space_get_south(space);
@@ -1192,7 +1192,7 @@ STATUS game_callback_open(Game* game, Command* cmd){
         link_ids[3] = space_get_west(space);
         link_ids[4] = space_get_up(space);
         link_ids[5] = space_get_down(space);
-        
+
         for(i=0; i < 6; i++){
             if(link_ids[i] == link_id){
                 if(object_Get_Open(object) == link_id){
@@ -1200,25 +1200,25 @@ STATUS game_callback_open(Game* game, Command* cmd){
                     return OK;
                 }
             }
-        }    
+        }
     }
-    
+
     return ERROR;
 }
 
 /*
- * @brief Guarda la partida 
+ * @brief Guarda la partida
  * @param game Una estructura del juego
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @author Sandra Benitez y Laura Bernal
  * @return OK si todo ha ido bien o ERROR en caso contrario
- */ 
+ */
 STATUS game_callback_save(Game* game, Command* cmd){
     char* name = NULL;
     SAVE_STATUS status = -1;
     if(!game || !cmd)
         return ERROR;
-    
+
     name = Command_get_cmd_arg(cmd, 0);
     status = game_management_save(game, name);
     if(status == SAVE_OK){
@@ -1231,7 +1231,7 @@ STATUS game_callback_save(Game* game, Command* cmd){
         dialogue_save(game->dialogue, name, SAVE_WRITE_FAILED);
         return ERROR;
     }
-        
+
     return ERROR;
 }
 
@@ -1241,7 +1241,7 @@ STATUS game_callback_save(Game* game, Command* cmd){
  * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
  * @author Sandra Benitez y Laura Bernal
  * @return OK si todo ha ido bien o ERROR en caso contrario
- */ 
+ */
 STATUS game_callback_load(Game* game, Command* cmd){
     int i;
     int numSpaces, numLinks, numObjects;
@@ -1253,43 +1253,43 @@ STATUS game_callback_load(Game* game, Command* cmd){
     char* name = NULL;
     if(!game || !cmd)
         return ERROR;
-        
+
     name = Command_get_cmd_arg(cmd, 0);
     if(strlen(name)>0){
         for(numSpaces = 0; game->spaces[numSpaces] != NULL; numSpaces++);
         for(numLinks = 0; game->links[numLinks] != NULL; numLinks++);
         for(numObjects = 0; game->objects[numObjects] != NULL; numObjects++);
-        
+
         spaces = calloc(numSpaces, sizeof(Space*));
         objects = calloc(numObjects, sizeof(Object*));
         links = calloc(numLinks, sizeof(Link*));
-                
+
         for(i=0; game->spaces[i] != NULL; i++){
             spaces[i] = game->spaces[i];
             game->spaces[i] = NULL;
         }
-        
+
         for(i=0; game->links[i] != NULL; i++){
             links[i] = game->links[i];
             game->links[i] = NULL;
         }
-        
+
         for(i=0; game->objects[i] != NULL; i++){
             objects[i] = game->objects[i];
             game->objects[i] = NULL;
         }
-        
+
         player = game->player;
         game->player = NULL;
         if(game_management_load(game, name) == OK){
             for(i=0; i < numSpaces; i++){
                 space_destroy(spaces[i]);
             }
-            
+
             for(i=0; i < numObjects; i++){
                 object_destroy(objects[i]);
             }
-            
+
             for(i=0; i < numLinks; i++){
                 link_destroy(links[i]);
             }
@@ -1301,11 +1301,11 @@ STATUS game_callback_load(Game* game, Command* cmd){
             for(i=0; i < numSpaces; i++){
                 game->spaces[i] = spaces[i];
             }
-            
+
             for(i=0; i < numObjects; i++){
                 game->objects[i] = objects[i];
             }
-            
+
             for(i=0; i < numLinks; i++){
                 game->links[i] = links[i];
             }
@@ -1316,9 +1316,9 @@ STATUS game_callback_load(Game* game, Command* cmd){
             return ERROR;
         }
     } else{
-        return ERROR;    
-    }   
-    
+        return ERROR;
+    }
+
     return OK;
 }
 
@@ -1338,8 +1338,43 @@ STATUS game_callback_help(Game* game, Command* cmd){
 }
 
 STATUS game_callback_attack(Game* game, Command* cmd){
+    Space* space = NULL;
+    Link* link = NULL;
+    char graphics[6][24] = {
+      {"    _______________    "},
+      {"   |El  guardian se|   "},
+      {"   | ha asustado y |   "},
+      {"   |    ha huido   |   "},
+      {"   \\_______________/   "},
+      {"                       "}
+    };
+
+    char graphics2[6][24] = {
+      {"     .     '     ,     "},
+      {"       _________       "},
+      {"    _ /_|_____|_\\ _    "},
+      {"      '. \\   / .'      "},
+      {"        '.\\ /.'        "},
+      {"          '.'          "}
+    };
+
     if(!game || !cmd)
         return ERROR;
-    
+
+    space = game_get_space(game, game_get_player_location(game));
+    if(space_get_id(space) == 8){
+      if(player_Has_Object(game->player, 4)){
+        link = game_get_link(game,9);
+        link_set_state(link, OPENED);
+        space_set_graphics(space, graphics);
+      }
+    }else if(space_get_id(space) == 10){
+      if(player_Has_Object(game->player, 3)){
+        if(player_Add_Object(game->player, 14) == ERROR){
+          space_add_object(space, 14);
+        }
+        space_set_graphics(space, graphics2);
+      }
+    }
     return OK;
 }

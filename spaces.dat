@@ -1,4 +1,4 @@
-* El formato para añadir un nuevo espacio es 
+* El formato para añadir un nuevo espacio es
 * #s: [id del espacio] | [nombre] | [norte] | [este] | [sur] | [oeste] | [grafico linea 1] | [grafico linea 2] | [grafico linea 3]
 * Cualquier otra linea que no empiece con #s: es ignorada
 
@@ -9,6 +9,6 @@
 #s:5|Sala magica|           1|-1| 4|-1|-1|-1|-1|                       @                       @                       @                       @                       @                       @El laborario de Merlin|Hay un monton de objetos embrujados en esta sala. Cuidado con lo que tocas|
 #s:6|Sala del futuro|       1|-1|-1| 5|-1|-1|-1|                       @                       @                       @                       @                       @                       @Parece que no hay nada aqui|Si miras atentamente encuentras una bola de cristal que predice el futuro|
 #s:7|Warning Zone|          1|-1|-1| 8|-1| 7|-1|                       @                       @                       @                       @                       @                       @Peligro|Parece que aqui hubo una batalla, no resbales con la sangre|
-#s:8|Sala del Guardian|     0| 8| 9|-1|-1|-1|-1|                       @              \        @               \  O_\  @                \-'\   @                 / |   @        	     |  \  @El guardian no te va a dejar avanzar|Si quieres cruzar el puente debes derrotar al guardian(no sirve cualquier arma)|
+#s:8|Sala del Guardian|     0| 8| 9|-1|-1|-1|-1|                       @              \        @               \  O_\  @                \-'\   @                 / |   @        	     |  \    @El guardian no te va a dejar avanzar|Si quieres cruzar el puente debes derrotar al guardian(no sirve cualquier arma)|
 #s:9|Sala|                  1|-1|10|-1| 9|-1|-1|                       @                       @                       @                       @                       @                       @Coge la cuerda|Coge la cuerda rapido|
-#s:10|Sala del tesoro|      0|-1|-1|11|-1| 6|-1|                       @                       @                       @                       @                       @                       @Enhorabuena|Has encontrado el arca perdida|
+#s:10|Sala del tesoro|      0|-1|-1|11|-1| 6|-1|                       @              \        @               \  O_\  @                \-'\   @                 / |   @        	     |  \    @Enhorabuena|Has encontrado el arca perdida|

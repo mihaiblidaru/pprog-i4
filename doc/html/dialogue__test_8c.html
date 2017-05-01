@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/dialogue_test.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo dialogue_test.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programa para probar el modulo dialogue. Progama para probar la correcta funcionalidad del nuevo TAD dialogue.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="space_8h_source.html">space.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="dialogue_8h_source.html">dialogue.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="dialogue__test_8h_source.html">tests/dialogue_test.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="test_8h_source.html">tests/test.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a7642ae995795f60126cc3d810f1e75e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a7642ae995795f60126cc3d810f1e75e0">test1_dialogue_ini</a> ()</td></tr>
+<tr class="separator:a7642ae995795f60126cc3d810f1e75e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abd9dce3db2aafec13df6afaf9af52a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a3abd9dce3db2aafec13df6afaf9af52a">test1_dialogue_get_text</a> ()</td></tr>
+<tr class="separator:a3abd9dce3db2aafec13df6afaf9af52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab7465e80b710f2779314e7f3dd7729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a6ab7465e80b710f2779314e7f3dd7729">test2_dialogue_get_text</a> ()</td></tr>
+<tr class="separator:a6ab7465e80b710f2779314e7f3dd7729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b03512a8026b6732351e36b167c3c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#ac9b03512a8026b6732351e36b167c3c3">test1_dialogue_go</a> ()</td></tr>
+<tr class="separator:ac9b03512a8026b6732351e36b167c3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a241703ad12341b936a43023502894a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a3a241703ad12341b936a43023502894a">test2_dialogue_go</a> ()</td></tr>
+<tr class="separator:a3a241703ad12341b936a43023502894a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947b89b925d20ecf32b14b214e2d9680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a947b89b925d20ecf32b14b214e2d9680">test1_dialogue_unknown</a> ()</td></tr>
+<tr class="separator:a947b89b925d20ecf32b14b214e2d9680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f24fdcb26f4125edef54917fb3f062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a23f24fdcb26f4125edef54917fb3f062">test2_dialogue_unknown</a> ()</td></tr>
+<tr class="separator:a23f24fdcb26f4125edef54917fb3f062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2e2e98bdec7f84bfd0bf0deafa47ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a2f2e2e98bdec7f84bfd0bf0deafa47ee">test1_dialogue_dir</a> ()</td></tr>
+<tr class="separator:a2f2e2e98bdec7f84bfd0bf0deafa47ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ef73713203e9a8cc561a3c095f9180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a95ef73713203e9a8cc561a3c095f9180">test2_dialogue_dir</a> ()</td></tr>
+<tr class="separator:a95ef73713203e9a8cc561a3c095f9180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8921974934b3cb18026e16feb6f046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a4f8921974934b3cb18026e16feb6f046">test1_dialogue_take</a> ()</td></tr>
+<tr class="separator:a4f8921974934b3cb18026e16feb6f046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e20c2c89fc1fe8f08c205c4a568e8ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a6e20c2c89fc1fe8f08c205c4a568e8ff">test2_dialogue_take</a> ()</td></tr>
+<tr class="separator:a6e20c2c89fc1fe8f08c205c4a568e8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae4dc7b1bcabfc4e6ee958696f6ee49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#aaae4dc7b1bcabfc4e6ee958696f6ee49">test1_dialogue_leave</a> ()</td></tr>
+<tr class="separator:aaae4dc7b1bcabfc4e6ee958696f6ee49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a0297476cfdbb7e02af0b01eb63c24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a87a0297476cfdbb7e02af0b01eb63c24">test2_dialogue_leave</a> ()</td></tr>
+<tr class="separator:a87a0297476cfdbb7e02af0b01eb63c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62498306df928040df7d75c5e37171dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a62498306df928040df7d75c5e37171dc">test1_dialogue_save</a> ()</td></tr>
+<tr class="separator:a62498306df928040df7d75c5e37171dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cae248773d935d46b61a10b1d5de30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a16cae248773d935d46b61a10b1d5de30">test2_dialogue_save</a> ()</td></tr>
+<tr class="separator:a16cae248773d935d46b61a10b1d5de30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9251f9bcff5723582b02b75aa8e3355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#af9251f9bcff5723582b02b75aa8e3355">test1_dialogue_load</a> ()</td></tr>
+<tr class="separator:af9251f9bcff5723582b02b75aa8e3355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc72cfd6c032b664412a2e7c22bc892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a1fc72cfd6c032b664412a2e7c22bc892">test2_dialogue_load</a> ()</td></tr>
+<tr class="separator:a1fc72cfd6c032b664412a2e7c22bc892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac458112e5644ec434eddda004b90db71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#ac458112e5644ec434eddda004b90db71">test1_dialogue_attack</a> ()</td></tr>
+<tr class="separator:ac458112e5644ec434eddda004b90db71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c25f3d225b4d797ea9c719581676d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a98c25f3d225b4d797ea9c719581676d3">test2_dialogue_attack</a> ()</td></tr>
+<tr class="separator:a98c25f3d225b4d797ea9c719581676d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660d6c4e6da51800826f9af6dbd6ebee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a660d6c4e6da51800826f9af6dbd6ebee">test1_dialogue_inspect</a> ()</td></tr>
+<tr class="separator:a660d6c4e6da51800826f9af6dbd6ebee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac737fa433cecf2ec8e2f65dea6df8d21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#ac737fa433cecf2ec8e2f65dea6df8d21">test2_dialogue_inspect</a> ()</td></tr>
+<tr class="separator:ac737fa433cecf2ec8e2f65dea6df8d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8943ea7fbda2915aec18563ea34a15b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#aa8943ea7fbda2915aec18563ea34a15b">test1_dialogue_open</a> ()</td></tr>
+<tr class="separator:aa8943ea7fbda2915aec18563ea34a15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c1ac853e3d18d6a25041a555212aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a39c1ac853e3d18d6a25041a555212aa3">test2_dialogue_open</a> ()</td></tr>
+<tr class="separator:a39c1ac853e3d18d6a25041a555212aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42349df582a05e0d329ec5adb3b30ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a42349df582a05e0d329ec5adb3b30ac7">test1_dialogue_turn_on</a> ()</td></tr>
+<tr class="separator:a42349df582a05e0d329ec5adb3b30ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f7e26397bc15bf0d776dacffbfb205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a74f7e26397bc15bf0d776dacffbfb205">test2_dialogue_turn_on</a> ()</td></tr>
+<tr class="separator:a74f7e26397bc15bf0d776dacffbfb205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11eb86df4e1a77f7aacab996f4f0c8ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a11eb86df4e1a77f7aacab996f4f0c8ee">test1_dialogue_turn_off</a> ()</td></tr>
+<tr class="separator:a11eb86df4e1a77f7aacab996f4f0c8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce6fa8ed572d92e5099c31ef438ae5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a2ce6fa8ed572d92e5099c31ef438ae5c">test2_dialogue_turn_off</a> ()</td></tr>
+<tr class="separator:a2ce6fa8ed572d92e5099c31ef438ae5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb02112356fe68f0c26fa0a109f2e816"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#adb02112356fe68f0c26fa0a109f2e816">test1_dialogue_help</a> ()</td></tr>
+<tr class="separator:adb02112356fe68f0c26fa0a109f2e816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba272726000e6864cce83a8f773603b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a2ba272726000e6864cce83a8f773603b">test2_dialogue_help</a> ()</td></tr>
+<tr class="separator:a2ba272726000e6864cce83a8f773603b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70481672cf53ad95dd3477f36eba3826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a70481672cf53ad95dd3477f36eba3826">test1_dialogue_game_rule</a> ()</td></tr>
+<tr class="separator:a70481672cf53ad95dd3477f36eba3826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764625c54d82bfa734d4b833d23403a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue__test_8c.html#a764625c54d82bfa734d4b833d23403a8">test2_dialogue_game_rule</a> ()</td></tr>
+<tr class="separator:a764625c54d82bfa734d4b833d23403a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Programa para probar el modulo dialogue. Progama para probar la correcta funcionalidad del nuevo TAD dialogue. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>24-04-2017 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="ac458112e5644ec434eddda004b90db71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_attack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000038">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando ATTACK <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f2e2e98bdec7f84bfd0bf0deafa47ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_dir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000028">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando DIR <dl class="section pre"><dt>Precondición</dt><dd>El dialogo ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a70481672cf53ad95dd3477f36eba3826"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_game_rule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000050">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para las reglas del juego <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3abd9dce3db2aafec13df6afaf9af52a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_get_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Prueba:</a></b></dt><dd>Prueba la funcion que devuelve el texto del dialogo <dl class="section pre"><dt>Precondición</dt><dd>El dialogo se ha inicializado antes </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida es un texto no nulo </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac9b03512a8026b6732351e36b167c3c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_go </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando GO <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adb02112356fe68f0c26fa0a109f2e816"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_help </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000048">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando HELP <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7642ae995795f60126cc3d810f1e75e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_ini </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Número maximo de tests </p>
+
+</div>
+</div>
+<a class="anchor" id="a660d6c4e6da51800826f9af6dbd6ebee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_inspect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000040">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando INSPECT <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaae4dc7b1bcabfc4e6ee958696f6ee49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_leave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000032">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando LEAVE <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9251f9bcff5723582b02b75aa8e3355"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000036">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando LOAD <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa8943ea7fbda2915aec18563ea34a15b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000042">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando OPEN <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a62498306df928040df7d75c5e37171dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000034">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando SAVE <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f8921974934b3cb18026e16feb6f046"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_take </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000030">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TAKE <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a11eb86df4e1a77f7aacab996f4f0c8ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_turn_off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000046">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TURN_OFF <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a42349df582a05e0d329ec5adb3b30ac7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_turn_on </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000044">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TURN_ON <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a947b89b925d20ecf32b14b214e2d9680"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_dialogue_unknown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para comandos desconocidos <dl class="section pre"><dt>Precondición</dt><dd>Todos los parametros han sido inicializados </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98c25f3d225b4d797ea9c719581676d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_attack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000039">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando ATTACK <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a95ef73713203e9a8cc561a3c095f9180"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_dir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000029">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando DIR <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a764625c54d82bfa734d4b833d23403a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_game_rule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000051">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para las reglas del juego <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ab7465e80b710f2779314e7f3dd7729"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_get_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000023">Prueba:</a></b></dt><dd>Prueba la funcion que devuelve el texto del dialogo <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no se ha inicializado antes </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a241703ad12341b936a43023502894a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_go </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando GO <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ba272726000e6864cce83a8f773603b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_help </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000049">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando HELP <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac737fa433cecf2ec8e2f65dea6df8d21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_inspect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000041">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando INSPECT <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a87a0297476cfdbb7e02af0b01eb63c24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_leave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000033">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando LEAVE <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1fc72cfd6c032b664412a2e7c22bc892"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000037">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando LOAD <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a39c1ac853e3d18d6a25041a555212aa3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000043">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando OPEN <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16cae248773d935d46b61a10b1d5de30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000035">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando SAVE <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e20c2c89fc1fe8f08c205c4a568e8ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_take </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000031">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TAKE <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ce6fa8ed572d92e5099c31ef438ae5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_turn_off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000047">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TURN_OFF <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a74f7e26397bc15bf0d776dacffbfb205"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_turn_on </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000045">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para el comando TURN_ON <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a23f24fdcb26f4125edef54917fb3f062"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_dialogue_unknown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000027">Prueba:</a></b></dt><dd>Prueba la funcion que construye el dialogo para comandos desconocidos <dl class="section pre"><dt>Precondición</dt><dd>El dialogo no ha sido inicializado </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,147 @@
+\hypertarget{game__management_8h}{\section{Referencia del Archivo include/game\-\_\-management.h}
+\label{game__management_8h}\index{include/game\-\_\-management.\-h@{include/game\-\_\-management.\-h}}
+}
+
+
+Define los prototipos de las funciones necesarias para cargar los datos del juego desde un archivo asi como guardar una partida.  
+
+
+\subsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5}{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} \{ \hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5a78a0dbba5f629a0eb1e016e80d526c46}{P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E}, 
+\hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5aabd47dc6f0988d79ed5d8e6733202871}{S\-A\-V\-E\-\_\-\-O\-K}, 
+\hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5a8ddcc9434788afe600c86c7e7f668c3a}{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D}, 
+\hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5ad7f372050a26b0843a31bfdf6f21398b}{B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S}
+ \}
+\begin{DoxyCompactList}\small\item\em Define los estados que puede devolver la función Save. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5}{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} \hyperlink{game__management_8h_aa894e393666367ef4b8dcd5294a4ee6d}{game\-\_\-management\-\_\-save} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Guarda los datos de la partida con el mismo formato que los ficheros de carga. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{game__management_8h_afec68c063a60726a1429d20740dcb9ef}{game\-\_\-management\-\_\-load} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Carga los datos del juego desde un archivo. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{game__management_8h_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$spaces\-File, char $\ast$objects\-File, char $\ast$linksfile, char $\ast$players\-File)
+\begin{DoxyCompactList}\small\item\em Carga los datos del juego desde un archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Define los prototipos de las funciones necesarias para cargar los datos del juego desde un archivo asi como guardar una partida. \begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+23-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las enumeraciones}
+\hypertarget{game__management_8h_a511decf56b1875181521a3ca2635b8f5}{\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S@{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S@{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}!game_management.h@{game\-\_\-management.\-h}}
+\subsubsection[{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}}}\label{game__management_8h_a511decf56b1875181521a3ca2635b8f5}
+
+
+Define los estados que puede devolver la función Save. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E@{P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E}!game\-\_\-management.\-h@{game\-\_\-management.\-h}}\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E@{P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E}}\item[{\em 
+\hypertarget{game__management_8h_a511decf56b1875181521a3ca2635b8f5a78a0dbba5f629a0eb1e016e80d526c46}{P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-F\-I\-L\-E}\label{game__management_8h_a511decf56b1875181521a3ca2635b8f5a78a0dbba5f629a0eb1e016e80d526c46}
+}]E\-L archivo donde se quiere guardar es un archivo protegido \index{S\-A\-V\-E\-\_\-\-O\-K@{S\-A\-V\-E\-\_\-\-O\-K}!game\-\_\-management.\-h@{game\-\_\-management.\-h}}\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!S\-A\-V\-E\-\_\-\-O\-K@{S\-A\-V\-E\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{game__management_8h_a511decf56b1875181521a3ca2635b8f5aabd47dc6f0988d79ed5d8e6733202871}{S\-A\-V\-E\-\_\-\-O\-K}\label{game__management_8h_a511decf56b1875181521a3ca2635b8f5aabd47dc6f0988d79ed5d8e6733202871}
+}]Se ha gaurdado todo sin problemas \index{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D@{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D}!game\-\_\-management.\-h@{game\-\_\-management.\-h}}\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D@{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D}}\item[{\em 
+\hypertarget{game__management_8h_a511decf56b1875181521a3ca2635b8f5a8ddcc9434788afe600c86c7e7f668c3a}{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L\-E\-D}\label{game__management_8h_a511decf56b1875181521a3ca2635b8f5a8ddcc9434788afe600c86c7e7f668c3a}
+}]No se puede escribir en ese archivo \index{B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S@{B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S}!game\-\_\-management.\-h@{game\-\_\-management.\-h}}\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S@{B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S}}\item[{\em 
+\hypertarget{game__management_8h_a511decf56b1875181521a3ca2635b8f5ad7f372050a26b0843a31bfdf6f21398b}{B\-A\-D\-\_\-\-A\-R\-G\-U\-M\-E\-N\-T\-S}\label{game__management_8h_a511decf56b1875181521a3ca2635b8f5ad7f372050a26b0843a31bfdf6f21398b}
+}]Los argumentos de la función no son validos \end{description}
+\end{Desc}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{game__management_8h_afec68c063a60726a1429d20740dcb9ef}{\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!game\-\_\-management\-\_\-load@{game\-\_\-management\-\_\-load}}
+\index{game\-\_\-management\-\_\-load@{game\-\_\-management\-\_\-load}!game_management.h@{game\-\_\-management.\-h}}
+\subsubsection[{game\-\_\-management\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-load (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_afec68c063a60726a1429d20740dcb9ef}
+
+
+Carga los datos del juego desde un archivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Un puntero al juego donde cargar los datos \\
+\hline
+{\em filename} & nombre del archivo desde donde cargar los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha cargado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{game__management_8h_aa894e393666367ef4b8dcd5294a4ee6d}{\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!game\-\_\-management\-\_\-save@{game\-\_\-management\-\_\-save}}
+\index{game\-\_\-management\-\_\-save@{game\-\_\-management\-\_\-save}!game_management.h@{game\-\_\-management.\-h}}
+\subsubsection[{game\-\_\-management\-\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-save (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_aa894e393666367ef4b8dcd5294a4ee6d}
+
+
+Guarda los datos de la partida con el mismo formato que los ficheros de carga. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Un puntero al game desde donde se quieren guardar los datos \\
+\hline
+{\em filename} & Archivo donde guardar los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si ha guardado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{game__management_8h_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}{\index{game\-\_\-management.\-h@{game\-\_\-management.\-h}!game\-\_\-management\-\_\-start\-\_\-from\-\_\-file@{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}}
+\index{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file@{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}!game_management.h@{game\-\_\-management.\-h}}
+\subsubsection[{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-start\-\_\-from\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{spaces\-File, }
+\item[{char $\ast$}]{objects\-File, }
+\item[{char $\ast$}]{linksfile, }
+\item[{char $\ast$}]{players\-File}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}
+
+
+Carga los datos del juego desde un archivo. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Puntero a la estructura del juego. \\
+\hline
+{\em spaces\-File} & Nombre del archivo desde donde hay que cargar los espacios \\
+\hline
+{\em objects\-File} & Nombre del archivo desde donde hay que cargar los objetos \\
+\hline
+{\em linksfile} & Nombre del archivo desde donde hay que cargar los links \\
+\hline
+{\em players\-File} & Nombre del archivo desde donde hay que cargar los datos del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si todo ha ido bien. E\-R\-R\-O\-R en caso contrario. 
+\end{DoxyReturn}

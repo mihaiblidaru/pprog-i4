@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Fichero Fuente include/object.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">object.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="object_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef OBJECT_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OBJECT_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_Object <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#a2dd568a27239e988cdde871cfb30e166">object_create</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a19d6d51fee809e3801893eefc789f4b4">object_destroy</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#ae51dccb56662554f35c2060c6d1a26e4">object_Set_Id</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#a6e869c0c6741e1ea39480f20aad7d1f8">object_Set_Name</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#a6fcdf085bff38ed634163292aa44eaf8">object_Set_Description</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">char</span>* description);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#a4605a6beaf5889bf9420f88e21cbe981">object_Set_Description2</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">char</span> *desc2);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a05c9d2710f1300c5d1729d188db1efde">object_Set_Mobile</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keyword">const</span> <a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> mobile);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a0019840011cc2d5433cf958bf4621d14">object_Set_Moved</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keyword">const</span> <a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> moved);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a2e86289cd0eedc29320243cd04e03b59">object_Set_Hidden</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> hidden);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a5c3a3a884f08171d7f0724f5f5aa0aaa">object_Set_Open</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> open); </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a7c2324a10aa3cbd62ef0091d41ed3858">object_Set_Illuminates</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> illuminates);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#a3e7470ed915bc69304617a4c8344db24">object_Set_Light</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> on);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="object_8h.html#a8a9c8f85881c32bf25e0eadbba4e0ecb">object_Get_Id</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="object_8h.html#acd58d4ed895aac1d0434a3b85679faf7">object_Get_Name</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="object_8h.html#a237b4d9d8f98adfb3894fadadf3e107d">object_Get_Description</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="object_8h.html#acc4e8f388cb414354f458ed8ffaea0df">object_Get_Description2</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="object_8h.html#ab9816db91c6d6366dfebc312edfd2d4a">object_Get_Mobile</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="object_8h.html#a5993c22726e9a25b26897486be65b04b">object_Get_Moved</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="object_8h.html#ad52af6d2251daef99432eda4a9c6d229">object_Get_Hidden</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="object_8h.html#aa90fb9b63f03825f100afaee9c164a62">object_Get_Open</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="object_8h.html#ad1a9d55dbfa58c1c964ce79141425dd6">object_Get_Illuminates</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="object_8h.html#a4ba698677df7f205780cd925bb614b1b">object_Get_Light</a>(<span class="keyword">const</span> <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="object_8h.html#adebb77fb5d33fc70616ab3b2b64c27ce">object_print</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="object_8h.html#a6f755aea39ed103996a35988bc3364fe">object_Set_Graphics</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">char</span> *graphics);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="object_8h.html#a29168839c2a8992f47b44c72d77a48d3">object_Get_Graphics</a>(<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="types_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Define tipos de datos comunes. </div></div>
+<div class="ttc" id="object_8h_html_a6e869c0c6741e1ea39480f20aad7d1f8"><div class="ttname"><a href="object_8h.html#a6e869c0c6741e1ea39480f20aad7d1f8">object_Set_Name</a></div><div class="ttdeci">Object * object_Set_Name(Object *object, char *name)</div><div class="ttdoc">Pone el nombre del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:107</div></div>
+<div class="ttc" id="types_8h_html_a32c27cc471df37f4fc818d65de0a56c4"><div class="ttname"><a href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a></div><div class="ttdeci">STATUS</div><div class="ttdoc">Definicion de la enumeración STATUS. </div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="object_8h_html_a7c2324a10aa3cbd62ef0091d41ed3858"><div class="ttname"><a href="object_8h.html#a7c2324a10aa3cbd62ef0091d41ed3858">object_Set_Illuminates</a></div><div class="ttdeci">STATUS object_Set_Illuminates(Object *object, BOOL illuminates)</div><div class="ttdoc">Pone la iluminacion del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:221</div></div>
+<div class="ttc" id="object_8h_html_a7f8bbcda919b65ce67f92fba08e0212f"><div class="ttname"><a href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a></div><div class="ttdeci">struct _Object Object</div><div class="ttdoc">Definicion de la estructura objecto. </div><div class="ttdef"><b>Definition:</b> object.h:19</div></div>
+<div class="ttc" id="object_8h_html_a5c3a3a884f08171d7f0724f5f5aa0aaa"><div class="ttname"><a href="object_8h.html#a5c3a3a884f08171d7f0724f5f5aa0aaa">object_Set_Open</a></div><div class="ttdeci">STATUS object_Set_Open(Object *object, Id open)</div><div class="ttdoc">Pone la situacion del link del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:206</div></div>
+<div class="ttc" id="object_8h_html_a2e86289cd0eedc29320243cd04e03b59"><div class="ttname"><a href="object_8h.html#a2e86289cd0eedc29320243cd04e03b59">object_Set_Hidden</a></div><div class="ttdeci">STATUS object_Set_Hidden(Object *object, BOOL hidden)</div><div class="ttdoc">Pone la situacion del objeto, oculto o no oculto. </div><div class="ttdef"><b>Definition:</b> object.c:192</div></div>
+<div class="ttc" id="object_8h_html_a3e7470ed915bc69304617a4c8344db24"><div class="ttname"><a href="object_8h.html#a3e7470ed915bc69304617a4c8344db24">object_Set_Light</a></div><div class="ttdeci">STATUS object_Set_Light(Object *object, BOOL on)</div><div class="ttdoc">Pone el encendido del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:236</div></div>
+<div class="ttc" id="object_8h_html_acd58d4ed895aac1d0434a3b85679faf7"><div class="ttname"><a href="object_8h.html#acd58d4ed895aac1d0434a3b85679faf7">object_Get_Name</a></div><div class="ttdeci">char * object_Get_Name(Object *object)</div><div class="ttdoc">Obtiene el nombre del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:263</div></div>
+<div class="ttc" id="object_8h_html_aa90fb9b63f03825f100afaee9c164a62"><div class="ttname"><a href="object_8h.html#aa90fb9b63f03825f100afaee9c164a62">object_Get_Open</a></div><div class="ttdeci">Id object_Get_Open(const Object *object)</div><div class="ttdoc">Obtiene si esta abierto el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:347</div></div>
+<div class="ttc" id="object_8h_html_ae51dccb56662554f35c2060c6d1a26e4"><div class="ttname"><a href="object_8h.html#ae51dccb56662554f35c2060c6d1a26e4">object_Set_Id</a></div><div class="ttdeci">Object * object_Set_Id(Object *object, Id object_id)</div><div class="ttdoc">Pone el id del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:93</div></div>
+<div class="ttc" id="object_8h_html_a237b4d9d8f98adfb3894fadadf3e107d"><div class="ttname"><a href="object_8h.html#a237b4d9d8f98adfb3894fadadf3e107d">object_Get_Description</a></div><div class="ttdeci">char * object_Get_Description(Object *object)</div><div class="ttdoc">Obtiene la descripción del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:287</div></div>
+<div class="ttc" id="object_8h_html_a19d6d51fee809e3801893eefc789f4b4"><div class="ttname"><a href="object_8h.html#a19d6d51fee809e3801893eefc789f4b4">object_destroy</a></div><div class="ttdeci">STATUS object_destroy(Object *object)</div><div class="ttdoc">Destruye un objeto. </div><div class="ttdef"><b>Definition:</b> object.c:78</div></div>
+<div class="ttc" id="object_8h_html_adebb77fb5d33fc70616ab3b2b64c27ce"><div class="ttname"><a href="object_8h.html#adebb77fb5d33fc70616ab3b2b64c27ce">object_print</a></div><div class="ttdeci">STATUS object_print(Object *object)</div><div class="ttdoc">Imprime por pantalla el nombre del objeto y el id. </div><div class="ttdef"><b>Definition:</b> object.c:382</div></div>
+<div class="ttc" id="object_8h_html_a29168839c2a8992f47b44c72d77a48d3"><div class="ttname"><a href="object_8h.html#a29168839c2a8992f47b44c72d77a48d3">object_Get_Graphics</a></div><div class="ttdeci">char * object_Get_Graphics(Object *object)</div><div class="ttdoc">Obtiene la descripción grafica del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:275</div></div>
+<div class="ttc" id="object_8h_html_a4605a6beaf5889bf9420f88e21cbe981"><div class="ttname"><a href="object_8h.html#a4605a6beaf5889bf9420f88e21cbe981">object_Set_Description2</a></div><div class="ttdeci">Object * object_Set_Description2(Object *object, char *desc2)</div><div class="ttdoc">Pone la descripción dos del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:150</div></div>
+<div class="ttc" id="object_8h_html_ad1a9d55dbfa58c1c964ce79141425dd6"><div class="ttname"><a href="object_8h.html#ad1a9d55dbfa58c1c964ce79141425dd6">object_Get_Illuminates</a></div><div class="ttdeci">BOOL object_Get_Illuminates(const Object *object)</div><div class="ttdoc">Obtiene si se ha iluminado el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:359</div></div>
+<div class="ttc" id="object_8h_html_a6fcdf085bff38ed634163292aa44eaf8"><div class="ttname"><a href="object_8h.html#a6fcdf085bff38ed634163292aa44eaf8">object_Set_Description</a></div><div class="ttdeci">Object * object_Set_Description(Object *object, char *description)</div><div class="ttdoc">Pone la descripción del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:135</div></div>
+<div class="ttc" id="object_8h_html_a6f755aea39ed103996a35988bc3364fe"><div class="ttname"><a href="object_8h.html#a6f755aea39ed103996a35988bc3364fe">object_Set_Graphics</a></div><div class="ttdeci">Object * object_Set_Graphics(Object *object, char *graphics)</div><div class="ttdoc">Le asigna al objeto descripción grafica del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:121</div></div>
+<div class="ttc" id="types_8h_html_a845e604fb28f7e3d97549da3448149d3"><div class="ttname"><a href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Definicion de Id. </div><div class="ttdef"><b>Definition:</b> types.h:30</div></div>
+<div class="ttc" id="object_8h_html_a0019840011cc2d5433cf958bf4621d14"><div class="ttname"><a href="object_8h.html#a0019840011cc2d5433cf958bf4621d14">object_Set_Moved</a></div><div class="ttdeci">STATUS object_Set_Moved(Object *object, const BOOL moved)</div><div class="ttdoc">Pone si se ha mpvido el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:178</div></div>
+<div class="ttc" id="object_8h_html_a5993c22726e9a25b26897486be65b04b"><div class="ttname"><a href="object_8h.html#a5993c22726e9a25b26897486be65b04b">object_Get_Moved</a></div><div class="ttdeci">BOOL object_Get_Moved(const Object *object)</div><div class="ttdoc">Obtiene si se ha movido el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:323</div></div>
+<div class="ttc" id="object_8h_html_ad52af6d2251daef99432eda4a9c6d229"><div class="ttname"><a href="object_8h.html#ad52af6d2251daef99432eda4a9c6d229">object_Get_Hidden</a></div><div class="ttdeci">BOOL object_Get_Hidden(const Object *object)</div><div class="ttdoc">Obtiene si se ha movido el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:335</div></div>
+<div class="ttc" id="object_8h_html_a8a9c8f85881c32bf25e0eadbba4e0ecb"><div class="ttname"><a href="object_8h.html#a8a9c8f85881c32bf25e0eadbba4e0ecb">object_Get_Id</a></div><div class="ttdeci">Id object_Get_Id(Object *object)</div><div class="ttdoc">Obtiene el id del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:251</div></div>
+<div class="ttc" id="object_8h_html_a05c9d2710f1300c5d1729d188db1efde"><div class="ttname"><a href="object_8h.html#a05c9d2710f1300c5d1729d188db1efde">object_Set_Mobile</a></div><div class="ttdeci">STATUS object_Set_Mobile(Object *object, const BOOL mobile)</div><div class="ttdoc">Pone la disponibilidad de movimiento del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:164</div></div>
+<div class="ttc" id="types_8h_html_a3e5b8192e7d9ffaf3542f1210aec18dd"><div class="ttname"><a href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a></div><div class="ttdeci">BOOL</div><div class="ttdoc">Definicion de la enumeración BOOL. </div><div class="ttdef"><b>Definition:</b> types.h:36</div></div>
+<div class="ttc" id="object_8h_html_ab9816db91c6d6366dfebc312edfd2d4a"><div class="ttname"><a href="object_8h.html#ab9816db91c6d6366dfebc312edfd2d4a">object_Get_Mobile</a></div><div class="ttdeci">BOOL object_Get_Mobile(const Object *object)</div><div class="ttdoc">Obtiene la movibilidad del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:311</div></div>
+<div class="ttc" id="object_8h_html_a4ba698677df7f205780cd925bb614b1b"><div class="ttname"><a href="object_8h.html#a4ba698677df7f205780cd925bb614b1b">object_Get_Light</a></div><div class="ttdeci">BOOL object_Get_Light(const Object *object)</div><div class="ttdoc">Obtiene si se ha encendido el objeto. </div><div class="ttdef"><b>Definition:</b> object.c:371</div></div>
+<div class="ttc" id="object_8h_html_a2dd568a27239e988cdde871cfb30e166"><div class="ttname"><a href="object_8h.html#a2dd568a27239e988cdde871cfb30e166">object_create</a></div><div class="ttdeci">Object * object_create()</div><div class="ttdoc">Reservamos memoria para un nuevo objeto. </div><div class="ttdef"><b>Definition:</b> object.c:52</div></div>
+<div class="ttc" id="object_8h_html_acc4e8f388cb414354f458ed8ffaea0df"><div class="ttname"><a href="object_8h.html#acc4e8f388cb414354f458ed8ffaea0df">object_Get_Description2</a></div><div class="ttdeci">char * object_Get_Description2(Object *object)</div><div class="ttdoc">Obtiene la descripción dos del objeto. </div><div class="ttdef"><b>Definition:</b> object.c:299</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:43 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Fichero Fuente include/game.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">game.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="game_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef GAME_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GAME_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/* Cabeceras propias */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="command_8h.html">command.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="space_8h.html">space.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">player.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="object_8h.html">object.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="die_8h.html">die.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="set_8h.html">set.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="link_8h.html">link.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dialogue_8h.html">dialogue.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="game_8h.html#acdc7844fbd4d45737d4aa56834d37829">   30</a></span>&#160;<span class="preprocessor">#define MAX_OBJECTS 20</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="game_8h.html#a5f54fd55f983a2e33ce076cd9f587e82">   35</a></span>&#160;<span class="preprocessor">#define MAX_SPACES 10000</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">   42</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_Game <a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* <a class="code" href="game_8h.html#a1cdbe3f06b9bf49eb5e334a22ad3b2b9">game_create</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#a0736924a1235c0e6fe9b6d91c2a12af8">game_destroy</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#a0a3e83f8ac4e4a94d6975d776abf27fa">game_update</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a>* command);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="game_8h.html#aa6efe0650af110bbd84e742cc8046d93">game_is_over</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#a9597a8e456aa74db536e87d56f56c3b4">game_add_object</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#ae5ad86de0a92d9eccb234948458da7f1">game_add_space</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game , <a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* space);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#a4691bee17d5784ad6eb257dfbb252c27">game_add_link</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* link);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="game_8h.html#a4280b7ee7ac0d4575d0aa88e8b7f921b">game_add_player</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<a class="code" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* <a class="code" href="game_8h.html#a08ad17816339cf8c469b2ce213cd06e4">game_get_link</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> link_id);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<a class="code" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* <a class="code" href="game_8h.html#a01b19ca169a5c1d9cb8c4d5de7f7bcae">game_get_link_at</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* <a class="code" href="game_8h.html#abd5042cf414a61dfb9e138ee1fd52dcb">game_get_space</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> space_id);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* <a class="code" href="game_8h.html#a1a8156d5bed5e2d46a7455dec89238f3">game_get_space_at</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="game_8h.html#a522fa057563961740062266f3696179f">game_get_object_at</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<a class="code" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a>* <a class="code" href="game_8h.html#a5753a09313b092a52c0cea742c40f3cf">game_get_die</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="game_8h.html#af46efd507d797aec6da90d08aa592e32">game_get_player</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="game_8h.html#a16a2d2c3b658ab7502716a096c8ceda5">game_get_obj_list_as_str</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* space);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* <a class="code" href="game_8h.html#a0f3251c7fe9dd5408f83ad91608c14ec">game_get_last_inspected_space</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <a class="code" href="game_8h.html#a8d0effe7dae7618d3260adacab77bbeb">game_get_last_inspected_object</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="game_8h.html#ac6a628f2106f81c37d0e83c67920615f">game_get_player_location</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="game_8h.html#a3281f4288efd16ae69ece933263e0f8b">game_get_object_location</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8h.html#a33a5ed8937423f8c012df3cedad4fa4c">game_print_data</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* <a class="code" href="game_8h.html#aba890b1d796db361825e9eaaf900133e">game_get_dialogue</a>(<a class="code" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="game_8h_html_a33a5ed8937423f8c012df3cedad4fa4c"><div class="ttname"><a href="game_8h.html#a33a5ed8937423f8c012df3cedad4fa4c">game_print_data</a></div><div class="ttdeci">void game_print_data(Game *game)</div><div class="ttdoc">Imprime la información del juego. </div><div class="ttdef"><b>Definition:</b> game.c:689</div></div>
+<div class="ttc" id="types_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Define tipos de datos comunes. </div></div>
+<div class="ttc" id="game_8h_html_af46efd507d797aec6da90d08aa592e32"><div class="ttname"><a href="game_8h.html#af46efd507d797aec6da90d08aa592e32">game_get_player</a></div><div class="ttdeci">Player * game_get_player(Game *game)</div><div class="ttdoc">Devuelve el jugador del juego. </div><div class="ttdef"><b>Definition:</b> game.c:568</div></div>
+<div class="ttc" id="game_8h_html_ae5ad86de0a92d9eccb234948458da7f1"><div class="ttname"><a href="game_8h.html#ae5ad86de0a92d9eccb234948458da7f1">game_add_space</a></div><div class="ttdeci">STATUS game_add_space(Game *game, Space *space)</div><div class="ttdoc">Añade un espacio al juego. </div><div class="ttdef"><b>Definition:</b> game.c:202</div></div>
+<div class="ttc" id="command_8h_html"><div class="ttname"><a href="command_8h.html">command.h</a></div><div class="ttdoc">Implementa el interpreatador de comandos. Lee los comandos que introduce el usuario parseandolos al t...</div></div>
+<div class="ttc" id="command_8h_html_a7d2935971c252377cb0fc1c8545dc2bc"><div class="ttname"><a href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a></div><div class="ttdeci">struct _Command Command</div><div class="ttdoc">Definicion de la estructura del comando. </div><div class="ttdef"><b>Definition:</b> command.h:26</div></div>
+<div class="ttc" id="types_8h_html_a32c27cc471df37f4fc818d65de0a56c4"><div class="ttname"><a href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a></div><div class="ttdeci">STATUS</div><div class="ttdoc">Definicion de la enumeración STATUS. </div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="game_8h_html_a9597a8e456aa74db536e87d56f56c3b4"><div class="ttname"><a href="game_8h.html#a9597a8e456aa74db536e87d56f56c3b4">game_add_object</a></div><div class="ttdeci">STATUS game_add_object(Game *game, Object *object)</div><div class="ttdoc">Añade un objeto al juego. </div><div class="ttdef"><b>Definition:</b> game.c:232</div></div>
+<div class="ttc" id="die_8h_html_a892f0b0bf81d69a1f7a14ea238e36dd3"><div class="ttname"><a href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a></div><div class="ttdeci">struct _Die Die</div><div class="ttdef"><b>Definition:</b> die.h:22</div></div>
+<div class="ttc" id="set_8h_html"><div class="ttname"><a href="set_8h.html">set.h</a></div><div class="ttdoc">Definicion de los prototipos de las primitivas del TAD Set. </div></div>
+<div class="ttc" id="game_8h_html_aba890b1d796db361825e9eaaf900133e"><div class="ttname"><a href="game_8h.html#aba890b1d796db361825e9eaaf900133e">game_get_dialogue</a></div><div class="ttdeci">Dialogue * game_get_dialogue(Game *game)</div><div class="ttdoc">Devuelve un puntero al modulo dialogo del juego. </div><div class="ttdef"><b>Definition:</b> game.c:582</div></div>
+<div class="ttc" id="game_8h_html_ac6a628f2106f81c37d0e83c67920615f"><div class="ttname"><a href="game_8h.html#ac6a628f2106f81c37d0e83c67920615f">game_get_player_location</a></div><div class="ttdeci">Id game_get_player_location(Game *game)</div><div class="ttdoc">Devuelve la localización del jugador. </div><div class="ttdef"><b>Definition:</b> game.c:554</div></div>
+<div class="ttc" id="space_8h_html"><div class="ttname"><a href="space_8h.html">space.h</a></div><div class="ttdoc">Define un espacio. </div></div>
+<div class="ttc" id="game_8h_html_a57156d39c530aec3fba3a9dad8c2dc6a"><div class="ttname"><a href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a></div><div class="ttdeci">struct _Game Game</div><div class="ttdef"><b>Definition:</b> game.h:42</div></div>
+<div class="ttc" id="game_8h_html_aa6efe0650af110bbd84e742cc8046d93"><div class="ttname"><a href="game_8h.html#aa6efe0650af110bbd84e742cc8046d93">game_is_over</a></div><div class="ttdeci">BOOL game_is_over(Game *game)</div><div class="ttdoc">Devuelve si el juego a acabado o no. </div><div class="ttdef"><b>Definition:</b> game.c:732</div></div>
+<div class="ttc" id="object_8h_html_a7f8bbcda919b65ce67f92fba08e0212f"><div class="ttname"><a href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a></div><div class="ttdeci">struct _Object Object</div><div class="ttdoc">Definicion de la estructura objecto. </div><div class="ttdef"><b>Definition:</b> object.h:19</div></div>
+<div class="ttc" id="space_8h_html_a67533ffc2b70463baecc38fb0629bbfc"><div class="ttname"><a href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a></div><div class="ttdeci">struct _Space Space</div><div class="ttdef"><b>Definition:</b> space.h:22</div></div>
+<div class="ttc" id="player_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div><div class="ttdoc">Define el TAD player y los prototipos de las funciones necesarias para trabajar con este TAD...</div></div>
+<div class="ttc" id="die_8h_html"><div class="ttname"><a href="die_8h.html">die.h</a></div><div class="ttdoc">Primitivas del TAD Die en el juego. </div></div>
+<div class="ttc" id="game_8h_html_a0a3e83f8ac4e4a94d6975d776abf27fa"><div class="ttname"><a href="game_8h.html#a0a3e83f8ac4e4a94d6975d776abf27fa">game_update</a></div><div class="ttdeci">STATUS game_update(Game *game, Command *command)</div><div class="ttdoc">Ejecuta una de las funciones callback en funcion del comando recibido. </div><div class="ttdef"><b>Definition:</b> game.c:772</div></div>
+<div class="ttc" id="dialogue_8h_html"><div class="ttname"><a href="dialogue_8h.html">dialogue.h</a></div><div class="ttdoc">Implementa el dialogo del juego. </div></div>
+<div class="ttc" id="game_8h_html_a5753a09313b092a52c0cea742c40f3cf"><div class="ttname"><a href="game_8h.html#a5753a09313b092a52c0cea742c40f3cf">game_get_die</a></div><div class="ttdeci">Die * game_get_die(Game *game)</div><div class="ttdoc">Devuelve el dado del juego. </div><div class="ttdef"><b>Definition:</b> game.c:516</div></div>
+<div class="ttc" id="game_8h_html_a522fa057563961740062266f3696179f"><div class="ttname"><a href="game_8h.html#a522fa057563961740062266f3696179f">game_get_object_at</a></div><div class="ttdeci">Object * game_get_object_at(Game *game, int index)</div><div class="ttdoc">Develve el objeto una posición dada. </div><div class="ttdef"><b>Definition:</b> game.c:453</div></div>
+<div class="ttc" id="link_8h_html_ae3b299941e67be6971bfd64a25505eff"><div class="ttname"><a href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a></div><div class="ttdeci">struct _Link Link</div><div class="ttdoc">Estructura de link. </div><div class="ttdef"><b>Definition:</b> link.h:22</div></div>
+<div class="ttc" id="game_8h_html_a4691bee17d5784ad6eb257dfbb252c27"><div class="ttname"><a href="game_8h.html#a4691bee17d5784ad6eb257dfbb252c27">game_add_link</a></div><div class="ttdeci">STATUS game_add_link(Game *game, Link *link)</div><div class="ttdoc">Añade un objeto al juego. </div><div class="ttdef"><b>Definition:</b> game.c:261</div></div>
+<div class="ttc" id="game_8h_html_a08ad17816339cf8c469b2ce213cd06e4"><div class="ttname"><a href="game_8h.html#a08ad17816339cf8c469b2ce213cd06e4">game_get_link</a></div><div class="ttdeci">Link * game_get_link(Game *game, Id link_id)</div><div class="ttdoc">Devuelve un puntero al link que tiene el Id igual al Id pasado como parametro. </div><div class="ttdef"><b>Definition:</b> game.c:472</div></div>
+<div class="ttc" id="game_8h_html_a01b19ca169a5c1d9cb8c4d5de7f7bcae"><div class="ttname"><a href="game_8h.html#a01b19ca169a5c1d9cb8c4d5de7f7bcae">game_get_link_at</a></div><div class="ttdeci">Link * game_get_link_at(Game *game, int index)</div><div class="ttdoc">Develve el link en una posición dada. </div><div class="ttdef"><b>Definition:</b> game.c:499</div></div>
+<div class="ttc" id="types_8h_html_a845e604fb28f7e3d97549da3448149d3"><div class="ttname"><a href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Definicion de Id. </div><div class="ttdef"><b>Definition:</b> types.h:30</div></div>
+<div class="ttc" id="dialogue_8h_html_ad25e8d75177dc0ecfaaf97610765d318"><div class="ttname"><a href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a></div><div class="ttdeci">struct _Dialogue Dialogue</div><div class="ttdef"><b>Definition:</b> dialogue.h:26</div></div>
+<div class="ttc" id="game_8h_html_abd5042cf414a61dfb9e138ee1fd52dcb"><div class="ttname"><a href="game_8h.html#abd5042cf414a61dfb9e138ee1fd52dcb">game_get_space</a></div><div class="ttdeci">Space * game_get_space(Game *game, Id space_id)</div><div class="ttdoc">Devuelve un puntero al space que tiene el Id igual al Id pasado como parametro. </div><div class="ttdef"><b>Definition:</b> game.c:312</div></div>
+<div class="ttc" id="game_8h_html_a0736924a1235c0e6fe9b6d91c2a12af8"><div class="ttname"><a href="game_8h.html#a0736924a1235c0e6fe9b6d91c2a12af8">game_destroy</a></div><div class="ttdeci">STATUS game_destroy(Game *game)</div><div class="ttdoc">Destruye la estructura game. Se encarga de liberar la memoria reservada por los elementos del juego s...</div><div class="ttdef"><b>Definition:</b> game.c:164</div></div>
+<div class="ttc" id="game_8h_html_a16a2d2c3b658ab7502716a096c8ceda5"><div class="ttname"><a href="game_8h.html#a16a2d2c3b658ab7502716a096c8ceda5">game_get_obj_list_as_str</a></div><div class="ttdeci">char * game_get_obj_list_as_str(Game *game, Space *space)</div><div class="ttdoc">Devuelve la lista de objetos de una casilla como cadena. </div><div class="ttdef"><b>Definition:</b> game.c:628</div></div>
+<div class="ttc" id="game_8h_html_a8d0effe7dae7618d3260adacab77bbeb"><div class="ttname"><a href="game_8h.html#a8d0effe7dae7618d3260adacab77bbeb">game_get_last_inspected_object</a></div><div class="ttdeci">Object * game_get_last_inspected_object(Game *game)</div><div class="ttdoc">Devuelve el ultimo objeto inspeccionado. </div><div class="ttdef"><b>Definition:</b> game.c:674</div></div>
+<div class="ttc" id="object_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div><div class="ttdoc">Define la interfaz pública del TAD Objeto. </div></div>
+<div class="ttc" id="game_8h_html_a0f3251c7fe9dd5408f83ad91608c14ec"><div class="ttname"><a href="game_8h.html#a0f3251c7fe9dd5408f83ad91608c14ec">game_get_last_inspected_space</a></div><div class="ttdeci">Space * game_get_last_inspected_space(Game *game)</div><div class="ttdoc">Devuelve el último espacio inspeccionado. </div><div class="ttdef"><b>Definition:</b> game.c:661</div></div>
+<div class="ttc" id="game_8h_html_a3281f4288efd16ae69ece933263e0f8b"><div class="ttname"><a href="game_8h.html#a3281f4288efd16ae69ece933263e0f8b">game_get_object_location</a></div><div class="ttdeci">Id game_get_object_location(Game *game, Object *object)</div><div class="ttdoc">Obtiene la localización de un objeto. </div><div class="ttdef"><b>Definition:</b> game.c:599</div></div>
+<div class="ttc" id="types_8h_html_a3e5b8192e7d9ffaf3542f1210aec18dd"><div class="ttname"><a href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a></div><div class="ttdeci">BOOL</div><div class="ttdoc">Definicion de la enumeración BOOL. </div><div class="ttdef"><b>Definition:</b> types.h:36</div></div>
+<div class="ttc" id="link_8h_html"><div class="ttname"><a href="link_8h.html">link.h</a></div><div class="ttdoc">Implementa el nuevo TAD Link (Enlace). Sirve para enlazar de forma más potente las casillas...</div></div>
+<div class="ttc" id="player_8h_html_af30e2030635a69690f85e48bc6ef202f"><div class="ttname"><a href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a></div><div class="ttdeci">struct _Player Player</div><div class="ttdoc">Definicion de la estructura player. </div><div class="ttdef"><b>Definition:</b> player.h:29</div></div>
+<div class="ttc" id="game_8h_html_a1a8156d5bed5e2d46a7455dec89238f3"><div class="ttname"><a href="game_8h.html#a1a8156d5bed5e2d46a7455dec89238f3">game_get_space_at</a></div><div class="ttdeci">Space * game_get_space_at(Game *game, int index)</div><div class="ttdoc">Develve el espacop una posición dada. </div><div class="ttdef"><b>Definition:</b> game.c:339</div></div>
+<div class="ttc" id="game_8h_html_a4280b7ee7ac0d4575d0aa88e8b7f921b"><div class="ttname"><a href="game_8h.html#a4280b7ee7ac0d4575d0aa88e8b7f921b">game_add_player</a></div><div class="ttdeci">STATUS game_add_player(Game *game, Player *player)</div><div class="ttdoc">Añade un jugador al juego. Si el jugador ya está inicializado, lo sustituye por otro. </div><div class="ttdef"><b>Definition:</b> game.c:290</div></div>
+<div class="ttc" id="game_8h_html_a1cdbe3f06b9bf49eb5e334a22ad3b2b9"><div class="ttname"><a href="game_8h.html#a1cdbe3f06b9bf49eb5e334a22ad3b2b9">game_create</a></div><div class="ttdeci">Game * game_create()</div><div class="ttdoc">Inicializa los datos del juego Esta función inicializa los espacios, crea e inicializa el jugador...</div><div class="ttdef"><b>Definition:</b> game.c:123</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:43 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

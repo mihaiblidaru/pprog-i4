@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/inventory.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo inventory.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implememtacion del inventario del juego.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="set_8h_source.html">set.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inventory_8h_source.html">inventory.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5d6b47f7a727932c56d66a65fb540910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#a5d6b47f7a727932c56d66a65fb540910">inventory_create</a> ()</td></tr>
+<tr class="memdesc:a5d6b47f7a727932c56d66a65fb540910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el inventario e inicializa sus campos.  <a href="#a5d6b47f7a727932c56d66a65fb540910">Más...</a><br/></td></tr>
+<tr class="separator:a5d6b47f7a727932c56d66a65fb540910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690c5b171251c27a628f0ecaaaf6b9ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#a690c5b171251c27a628f0ecaaaf6b9ce">inventory_destroy</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory)</td></tr>
+<tr class="memdesc:a690c5b171251c27a628f0ecaaaf6b9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruye un inventario.  <a href="#a690c5b171251c27a628f0ecaaaf6b9ce">Más...</a><br/></td></tr>
+<tr class="separator:a690c5b171251c27a628f0ecaaaf6b9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb64993bbb4b8c2e0c84f438073760c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#adb64993bbb4b8c2e0c84f438073760c5">inventory_add_object</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> id)</td></tr>
+<tr class="memdesc:adb64993bbb4b8c2e0c84f438073760c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un objeto al inventario.  <a href="#adb64993bbb4b8c2e0c84f438073760c5">Más...</a><br/></td></tr>
+<tr class="separator:adb64993bbb4b8c2e0c84f438073760c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93ba85d30635a77f71213779a5eb88c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#ac93ba85d30635a77f71213779a5eb88c">inventory_set_max</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory, int NumIds)</td></tr>
+<tr class="memdesc:ac93ba85d30635a77f71213779a5eb88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el numero de objetos del inventario.  <a href="#ac93ba85d30635a77f71213779a5eb88c">Más...</a><br/></td></tr>
+<tr class="separator:ac93ba85d30635a77f71213779a5eb88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac41dfbea9df9fcfbbebfec318ddd636"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#aac41dfbea9df9fcfbbebfec318ddd636">inventory_get_max</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory)</td></tr>
+<tr class="memdesc:aac41dfbea9df9fcfbbebfec318ddd636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el número de objetos de un inventario.  <a href="#aac41dfbea9df9fcfbbebfec318ddd636">Más...</a><br/></td></tr>
+<tr class="separator:aac41dfbea9df9fcfbbebfec318ddd636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e818c6024ffdab4dba6eb814675f81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#a17e818c6024ffdab4dba6eb814675f81">inventory_remove_object</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> id)</td></tr>
+<tr class="memdesc:a17e818c6024ffdab4dba6eb814675f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina un objeto del inventario.  <a href="#a17e818c6024ffdab4dba6eb814675f81">Más...</a><br/></td></tr>
+<tr class="separator:a17e818c6024ffdab4dba6eb814675f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd25032e0e69c343ecae29182a8f70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="set_8h.html#a6d3b7f7c92cbb4577ef3ef7ddbf93161">Set</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#acbd25032e0e69c343ecae29182a8f70f">inventory_get_set</a> (<a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory)</td></tr>
+<tr class="memdesc:acbd25032e0e69c343ecae29182a8f70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el conjunto de identificadores.  <a href="#acbd25032e0e69c343ecae29182a8f70f">Más...</a><br/></td></tr>
+<tr class="separator:acbd25032e0e69c343ecae29182a8f70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743221b32ac6c372214bb83aaa3fbd74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory_8c.html#a743221b32ac6c372214bb83aaa3fbd74">inventory_print</a> (FILE *fp, <a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *inventory)</td></tr>
+<tr class="memdesc:a743221b32ac6c372214bb83aaa3fbd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime los datos de un inventario.  <a href="#a743221b32ac6c372214bb83aaa3fbd74">Más...</a><br/></td></tr>
+<tr class="separator:a743221b32ac6c372214bb83aaa3fbd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implememtacion del inventario del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Laura Bernal y Sandra Benítez </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>14-03-2017 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="adb64993bbb4b8c2e0c84f438073760c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> inventory_add_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un objeto al inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario al que se desea añadir objeto </td></tr>
+    <tr><td class="paramname">id</td><td>Id del objeto a añadir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Un array de Ids de los objetos que tiene el jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d6b47f7a727932c56d66a65fb540910"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a>* inventory_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea el inventario e inicializa sus campos. </p>
+<dl class="section author"><dt>Autor</dt><dd>Laura Bernal y Sandra Benitez</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero a inventory </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a690c5b171251c27a628f0ecaaaf6b9ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> inventory_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruye un inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario que se desea eliminar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha liberado correctamente, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac41dfbea9df9fcfbbebfec318ddd636"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inventory_get_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el número de objetos de un inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario del que se obtiene el numero maximo de objetos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de objetos de un inventario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acbd25032e0e69c343ecae29182a8f70f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set_8h.html#a6d3b7f7c92cbb4577ef3ef7ddbf93161">Set</a>* inventory_get_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el conjunto de identificadores. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario del que se desea obtener el conjunto de identificadores </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Conjunto de identificadores </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a743221b32ac6c372214bb83aaa3fbd74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> inventory_print </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime los datos de un inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td></td></tr>
+    <tr><td class="paramname">fp</td><td>Archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha realizado correctamente, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a17e818c6024ffdab4dba6eb814675f81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> inventory_remove_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina un objeto del inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario de que eliminar el objeto </td></tr>
+    <tr><td class="paramname">id</td><td>Id del objeto a eliminar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha realizado correctamente, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac93ba85d30635a77f71213779a5eb88c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> inventory_set_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="inventory_8h.html#a2253bf64ac4ce6a9c1d6f39c0b0d32a3">Inventory</a> *&#160;</td>
+          <td class="paramname"><em>inventory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NumIds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifica el numero de objetos del inventario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inventory</td><td>Inventario en el que se quiere poner el numero maximo de ids </td></tr>
+    <tr><td class="paramname">NumIds</td><td>El numero maximo de ids a colocar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha realizado correctamente, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

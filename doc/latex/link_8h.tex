@@ -1,0 +1,410 @@
+\hypertarget{link_8h}{\section{Referencia del Archivo include/link.h}
+\label{link_8h}\index{include/link.\-h@{include/link.\-h}}
+}
+
+
+Implementa el nuevo T\-A\-D Link (Enlace). Sirve para enlazar de forma más potente las casillas.  
+
+
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+\subsection*{'defines'}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{link_8h_abfa744c8ca5b46f7f2a10aea53a4ec59}{M\-A\-X\-\_\-\-L\-I\-N\-K}~10000
+\end{DoxyCompactItemize}
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{link_8h_ae3b299941e67be6971bfd64a25505eff}{typedef struct \-\_\-\-Link \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}\label{link_8h_ae3b299941e67be6971bfd64a25505eff}
+
+\begin{DoxyCompactList}\small\item\em Estructura de link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State} \{ \hyperlink{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a45c1c97bdcce420fc01045ee101a0cf2}{O\-P\-E\-N\-E\-D}, 
+\hyperlink{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a929f0327e17604ce9713b2a6117bd603}{C\-L\-O\-S\-E\-D}
+ \}
+\begin{DoxyCompactList}\small\item\em Define los posibles estados de un enlace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8h_aaf21d03943afcbed370ca720f972482c}{link\-\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Crea un nuevo link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_a85c4dd77887bf31f651ea1162144d712}{link\-\_\-destroy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Destruye el link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_a3fd49fb1a3f19be4fc800ff07820cafb}{link\-\_\-set\-\_\-id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Coloca la id del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}{link\-\_\-get\-\_\-id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene la id del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_a6c7a3bd7a856288c377edbcd045912e6}{link\-\_\-set\-\_\-name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Coloca el nombre del link. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{link_8h_a9747ee8201a323e112e67bdeacbc90d8}{link\-\_\-get\-\_\-name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_aae5fe19ad2512430e52cf78968b52bf1}{link\-\_\-set\-\_\-space1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Coloca la id del spacio 1 del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a7a703edf730484b48e951754f754bd94}{link\-\_\-get\-\_\-space1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene la id del spacio 1 del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_a153c76eec748e402ea66cc13f2725131}{link\-\_\-set\-\_\-space2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Coloca la id del spacio 2 del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_afefc169db63bad1b3660ba1d0ee14095}{link\-\_\-get\-\_\-space2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene la id del spacio 2 del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{link_8h_af560433337904da507be9748215f934a}{link\-\_\-set\-\_\-state} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, int state)
+\begin{DoxyCompactList}\small\item\em Coloca el estado del link. \end{DoxyCompactList}\item 
+\hyperlink{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State} \hyperlink{link_8h_a6a0fd557795ecd04df19b31f47a9f075}{link\-\_\-get\-\_\-state} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el estado del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a9d838216ad0f2760aabd24c1b17dc891}{link\-\_\-get\-\_\-dest\-\_\-from} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} from)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de destino de un link desde una casilla dada. \end{DoxyCompactList}\item 
+int \hyperlink{link_8h_ab5c45f8c1edc80d2f2dd73f5539d1951}{link\-\_\-print} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Imprime el link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementa el nuevo T\-A\-D Link (Enlace). Sirve para enlazar de forma más potente las casillas. \begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+
+
+\subsection{Documentación de los 'defines'}
+\hypertarget{link_8h_abfa744c8ca5b46f7f2a10aea53a4ec59}{\index{link.\-h@{link.\-h}!M\-A\-X\-\_\-\-L\-I\-N\-K@{M\-A\-X\-\_\-\-L\-I\-N\-K}}
+\index{M\-A\-X\-\_\-\-L\-I\-N\-K@{M\-A\-X\-\_\-\-L\-I\-N\-K}!link.h@{link.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-L\-I\-N\-K~10000}}\label{link_8h_abfa744c8ca5b46f7f2a10aea53a4ec59}
+Numero maximo de enlaces permitidos 
+
+\subsection{Documentación de las enumeraciones}
+\hypertarget{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{\index{link.\-h@{link.\-h}!State@{State}}
+\index{State@{State}!link.h@{link.\-h}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf State}}}\label{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8}
+
+
+Define los posibles estados de un enlace. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{O\-P\-E\-N\-E\-D@{O\-P\-E\-N\-E\-D}!link.\-h@{link.\-h}}\index{link.\-h@{link.\-h}!O\-P\-E\-N\-E\-D@{O\-P\-E\-N\-E\-D}}\item[{\em 
+\hypertarget{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a45c1c97bdcce420fc01045ee101a0cf2}{O\-P\-E\-N\-E\-D}\label{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a45c1c97bdcce420fc01045ee101a0cf2}
+}]Enlace abierto \index{C\-L\-O\-S\-E\-D@{C\-L\-O\-S\-E\-D}!link.\-h@{link.\-h}}\index{link.\-h@{link.\-h}!C\-L\-O\-S\-E\-D@{C\-L\-O\-S\-E\-D}}\item[{\em 
+\hypertarget{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a929f0327e17604ce9713b2a6117bd603}{C\-L\-O\-S\-E\-D}\label{link_8h_a5d74787dedbc4e11c1ab15bf487e61f8a929f0327e17604ce9713b2a6117bd603}
+}]Enlace cerrado \end{description}
+\end{Desc}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{link_8h_aaf21d03943afcbed370ca720f972482c}{\index{link.\-h@{link.\-h}!link\-\_\-create@{link\-\_\-create}}
+\index{link\-\_\-create@{link\-\_\-create}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ link\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{link_8h_aaf21d03943afcbed370ca720f972482c}
+
+
+Crea un nuevo link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+El nuevo link creado 
+\end{DoxyReturn}
+\hypertarget{link_8h_a85c4dd77887bf31f651ea1162144d712}{\index{link.\-h@{link.\-h}!link\-\_\-destroy@{link\-\_\-destroy}}
+\index{link\-\_\-destroy@{link\-\_\-destroy}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a85c4dd77887bf31f651ea1162144d712}
+
+
+Destruye el link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se destruido, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{link_8h_a9d838216ad0f2760aabd24c1b17dc891}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-dest\-\_\-from@{link\-\_\-get\-\_\-dest\-\_\-from}}
+\index{link\-\_\-get\-\_\-dest\-\_\-from@{link\-\_\-get\-\_\-dest\-\_\-from}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-dest\-\_\-from}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\-\_\-get\-\_\-dest\-\_\-from (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{from}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a9d838216ad0f2760aabd24c1b17dc891}
+
+
+Obtiene el id de destino de un link desde una casilla dada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero a link. \\
+\hline
+{\em from} & Id de la casilla de origen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El id de destino si se ha podido encontrar o N\-O\-\_\-\-I\-D en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-id@{link\-\_\-get\-\_\-id}}
+\index{link\-\_\-get\-\_\-id@{link\-\_\-get\-\_\-id}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\-\_\-get\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}
+
+
+Obtiene la id del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La id del link 
+\end{DoxyReturn}
+\hypertarget{link_8h_a9747ee8201a323e112e67bdeacbc90d8}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-name@{link\-\_\-get\-\_\-name}}
+\index{link\-\_\-get\-\_\-name@{link\-\_\-get\-\_\-name}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ link\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a9747ee8201a323e112e67bdeacbc90d8}
+
+
+Obtiene el nombre del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El nombre del link 
+\end{DoxyReturn}
+\hypertarget{link_8h_a7a703edf730484b48e951754f754bd94}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-space1@{link\-\_\-get\-\_\-space1}}
+\index{link\-\_\-get\-\_\-space1@{link\-\_\-get\-\_\-space1}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-space1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\-\_\-get\-\_\-space1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a7a703edf730484b48e951754f754bd94}
+
+
+Obtiene la id del spacio 1 del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El id del spacio 1 
+\end{DoxyReturn}
+\hypertarget{link_8h_afefc169db63bad1b3660ba1d0ee14095}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-space2@{link\-\_\-get\-\_\-space2}}
+\index{link\-\_\-get\-\_\-space2@{link\-\_\-get\-\_\-space2}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-space2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\-\_\-get\-\_\-space2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_afefc169db63bad1b3660ba1d0ee14095}
+
+
+Obtiene la id del spacio 2 del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Id del spacio 2 del link 
+\end{DoxyReturn}
+\hypertarget{link_8h_a6a0fd557795ecd04df19b31f47a9f075}{\index{link.\-h@{link.\-h}!link\-\_\-get\-\_\-state@{link\-\_\-get\-\_\-state}}
+\index{link\-\_\-get\-\_\-state@{link\-\_\-get\-\_\-state}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-get\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} link\-\_\-get\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a6a0fd557795ecd04df19b31f47a9f075}
+
+
+Obtiene el estado del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El estado del link 
+\end{DoxyReturn}
+\hypertarget{link_8h_ab5c45f8c1edc80d2f2dd73f5539d1951}{\index{link.\-h@{link.\-h}!link\-\_\-print@{link\-\_\-print}}
+\index{link\-\_\-print@{link\-\_\-print}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}int link\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8h_ab5c45f8c1edc80d2f2dd73f5539d1951}
+
+
+Imprime el link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Impresion del link 
+\end{DoxyReturn}
+\hypertarget{link_8h_a3fd49fb1a3f19be4fc800ff07820cafb}{\index{link.\-h@{link.\-h}!link\-\_\-set\-\_\-id@{link\-\_\-set\-\_\-id}}
+\index{link\-\_\-set\-\_\-id@{link\-\_\-set\-\_\-id}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-set\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-set\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a3fd49fb1a3f19be4fc800ff07820cafb}
+
+
+Coloca la id del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+{\em id} & La id que se desea colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha colocado bien la id, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{link_8h_a6c7a3bd7a856288c377edbcd045912e6}{\index{link.\-h@{link.\-h}!link\-\_\-set\-\_\-name@{link\-\_\-set\-\_\-name}}
+\index{link\-\_\-set\-\_\-name@{link\-\_\-set\-\_\-name}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a6c7a3bd7a856288c377edbcd045912e6}
+
+
+Coloca el nombre del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+{\em name} & El nombre que se desea colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha colocado bien el nombre, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{link_8h_aae5fe19ad2512430e52cf78968b52bf1}{\index{link.\-h@{link.\-h}!link\-\_\-set\-\_\-space1@{link\-\_\-set\-\_\-space1}}
+\index{link\-\_\-set\-\_\-space1@{link\-\_\-set\-\_\-space1}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-set\-\_\-space1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-set\-\_\-space1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{link_8h_aae5fe19ad2512430e52cf78968b52bf1}
+
+
+Coloca la id del spacio 1 del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+{\em id} & La id que se desea colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha colocado bien la id, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{link_8h_a153c76eec748e402ea66cc13f2725131}{\index{link.\-h@{link.\-h}!link\-\_\-set\-\_\-space2@{link\-\_\-set\-\_\-space2}}
+\index{link\-\_\-set\-\_\-space2@{link\-\_\-set\-\_\-space2}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-set\-\_\-space2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-set\-\_\-space2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{link_8h_a153c76eec748e402ea66cc13f2725131}
+
+
+Coloca la id del spacio 2 del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+{\em id} & La id que se desea colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha colocado bien la id, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{link_8h_af560433337904da507be9748215f934a}{\index{link.\-h@{link.\-h}!link\-\_\-set\-\_\-state@{link\-\_\-set\-\_\-state}}
+\index{link\-\_\-set\-\_\-state@{link\-\_\-set\-\_\-state}!link.h@{link.\-h}}
+\subsubsection[{link\-\_\-set\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} link\-\_\-set\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}}\label{link_8h_af560433337904da507be9748215f934a}
+
+
+Coloca el estado del link. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em link} & Puntero al link. \\
+\hline
+{\em state} & El estado al que se quiere poner el link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha colocado bien el estado, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}

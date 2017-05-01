@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Fichero Fuente include/dialogue.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dialogue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dialogue_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef DIALOGUE_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DIALOGUE_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="space_8h.html">space.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="link_8h.html">link.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="object_8h.html">object.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a4a495c5dc119df269e405793ffdc6e38">   22</a></span>&#160;<span class="preprocessor">#define GLOBAL_NO_ARGS -20</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_Dialogue <a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    NO_OBJ,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    NOT_IN_SPACE,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    NOT_MOBILE,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    INVENTORY_FULL,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    TAKE_OK</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}<a class="code" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">   42</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    NOT_IN_INV,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    LEAVE_OK</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}<a class="code" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">   50</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395">   51</a></span>&#160;    <a class="code" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395">SAVE_PROTECTED_FILE</a>,       </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3">   52</a></span>&#160;    <a class="code" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3">SAVE_SAVE_OK</a>,              </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27">   53</a></span>&#160;    <a class="code" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27">SAVE_WRITE_FAILED</a>         </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <a class="code" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">   59</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    INSPECT_NO_OBJ,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    INSPECT_OK</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}<a class="code" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">   67</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    TURN_NOT_IN_INV,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    TURN_NO_LIGHT,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    TURN_ALREADY,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    TURN_OK</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}<a class="code" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">   77</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    LOAD_OK,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    LOAD_ERROR</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}<a class="code" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a1519f3f8390a73a656d733dd12d62ebe">   85</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    NO_RULE,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    LIGHT_OBJECT,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    LIGHT_SPACE,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    HIDE_OBJECT,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    LOSE_OBJECT,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    CLOSE_LINK,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    CHANGE_LAST_LINK</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}<a class="code" href="dialogue_8h.html#a1519f3f8390a73a656d733dd12d62ebe">GAME_RULES_LIST</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">   98</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    NOTHING_TO_ATTACK,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    BOSS1_OK,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    BOSS2_OK,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    WRONG_WEAPON</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}<a class="code" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">  108</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    WRONG_SYNTAX,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    NO_OBJECT,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    NO_LINK,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    NOT_SAME_ID,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    OPEN_OK</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}<a class="code" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* <a class="code" href="dialogue_8h.html#a50fda0c6b948ba5ed34308356fd657ab">dialogue_ini</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dialogue_8h.html#afdea7e120fcbe5a5953567ccadd34e07">dialogue_destroy</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="dialogue_8h.html#afd5bfa1c2c0ca6c47b2ee7601197e9e7">dialogue_get_text</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> * d);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#ab62ce05056b5a70df734e3d1de5c7445">dialogue_go</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>*d, <a class="code" href="types_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a> direction, <a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* space, <a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> status, <span class="keywordtype">char</span>* dir_name, <a class="code" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* link);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a34b96f2b7a971371a568aa8a4bfc7c0d">dialogue_unknown</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a03267613366ecb10b7040ee728edc78e">dialogue_dir</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a1b6903507c77e42bbaee603b2c37f049">dialogue_take</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a> status);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a5cc35f5b1744b56dd84d829c84643d3f">dialogue_leave</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>*<span class="keywordtype">object</span>, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a> status);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#ab108ab2b45d7461d255f6b8b68076f2c">dialogue_save</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> * d, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a> status);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a2568cef61b95437e8c92451e7c38d96a">dialogue_load</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a> status);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a2d2f2027c6cbfec7304cab5c29a1e593">dialogue_attack</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a> status);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a25e995aad81fe49c639d3900f7babee0">dialogue_inspect</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* <span class="keywordtype">object</span>, <a class="code" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* space, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a> status);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a25755ceeb0f23393cae878616dbe9dfb">dialogue_open</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <span class="keywordtype">char</span>* objName, <span class="keywordtype">char</span>* linkName, <a class="code" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a> status);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a48673dd4b6ec0904bb4345ca190ce8f1">dialogue_turn_on</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>*<span class="keywordtype">object</span>, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a> status);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a1894cb32181474d5df46fe3588bf666a">dialogue_turn_off</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* d, <a class="code" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>*<span class="keywordtype">object</span>, <span class="keywordtype">char</span>* name, <a class="code" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a> status);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#abebdb24e2dd3d65da67ad0ac67ba808f">dialogue_help</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="dialogue_8h.html#a4b6b9ef3c64800f169edd11b4a96d948">dialogue_game_rule</a>(<a class="code" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <span class="keywordtype">int</span> rule);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="dialogue_8h_html_ab108ab2b45d7461d255f6b8b68076f2c"><div class="ttname"><a href="dialogue_8h.html#ab108ab2b45d7461d255f6b8b68076f2c">dialogue_save</a></div><div class="ttdeci">STATUS dialogue_save(Dialogue *d, char *name, DIALOGUE_SAVE_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando SAVE. </div><div class="ttdef"><b>Definition:</b> dialogue.c:249</div></div>
+<div class="ttc" id="dialogue_8h_html_aa2b1484b3e1813d71f86b93844e3d5c8"><div class="ttname"><a href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a></div><div class="ttdeci">OPEN_STATUS</div><div class="ttdoc">Codigos de estado del comando OPEN. </div><div class="ttdef"><b>Definition:</b> dialogue.h:108</div></div>
+<div class="ttc" id="dialogue_8h_html_a1b6903507c77e42bbaee603b2c37f049"><div class="ttname"><a href="dialogue_8h.html#a1b6903507c77e42bbaee603b2c37f049">dialogue_take</a></div><div class="ttdeci">STATUS dialogue_take(Dialogue *d, Object *object, char *name, TAKE_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando TAKE. </div><div class="ttdef"><b>Definition:</b> dialogue.c:191</div></div>
+<div class="ttc" id="types_8h_html_a32c27cc471df37f4fc818d65de0a56c4"><div class="ttname"><a href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a></div><div class="ttdeci">STATUS</div><div class="ttdoc">Definicion de la enumeración STATUS. </div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="dialogue_8h_html_a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27"><div class="ttname"><a href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27">SAVE_WRITE_FAILED</a></div><div class="ttdef"><b>Definition:</b> dialogue.h:53</div></div>
+<div class="ttc" id="space_8h_html"><div class="ttname"><a href="space_8h.html">space.h</a></div><div class="ttdoc">Define un espacio. </div></div>
+<div class="ttc" id="types_8h_html_aa268a41a13430b18e933ed40207178d0"><div class="ttname"><a href="types_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a></div><div class="ttdeci">DIRECTION</div><div class="ttdoc">Direciones en las que puede ir en jugador. </div><div class="ttdef"><b>Definition:</b> types.h:50</div></div>
+<div class="ttc" id="object_8h_html_a7f8bbcda919b65ce67f92fba08e0212f"><div class="ttname"><a href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a></div><div class="ttdeci">struct _Object Object</div><div class="ttdoc">Definicion de la estructura objecto. </div><div class="ttdef"><b>Definition:</b> object.h:19</div></div>
+<div class="ttc" id="space_8h_html_a67533ffc2b70463baecc38fb0629bbfc"><div class="ttname"><a href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a></div><div class="ttdeci">struct _Space Space</div><div class="ttdef"><b>Definition:</b> space.h:22</div></div>
+<div class="ttc" id="dialogue_8h_html_a25755ceeb0f23393cae878616dbe9dfb"><div class="ttname"><a href="dialogue_8h.html#a25755ceeb0f23393cae878616dbe9dfb">dialogue_open</a></div><div class="ttdeci">STATUS dialogue_open(Dialogue *d, char *objName, char *linkName, OPEN_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando TAKE. </div><div class="ttdef"><b>Definition:</b> dialogue.c:368</div></div>
+<div class="ttc" id="dialogue_8h_html_ac85b757c2f78da5e14bfa218eccf381c"><div class="ttname"><a href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a></div><div class="ttdeci">LEAVE_STATUS</div><div class="ttdoc">Codigos de estado del comando LEAVE. </div><div class="ttdef"><b>Definition:</b> dialogue.h:42</div></div>
+<div class="ttc" id="dialogue_8h_html_a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395"><div class="ttname"><a href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395">SAVE_PROTECTED_FILE</a></div><div class="ttdef"><b>Definition:</b> dialogue.h:51</div></div>
+<div class="ttc" id="dialogue_8h_html_a4b6b9ef3c64800f169edd11b4a96d948"><div class="ttname"><a href="dialogue_8h.html#a4b6b9ef3c64800f169edd11b4a96d948">dialogue_game_rule</a></div><div class="ttdeci">STATUS dialogue_game_rule(Dialogue *d, int rule)</div><div class="ttdoc">Contruye el texto del dialogo para las reglas dej juego. </div><div class="ttdef"><b>Definition:</b> dialogue.c:476</div></div>
+<div class="ttc" id="dialogue_8h_html_ab62ce05056b5a70df734e3d1de5c7445"><div class="ttname"><a href="dialogue_8h.html#ab62ce05056b5a70df734e3d1de5c7445">dialogue_go</a></div><div class="ttdeci">STATUS dialogue_go(Dialogue *d, DIRECTION direction, Space *space, STATUS status, char *dir_name, Link *link)</div><div class="ttdoc">Contruye el texto del dialogo para el comando GO. </div><div class="ttdef"><b>Definition:</b> dialogue.c:90</div></div>
+<div class="ttc" id="dialogue_8h_html_a48673dd4b6ec0904bb4345ca190ce8f1"><div class="ttname"><a href="dialogue_8h.html#a48673dd4b6ec0904bb4345ca190ce8f1">dialogue_turn_on</a></div><div class="ttdeci">STATUS dialogue_turn_on(Dialogue *d, Object *object, char *name, TURN_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando TURN_ON. </div><div class="ttdef"><b>Definition:</b> dialogue.c:397</div></div>
+<div class="ttc" id="link_8h_html_ae3b299941e67be6971bfd64a25505eff"><div class="ttname"><a href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a></div><div class="ttdeci">struct _Link Link</div><div class="ttdoc">Estructura de link. </div><div class="ttdef"><b>Definition:</b> link.h:22</div></div>
+<div class="ttc" id="dialogue_8h_html_afdea7e120fcbe5a5953567ccadd34e07"><div class="ttname"><a href="dialogue_8h.html#afdea7e120fcbe5a5953567ccadd34e07">dialogue_destroy</a></div><div class="ttdeci">void dialogue_destroy(Dialogue *d)</div><div class="ttdoc">Libera la memoria usasa por un dialogo. </div><div class="ttdef"><b>Definition:</b> dialogue.c:50</div></div>
+<div class="ttc" id="dialogue_8h_html_a03267613366ecb10b7040ee728edc78e"><div class="ttname"><a href="dialogue_8h.html#a03267613366ecb10b7040ee728edc78e">dialogue_dir</a></div><div class="ttdeci">STATUS dialogue_dir(Dialogue *d)</div><div class="ttdoc">Contruye el texto del dialogo para el comando DIR. </div><div class="ttdef"><b>Definition:</b> dialogue.c:175</div></div>
+<div class="ttc" id="dialogue_8h_html_a05f49ce48da4369a10cb00658c1358ff"><div class="ttname"><a href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a></div><div class="ttdeci">ATTACK_STATUS</div><div class="ttdoc">Codigos de estado del comando ATTACK. </div><div class="ttdef"><b>Definition:</b> dialogue.h:98</div></div>
+<div class="ttc" id="dialogue_8h_html_abebdb24e2dd3d65da67ad0ac67ba808f"><div class="ttname"><a href="dialogue_8h.html#abebdb24e2dd3d65da67ad0ac67ba808f">dialogue_help</a></div><div class="ttdeci">STATUS dialogue_help(Dialogue *d)</div><div class="ttdoc">Contruye el texto del dialogo para el comando HELP. </div><div class="ttdef"><b>Definition:</b> dialogue.c:462</div></div>
+<div class="ttc" id="dialogue_8h_html_a6b92fb32ecdb02261dd90b467408c3a1"><div class="ttname"><a href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a></div><div class="ttdeci">TAKE_STATUS</div><div class="ttdoc">Codigos de estado del comando TAKE. </div><div class="ttdef"><b>Definition:</b> dialogue.h:31</div></div>
+<div class="ttc" id="dialogue_8h_html_a1519f3f8390a73a656d733dd12d62ebe"><div class="ttname"><a href="dialogue_8h.html#a1519f3f8390a73a656d733dd12d62ebe">GAME_RULES_LIST</a></div><div class="ttdeci">GAME_RULES_LIST</div><div class="ttdoc">Codigos de idenficación de las reglas. </div><div class="ttdef"><b>Definition:</b> dialogue.h:85</div></div>
+<div class="ttc" id="dialogue_8h_html_ad25e8d75177dc0ecfaaf97610765d318"><div class="ttname"><a href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a></div><div class="ttdeci">struct _Dialogue Dialogue</div><div class="ttdef"><b>Definition:</b> dialogue.h:26</div></div>
+<div class="ttc" id="dialogue_8h_html_a93bfe92dab2bd60c87310cf9e1bab9a4"><div class="ttname"><a href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a></div><div class="ttdeci">DIALOGUE_SAVE_STATUS</div><div class="ttdoc">Codigos de estado del comando SAVE. </div><div class="ttdef"><b>Definition:</b> dialogue.h:50</div></div>
+<div class="ttc" id="dialogue_8h_html_abae9271a1a4e92272e6dc0b67ec0db33"><div class="ttname"><a href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a></div><div class="ttdeci">TURN_STATUS</div><div class="ttdoc">Codigos de estado de los comandos TURNON TURNOFF. </div><div class="ttdef"><b>Definition:</b> dialogue.h:67</div></div>
+<div class="ttc" id="dialogue_8h_html_a2568cef61b95437e8c92451e7c38d96a"><div class="ttname"><a href="dialogue_8h.html#a2568cef61b95437e8c92451e7c38d96a">dialogue_load</a></div><div class="ttdeci">STATUS dialogue_load(Dialogue *d, char *name, DIALOGUE_LOAD_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando LOAD. </div><div class="ttdef"><b>Definition:</b> dialogue.c:277</div></div>
+<div class="ttc" id="object_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div><div class="ttdoc">Define la interfaz pública del TAD Objeto. </div></div>
+<div class="ttc" id="dialogue_8h_html_a05a614e0f15c86cc47bedbbb0b7519ca"><div class="ttname"><a href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a></div><div class="ttdeci">DIALOGUE_LOAD_STATUS</div><div class="ttdoc">Codigos de estado del comando LOAD. </div><div class="ttdef"><b>Definition:</b> dialogue.h:77</div></div>
+<div class="ttc" id="dialogue_8h_html_a2d2f2027c6cbfec7304cab5c29a1e593"><div class="ttname"><a href="dialogue_8h.html#a2d2f2027c6cbfec7304cab5c29a1e593">dialogue_attack</a></div><div class="ttdeci">STATUS dialogue_attack(Dialogue *d, ATTACK_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando ATTACK. </div><div class="ttdef"><b>Definition:</b> dialogue.c:304</div></div>
+<div class="ttc" id="dialogue_8h_html_a25e995aad81fe49c639d3900f7babee0"><div class="ttname"><a href="dialogue_8h.html#a25e995aad81fe49c639d3900f7babee0">dialogue_inspect</a></div><div class="ttdeci">STATUS dialogue_inspect(Dialogue *d, Object *object, Space *space, char *name, INSPECT_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando TAKE. </div><div class="ttdef"><b>Definition:</b> dialogue.c:332</div></div>
+<div class="ttc" id="dialogue_8h_html_a8aee189b53a7a599b700e35d5125b4c1"><div class="ttname"><a href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a></div><div class="ttdeci">INSPECT_STATUS</div><div class="ttdoc">Codigos de estado del comando INSPECT. </div><div class="ttdef"><b>Definition:</b> dialogue.h:59</div></div>
+<div class="ttc" id="dialogue_8h_html_a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3"><div class="ttname"><a href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3">SAVE_SAVE_OK</a></div><div class="ttdef"><b>Definition:</b> dialogue.h:52</div></div>
+<div class="ttc" id="dialogue_8h_html_a1894cb32181474d5df46fe3588bf666a"><div class="ttname"><a href="dialogue_8h.html#a1894cb32181474d5df46fe3588bf666a">dialogue_turn_off</a></div><div class="ttdeci">STATUS dialogue_turn_off(Dialogue *d, Object *object, char *name, TURN_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando TURN_ON. </div><div class="ttdef"><b>Definition:</b> dialogue.c:431</div></div>
+<div class="ttc" id="link_8h_html"><div class="ttname"><a href="link_8h.html">link.h</a></div><div class="ttdoc">Implementa el nuevo TAD Link (Enlace). Sirve para enlazar de forma más potente las casillas...</div></div>
+<div class="ttc" id="dialogue_8h_html_a34b96f2b7a971371a568aa8a4bfc7c0d"><div class="ttname"><a href="dialogue_8h.html#a34b96f2b7a971371a568aa8a4bfc7c0d">dialogue_unknown</a></div><div class="ttdeci">STATUS dialogue_unknown(Dialogue *d)</div><div class="ttdoc">Contruye el texto del dialogo para comandos desconocidos. </div><div class="ttdef"><b>Definition:</b> dialogue.c:162</div></div>
+<div class="ttc" id="dialogue_8h_html_afd5bfa1c2c0ca6c47b2ee7601197e9e7"><div class="ttname"><a href="dialogue_8h.html#afd5bfa1c2c0ca6c47b2ee7601197e9e7">dialogue_get_text</a></div><div class="ttdeci">char * dialogue_get_text(Dialogue *d)</div><div class="ttdoc">Devuelve el texto del dialogo. </div><div class="ttdef"><b>Definition:</b> dialogue.c:74</div></div>
+<div class="ttc" id="dialogue_8h_html_a50fda0c6b948ba5ed34308356fd657ab"><div class="ttname"><a href="dialogue_8h.html#a50fda0c6b948ba5ed34308356fd657ab">dialogue_ini</a></div><div class="ttdeci">Dialogue * dialogue_ini()</div><div class="ttdoc">Inicializa un modulo dialogo. </div><div class="ttdef"><b>Definition:</b> dialogue.c:38</div></div>
+<div class="ttc" id="dialogue_8h_html_a5cc35f5b1744b56dd84d829c84643d3f"><div class="ttname"><a href="dialogue_8h.html#a5cc35f5b1744b56dd84d829c84643d3f">dialogue_leave</a></div><div class="ttdeci">STATUS dialogue_leave(Dialogue *d, Object *object, char *name, LEAVE_STATUS status)</div><div class="ttdoc">Contruye el texto del dialogo para el comando LEAVE. </div><div class="ttdef"><b>Definition:</b> dialogue.c:222</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:43 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

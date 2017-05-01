@@ -1,0 +1,363 @@
+\hypertarget{player_8h}{\section{Referencia del Archivo include/player.h}
+\label{player_8h}\index{include/player.\-h@{include/player.\-h}}
+}
+
+
+Define el T\-A\-D player y los prototipos de las funciones necesarias para trabajar con este T\-A\-D.  
+
+
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}set.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}inventory.\-h\char`\"{}}\\*
+\subsection*{'defines'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{player_8h_aa8e7426a60de76746b37967a6a5da8a2}{\#define \hyperlink{player_8h_aa8e7426a60de76746b37967a6a5da8a2}{P\-L\-A\-Y\-E\-R\-\_\-\-I\-N\-V\-\_\-\-L\-O\-C\-A\-T\-I\-O\-N}~-\/65535}\label{player_8h_aa8e7426a60de76746b37967a6a5da8a2}
+
+\begin{DoxyCompactList}\small\item\em Localizacion ficticia que corresponde al inventario del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{player_8h_af30e2030635a69690f85e48bc6ef202f}{typedef struct \-\_\-\-Player \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}}\label{player_8h_af30e2030635a69690f85e48bc6ef202f}
+
+\begin{DoxyCompactList}\small\item\em Definicion de la estructura player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_a2a002f9a122c494520b2d478ce176244}{player\-\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Crea un nuevo jugador e inicializa sus campos. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}{player\-\_\-destroy} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Destruye un jugador. \end{DoxyCompactList}\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_a3c5d90e12fa0d9cb05a364e79b7a33be}{player\-\_\-\-Set\-\_\-\-Id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Pone el id del jugador. \end{DoxyCompactList}\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_a3df7bae0f9b39eac28aa93e8db3cfb07}{player\-\_\-\-Set\-\_\-\-Name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Pone el nombre del jugador. \end{DoxyCompactList}\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_ae635565b4d4f7d151f07b9f5e7e095eb}{player\-\_\-\-Set\-\_\-\-Location} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} location)
+\begin{DoxyCompactList}\small\item\em Pone la localizacion del jugador. \end{DoxyCompactList}\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_afa0e3fba12d6f77b42e6fee5a9aaf078}{player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, int max\-\_\-objects)
+\begin{DoxyCompactList}\small\item\em Asigna el número maximo de objetos que puede llevar el jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_a051a70ccaad86c89fe606a0291a303eb}{player\-\_\-\-Get\-\_\-\-Id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el id del jugador. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{player_8h_a63c53ec92d3b036120e50e40eda6e69b}{player\-\_\-\-Get\-\_\-\-Name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_a0661e6ad8cfde1bbc6854a2600d8ed12}{player\-\_\-\-Get\-\_\-\-Location} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene la localizacion del jugador. \end{DoxyCompactList}\item 
+int \hyperlink{player_8h_ab1781f4f8d7924042cbb0e7e0ab94b86}{player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Devuelve el número maximo de objetos que puede llevar el jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{player_8h_a398fd999cb35cb2b8a0b442d5f7c9f85}{player\-\_\-\-Add\-\_\-\-Object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Añade un objeto al Inventory del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{player_8h_aef4471c67dae8dc3c968e7ffed34e7c2}{player\-\_\-\-Remove\-\_\-\-Object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Borra un objeto del Inventory del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} \hyperlink{player_8h_a3f1ec136356c7e33902628cbf35ce461}{player\-\_\-\-Has\-\_\-\-Object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Comprueba si el jugador tiene un objeto determinado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{player_8h_a18a5cde058ef2e4fb9a6954cb9ae5cb3}{player\-\_\-\-Print} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Imprime por pantalla los datos del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Define el T\-A\-D player y los prototipos de las funciones necesarias para trabajar con este T\-A\-D. \begin{DoxyAuthor}{Autor}
+Mihai Blidaru Pareja 7 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+31-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{player_8h_a398fd999cb35cb2b8a0b442d5f7c9f85}{\index{player.\-h@{player.\-h}!player\-\_\-\-Add\-\_\-\-Object@{player\-\_\-\-Add\-\_\-\-Object}}
+\index{player\-\_\-\-Add\-\_\-\-Object@{player\-\_\-\-Add\-\_\-\-Object}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Add\-\_\-\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} player\-\_\-\-Add\-\_\-\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a398fd999cb35cb2b8a0b442d5f7c9f85}
+
+
+Añade un objeto al Inventory del jugador. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El jugador al que se quiere añadir un objeto \\
+\hline
+{\em object\-\_\-id} & El id del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se hace bien, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{player_8h_a2a002f9a122c494520b2d478ce176244}{\index{player.\-h@{player.\-h}!player\-\_\-create@{player\-\_\-create}}
+\index{player\-\_\-create@{player\-\_\-create}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a2a002f9a122c494520b2d478ce176244}
+
+
+Crea un nuevo jugador e inicializa sus campos. 
+
+\begin{DoxyReturn}{Devuelve}
+El nuevo jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}{\index{player.\-h@{player.\-h}!player\-\_\-destroy@{player\-\_\-destroy}}
+\index{player\-\_\-destroy@{player\-\_\-destroy}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} player\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}
+
+
+Destruye un jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Error si se ha hecho mal o Ok si se ha liberado correctamente. 
+\end{DoxyReturn}
+\hypertarget{player_8h_a051a70ccaad86c89fe606a0291a303eb}{\index{player.\-h@{player.\-h}!player\-\_\-\-Get\-\_\-\-Id@{player\-\_\-\-Get\-\_\-\-Id}}
+\index{player\-\_\-\-Get\-\_\-\-Id@{player\-\_\-\-Get\-\_\-\-Id}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Get\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} player\-\_\-\-Get\-\_\-\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a051a70ccaad86c89fe606a0291a303eb}
+
+
+Obtiene el id del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El id del jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_a0661e6ad8cfde1bbc6854a2600d8ed12}{\index{player.\-h@{player.\-h}!player\-\_\-\-Get\-\_\-\-Location@{player\-\_\-\-Get\-\_\-\-Location}}
+\index{player\-\_\-\-Get\-\_\-\-Location@{player\-\_\-\-Get\-\_\-\-Location}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Get\-\_\-\-Location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} player\-\_\-\-Get\-\_\-\-Location (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a0661e6ad8cfde1bbc6854a2600d8ed12}
+
+
+Obtiene la localizacion del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La localizacion del jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_ab1781f4f8d7924042cbb0e7e0ab94b86}{\index{player.\-h@{player.\-h}!player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects@{player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects}}
+\index{player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects@{player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}int player\-\_\-\-Get\-\_\-\-Max\-\_\-\-Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_ab1781f4f8d7924042cbb0e7e0ab94b86}
+
+
+Devuelve el número maximo de objetos que puede llevar el jugador. 
+
+\begin{DoxyAuthor}{Autor}
+Sandra Benitez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El jugador del que se quiere conocer el numero máximo de objetos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el número máximo de objetos 
+\end{DoxyReturn}
+\hypertarget{player_8h_a63c53ec92d3b036120e50e40eda6e69b}{\index{player.\-h@{player.\-h}!player\-\_\-\-Get\-\_\-\-Name@{player\-\_\-\-Get\-\_\-\-Name}}
+\index{player\-\_\-\-Get\-\_\-\-Name@{player\-\_\-\-Get\-\_\-\-Name}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Get\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ player\-\_\-\-Get\-\_\-\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a63c53ec92d3b036120e50e40eda6e69b}
+
+
+Obtiene el nombre del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El nombre del jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_a3f1ec136356c7e33902628cbf35ce461}{\index{player.\-h@{player.\-h}!player\-\_\-\-Has\-\_\-\-Object@{player\-\_\-\-Has\-\_\-\-Object}}
+\index{player\-\_\-\-Has\-\_\-\-Object@{player\-\_\-\-Has\-\_\-\-Object}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Has\-\_\-\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} player\-\_\-\-Has\-\_\-\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a3f1ec136356c7e33902628cbf35ce461}
+
+
+Comprueba si el jugador tiene un objeto determinado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El jugador que se quiere comprobar \\
+\hline
+{\em object\-\_\-id} & El id del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+T\-R\-U\-E si el jugador tiene el objeto o F\-A\-L\-S\-E en caso contrario o E\-R\-R\-O\-R 
+\end{DoxyReturn}
+\hypertarget{player_8h_a18a5cde058ef2e4fb9a6954cb9ae5cb3}{\index{player.\-h@{player.\-h}!player\-\_\-\-Print@{player\-\_\-\-Print}}
+\index{player\-\_\-\-Print@{player\-\_\-\-Print}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} player\-\_\-\-Print (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a18a5cde058ef2e4fb9a6954cb9ae5cb3}
+
+
+Imprime por pantalla los datos del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Imprime por pantalla si hay jugador y da E\-R\-R\-O\-R si lo contrario 
+\end{DoxyReturn}
+\hypertarget{player_8h_aef4471c67dae8dc3c968e7ffed34e7c2}{\index{player.\-h@{player.\-h}!player\-\_\-\-Remove\-\_\-\-Object@{player\-\_\-\-Remove\-\_\-\-Object}}
+\index{player\-\_\-\-Remove\-\_\-\-Object@{player\-\_\-\-Remove\-\_\-\-Object}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Remove\-\_\-\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} player\-\_\-\-Remove\-\_\-\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{object\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{player_8h_aef4471c67dae8dc3c968e7ffed34e7c2}
+
+
+Borra un objeto del Inventory del jugador. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El jugador al que se quiere quitar un objeto \\
+\hline
+{\em object\-\_\-id} & El id del objeto \\
+\hline
+\end{DoxyParams}
+\hypertarget{player_8h_a3c5d90e12fa0d9cb05a364e79b7a33be}{\index{player.\-h@{player.\-h}!player\-\_\-\-Set\-\_\-\-Id@{player\-\_\-\-Set\-\_\-\-Id}}
+\index{player\-\_\-\-Set\-\_\-\-Id@{player\-\_\-\-Set\-\_\-\-Id}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Set\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\-\_\-\-Set\-\_\-\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{player\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a3c5d90e12fa0d9cb05a364e79b7a33be}
+
+
+Pone el id del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+{\em player\-\_\-id} & Id del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_ae635565b4d4f7d151f07b9f5e7e095eb}{\index{player.\-h@{player.\-h}!player\-\_\-\-Set\-\_\-\-Location@{player\-\_\-\-Set\-\_\-\-Location}}
+\index{player\-\_\-\-Set\-\_\-\-Location@{player\-\_\-\-Set\-\_\-\-Location}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Set\-\_\-\-Location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\-\_\-\-Set\-\_\-\-Location (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{location}
+\end{DoxyParamCaption}
+)}}\label{player_8h_ae635565b4d4f7d151f07b9f5e7e095eb}
+
+
+Pone la localizacion del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+{\em location} & La localizacion del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El jugador 
+\end{DoxyReturn}
+\hypertarget{player_8h_afa0e3fba12d6f77b42e6fee5a9aaf078}{\index{player.\-h@{player.\-h}!player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects@{player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects}}
+\index{player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects@{player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\-\_\-\-Set\-\_\-\-Max\-\_\-\-Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{int}]{max\-\_\-objects}
+\end{DoxyParamCaption}
+)}}\label{player_8h_afa0e3fba12d6f77b42e6fee5a9aaf078}
+
+
+Asigna el número maximo de objetos que puede llevar el jugador. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El jugador al que se le quiere cambiar el numero máximo de objetos \\
+\hline
+{\em max\-\_\-objects} & Número máximo de objetos que puede llevar el jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al jugador si todo ha ido bien o N\-U\-L\-L en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{player_8h_a3df7bae0f9b39eac28aa93e8db3cfb07}{\index{player.\-h@{player.\-h}!player\-\_\-\-Set\-\_\-\-Name@{player\-\_\-\-Set\-\_\-\-Name}}
+\index{player\-\_\-\-Set\-\_\-\-Name@{player\-\_\-\-Set\-\_\-\-Name}!player.h@{player.\-h}}
+\subsubsection[{player\-\_\-\-Set\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\-\_\-\-Set\-\_\-\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{player_8h_a3df7bae0f9b39eac28aa93e8db3cfb07}
+
+
+Pone el nombre del jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & El puntero del jugador. \\
+\hline
+{\em name} & Nombre del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El jugador 
+\end{DoxyReturn}

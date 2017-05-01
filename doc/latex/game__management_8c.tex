@@ -1,0 +1,121 @@
+\hypertarget{game__management_8c}{\section{Referencia del Archivo src/game\-\_\-management.c}
+\label{game__management_8c}\index{src/game\-\_\-management.\-c@{src/game\-\_\-management.\-c}}
+}
+
+
+Este modulo se encarga de cargar los datos del juego. Carga las casillas los enlaces, los objetos y los datos del jugador. Tambié incluye la función de guardado.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}game.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}space.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game\-\_\-management.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{game__management_8c_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$spaces\-File, char $\ast$objects\-File, char $\ast$linksfile, char $\ast$players\-File)
+\begin{DoxyCompactList}\small\item\em Carga los datos del juego desde un archivo. \end{DoxyCompactList}\item 
+\hyperlink{game__management_8h_a511decf56b1875181521a3ca2635b8f5}{S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} \hyperlink{game__management_8c_aa894e393666367ef4b8dcd5294a4ee6d}{game\-\_\-management\-\_\-save} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Guarda los datos de la partida con el mismo formato que los ficheros de carga. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{game__management_8c_afec68c063a60726a1429d20740dcb9ef}{game\-\_\-management\-\_\-load} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Carga los datos del juego desde un archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Este modulo se encarga de cargar los datos del juego. Carga las casillas los enlaces, los objetos y los datos del jugador. Tambié incluye la función de guardado. \begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+29-\/04-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{game__management_8c_afec68c063a60726a1429d20740dcb9ef}{\index{game\-\_\-management.\-c@{game\-\_\-management.\-c}!game\-\_\-management\-\_\-load@{game\-\_\-management\-\_\-load}}
+\index{game\-\_\-management\-\_\-load@{game\-\_\-management\-\_\-load}!game_management.c@{game\-\_\-management.\-c}}
+\subsubsection[{game\-\_\-management\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-load (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8c_afec68c063a60726a1429d20740dcb9ef}
+
+
+Carga los datos del juego desde un archivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Un puntero al juego donde cargar los datos \\
+\hline
+{\em filename} & nombre del archivo desde donde cargar los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha cargado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{game__management_8c_aa894e393666367ef4b8dcd5294a4ee6d}{\index{game\-\_\-management.\-c@{game\-\_\-management.\-c}!game\-\_\-management\-\_\-save@{game\-\_\-management\-\_\-save}}
+\index{game\-\_\-management\-\_\-save@{game\-\_\-management\-\_\-save}!game_management.c@{game\-\_\-management.\-c}}
+\subsubsection[{game\-\_\-management\-\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-save (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8c_aa894e393666367ef4b8dcd5294a4ee6d}
+
+
+Guarda los datos de la partida con el mismo formato que los ficheros de carga. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Un puntero al game desde donde se quieren guardar los datos \\
+\hline
+{\em filename} & Archivo donde guardar los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si ha guardado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{game__management_8c_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}{\index{game\-\_\-management.\-c@{game\-\_\-management.\-c}!game\-\_\-management\-\_\-start\-\_\-from\-\_\-file@{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}}
+\index{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file@{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}!game_management.c@{game\-\_\-management.\-c}}
+\subsubsection[{game\-\_\-management\-\_\-start\-\_\-from\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} game\-\_\-management\-\_\-start\-\_\-from\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{spaces\-File, }
+\item[{char $\ast$}]{objects\-File, }
+\item[{char $\ast$}]{linksfile, }
+\item[{char $\ast$}]{players\-File}
+\end{DoxyParamCaption}
+)}}\label{game__management_8c_ab886ad7cc0ba7cd8d8cb2c40ac87cfc7}
+
+
+Carga los datos del juego desde un archivo. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & Puntero a la estructura del juego. \\
+\hline
+{\em spaces\-File} & Nombre del archivo desde donde hay que cargar los espacios \\
+\hline
+{\em objects\-File} & Nombre del archivo desde donde hay que cargar los objetos \\
+\hline
+{\em linksfile} & Nombre del archivo desde donde hay que cargar los links \\
+\hline
+{\em players\-File} & Nombre del archivo desde donde hay que cargar los datos del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si todo ha ido bien. E\-R\-R\-O\-R en caso contrario. 
+\end{DoxyReturn}

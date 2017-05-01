@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo include/command.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo command.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementa el interpreatador de comandos. Lee los comandos que introduce el usuario parseandolos al tipo de datos T_Command, para poder trabajar facilmente con estos comandos.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br/>
+</div>
+<p><a href="command_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a2b1bd24d2eddf8081d8c541e4cc4fd4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b1bd24d2eddf8081d8c541e4cc4fd4b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a2b1bd24d2eddf8081d8c541e4cc4fd4b">CMD_LENGHT</a>&#160;&#160;&#160;70</td></tr>
+<tr class="memdesc:a2b1bd24d2eddf8081d8c541e4cc4fd4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extension del comando. <br/></td></tr>
+<tr class="separator:a2b1bd24d2eddf8081d8c541e4cc4fd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:a7d2935971c252377cb0fc1c8545dc2bc"><td class="memItemLeft" align="right" valign="top">typedef struct _Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a></td></tr>
+<tr class="memdesc:a7d2935971c252377cb0fc1c8545dc2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de la estructura del comando.  <a href="#a7d2935971c252377cb0fc1c8545dc2bc">Más...</a><br/></td></tr>
+<tr class="separator:a7d2935971c252377cb0fc1c8545dc2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0473597db8c45c0289b6b8e2f8abbe32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0473597db8c45c0289b6b8e2f8abbe32"></a>
+typedef enum <a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50c">enum_Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a0473597db8c45c0289b6b8e2f8abbe32">T_Command</a></td></tr>
+<tr class="memdesc:a0473597db8c45c0289b6b8e2f8abbe32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define los tipos de comandos que existen en el juego. <br/></td></tr>
+<tr class="separator:a0473597db8c45c0289b6b8e2f8abbe32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ace19ba2296a74e4aef53304e0934c50c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50c">enum_Command</a> { <br/>
+&#160;&#160;<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca785693a1d550a18688638e9124af41d0">NO_CMD</a> = -1, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca76bdc8adfd6c6463ab269ff4c06be9b4">QUIT</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca7405647410e343caba1bf383e83d4f5f">TAKE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0">LEAVE</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca2eeb9fef8a6a516fa6437a44a6efbd52">ROLL</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca50d8e53aac4e002d0fd296c5033ce985">GO</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50caab933f64fcaa285df294e1420f6f1b07">INSPECT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca141759a3bd88e1f969f53ce070705fcd">TURNON</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca564ee0e901bafdd34855cf0ad96ef60c">TURNOFF</a>, 
+<a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50ca0e0143636c29971736eab47415868eae">OPEN</a>, 
+<b>SAVE</b>, 
+<br/>
+&#160;&#160;<b>LOAD</b>, 
+<b>DIR</b>, 
+<b>HELP</b>, 
+<b>ATTACK</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ace19ba2296a74e4aef53304e0934c50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define los tipos de comandos que existen en el juego.  <a href="command_8h.html#ace19ba2296a74e4aef53304e0934c50c">Más...</a><br/></td></tr>
+<tr class="separator:ace19ba2296a74e4aef53304e0934c50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a332ed516a605d73018254c8f6e5d1a25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a332ed516a605d73018254c8f6e5d1a25">Command_ini</a> ()</td></tr>
+<tr class="memdesc:a332ed516a605d73018254c8f6e5d1a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa una estructura tipo Command.  <a href="#a332ed516a605d73018254c8f6e5d1a25">Más...</a><br/></td></tr>
+<tr class="separator:a332ed516a605d73018254c8f6e5d1a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492ad103fd0a8abd174cecc1a86dcdf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a492ad103fd0a8abd174cecc1a86dcdf8">Command_destroy</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager)</td></tr>
+<tr class="memdesc:a492ad103fd0a8abd174cecc1a86dcdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera memoria usada por una estructura Command.  <a href="#a492ad103fd0a8abd174cecc1a86dcdf8">Más...</a><br/></td></tr>
+<tr class="separator:a492ad103fd0a8abd174cecc1a86dcdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa9a05b602789d69d4b26b04c0cf1fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#acfa9a05b602789d69d4b26b04c0cf1fb">Command_set_cmd</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager, <a class="el" href="command_8h.html#a0473597db8c45c0289b6b8e2f8abbe32">T_Command</a> cmd)</td></tr>
+<tr class="memdesc:acfa9a05b602789d69d4b26b04c0cf1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda un comando en la estructura.  <a href="#acfa9a05b602789d69d4b26b04c0cf1fb">Más...</a><br/></td></tr>
+<tr class="separator:acfa9a05b602789d69d4b26b04c0cf1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62be88f588be7388a4e88862ac57b926"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a62be88f588be7388a4e88862ac57b926">Command_set_cmd_arg</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager, char *arg, int index)</td></tr>
+<tr class="memdesc:a62be88f588be7388a4e88862ac57b926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda un parametro de un comando en la estructura en una posición dada.  <a href="#a62be88f588be7388a4e88862ac57b926">Más...</a><br/></td></tr>
+<tr class="separator:a62be88f588be7388a4e88862ac57b926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a46ec28d9377c261485aeed9f5b21f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command_8h.html#a0473597db8c45c0289b6b8e2f8abbe32">T_Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a0a46ec28d9377c261485aeed9f5b21f2">Command_get_cmd</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager)</td></tr>
+<tr class="memdesc:a0a46ec28d9377c261485aeed9f5b21f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el comando guardado en la estructura.  <a href="#a0a46ec28d9377c261485aeed9f5b21f2">Más...</a><br/></td></tr>
+<tr class="separator:a0a46ec28d9377c261485aeed9f5b21f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfa89a1c3ba1f8a526a66f997ccd53c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a9bfa89a1c3ba1f8a526a66f997ccd53c">Command_get_cmd_arg</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager, int index)</td></tr>
+<tr class="memdesc:a9bfa89a1c3ba1f8a526a66f997ccd53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un parametro del comando guardado en la estructura en una posición dada.  <a href="#a9bfa89a1c3ba1f8a526a66f997ccd53c">Más...</a><br/></td></tr>
+<tr class="separator:a9bfa89a1c3ba1f8a526a66f997ccd53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926b4548f30a633eec7c8c17ae90d093"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a926b4548f30a633eec7c8c17ae90d093">Command_clear</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager)</td></tr>
+<tr class="memdesc:a926b4548f30a633eec7c8c17ae90d093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpia los datos de una estructura Command.  <a href="#a926b4548f30a633eec7c8c17ae90d093">Más...</a><br/></td></tr>
+<tr class="separator:a926b4548f30a633eec7c8c17ae90d093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756d09f48ba1599fb9b9b46877ad9d0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#a756d09f48ba1599fb9b9b46877ad9d0a">get_user_input</a> (<a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *cmdManager)</td></tr>
+<tr class="memdesc:a756d09f48ba1599fb9b9b46877ad9d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee los comandos de introduce el usuario.  <a href="#a756d09f48ba1599fb9b9b46877ad9d0a">Más...</a><br/></td></tr>
+<tr class="separator:a756d09f48ba1599fb9b9b46877ad9d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementa el interpreatador de comandos. Lee los comandos que introduce el usuario parseandolos al tipo de datos T_Command, para poder trabajar facilmente con estos comandos. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Javier Bernardo y Mihai Blidaru </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>09/03/2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a class="anchor" id="a7d2935971c252377cb0fc1c8545dc2bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _Command <a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion de la estructura del comando. </p>
+<p>Tad Comando. Gestiona la entrada de comandos en el juego </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
+<a class="anchor" id="ace19ba2296a74e4aef53304e0934c50c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="command_8h.html#ace19ba2296a74e4aef53304e0934c50c">enum_Command</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define los tipos de comandos que existen en el juego. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca785693a1d550a18688638e9124af41d0"></a>NO_CMD</em>&#160;</td><td class="fielddoc">
+<p>Sin Comando </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca6ce26a62afab55d7606ad4e92428b30c"></a>UNKNOWN</em>&#160;</td><td class="fielddoc">
+<p>Comando desconocido </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca76bdc8adfd6c6463ab269ff4c06be9b4"></a>QUIT</em>&#160;</td><td class="fielddoc">
+<p>Comando salir </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca7405647410e343caba1bf383e83d4f5f"></a>TAKE</em>&#160;</td><td class="fielddoc">
+<p>Comando coger </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0"></a>LEAVE</em>&#160;</td><td class="fielddoc">
+<p>Comando dejar </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca2eeb9fef8a6a516fa6437a44a6efbd52"></a>ROLL</em>&#160;</td><td class="fielddoc">
+<p>Comando lanzar </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca50d8e53aac4e002d0fd296c5033ce985"></a>GO</em>&#160;</td><td class="fielddoc">
+<p>Comando ir </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50caab933f64fcaa285df294e1420f6f1b07"></a>INSPECT</em>&#160;</td><td class="fielddoc">
+<p>Comando inspeccionar </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca141759a3bd88e1f969f53ce070705fcd"></a>TURNON</em>&#160;</td><td class="fielddoc">
+<p>Comando encender </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca564ee0e901bafdd34855cf0ad96ef60c"></a>TURNOFF</em>&#160;</td><td class="fielddoc">
+<p>Comando apagar </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ace19ba2296a74e4aef53304e0934c50ca0e0143636c29971736eab47415868eae"></a>OPEN</em>&#160;</td><td class="fielddoc">
+<p>Comando abrir </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a926b4548f30a633eec7c8c17ae90d093"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> Command_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpia los datos de una estructura Command. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>Una estructura Command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha hecho correctamente o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a492ad103fd0a8abd174cecc1a86dcdf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> Command_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera memoria usada por una estructura Command. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>La estructura command que se tiene que liberar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha realizado correctamente o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a46ec28d9377c261485aeed9f5b21f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="command_8h.html#a0473597db8c45c0289b6b8e2f8abbe32">T_Command</a> Command_get_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el comando guardado en la estructura. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>La estructura Command de la cual leer los datos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El comando guardado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9bfa89a1c3ba1f8a526a66f997ccd53c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Command_get_cmd_arg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un parametro del comando guardado en la estructura en una posición dada. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>La estructura Command de la cual leer los datos </td></tr>
+    <tr><td class="paramname">index</td><td>El indice del parametro que se quiere leer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El parametro del comando guardado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a332ed516a605d73018254c8f6e5d1a25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a>* Command_ini </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea e inicializa una estructura tipo Command. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Una estructura command inicializada o NULL si hay algun error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acfa9a05b602789d69d4b26b04c0cf1fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> Command_set_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a0473597db8c45c0289b6b8e2f8abbe32">T_Command</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda un comando en la estructura. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>Una estructura tipo command </td></tr>
+    <tr><td class="paramname">cmd</td><td>El comando a guardar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha guardado correctamente o error en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a62be88f588be7388a4e88862ac57b926"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> Command_set_cmd_arg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda un parametro de un comando en la estructura en una posición dada. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>Una estructura tipo command </td></tr>
+    <tr><td class="paramname">arg</td><td>El parametro a guardar </td></tr>
+    <tr><td class="paramname">index</td><td>La posición donde se quiere guardar el parametro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha guardado correctamente o error en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a756d09f48ba1599fb9b9b46877ad9d0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> get_user_input </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>cmdManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee los comandos de introduce el usuario. </p>
+<p>Lee por teclado el comando que introduce el usuario y comprueba que esta en la lista de los comandos permitidos. Guarda en la estructura Command los datos introducidos: en cmd guarda el tipo de comando y en arg guarda el argumento que tiene un comando</p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Javier Bernardo </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmdManager</td><td>Una estructura tipo Command donde guardar los datos leidos por teclado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si ha leido bien el comando o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

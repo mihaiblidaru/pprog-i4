@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/game.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo game.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>It implements the game interface and all the associated callbacks for each command.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="die_8h_source.html">die.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="command_8h_source.html">command.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="space_8h_source.html">space.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="object_8h_source.html">object.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="dialogue_8h_source.html">dialogue.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="game__management_8h_source.html">game_management.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a1cdbe3f06b9bf49eb5e334a22ad3b2b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a1cdbe3f06b9bf49eb5e334a22ad3b2b9">game_create</a> ()</td></tr>
+<tr class="memdesc:a1cdbe3f06b9bf49eb5e334a22ad3b2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa los datos del juego Esta función inicializa los espacios, crea e inicializa el jugador, los objetos y el dado.  <a href="#a1cdbe3f06b9bf49eb5e334a22ad3b2b9">Más...</a><br/></td></tr>
+<tr class="separator:a1cdbe3f06b9bf49eb5e334a22ad3b2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0736924a1235c0e6fe9b6d91c2a12af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a0736924a1235c0e6fe9b6d91c2a12af8">game_destroy</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a0736924a1235c0e6fe9b6d91c2a12af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruye la estructura game. Se encarga de liberar la memoria reservada por los elementos del juego spaces, player, objects y die.  <a href="#a0736924a1235c0e6fe9b6d91c2a12af8">Más...</a><br/></td></tr>
+<tr class="separator:a0736924a1235c0e6fe9b6d91c2a12af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ad86de0a92d9eccb234948458da7f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ae5ad86de0a92d9eccb234948458da7f1">game_add_space</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *space)</td></tr>
+<tr class="memdesc:ae5ad86de0a92d9eccb234948458da7f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un espacio al juego.  <a href="#ae5ad86de0a92d9eccb234948458da7f1">Más...</a><br/></td></tr>
+<tr class="separator:ae5ad86de0a92d9eccb234948458da7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9597a8e456aa74db536e87d56f56c3b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a9597a8e456aa74db536e87d56f56c3b4">game_add_object</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a9597a8e456aa74db536e87d56f56c3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un objeto al juego.  <a href="#a9597a8e456aa74db536e87d56f56c3b4">Más...</a><br/></td></tr>
+<tr class="separator:a9597a8e456aa74db536e87d56f56c3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4691bee17d5784ad6eb257dfbb252c27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a4691bee17d5784ad6eb257dfbb252c27">game_add_link</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *link)</td></tr>
+<tr class="memdesc:a4691bee17d5784ad6eb257dfbb252c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un objeto al juego.  <a href="#a4691bee17d5784ad6eb257dfbb252c27">Más...</a><br/></td></tr>
+<tr class="separator:a4691bee17d5784ad6eb257dfbb252c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4280b7ee7ac0d4575d0aa88e8b7f921b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a4280b7ee7ac0d4575d0aa88e8b7f921b">game_add_player</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a4280b7ee7ac0d4575d0aa88e8b7f921b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un jugador al juego. Si el jugador ya está inicializado, lo sustituye por otro.  <a href="#a4280b7ee7ac0d4575d0aa88e8b7f921b">Más...</a><br/></td></tr>
+<tr class="separator:a4280b7ee7ac0d4575d0aa88e8b7f921b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5042cf414a61dfb9e138ee1fd52dcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#abd5042cf414a61dfb9e138ee1fd52dcb">game_get_space</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> space_id)</td></tr>
+<tr class="memdesc:abd5042cf414a61dfb9e138ee1fd52dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un puntero al space que tiene el Id igual al Id pasado como parametro.  <a href="#abd5042cf414a61dfb9e138ee1fd52dcb">Más...</a><br/></td></tr>
+<tr class="separator:abd5042cf414a61dfb9e138ee1fd52dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8156d5bed5e2d46a7455dec89238f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a1a8156d5bed5e2d46a7455dec89238f3">game_get_space_at</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int index)</td></tr>
+<tr class="memdesc:a1a8156d5bed5e2d46a7455dec89238f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Develve el espacop una posición dada.  <a href="#a1a8156d5bed5e2d46a7455dec89238f3">Más...</a><br/></td></tr>
+<tr class="separator:a1a8156d5bed5e2d46a7455dec89238f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522fa057563961740062266f3696179f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a522fa057563961740062266f3696179f">game_get_object_at</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int index)</td></tr>
+<tr class="memdesc:a522fa057563961740062266f3696179f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Develve el objeto una posición dada.  <a href="#a522fa057563961740062266f3696179f">Más...</a><br/></td></tr>
+<tr class="separator:a522fa057563961740062266f3696179f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ad17816339cf8c469b2ce213cd06e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a08ad17816339cf8c469b2ce213cd06e4">game_get_link</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> link_id)</td></tr>
+<tr class="memdesc:a08ad17816339cf8c469b2ce213cd06e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un puntero al link que tiene el Id igual al Id pasado como parametro.  <a href="#a08ad17816339cf8c469b2ce213cd06e4">Más...</a><br/></td></tr>
+<tr class="separator:a08ad17816339cf8c469b2ce213cd06e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b19ca169a5c1d9cb8c4d5de7f7bcae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a01b19ca169a5c1d9cb8c4d5de7f7bcae">game_get_link_at</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int index)</td></tr>
+<tr class="memdesc:a01b19ca169a5c1d9cb8c4d5de7f7bcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Develve el link en una posición dada.  <a href="#a01b19ca169a5c1d9cb8c4d5de7f7bcae">Más...</a><br/></td></tr>
+<tr class="separator:a01b19ca169a5c1d9cb8c4d5de7f7bcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5753a09313b092a52c0cea742c40f3cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a5753a09313b092a52c0cea742c40f3cf">game_get_die</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a5753a09313b092a52c0cea742c40f3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el dado del juego.  <a href="#a5753a09313b092a52c0cea742c40f3cf">Más...</a><br/></td></tr>
+<tr class="separator:a5753a09313b092a52c0cea742c40f3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a628f2106f81c37d0e83c67920615f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ac6a628f2106f81c37d0e83c67920615f">game_get_player_location</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:ac6a628f2106f81c37d0e83c67920615f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la localización del jugador.  <a href="#ac6a628f2106f81c37d0e83c67920615f">Más...</a><br/></td></tr>
+<tr class="separator:ac6a628f2106f81c37d0e83c67920615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46efd507d797aec6da90d08aa592e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#af46efd507d797aec6da90d08aa592e32">game_get_player</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:af46efd507d797aec6da90d08aa592e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el jugador del juego.  <a href="#af46efd507d797aec6da90d08aa592e32">Más...</a><br/></td></tr>
+<tr class="separator:af46efd507d797aec6da90d08aa592e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba890b1d796db361825e9eaaf900133e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#aba890b1d796db361825e9eaaf900133e">game_get_dialogue</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:aba890b1d796db361825e9eaaf900133e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un puntero al modulo dialogo del juego.  <a href="#aba890b1d796db361825e9eaaf900133e">Más...</a><br/></td></tr>
+<tr class="separator:aba890b1d796db361825e9eaaf900133e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3281f4288efd16ae69ece933263e0f8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a3281f4288efd16ae69ece933263e0f8b">game_get_object_location</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a3281f4288efd16ae69ece933263e0f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la localización de un objeto.  <a href="#a3281f4288efd16ae69ece933263e0f8b">Más...</a><br/></td></tr>
+<tr class="separator:a3281f4288efd16ae69ece933263e0f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a2d2c3b658ab7502716a096c8ceda5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a16a2d2c3b658ab7502716a096c8ceda5">game_get_obj_list_as_str</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *space)</td></tr>
+<tr class="memdesc:a16a2d2c3b658ab7502716a096c8ceda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la lista de objetos de una casilla como cadena.  <a href="#a16a2d2c3b658ab7502716a096c8ceda5">Más...</a><br/></td></tr>
+<tr class="separator:a16a2d2c3b658ab7502716a096c8ceda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3251c7fe9dd5408f83ad91608c14ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a0f3251c7fe9dd5408f83ad91608c14ec">game_get_last_inspected_space</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a0f3251c7fe9dd5408f83ad91608c14ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el último espacio inspeccionado.  <a href="#a0f3251c7fe9dd5408f83ad91608c14ec">Más...</a><br/></td></tr>
+<tr class="separator:a0f3251c7fe9dd5408f83ad91608c14ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0effe7dae7618d3260adacab77bbeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a8d0effe7dae7618d3260adacab77bbeb">game_get_last_inspected_object</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a8d0effe7dae7618d3260adacab77bbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el ultimo objeto inspeccionado.  <a href="#a8d0effe7dae7618d3260adacab77bbeb">Más...</a><br/></td></tr>
+<tr class="separator:a8d0effe7dae7618d3260adacab77bbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a5ed8937423f8c012df3cedad4fa4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a33a5ed8937423f8c012df3cedad4fa4c">game_print_data</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a33a5ed8937423f8c012df3cedad4fa4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime la información del juego.  <a href="#a33a5ed8937423f8c012df3cedad4fa4c">Más...</a><br/></td></tr>
+<tr class="separator:a33a5ed8937423f8c012df3cedad4fa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6efe0650af110bbd84e742cc8046d93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#aa6efe0650af110bbd84e742cc8046d93">game_is_over</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:aa6efe0650af110bbd84e742cc8046d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve si el juego a acabado o no.  <a href="#aa6efe0650af110bbd84e742cc8046d93">Más...</a><br/></td></tr>
+<tr class="separator:aa6efe0650af110bbd84e742cc8046d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3e83f8ac4e4a94d6975d776abf27fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a0a3e83f8ac4e4a94d6975d776abf27fa">game_update</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *command)</td></tr>
+<tr class="memdesc:a0a3e83f8ac4e4a94d6975d776abf27fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta una de las funciones callback en funcion del comando recibido.  <a href="#a0a3e83f8ac4e4a94d6975d776abf27fa">Más...</a><br/></td></tr>
+<tr class="separator:a0a3e83f8ac4e4a94d6975d776abf27fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>It implements the game interface and all the associated callbacks for each command. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Javier Bernardo </dd>
+<dd>
+Mihai Blidaru </dd>
+<dd>
+Laura Bernal </dd>
+<dd>
+Sandra Benitez </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>2.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>13-01-2015 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a4691bee17d5784ad6eb257dfbb252c27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_add_link </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *&#160;</td>
+          <td class="paramname"><em>link</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un objeto al juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>El puntero al juego </td></tr>
+    <tr><td class="paramname">link</td><td>Un puntero al objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha añaido correctamente, sino ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9597a8e456aa74db536e87d56f56c3b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_add_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un objeto al juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>El puntero al juego </td></tr>
+    <tr><td class="paramname">object</td><td>Un puntero al objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha añadido correctamente, sino ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4280b7ee7ac0d4575d0aa88e8b7f921b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_add_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un jugador al juego. Si el jugador ya está inicializado, lo sustituye por otro. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>El puntero al juego </td></tr>
+    <tr><td class="paramname">player</td><td>Un puntero al jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha añaido correctamente, sino ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5ad86de0a92d9eccb234948458da7f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_add_space </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td>
+          <td class="paramname"><em>space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un espacio al juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>El puntero al juego </td></tr>
+    <tr><td class="paramname">space</td><td>Un puntero al espacio </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha añadido correctamente, sino ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1cdbe3f06b9bf49eb5e334a22ad3b2b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a>* game_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa los datos del juego Esta función inicializa los espacios, crea e inicializa el jugador, los objetos y el dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Mihai Blidaru</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si todo ha ido bien. En caso contrario ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0736924a1235c0e6fe9b6d91c2a12af8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruye la estructura game. Se encarga de liberar la memoria reservada por los elementos del juego spaces, player, objects y die. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha podido hacer todo correctamente. ERROR en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aba890b1d796db361825e9eaaf900133e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* game_get_dialogue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un puntero al modulo dialogo del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Un puntero al modulo dialogo del juego o NULL si hay algun error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5753a09313b092a52c0cea742c40f3cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a>* game_get_die </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el dado del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Dado del juego. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d0effe7dae7618d3260adacab77bbeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* game_get_last_inspected_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el ultimo objeto inspeccionado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Laura Bernal y Sandra Benitez </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Un puntero a la estructura game</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El ultimo objeto inspeccionado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0f3251c7fe9dd5408f83ad91608c14ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* game_get_last_inspected_space </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el último espacio inspeccionado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Laura Bernal y Sandra Benitez </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Un puntero a la estructura game</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El ultimo espacio inspeccionado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a08ad17816339cf8c469b2ce213cd06e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* game_get_link </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>link_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un puntero al link que tiene el Id igual al Id pasado como parametro. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">link_id</td><td>Id del link </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al link que tiene el Id igual al Id pasado como parametro. NULL si no existe. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a01b19ca169a5c1d9cb8c4d5de7f7bcae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a>* game_get_link_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Develve el link en una posición dada. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">index</td><td>La posición de la cual se quiere encontrar el link</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El espacio en la posición dada.Null si la posición es invalida. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16a2d2c3b658ab7502716a096c8ceda5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* game_get_obj_list_as_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td>
+          <td class="paramname"><em>space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la lista de objetos de una casilla como cadena. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Un puntero a la estructura game </td></tr>
+    <tr><td class="paramname">space</td><td>Un puntero a la casilla desde la cual leer los objetos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Una cadena con la lista de los objetos. Quien use esta funciónse tiene que encargar de liberar la memoria usada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a522fa057563961740062266f3696179f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* game_get_object_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Develve el objeto una posición dada. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">index</td><td>La posición de la cual se quiere encontrar el objeto</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto en la posición dada. Null si la posición es invalida. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3281f4288efd16ae69ece933263e0f8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> game_get_object_location </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la localización de un objeto. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura de el juego. </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto del que quieres obtener la posicion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La posicion del objeto o NO_ID en caso de error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af46efd507d797aec6da90d08aa592e32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* game_get_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el jugador del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Jugador del juego. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6a628f2106f81c37d0e83c67920615f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> game_get_player_location </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la localización del jugador. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura de l juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La localización del jugador. NO_ID si hay algun error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abd5042cf414a61dfb9e138ee1fd52dcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* game_get_space </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>space_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un puntero al space que tiene el Id igual al Id pasado como parametro. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">space_id</td><td>Id del espacio </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al espacio que tiene el Id igual al Id pasado como parametro. NULL si no existe. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a8156d5bed5e2d46a7455dec89238f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a>* game_get_space_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Develve el espacop una posición dada. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">index</td><td>La posición de la cual se quiere encontrar el espacio</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El espacio en la posición dada.Null si la posición es invalida. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6efe0650af110bbd84e742cc8046d93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> game_is_over </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve si el juego a acabado o no. </p>
+<p>En esta iteración la función devuelve siempre FALSE ya que no hay suficiente funcionalidad en el juego como para poder decidir si el juego ha acabado o no.</p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>FALSE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a33a5ed8937423f8c012df3cedad4fa4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_print_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime la información del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Nada </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a3e83f8ac4e4a94d6975d776abf27fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="command_8h.html#a7d2935971c252377cb0fc1c8545dc2bc">Command</a> *&#160;</td>
+          <td class="paramname"><em>command</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta una de las funciones callback en funcion del comando recibido. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego </td></tr>
+    <tr><td class="paramname">command</td><td>Comando que se tiene que ejecutar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

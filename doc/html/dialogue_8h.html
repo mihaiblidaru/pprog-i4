@@ -1,0 +1,988 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo include/dialogue.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo dialogue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementa el dialogo del juego.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="space_8h_source.html">space.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="link_8h_source.html">link.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="object_8h_source.html">object.h</a>&quot;</code><br/>
+</div>
+<p><a href="dialogue_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a4a495c5dc119df269e405793ffdc6e38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a4a495c5dc119df269e405793ffdc6e38">GLOBAL_NO_ARGS</a>&#160;&#160;&#160;-20</td></tr>
+<tr class="separator:a4a495c5dc119df269e405793ffdc6e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:ad25e8d75177dc0ecfaaf97610765d318"><td class="memItemLeft" align="right" valign="top">typedef struct _Dialogue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a></td></tr>
+<tr class="separator:ad25e8d75177dc0ecfaaf97610765d318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a6b92fb32ecdb02261dd90b467408c3a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a> { <br/>
+&#160;&#160;<b>NO_OBJ</b>, 
+<b>NOT_IN_SPACE</b>, 
+<b>NOT_MOBILE</b>, 
+<b>INVENTORY_FULL</b>, 
+<br/>
+&#160;&#160;<b>TAKE_OK</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a6b92fb32ecdb02261dd90b467408c3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando TAKE. <br/></td></tr>
+<tr class="separator:a6b92fb32ecdb02261dd90b467408c3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85b757c2f78da5e14bfa218eccf381c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a> { <b>NOT_IN_INV</b>, 
+<b>LEAVE_OK</b>
+ }</td></tr>
+<tr class="memdesc:ac85b757c2f78da5e14bfa218eccf381c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando LEAVE. <br/></td></tr>
+<tr class="separator:ac85b757c2f78da5e14bfa218eccf381c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93bfe92dab2bd60c87310cf9e1bab9a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a> { <a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395">SAVE_PROTECTED_FILE</a>, 
+<a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3">SAVE_SAVE_OK</a>, 
+<a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27">SAVE_WRITE_FAILED</a>
+ }</td></tr>
+<tr class="memdesc:a93bfe92dab2bd60c87310cf9e1bab9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando SAVE.  <a href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">Más...</a><br/></td></tr>
+<tr class="separator:a93bfe92dab2bd60c87310cf9e1bab9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aee189b53a7a599b700e35d5125b4c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a> { <b>INSPECT_NO_OBJ</b>, 
+<b>INSPECT_OK</b>
+ }</td></tr>
+<tr class="memdesc:a8aee189b53a7a599b700e35d5125b4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando INSPECT. <br/></td></tr>
+<tr class="separator:a8aee189b53a7a599b700e35d5125b4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae9271a1a4e92272e6dc0b67ec0db33"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a> { <b>TURN_NOT_IN_INV</b>, 
+<b>TURN_NO_LIGHT</b>, 
+<b>TURN_ALREADY</b>, 
+<b>TURN_OK</b>
+ }</td></tr>
+<tr class="memdesc:abae9271a1a4e92272e6dc0b67ec0db33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado de los comandos TURNON TURNOFF. <br/></td></tr>
+<tr class="separator:abae9271a1a4e92272e6dc0b67ec0db33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a614e0f15c86cc47bedbbb0b7519ca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a> { <b>LOAD_OK</b>, 
+<b>LOAD_ERROR</b>
+ }</td></tr>
+<tr class="memdesc:a05a614e0f15c86cc47bedbbb0b7519ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando LOAD. <br/></td></tr>
+<tr class="separator:a05a614e0f15c86cc47bedbbb0b7519ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1519f3f8390a73a656d733dd12d62ebe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a1519f3f8390a73a656d733dd12d62ebe">GAME_RULES_LIST</a> { <br/>
+&#160;&#160;<b>NO_RULE</b>, 
+<b>LIGHT_OBJECT</b>, 
+<b>LIGHT_SPACE</b>, 
+<b>HIDE_OBJECT</b>, 
+<br/>
+&#160;&#160;<b>LOSE_OBJECT</b>, 
+<b>CLOSE_LINK</b>, 
+<b>CHANGE_LAST_LINK</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a1519f3f8390a73a656d733dd12d62ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de idenficación de las reglas. <br/></td></tr>
+<tr class="separator:a1519f3f8390a73a656d733dd12d62ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f49ce48da4369a10cb00658c1358ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a> { <b>NOTHING_TO_ATTACK</b>, 
+<b>BOSS1_OK</b>, 
+<b>BOSS2_OK</b>, 
+<b>WRONG_WEAPON</b>
+ }</td></tr>
+<tr class="memdesc:a05f49ce48da4369a10cb00658c1358ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando ATTACK. <br/></td></tr>
+<tr class="separator:a05f49ce48da4369a10cb00658c1358ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b1484b3e1813d71f86b93844e3d5c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a> { <br/>
+&#160;&#160;<b>WRONG_SYNTAX</b>, 
+<b>NO_OBJECT</b>, 
+<b>NO_LINK</b>, 
+<b>NOT_SAME_ID</b>, 
+<br/>
+&#160;&#160;<b>OPEN_OK</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:aa2b1484b3e1813d71f86b93844e3d5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codigos de estado del comando OPEN. <br/></td></tr>
+<tr class="separator:aa2b1484b3e1813d71f86b93844e3d5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a50fda0c6b948ba5ed34308356fd657ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a50fda0c6b948ba5ed34308356fd657ab">dialogue_ini</a> ()</td></tr>
+<tr class="memdesc:a50fda0c6b948ba5ed34308356fd657ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa un modulo dialogo.  <a href="#a50fda0c6b948ba5ed34308356fd657ab">Más...</a><br/></td></tr>
+<tr class="separator:a50fda0c6b948ba5ed34308356fd657ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdea7e120fcbe5a5953567ccadd34e07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#afdea7e120fcbe5a5953567ccadd34e07">dialogue_destroy</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d)</td></tr>
+<tr class="memdesc:afdea7e120fcbe5a5953567ccadd34e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria usasa por un dialogo.  <a href="#afdea7e120fcbe5a5953567ccadd34e07">Más...</a><br/></td></tr>
+<tr class="separator:afdea7e120fcbe5a5953567ccadd34e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5bfa1c2c0ca6c47b2ee7601197e9e7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#afd5bfa1c2c0ca6c47b2ee7601197e9e7">dialogue_get_text</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d)</td></tr>
+<tr class="memdesc:afd5bfa1c2c0ca6c47b2ee7601197e9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el texto del dialogo.  <a href="#afd5bfa1c2c0ca6c47b2ee7601197e9e7">Más...</a><br/></td></tr>
+<tr class="separator:afd5bfa1c2c0ca6c47b2ee7601197e9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62ce05056b5a70df734e3d1de5c7445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#ab62ce05056b5a70df734e3d1de5c7445">dialogue_go</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="types_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a> direction, <a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *space, <a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> status, char *dir_name, <a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *link)</td></tr>
+<tr class="memdesc:ab62ce05056b5a70df734e3d1de5c7445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando GO.  <a href="#ab62ce05056b5a70df734e3d1de5c7445">Más...</a><br/></td></tr>
+<tr class="separator:ab62ce05056b5a70df734e3d1de5c7445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b96f2b7a971371a568aa8a4bfc7c0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a34b96f2b7a971371a568aa8a4bfc7c0d">dialogue_unknown</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d)</td></tr>
+<tr class="memdesc:a34b96f2b7a971371a568aa8a4bfc7c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para comandos desconocidos.  <a href="#a34b96f2b7a971371a568aa8a4bfc7c0d">Más...</a><br/></td></tr>
+<tr class="separator:a34b96f2b7a971371a568aa8a4bfc7c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03267613366ecb10b7040ee728edc78e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a03267613366ecb10b7040ee728edc78e">dialogue_dir</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d)</td></tr>
+<tr class="memdesc:a03267613366ecb10b7040ee728edc78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando DIR.  <a href="#a03267613366ecb10b7040ee728edc78e">Más...</a><br/></td></tr>
+<tr class="separator:a03267613366ecb10b7040ee728edc78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6903507c77e42bbaee603b2c37f049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a1b6903507c77e42bbaee603b2c37f049">dialogue_take</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *name, <a class="el" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a> status)</td></tr>
+<tr class="memdesc:a1b6903507c77e42bbaee603b2c37f049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando TAKE.  <a href="#a1b6903507c77e42bbaee603b2c37f049">Más...</a><br/></td></tr>
+<tr class="separator:a1b6903507c77e42bbaee603b2c37f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc35f5b1744b56dd84d829c84643d3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a5cc35f5b1744b56dd84d829c84643d3f">dialogue_leave</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *name, <a class="el" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a> status)</td></tr>
+<tr class="memdesc:a5cc35f5b1744b56dd84d829c84643d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando LEAVE.  <a href="#a5cc35f5b1744b56dd84d829c84643d3f">Más...</a><br/></td></tr>
+<tr class="separator:a5cc35f5b1744b56dd84d829c84643d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab108ab2b45d7461d255f6b8b68076f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#ab108ab2b45d7461d255f6b8b68076f2c">dialogue_save</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, char *name, <a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a> status)</td></tr>
+<tr class="memdesc:ab108ab2b45d7461d255f6b8b68076f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando SAVE.  <a href="#ab108ab2b45d7461d255f6b8b68076f2c">Más...</a><br/></td></tr>
+<tr class="separator:ab108ab2b45d7461d255f6b8b68076f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2568cef61b95437e8c92451e7c38d96a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a2568cef61b95437e8c92451e7c38d96a">dialogue_load</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, char *name, <a class="el" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a> status)</td></tr>
+<tr class="memdesc:a2568cef61b95437e8c92451e7c38d96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando LOAD.  <a href="#a2568cef61b95437e8c92451e7c38d96a">Más...</a><br/></td></tr>
+<tr class="separator:a2568cef61b95437e8c92451e7c38d96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2f2027c6cbfec7304cab5c29a1e593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a2d2f2027c6cbfec7304cab5c29a1e593">dialogue_attack</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a> status)</td></tr>
+<tr class="memdesc:a2d2f2027c6cbfec7304cab5c29a1e593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando ATTACK.  <a href="#a2d2f2027c6cbfec7304cab5c29a1e593">Más...</a><br/></td></tr>
+<tr class="separator:a2d2f2027c6cbfec7304cab5c29a1e593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e995aad81fe49c639d3900f7babee0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a25e995aad81fe49c639d3900f7babee0">dialogue_inspect</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *space, char *name, <a class="el" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a> status)</td></tr>
+<tr class="memdesc:a25e995aad81fe49c639d3900f7babee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando TAKE.  <a href="#a25e995aad81fe49c639d3900f7babee0">Más...</a><br/></td></tr>
+<tr class="separator:a25e995aad81fe49c639d3900f7babee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25755ceeb0f23393cae878616dbe9dfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a25755ceeb0f23393cae878616dbe9dfb">dialogue_open</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, char *objName, char *linkName, <a class="el" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a> status)</td></tr>
+<tr class="memdesc:a25755ceeb0f23393cae878616dbe9dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando TAKE.  <a href="#a25755ceeb0f23393cae878616dbe9dfb">Más...</a><br/></td></tr>
+<tr class="separator:a25755ceeb0f23393cae878616dbe9dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48673dd4b6ec0904bb4345ca190ce8f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a48673dd4b6ec0904bb4345ca190ce8f1">dialogue_turn_on</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *name, <a class="el" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a> status)</td></tr>
+<tr class="memdesc:a48673dd4b6ec0904bb4345ca190ce8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando TURN_ON.  <a href="#a48673dd4b6ec0904bb4345ca190ce8f1">Más...</a><br/></td></tr>
+<tr class="separator:a48673dd4b6ec0904bb4345ca190ce8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1894cb32181474d5df46fe3588bf666a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a1894cb32181474d5df46fe3588bf666a">dialogue_turn_off</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *name, <a class="el" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a> status)</td></tr>
+<tr class="memdesc:a1894cb32181474d5df46fe3588bf666a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando TURN_ON.  <a href="#a1894cb32181474d5df46fe3588bf666a">Más...</a><br/></td></tr>
+<tr class="separator:a1894cb32181474d5df46fe3588bf666a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebdb24e2dd3d65da67ad0ac67ba808f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#abebdb24e2dd3d65da67ad0ac67ba808f">dialogue_help</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d)</td></tr>
+<tr class="memdesc:abebdb24e2dd3d65da67ad0ac67ba808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para el comando HELP.  <a href="#abebdb24e2dd3d65da67ad0ac67ba808f">Más...</a><br/></td></tr>
+<tr class="separator:abebdb24e2dd3d65da67ad0ac67ba808f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6b9ef3c64800f169edd11b4a96d948"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dialogue_8h.html#a4b6b9ef3c64800f169edd11b4a96d948">dialogue_game_rule</a> (<a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *d, int rule)</td></tr>
+<tr class="memdesc:a4b6b9ef3c64800f169edd11b4a96d948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruye el texto del dialogo para las reglas dej juego.  <a href="#a4b6b9ef3c64800f169edd11b4a96d948">Más...</a><br/></td></tr>
+<tr class="separator:a4b6b9ef3c64800f169edd11b4a96d948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementa el dialogo del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Profesores PPROG </dd>
+<dd>
+Mihai Blidaru </dd>
+<dd>
+Sandra Benítez </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>09/03/2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a class="anchor" id="a4a495c5dc119df269e405793ffdc6e38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLOBAL_NO_ARGS&#160;&#160;&#160;-20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Codigo de error global para acciones a los que no se han pasado los argumentos necesarios </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a class="anchor" id="ad25e8d75177dc0ecfaaf97610765d318"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _Dialogue <a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Declaración del tipo dialogo </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
+<a class="anchor" id="a93bfe92dab2bd60c87310cf9e1bab9a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Codigos de estado del comando SAVE. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a93bfe92dab2bd60c87310cf9e1bab9a4af011e04fac62e5cb6b5a37a62594f395"></a>SAVE_PROTECTED_FILE</em>&#160;</td><td class="fielddoc">
+<p>EL archivo donde se quiere guardar es un archivo protegido </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a93bfe92dab2bd60c87310cf9e1bab9a4af4ff77b13343798d8b852658e2ab53c3"></a>SAVE_SAVE_OK</em>&#160;</td><td class="fielddoc">
+<p>Se ha gaurdado todo sin problemas </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a93bfe92dab2bd60c87310cf9e1bab9a4ad111f31ed95d8af80cd615ff7084fd27"></a>SAVE_WRITE_FAILED</em>&#160;</td><td class="fielddoc">
+<p>No se puede escribir en ese archivo </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a2d2f2027c6cbfec7304cab5c29a1e593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_attack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#a05f49ce48da4369a10cb00658c1358ff">ATTACK_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando ATTACK. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afdea7e120fcbe5a5953567ccadd34e07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dialogue_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera la memoria usasa por un dialogo. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>El dialogo que se quiere destruir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a03267613366ecb10b7040ee728edc78e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_dir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando DIR. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b6b9ef3c64800f169edd11b4a96d948"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_game_rule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rule</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para las reglas dej juego. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">rule</td><td>Codigo de la regla que se ha ejecutado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afd5bfa1c2c0ca6c47b2ee7601197e9e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* dialogue_get_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el texto del dialogo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>El dialogo del que se quiere leer el texto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El texto del dialogo </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab62ce05056b5a70df734e3d1de5c7445"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_go </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a>&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td>
+          <td class="paramname"><em>space</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dir_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="link_8h.html#ae3b299941e67be6971bfd64a25505eff">Link</a> *&#160;</td>
+          <td class="paramname"><em>link</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando GO. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">direction</td><td>La direccion en la que se quiere mover </td></tr>
+    <tr><td class="paramname">space</td><td>La casilla destino </td></tr>
+    <tr><td class="paramname">status</td><td>Si se ha llevado a cabo con exito o no </td></tr>
+    <tr><td class="paramname">dir_name</td><td>la dirrecion introducida por teclado </td></tr>
+    <tr><td class="paramname">link</td><td>El enlace por el que se quiere pasar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abebdb24e2dd3d65da67ad0ac67ba808f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_help </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando HELP. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50fda0c6b948ba5ed34308356fd657ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a>* dialogue_ini </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa un modulo dialogo. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Un dialogo inicializado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25e995aad81fe49c639d3900f7babee0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_inspect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space_8h.html#a67533ffc2b70463baecc38fb0629bbfc">Space</a> *&#160;</td>
+          <td class="paramname"><em>space</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#a8aee189b53a7a599b700e35d5125b4c1">INSPECT_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando TAKE. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto que se quiere inspeccionar si existe </td></tr>
+    <tr><td class="paramname">space</td><td>El espacio que se quiere inspeccionar si existe </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre introducido por teclado </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5cc35f5b1744b56dd84d829c84643d3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_leave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c">LEAVE_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando LEAVE. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto que se quiere dejar si existe </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre introducido por teclado </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2568cef61b95437e8c92451e7c38d96a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#a05a614e0f15c86cc47bedbbb0b7519ca">DIALOGUE_LOAD_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando LOAD. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre del fichero desde el cual se quiere cargar </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25755ceeb0f23393cae878616dbe9dfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>objName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>linkName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#aa2b1484b3e1813d71f86b93844e3d5c8">OPEN_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando TAKE. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">objName</td><td>Nombre del objeto con el que se quiere abrir </td></tr>
+    <tr><td class="paramname">linkName</td><td>Nombre del link que se quiere abris </td></tr>
+    <tr><td class="paramname">status</td><td>Codigo de error de la operacion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab108ab2b45d7461d255f6b8b68076f2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#a93bfe92dab2bd60c87310cf9e1bab9a4">DIALOGUE_SAVE_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando SAVE. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre del ficheri donde se quiere guardar </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1b6903507c77e42bbaee603b2c37f049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_take </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#a6b92fb32ecdb02261dd90b467408c3a1">TAKE_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando TAKE. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto que se quiere llevar si existe </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre introducido por teclado </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1894cb32181474d5df46fe3588bf666a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_turn_off </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando TURN_ON. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto que se quiere apagar </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre introducido por teclado </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a48673dd4b6ec0904bb4345ca190ce8f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_turn_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#abae9271a1a4e92272e6dc0b67ec0db33">TURN_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para el comando TURN_ON. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+    <tr><td class="paramname">object</td><td>El objeto que se quiere encender </td></tr>
+    <tr><td class="paramname">name</td><td>El nombre introducido por teclado </td></tr>
+    <tr><td class="paramname">status</td><td>El codigo de error del comando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a34b96f2b7a971371a568aa8a4bfc7c0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> dialogue_unknown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dialogue_8h.html#ad25e8d75177dc0ecfaaf97610765d318">Dialogue</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruye el texto del dialogo para comandos desconocidos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Una estructura dialogo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si el texto se ha asignado con exito o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

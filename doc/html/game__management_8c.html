@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/game_management.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo game_management.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Este modulo se encarga de cargar los datos del juego. Carga las casillas los enlaces, los objetos y los datos del jugador. Tambié incluye la función de guardado.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="space_8h_source.html">space.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="game__management_8h_source.html">game_management.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ab886ad7cc0ba7cd8d8cb2c40ac87cfc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__management_8c.html#ab886ad7cc0ba7cd8d8cb2c40ac87cfc7">game_management_start_from_file</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *spacesFile, char *objectsFile, char *linksfile, char *playersFile)</td></tr>
+<tr class="memdesc:ab886ad7cc0ba7cd8d8cb2c40ac87cfc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga los datos del juego desde un archivo.  <a href="#ab886ad7cc0ba7cd8d8cb2c40ac87cfc7">Más...</a><br/></td></tr>
+<tr class="separator:ab886ad7cc0ba7cd8d8cb2c40ac87cfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa894e393666367ef4b8dcd5294a4ee6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="game__management_8h.html#a511decf56b1875181521a3ca2635b8f5">SAVE_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__management_8c.html#aa894e393666367ef4b8dcd5294a4ee6d">game_management_save</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *filename)</td></tr>
+<tr class="memdesc:aa894e393666367ef4b8dcd5294a4ee6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda los datos de la partida con el mismo formato que los ficheros de carga.  <a href="#aa894e393666367ef4b8dcd5294a4ee6d">Más...</a><br/></td></tr>
+<tr class="separator:aa894e393666367ef4b8dcd5294a4ee6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec68c063a60726a1429d20740dcb9ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__management_8c.html#afec68c063a60726a1429d20740dcb9ef">game_management_load</a> (<a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *filename)</td></tr>
+<tr class="memdesc:afec68c063a60726a1429d20740dcb9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga los datos del juego desde un archivo.  <a href="#afec68c063a60726a1429d20740dcb9ef">Más...</a><br/></td></tr>
+<tr class="separator:afec68c063a60726a1429d20740dcb9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Este modulo se encarga de cargar los datos del juego. Carga las casillas los enlaces, los objetos y los datos del jugador. Tambié incluye la función de guardado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd>
+<dd>
+Mihai Blidaru </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>2.2 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>29-04-2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="afec68c063a60726a1429d20740dcb9ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_management_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga los datos del juego desde un archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Un puntero al juego donde cargar los datos </td></tr>
+    <tr><td class="paramname">filename</td><td>nombre del archivo desde donde cargar los datos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se ha cargado correctamente o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa894e393666367ef4b8dcd5294a4ee6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="game__management_8h.html#a511decf56b1875181521a3ca2635b8f5">SAVE_STATUS</a> game_management_save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda los datos de la partida con el mismo formato que los ficheros de carga. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Un puntero al game desde donde se quieren guardar los datos </td></tr>
+    <tr><td class="paramname">filename</td><td>Archivo donde guardar los datos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si ha guardado correctamente o ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab886ad7cc0ba7cd8d8cb2c40ac87cfc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> game_management_start_from_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="game_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>spacesFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>objectsFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>linksfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>playersFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga los datos del juego desde un archivo. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>Puntero a la estructura del juego. </td></tr>
+    <tr><td class="paramname">spacesFile</td><td>Nombre del archivo desde donde hay que cargar los espacios </td></tr>
+    <tr><td class="paramname">objectsFile</td><td>Nombre del archivo desde donde hay que cargar los objetos </td></tr>
+    <tr><td class="paramname">linksfile</td><td>Nombre del archivo desde donde hay que cargar los links </td></tr>
+    <tr><td class="paramname">playersFile</td><td>Nombre del archivo desde donde hay que cargar los datos del jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si todo ha ido bien. ERROR en caso contrario. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

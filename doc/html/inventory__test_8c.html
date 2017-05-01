@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/inventory_test.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo inventory_test.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programa para probar el modulo Inventory. Progama para probar la correcta funcionalidad del nuevo TAD Inventory.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="test_8h_source.html">tests/test.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inventory__test_8h_source.html">tests/inventory_test.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inventory_8h_source.html">inventory.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a33638f1a88ae16ab8d6bee00145b82b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a33638f1a88ae16ab8d6bee00145b82b8">test1_inventory_create</a> ()</td></tr>
+<tr class="separator:a33638f1a88ae16ab8d6bee00145b82b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddf20d7b11937754a88fb57c9d74292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#abddf20d7b11937754a88fb57c9d74292">test1_inventory_add_object</a> ()</td></tr>
+<tr class="separator:abddf20d7b11937754a88fb57c9d74292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71b62b43df77830d47caa4237ee76a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#aa71b62b43df77830d47caa4237ee76a2">test2_inventory_add_object</a> ()</td></tr>
+<tr class="separator:aa71b62b43df77830d47caa4237ee76a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77405dc2e23bc5e07f88194ade40a454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a77405dc2e23bc5e07f88194ade40a454">test3_inventory_add_object</a> ()</td></tr>
+<tr class="separator:a77405dc2e23bc5e07f88194ade40a454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54de162acad19de88c02e72f9db5cc27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a54de162acad19de88c02e72f9db5cc27">test1_inventory_set_max</a> ()</td></tr>
+<tr class="separator:a54de162acad19de88c02e72f9db5cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283a52426a084b058f3f932a47c16f7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a283a52426a084b058f3f932a47c16f7d">test2_inventory_set_max</a> ()</td></tr>
+<tr class="separator:a283a52426a084b058f3f932a47c16f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4498b503058368cf411a4c9f1edd8900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a4498b503058368cf411a4c9f1edd8900">test3_inventory_set_max</a> ()</td></tr>
+<tr class="separator:a4498b503058368cf411a4c9f1edd8900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c03f02b989bb00b04155c12fe2af9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a17c03f02b989bb00b04155c12fe2af9d">test1_inventory_get_max</a> ()</td></tr>
+<tr class="separator:a17c03f02b989bb00b04155c12fe2af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddcab377edb21235d6746668597fde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#abddcab377edb21235d6746668597fde2">test2_inventory_get_max</a> ()</td></tr>
+<tr class="separator:abddcab377edb21235d6746668597fde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2600ada0b5b2e5a34dfe6bc368f5e3be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a2600ada0b5b2e5a34dfe6bc368f5e3be">test1_inventory_remove_object</a> ()</td></tr>
+<tr class="separator:a2600ada0b5b2e5a34dfe6bc368f5e3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea1bbd9668f1049fb98590ffb0dd5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a4ea1bbd9668f1049fb98590ffb0dd5db">test2_inventory_remove_object</a> ()</td></tr>
+<tr class="separator:a4ea1bbd9668f1049fb98590ffb0dd5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3416a88f9c36ab13de940634c845b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a2e3416a88f9c36ab13de940634c845b6">test3_inventory_remove_object</a> ()</td></tr>
+<tr class="separator:a2e3416a88f9c36ab13de940634c845b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38fe4f7cdf9fa3972e975ee07caf876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#ac38fe4f7cdf9fa3972e975ee07caf876">test1_inventory_get_set</a> ()</td></tr>
+<tr class="separator:ac38fe4f7cdf9fa3972e975ee07caf876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66737b763a088f8a85549e846b01fbdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inventory__test_8c.html#a66737b763a088f8a85549e846b01fbdb">test2_inventory_get_set</a> ()</td></tr>
+<tr class="separator:a66737b763a088f8a85549e846b01fbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Programa para probar el modulo Inventory. Progama para probar la correcta funcionalidad del nuevo TAD Inventory. </p>
+<dl class="section author"><dt>Autor</dt><dd>Sandra Benítez </dd>
+<dd>
+Laura Bernal </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>01-04-2017 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="abddf20d7b11937754a88fb57c9d74292"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_add_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000115">Prueba:</a></b></dt><dd>Prueba la función que añade un objeto a un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a33638f1a88ae16ab8d6bee00145b82b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Número maximo de tests </p>
+
+</div>
+</div>
+<a class="anchor" id="a17c03f02b989bb00b04155c12fe2af9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_get_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000121">Prueba:</a></b></dt><dd>Prueba la función que devuelve el número máximo de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>Se establece previamente el número máximo de objetos a 20 </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es 20 </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac38fe4f7cdf9fa3972e975ee07caf876"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_get_set </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000126">Prueba:</a></b></dt><dd>Prueba la función que devuelve el set de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es diferente de NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2600ada0b5b2e5a34dfe6bc368f5e3be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_remove_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000123">Prueba:</a></b></dt><dd>Prueba la función que elimina un objeto de un inventario <dl class="section pre"><dt>Precondición</dt><dd>Se añade previamente un objeto con el id 10 </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54de162acad19de88c02e72f9db5cc27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_inventory_set_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000118">Prueba:</a></b></dt><dd>Prueba la función que establece el número máximo de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario ha sido creado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es OK </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa71b62b43df77830d47caa4237ee76a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_inventory_add_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000116">Prueba:</a></b></dt><dd>Prueba la función que añade un objeto a un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abddcab377edb21235d6746668597fde2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_inventory_get_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000122">Prueba:</a></b></dt><dd>Prueba la función que devuelve el número máximo de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es -1 </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a66737b763a088f8a85549e846b01fbdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_inventory_get_set </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000127">Prueba:</a></b></dt><dd>Prueba la función que devuelve el set de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ea1bbd9668f1049fb98590ffb0dd5db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_inventory_remove_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000124">Prueba:</a></b></dt><dd>Prueba la función que elimina un objeto de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido añadido previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a283a52426a084b058f3f932a47c16f7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_inventory_set_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000119">Prueba:</a></b></dt><dd>Prueba la función que establece el número máximo de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El número máximo de objetos es invalido (-5) </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a77405dc2e23bc5e07f88194ade40a454"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test3_inventory_add_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000117">Prueba:</a></b></dt><dd>Prueba la función que añade un objeto a un inventario <dl class="section pre"><dt>Precondición</dt><dd>El id del objeto que se quiere añadir es NO_ID </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e3416a88f9c36ab13de940634c845b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test3_inventory_remove_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000125">Prueba:</a></b></dt><dd>Prueba la función que elimina un objeto de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4498b503058368cf411a4c9f1edd8900"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test3_inventory_set_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000120">Prueba:</a></b></dt><dd>Prueba la función que establece el número máximo de objetos de un inventario <dl class="section pre"><dt>Precondición</dt><dd>El inventario es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es ERROR </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,487 @@
+\hypertarget{dialogue_8c}{\section{Referencia del Archivo src/dialogue.c}
+\label{dialogue_8c}\index{src/dialogue.\-c@{src/dialogue.\-c}}
+}
+
+
+Implementa Los dialogos del juego.  
+
+
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}command.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dialogue.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}space.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}link.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game\-\_\-management.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game\-\_\-rules.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$ \hyperlink{dialogue_8c_a50fda0c6b948ba5ed34308356fd657ab}{dialogue\-\_\-ini} ()
+\begin{DoxyCompactList}\small\item\em Inicializa un modulo dialogo. \end{DoxyCompactList}\item 
+void \hyperlink{dialogue_8c_afdea7e120fcbe5a5953567ccadd34e07}{dialogue\-\_\-destroy} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Libera la memoria usasa por un dialogo. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{dialogue_8c_afd5bfa1c2c0ca6c47b2ee7601197e9e7}{dialogue\-\_\-get\-\_\-text} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Devuelve el texto del dialogo. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_ab62ce05056b5a70df734e3d1de5c7445}{dialogue\-\_\-go} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{types_8h_aa268a41a13430b18e933ed40207178d0}{D\-I\-R\-E\-C\-T\-I\-O\-N} direction, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} status, char $\ast$dir\-\_\-name, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando G\-O. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a34b96f2b7a971371a568aa8a4bfc7c0d}{dialogue\-\_\-unknown} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para comandos desconocidos. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a03267613366ecb10b7040ee728edc78e}{dialogue\-\_\-dir} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando D\-I\-R. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a1b6903507c77e42bbaee603b2c37f049}{dialogue\-\_\-take} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name, \hyperlink{dialogue_8h_a6b92fb32ecdb02261dd90b467408c3a1}{T\-A\-K\-E\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando T\-A\-K\-E. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a5cc35f5b1744b56dd84d829c84643d3f}{dialogue\-\_\-leave} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name, \hyperlink{dialogue_8h_ac85b757c2f78da5e14bfa218eccf381c}{L\-E\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando L\-E\-A\-V\-E. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_ab108ab2b45d7461d255f6b8b68076f2c}{dialogue\-\_\-save} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, char $\ast$name, \hyperlink{dialogue_8h_a93bfe92dab2bd60c87310cf9e1bab9a4}{D\-I\-A\-L\-O\-G\-U\-E\-\_\-\-S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando S\-A\-V\-E. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a2568cef61b95437e8c92451e7c38d96a}{dialogue\-\_\-load} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, char $\ast$name, \hyperlink{dialogue_8h_a05a614e0f15c86cc47bedbbb0b7519ca}{D\-I\-A\-L\-O\-G\-U\-E\-\_\-\-L\-O\-A\-D\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando L\-O\-A\-D. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a2d2f2027c6cbfec7304cab5c29a1e593}{dialogue\-\_\-attack} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{dialogue_8h_a05f49ce48da4369a10cb00658c1358ff}{A\-T\-T\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando A\-T\-T\-A\-C\-K. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a25e995aad81fe49c639d3900f7babee0}{dialogue\-\_\-inspect} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$name, \hyperlink{dialogue_8h_a8aee189b53a7a599b700e35d5125b4c1}{I\-N\-S\-P\-E\-C\-T\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando T\-A\-K\-E. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a25755ceeb0f23393cae878616dbe9dfb}{dialogue\-\_\-open} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, char $\ast$obj\-Name, char $\ast$link\-Name, \hyperlink{dialogue_8h_aa2b1484b3e1813d71f86b93844e3d5c8}{O\-P\-E\-N\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando T\-A\-K\-E. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a48673dd4b6ec0904bb4345ca190ce8f1}{dialogue\-\_\-turn\-\_\-on} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name, \hyperlink{dialogue_8h_abae9271a1a4e92272e6dc0b67ec0db33}{T\-U\-R\-N\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando T\-U\-R\-N\-\_\-\-O\-N. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a1894cb32181474d5df46fe3588bf666a}{dialogue\-\_\-turn\-\_\-off} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name, \hyperlink{dialogue_8h_abae9271a1a4e92272e6dc0b67ec0db33}{T\-U\-R\-N\-\_\-\-S\-T\-A\-T\-U\-S} status)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando T\-U\-R\-N\-\_\-\-O\-N. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_abebdb24e2dd3d65da67ad0ac67ba808f}{dialogue\-\_\-help} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para el comando H\-E\-L\-P. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{dialogue_8c_a4b6b9ef3c64800f169edd11b4a96d948}{dialogue\-\_\-game\-\_\-rule} (\hyperlink{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{Dialogue} $\ast$d, int rule)
+\begin{DoxyCompactList}\small\item\em Contruye el texto del dialogo para las reglas dej juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementa Los dialogos del juego. \begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+
+Sandra Benítez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+19-\/12-\/2014 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{dialogue_8c_a2d2f2027c6cbfec7304cab5c29a1e593}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-attack@{dialogue\-\_\-attack}}
+\index{dialogue\-\_\-attack@{dialogue\-\_\-attack}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-attack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf A\-T\-T\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a2d2f2027c6cbfec7304cab5c29a1e593}
+
+
+Contruye el texto del dialogo para el comando A\-T\-T\-A\-C\-K. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_afdea7e120fcbe5a5953567ccadd34e07}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-destroy@{dialogue\-\_\-destroy}}
+\index{dialogue\-\_\-destroy@{dialogue\-\_\-destroy}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void dialogue\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_afdea7e120fcbe5a5953567ccadd34e07}
+
+
+Libera la memoria usasa por un dialogo. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & El dialogo que se quiere destruir \\
+\hline
+\end{DoxyParams}
+\hypertarget{dialogue_8c_a03267613366ecb10b7040ee728edc78e}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-dir@{dialogue\-\_\-dir}}
+\index{dialogue\-\_\-dir@{dialogue\-\_\-dir}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a03267613366ecb10b7040ee728edc78e}
+
+
+Contruye el texto del dialogo para el comando D\-I\-R. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a4b6b9ef3c64800f169edd11b4a96d948}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-game\-\_\-rule@{dialogue\-\_\-game\-\_\-rule}}
+\index{dialogue\-\_\-game\-\_\-rule@{dialogue\-\_\-game\-\_\-rule}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-game\-\_\-rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-game\-\_\-rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{int}]{rule}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a4b6b9ef3c64800f169edd11b4a96d948}
+
+
+Contruye el texto del dialogo para las reglas dej juego. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em rule} & Codigo de la regla que se ha ejecutado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_afd5bfa1c2c0ca6c47b2ee7601197e9e7}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-get\-\_\-text@{dialogue\-\_\-get\-\_\-text}}
+\index{dialogue\-\_\-get\-\_\-text@{dialogue\-\_\-get\-\_\-text}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-get\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ dialogue\-\_\-get\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_afd5bfa1c2c0ca6c47b2ee7601197e9e7}
+
+
+Devuelve el texto del dialogo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & El dialogo del que se quiere leer el texto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El texto del dialogo 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_ab62ce05056b5a70df734e3d1de5c7445}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-go@{dialogue\-\_\-go}}
+\index{dialogue\-\_\-go@{dialogue\-\_\-go}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-go}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-go (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf D\-I\-R\-E\-C\-T\-I\-O\-N}}]{direction, }
+\item[{{\bf Space} $\ast$}]{space, }
+\item[{{\bf S\-T\-A\-T\-U\-S}}]{status, }
+\item[{char $\ast$}]{dir\-\_\-name, }
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_ab62ce05056b5a70df734e3d1de5c7445}
+
+
+Contruye el texto del dialogo para el comando G\-O. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em direction} & La direccion en la que se quiere mover \\
+\hline
+{\em space} & La casilla destino \\
+\hline
+{\em status} & Si se ha llevado a cabo con exito o no \\
+\hline
+{\em dir\-\_\-name} & la dirrecion introducida por teclado \\
+\hline
+{\em link} & El enlace por el que se quiere pasar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_abebdb24e2dd3d65da67ad0ac67ba808f}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-help@{dialogue\-\_\-help}}
+\index{dialogue\-\_\-help@{dialogue\-\_\-help}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-help (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_abebdb24e2dd3d65da67ad0ac67ba808f}
+
+
+Contruye el texto del dialogo para el comando H\-E\-L\-P. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a50fda0c6b948ba5ed34308356fd657ab}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-ini@{dialogue\-\_\-ini}}
+\index{dialogue\-\_\-ini@{dialogue\-\_\-ini}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialogue}$\ast$ dialogue\-\_\-ini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a50fda0c6b948ba5ed34308356fd657ab}
+
+
+Inicializa un modulo dialogo. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+Un dialogo inicializado 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a25e995aad81fe49c639d3900f7babee0}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-inspect@{dialogue\-\_\-inspect}}
+\index{dialogue\-\_\-inspect@{dialogue\-\_\-inspect}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-inspect (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Space} $\ast$}]{space, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf I\-N\-S\-P\-E\-C\-T\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a25e995aad81fe49c639d3900f7babee0}
+
+
+Contruye el texto del dialogo para el comando T\-A\-K\-E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em object} & El objeto que se quiere inspeccionar si existe \\
+\hline
+{\em space} & El espacio que se quiere inspeccionar si existe \\
+\hline
+{\em name} & El nombre introducido por teclado \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a5cc35f5b1744b56dd84d829c84643d3f}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-leave@{dialogue\-\_\-leave}}
+\index{dialogue\-\_\-leave@{dialogue\-\_\-leave}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-leave}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-leave (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf L\-E\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a5cc35f5b1744b56dd84d829c84643d3f}
+
+
+Contruye el texto del dialogo para el comando L\-E\-A\-V\-E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em object} & El objeto que se quiere dejar si existe \\
+\hline
+{\em name} & El nombre introducido por teclado \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a2568cef61b95437e8c92451e7c38d96a}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-load@{dialogue\-\_\-load}}
+\index{dialogue\-\_\-load@{dialogue\-\_\-load}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-load (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf D\-I\-A\-L\-O\-G\-U\-E\-\_\-\-L\-O\-A\-D\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a2568cef61b95437e8c92451e7c38d96a}
+
+
+Contruye el texto del dialogo para el comando L\-O\-A\-D. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em name} & El nombre del fichero desde el cual se quiere cargar \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a25755ceeb0f23393cae878616dbe9dfb}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-open@{dialogue\-\_\-open}}
+\index{dialogue\-\_\-open@{dialogue\-\_\-open}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{char $\ast$}]{obj\-Name, }
+\item[{char $\ast$}]{link\-Name, }
+\item[{{\bf O\-P\-E\-N\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a25755ceeb0f23393cae878616dbe9dfb}
+
+
+Contruye el texto del dialogo para el comando T\-A\-K\-E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em obj\-Name} & Nombre del objeto con el que se quiere abrir \\
+\hline
+{\em link\-Name} & Nombre del link que se quiere abris \\
+\hline
+{\em status} & Codigo de error de la operacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_ab108ab2b45d7461d255f6b8b68076f2c}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-save@{dialogue\-\_\-save}}
+\index{dialogue\-\_\-save@{dialogue\-\_\-save}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-save}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-save (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf D\-I\-A\-L\-O\-G\-U\-E\-\_\-\-S\-A\-V\-E\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_ab108ab2b45d7461d255f6b8b68076f2c}
+
+
+Contruye el texto del dialogo para el comando S\-A\-V\-E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em name} & El nombre del ficheri donde se quiere guardar \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a1b6903507c77e42bbaee603b2c37f049}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-take@{dialogue\-\_\-take}}
+\index{dialogue\-\_\-take@{dialogue\-\_\-take}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-take}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-take (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf T\-A\-K\-E\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a1b6903507c77e42bbaee603b2c37f049}
+
+
+Contruye el texto del dialogo para el comando T\-A\-K\-E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em object} & El objeto que se quiere llevar si existe \\
+\hline
+{\em name} & El nombre introducido por teclado \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a1894cb32181474d5df46fe3588bf666a}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-turn\-\_\-off@{dialogue\-\_\-turn\-\_\-off}}
+\index{dialogue\-\_\-turn\-\_\-off@{dialogue\-\_\-turn\-\_\-off}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-turn\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-turn\-\_\-off (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf T\-U\-R\-N\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a1894cb32181474d5df46fe3588bf666a}
+
+
+Contruye el texto del dialogo para el comando T\-U\-R\-N\-\_\-\-O\-N. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em object} & El objeto que se quiere apagar \\
+\hline
+{\em name} & El nombre introducido por teclado \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a48673dd4b6ec0904bb4345ca190ce8f1}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-turn\-\_\-on@{dialogue\-\_\-turn\-\_\-on}}
+\index{dialogue\-\_\-turn\-\_\-on@{dialogue\-\_\-turn\-\_\-on}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-turn\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-turn\-\_\-on (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d, }
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf T\-U\-R\-N\-\_\-\-S\-T\-A\-T\-U\-S}}]{status}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a48673dd4b6ec0904bb4345ca190ce8f1}
+
+
+Contruye el texto del dialogo para el comando T\-U\-R\-N\-\_\-\-O\-N. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+{\em object} & El objeto que se quiere encender \\
+\hline
+{\em name} & El nombre introducido por teclado \\
+\hline
+{\em status} & El codigo de error del comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{dialogue_8c_a34b96f2b7a971371a568aa8a4bfc7c0d}{\index{dialogue.\-c@{dialogue.\-c}!dialogue\-\_\-unknown@{dialogue\-\_\-unknown}}
+\index{dialogue\-\_\-unknown@{dialogue\-\_\-unknown}!dialogue.c@{dialogue.\-c}}
+\subsubsection[{dialogue\-\_\-unknown}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} dialogue\-\_\-unknown (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8c_a34b96f2b7a971371a568aa8a4bfc7c0d}
+
+
+Contruye el texto del dialogo para comandos desconocidos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & Una estructura dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si el texto se ha asignado con exito o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}

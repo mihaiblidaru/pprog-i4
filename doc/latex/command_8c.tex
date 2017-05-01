@@ -1,0 +1,239 @@
+\hypertarget{command_8c}{\section{Referencia del Archivo src/command.c}
+\label{command_8c}\index{src/command.\-c@{src/command.\-c}}
+}
+
+
+Implementa el interpreatador de comandos Lee los comandos que introduce el usuario parseandolos al tipo de datos T\-\_\-\-Command, para poder trabajar facilmente con estos comandos.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}command.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8c_a332ed516a605d73018254c8f6e5d1a25}{Command\-\_\-ini} ()
+\begin{DoxyCompactList}\small\item\em Crea e inicializa una estructura tipo Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8c_a492ad103fd0a8abd174cecc1a86dcdf8}{Command\-\_\-destroy} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Libera memoria usada por una estructura Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8c_acfa9a05b602789d69d4b26b04c0cf1fb}{Command\-\_\-set\-\_\-cmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\-\_\-\-Command} cmd)
+\begin{DoxyCompactList}\small\item\em Guarda un comando en la estructura. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8c_a62be88f588be7388a4e88862ac57b926}{Command\-\_\-set\-\_\-cmd\-\_\-arg} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, char $\ast$arg, int index)
+\begin{DoxyCompactList}\small\item\em Guarda un parametro de un comando en la estructura en una posición dada. \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\-\_\-\-Command} \hyperlink{command_8c_a0a46ec28d9377c261485aeed9f5b21f2}{Command\-\_\-get\-\_\-cmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Devuelve el comando guardado en la estructura. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8c_a9bfa89a1c3ba1f8a526a66f997ccd53c}{Command\-\_\-get\-\_\-cmd\-\_\-arg} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, int index)
+\begin{DoxyCompactList}\small\item\em Devuelve un parametro del comando guardado en la estructura en una posición dada. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8c_a926b4548f30a633eec7c8c17ae90d093}{Command\-\_\-clear} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Limpia los datos de una estructura Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8c_a756d09f48ba1599fb9b9b46877ad9d0a}{get\-\_\-user\-\_\-input} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Lee los comandos de introduce el usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementa el interpreatador de comandos Lee los comandos que introduce el usuario parseandolos al tipo de datos T\-\_\-\-Command, para poder trabajar facilmente con estos comandos. \begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+19-\/12-\/2014 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{command_8c_a926b4548f30a633eec7c8c17ae90d093}{\index{command.\-c@{command.\-c}!Command\-\_\-clear@{Command\-\_\-clear}}
+\index{Command\-\_\-clear@{Command\-\_\-clear}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a926b4548f30a633eec7c8c17ae90d093}
+
+
+Limpia los datos de una estructura Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura Command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha hecho correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8c_a492ad103fd0a8abd174cecc1a86dcdf8}{\index{command.\-c@{command.\-c}!Command\-\_\-destroy@{Command\-\_\-destroy}}
+\index{Command\-\_\-destroy@{Command\-\_\-destroy}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a492ad103fd0a8abd174cecc1a86dcdf8}
+
+
+Libera memoria usada por una estructura Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura command que se tiene que liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8c_a0a46ec28d9377c261485aeed9f5b21f2}{\index{command.\-c@{command.\-c}!Command\-\_\-get\-\_\-cmd@{Command\-\_\-get\-\_\-cmd}}
+\index{Command\-\_\-get\-\_\-cmd@{Command\-\_\-get\-\_\-cmd}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-get\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-\-Command} Command\-\_\-get\-\_\-cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a0a46ec28d9377c261485aeed9f5b21f2}
+
+
+Devuelve el comando guardado en la estructura. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura Command de la cual leer los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El comando guardado 
+\end{DoxyReturn}
+\hypertarget{command_8c_a9bfa89a1c3ba1f8a526a66f997ccd53c}{\index{command.\-c@{command.\-c}!Command\-\_\-get\-\_\-cmd\-\_\-arg@{Command\-\_\-get\-\_\-cmd\-\_\-arg}}
+\index{Command\-\_\-get\-\_\-cmd\-\_\-arg@{Command\-\_\-get\-\_\-cmd\-\_\-arg}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-get\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Command\-\_\-get\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a9bfa89a1c3ba1f8a526a66f997ccd53c}
+
+
+Devuelve un parametro del comando guardado en la estructura en una posición dada. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura Command de la cual leer los datos \\
+\hline
+{\em index} & El indice del parametro que se quiere leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El parametro del comando guardado 
+\end{DoxyReturn}
+\hypertarget{command_8c_a332ed516a605d73018254c8f6e5d1a25}{\index{command.\-c@{command.\-c}!Command\-\_\-ini@{Command\-\_\-ini}}
+\index{Command\-\_\-ini@{Command\-\_\-ini}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}$\ast$ Command\-\_\-ini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a332ed516a605d73018254c8f6e5d1a25}
+
+
+Crea e inicializa una estructura tipo Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+Una estructura command inicializada o N\-U\-L\-L si hay algun error. 
+\end{DoxyReturn}
+\hypertarget{command_8c_acfa9a05b602789d69d4b26b04c0cf1fb}{\index{command.\-c@{command.\-c}!Command\-\_\-set\-\_\-cmd@{Command\-\_\-set\-\_\-cmd}}
+\index{Command\-\_\-set\-\_\-cmd@{Command\-\_\-set\-\_\-cmd}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-set\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-set\-\_\-cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{{\bf T\-\_\-\-Command}}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{command_8c_acfa9a05b602789d69d4b26b04c0cf1fb}
+
+
+Guarda un comando en la estructura. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo command \\
+\hline
+{\em cmd} & El comando a guardar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha guardado correctamente o error en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8c_a62be88f588be7388a4e88862ac57b926}{\index{command.\-c@{command.\-c}!Command\-\_\-set\-\_\-cmd\-\_\-arg@{Command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{Command\-\_\-set\-\_\-cmd\-\_\-arg@{Command\-\_\-set\-\_\-cmd\-\_\-arg}!command.c@{command.\-c}}
+\subsubsection[{Command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{char $\ast$}]{arg, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a62be88f588be7388a4e88862ac57b926}
+
+
+Guarda un parametro de un comando en la estructura en una posición dada. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo command \\
+\hline
+{\em arg} & El parametro a guardar \\
+\hline
+{\em index} & La posición donde se quiere guardar el parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha guardado correctamente o error en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8c_a756d09f48ba1599fb9b9b46877ad9d0a}{\index{command.\-c@{command.\-c}!get\-\_\-user\-\_\-input@{get\-\_\-user\-\_\-input}}
+\index{get\-\_\-user\-\_\-input@{get\-\_\-user\-\_\-input}!command.c@{command.\-c}}
+\subsubsection[{get\-\_\-user\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} get\-\_\-user\-\_\-input (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8c_a756d09f48ba1599fb9b9b46877ad9d0a}
+
+
+Lee los comandos de introduce el usuario. 
+
+Lee por teclado el comando que introduce el usuario y comprueba que esta en la lista de los comandos permitidos. Guarda en la estructura Command los datos introducidos\-: en cmd guarda el tipo de comando y en arg guarda el argumento que tiene un comando
+
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo Command donde guardar los datos leidos por teclado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si ha leido bien el comando o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}

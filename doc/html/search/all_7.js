@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['leave',['LEAVE',['../command_8h.html#ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0',1,'command.h']]],
+  ['leave_5fstatus',['LEAVE_STATUS',['../dialogue_8h.html#ac85b757c2f78da5e14bfa218eccf381c',1,'dialogue.h']]],
+  ['link',['Link',['../link_8h.html#ae3b299941e67be6971bfd64a25505eff',1,'link.h']]],
+  ['link_2ec',['link.c',['../link_8c.html',1,'']]],
+  ['link_2eh',['link.h',['../link_8h.html',1,'']]],
+  ['link_5fcreate',['link_create',['../link_8c.html#aaf21d03943afcbed370ca720f972482c',1,'link_create():&#160;link.c'],['../link_8h.html#aaf21d03943afcbed370ca720f972482c',1,'link_create():&#160;link.c']]],
+  ['link_5fdestroy',['link_destroy',['../link_8c.html#a85c4dd77887bf31f651ea1162144d712',1,'link_destroy(Link *link):&#160;link.c'],['../link_8h.html#a85c4dd77887bf31f651ea1162144d712',1,'link_destroy(Link *link):&#160;link.c']]],
+  ['link_5fget_5fdest_5ffrom',['link_get_dest_from',['../link_8c.html#a9d838216ad0f2760aabd24c1b17dc891',1,'link_get_dest_from(Link *link, Id from):&#160;link.c'],['../link_8h.html#a9d838216ad0f2760aabd24c1b17dc891',1,'link_get_dest_from(Link *link, Id from):&#160;link.c']]],
+  ['link_5fget_5fid',['link_get_id',['../link_8c.html#a2bbd320f995a72b2ea7ea639b1c81892',1,'link_get_id(Link *link):&#160;link.c'],['../link_8h.html#a2bbd320f995a72b2ea7ea639b1c81892',1,'link_get_id(Link *link):&#160;link.c']]],
+  ['link_5fget_5fname',['link_get_name',['../link_8c.html#a9747ee8201a323e112e67bdeacbc90d8',1,'link_get_name(Link *link):&#160;link.c'],['../link_8h.html#a9747ee8201a323e112e67bdeacbc90d8',1,'link_get_name(Link *link):&#160;link.c']]],
+  ['link_5fget_5fspace1',['link_get_space1',['../link_8c.html#a7a703edf730484b48e951754f754bd94',1,'link_get_space1(Link *link):&#160;link.c'],['../link_8h.html#a7a703edf730484b48e951754f754bd94',1,'link_get_space1(Link *link):&#160;link.c']]],
+  ['link_5fget_5fspace2',['link_get_space2',['../link_8c.html#afefc169db63bad1b3660ba1d0ee14095',1,'link_get_space2(Link *link):&#160;link.c'],['../link_8h.html#afefc169db63bad1b3660ba1d0ee14095',1,'link_get_space2(Link *link):&#160;link.c']]],
+  ['link_5fget_5fstate',['link_get_state',['../link_8c.html#a6a0fd557795ecd04df19b31f47a9f075',1,'link_get_state(Link *link):&#160;link.c'],['../link_8h.html#a6a0fd557795ecd04df19b31f47a9f075',1,'link_get_state(Link *link):&#160;link.c']]],
+  ['link_5fprint',['link_print',['../link_8c.html#ab5c45f8c1edc80d2f2dd73f5539d1951',1,'link_print(Link *link):&#160;link.c'],['../link_8h.html#ab5c45f8c1edc80d2f2dd73f5539d1951',1,'link_print(Link *link):&#160;link.c']]],
+  ['link_5fset_5fid',['link_set_id',['../link_8c.html#a3fd49fb1a3f19be4fc800ff07820cafb',1,'link_set_id(Link *link, Id id):&#160;link.c'],['../link_8h.html#a3fd49fb1a3f19be4fc800ff07820cafb',1,'link_set_id(Link *link, Id id):&#160;link.c']]],
+  ['link_5fset_5fname',['link_set_name',['../link_8c.html#a6c7a3bd7a856288c377edbcd045912e6',1,'link_set_name(Link *link, char *name):&#160;link.c'],['../link_8h.html#a6c7a3bd7a856288c377edbcd045912e6',1,'link_set_name(Link *link, char *name):&#160;link.c']]],
+  ['link_5fset_5fspace1',['link_set_space1',['../link_8c.html#aae5fe19ad2512430e52cf78968b52bf1',1,'link_set_space1(Link *link, Id id):&#160;link.c'],['../link_8h.html#aae5fe19ad2512430e52cf78968b52bf1',1,'link_set_space1(Link *link, Id id):&#160;link.c']]],
+  ['link_5fset_5fspace2',['link_set_space2',['../link_8c.html#a153c76eec748e402ea66cc13f2725131',1,'link_set_space2(Link *link, Id id):&#160;link.c'],['../link_8h.html#a153c76eec748e402ea66cc13f2725131',1,'link_set_space2(Link *link, Id id):&#160;link.c']]],
+  ['link_5fset_5fstate',['link_set_state',['../link_8c.html#af560433337904da507be9748215f934a',1,'link_set_state(Link *link, int state):&#160;link.c'],['../link_8h.html#af560433337904da507be9748215f934a',1,'link_set_state(Link *link, int state):&#160;link.c']]],
+  ['link_5ftest_2ec',['link_test.c',['../link__test_8c.html',1,'']]],
+  ['link_5ftest_2eh',['link_test.h',['../link__test_8h.html',1,'']]],
+  ['lista_20de_20pruebas',['Lista de pruebas',['../test.html',1,'']]]
+];

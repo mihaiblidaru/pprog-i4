@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo include/object.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo object.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Define la interfaz pública del TAD Objeto.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br/>
+</div>
+<p><a href="object_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:a7f8bbcda919b65ce67f92fba08e0212f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f8bbcda919b65ce67f92fba08e0212f"></a>
+typedef struct _Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a></td></tr>
+<tr class="memdesc:a7f8bbcda919b65ce67f92fba08e0212f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de la estructura objecto. <br/></td></tr>
+<tr class="separator:a7f8bbcda919b65ce67f92fba08e0212f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a2dd568a27239e988cdde871cfb30e166"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a2dd568a27239e988cdde871cfb30e166">object_create</a> ()</td></tr>
+<tr class="memdesc:a2dd568a27239e988cdde871cfb30e166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reservamos memoria para un nuevo objeto.  <a href="#a2dd568a27239e988cdde871cfb30e166">Más...</a><br/></td></tr>
+<tr class="separator:a2dd568a27239e988cdde871cfb30e166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d6d51fee809e3801893eefc789f4b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a19d6d51fee809e3801893eefc789f4b4">object_destroy</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a19d6d51fee809e3801893eefc789f4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruye un objeto.  <a href="#a19d6d51fee809e3801893eefc789f4b4">Más...</a><br/></td></tr>
+<tr class="separator:a19d6d51fee809e3801893eefc789f4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51dccb56662554f35c2060c6d1a26e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ae51dccb56662554f35c2060c6d1a26e4">object_Set_Id</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id)</td></tr>
+<tr class="memdesc:ae51dccb56662554f35c2060c6d1a26e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el id del objeto.  <a href="#ae51dccb56662554f35c2060c6d1a26e4">Más...</a><br/></td></tr>
+<tr class="separator:ae51dccb56662554f35c2060c6d1a26e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e869c0c6741e1ea39480f20aad7d1f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a6e869c0c6741e1ea39480f20aad7d1f8">object_Set_Name</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *name)</td></tr>
+<tr class="memdesc:a6e869c0c6741e1ea39480f20aad7d1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el nombre del objeto.  <a href="#a6e869c0c6741e1ea39480f20aad7d1f8">Más...</a><br/></td></tr>
+<tr class="separator:a6e869c0c6741e1ea39480f20aad7d1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcdf085bff38ed634163292aa44eaf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a6fcdf085bff38ed634163292aa44eaf8">object_Set_Description</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *description)</td></tr>
+<tr class="memdesc:a6fcdf085bff38ed634163292aa44eaf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la descripción del objeto.  <a href="#a6fcdf085bff38ed634163292aa44eaf8">Más...</a><br/></td></tr>
+<tr class="separator:a6fcdf085bff38ed634163292aa44eaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4605a6beaf5889bf9420f88e21cbe981"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a4605a6beaf5889bf9420f88e21cbe981">object_Set_Description2</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *desc2)</td></tr>
+<tr class="memdesc:a4605a6beaf5889bf9420f88e21cbe981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la descripción dos del objeto.  <a href="#a4605a6beaf5889bf9420f88e21cbe981">Más...</a><br/></td></tr>
+<tr class="separator:a4605a6beaf5889bf9420f88e21cbe981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c9d2710f1300c5d1729d188db1efde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a05c9d2710f1300c5d1729d188db1efde">object_Set_Mobile</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, const <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> mobile)</td></tr>
+<tr class="memdesc:a05c9d2710f1300c5d1729d188db1efde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la disponibilidad de movimiento del objeto.  <a href="#a05c9d2710f1300c5d1729d188db1efde">Más...</a><br/></td></tr>
+<tr class="separator:a05c9d2710f1300c5d1729d188db1efde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0019840011cc2d5433cf958bf4621d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a0019840011cc2d5433cf958bf4621d14">object_Set_Moved</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, const <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> moved)</td></tr>
+<tr class="memdesc:a0019840011cc2d5433cf958bf4621d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone si se ha mpvido el objeto.  <a href="#a0019840011cc2d5433cf958bf4621d14">Más...</a><br/></td></tr>
+<tr class="separator:a0019840011cc2d5433cf958bf4621d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e86289cd0eedc29320243cd04e03b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a2e86289cd0eedc29320243cd04e03b59">object_Set_Hidden</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> hidden)</td></tr>
+<tr class="memdesc:a2e86289cd0eedc29320243cd04e03b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la situacion del objeto, oculto o no oculto.  <a href="#a2e86289cd0eedc29320243cd04e03b59">Más...</a><br/></td></tr>
+<tr class="separator:a2e86289cd0eedc29320243cd04e03b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3a3a884f08171d7f0724f5f5aa0aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a5c3a3a884f08171d7f0724f5f5aa0aaa">object_Set_Open</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> open)</td></tr>
+<tr class="memdesc:a5c3a3a884f08171d7f0724f5f5aa0aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la situacion del link del objeto.  <a href="#a5c3a3a884f08171d7f0724f5f5aa0aaa">Más...</a><br/></td></tr>
+<tr class="separator:a5c3a3a884f08171d7f0724f5f5aa0aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2324a10aa3cbd62ef0091d41ed3858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a7c2324a10aa3cbd62ef0091d41ed3858">object_Set_Illuminates</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> illuminates)</td></tr>
+<tr class="memdesc:a7c2324a10aa3cbd62ef0091d41ed3858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la iluminacion del objeto.  <a href="#a7c2324a10aa3cbd62ef0091d41ed3858">Más...</a><br/></td></tr>
+<tr class="separator:a7c2324a10aa3cbd62ef0091d41ed3858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7470ed915bc69304617a4c8344db24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a3e7470ed915bc69304617a4c8344db24">object_Set_Light</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> on)</td></tr>
+<tr class="memdesc:a3e7470ed915bc69304617a4c8344db24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el encendido del objeto.  <a href="#a3e7470ed915bc69304617a4c8344db24">Más...</a><br/></td></tr>
+<tr class="separator:a3e7470ed915bc69304617a4c8344db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9c8f85881c32bf25e0eadbba4e0ecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a8a9c8f85881c32bf25e0eadbba4e0ecb">object_Get_Id</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a8a9c8f85881c32bf25e0eadbba4e0ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el id del objeto.  <a href="#a8a9c8f85881c32bf25e0eadbba4e0ecb">Más...</a><br/></td></tr>
+<tr class="separator:a8a9c8f85881c32bf25e0eadbba4e0ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd58d4ed895aac1d0434a3b85679faf7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#acd58d4ed895aac1d0434a3b85679faf7">object_Get_Name</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:acd58d4ed895aac1d0434a3b85679faf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el nombre del objeto.  <a href="#acd58d4ed895aac1d0434a3b85679faf7">Más...</a><br/></td></tr>
+<tr class="separator:acd58d4ed895aac1d0434a3b85679faf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237b4d9d8f98adfb3894fadadf3e107d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a237b4d9d8f98adfb3894fadadf3e107d">object_Get_Description</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a237b4d9d8f98adfb3894fadadf3e107d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la descripción del objeto.  <a href="#a237b4d9d8f98adfb3894fadadf3e107d">Más...</a><br/></td></tr>
+<tr class="separator:a237b4d9d8f98adfb3894fadadf3e107d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4e8f388cb414354f458ed8ffaea0df"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#acc4e8f388cb414354f458ed8ffaea0df">object_Get_Description2</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:acc4e8f388cb414354f458ed8ffaea0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la descripción dos del objeto.  <a href="#acc4e8f388cb414354f458ed8ffaea0df">Más...</a><br/></td></tr>
+<tr class="separator:acc4e8f388cb414354f458ed8ffaea0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9816db91c6d6366dfebc312edfd2d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ab9816db91c6d6366dfebc312edfd2d4a">object_Get_Mobile</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:ab9816db91c6d6366dfebc312edfd2d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la movibilidad del objeto.  <a href="#ab9816db91c6d6366dfebc312edfd2d4a">Más...</a><br/></td></tr>
+<tr class="separator:ab9816db91c6d6366dfebc312edfd2d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5993c22726e9a25b26897486be65b04b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a5993c22726e9a25b26897486be65b04b">object_Get_Moved</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a5993c22726e9a25b26897486be65b04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene si se ha movido el objeto.  <a href="#a5993c22726e9a25b26897486be65b04b">Más...</a><br/></td></tr>
+<tr class="separator:a5993c22726e9a25b26897486be65b04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52af6d2251daef99432eda4a9c6d229"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ad52af6d2251daef99432eda4a9c6d229">object_Get_Hidden</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:ad52af6d2251daef99432eda4a9c6d229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene si se ha movido el objeto.  <a href="#ad52af6d2251daef99432eda4a9c6d229">Más...</a><br/></td></tr>
+<tr class="separator:ad52af6d2251daef99432eda4a9c6d229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90fb9b63f03825f100afaee9c164a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#aa90fb9b63f03825f100afaee9c164a62">object_Get_Open</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:aa90fb9b63f03825f100afaee9c164a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene si esta abierto el objeto.  <a href="#aa90fb9b63f03825f100afaee9c164a62">Más...</a><br/></td></tr>
+<tr class="separator:aa90fb9b63f03825f100afaee9c164a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a9d55dbfa58c1c964ce79141425dd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ad1a9d55dbfa58c1c964ce79141425dd6">object_Get_Illuminates</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:ad1a9d55dbfa58c1c964ce79141425dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene si se ha iluminado el objeto.  <a href="#ad1a9d55dbfa58c1c964ce79141425dd6">Más...</a><br/></td></tr>
+<tr class="separator:ad1a9d55dbfa58c1c964ce79141425dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba698677df7f205780cd925bb614b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a4ba698677df7f205780cd925bb614b1b">object_Get_Light</a> (const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a4ba698677df7f205780cd925bb614b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene si se ha encendido el objeto.  <a href="#a4ba698677df7f205780cd925bb614b1b">Más...</a><br/></td></tr>
+<tr class="separator:a4ba698677df7f205780cd925bb614b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebb77fb5d33fc70616ab3b2b64c27ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#adebb77fb5d33fc70616ab3b2b64c27ce">object_print</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:adebb77fb5d33fc70616ab3b2b64c27ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime por pantalla el nombre del objeto y el id.  <a href="#adebb77fb5d33fc70616ab3b2b64c27ce">Más...</a><br/></td></tr>
+<tr class="separator:adebb77fb5d33fc70616ab3b2b64c27ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f755aea39ed103996a35988bc3364fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a6f755aea39ed103996a35988bc3364fe">object_Set_Graphics</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object, char *graphics)</td></tr>
+<tr class="memdesc:a6f755aea39ed103996a35988bc3364fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le asigna al objeto descripción grafica del objeto.  <a href="#a6f755aea39ed103996a35988bc3364fe">Más...</a><br/></td></tr>
+<tr class="separator:a6f755aea39ed103996a35988bc3364fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29168839c2a8992f47b44c72d77a48d3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a29168839c2a8992f47b44c72d77a48d3">object_Get_Graphics</a> (<a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *object)</td></tr>
+<tr class="memdesc:a29168839c2a8992f47b44c72d77a48d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la descripción grafica del objeto.  <a href="#a29168839c2a8992f47b44c72d77a48d3">Más...</a><br/></td></tr>
+<tr class="separator:a29168839c2a8992f47b44c72d77a48d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Define la interfaz pública del TAD Objeto. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>31-01-2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a2dd568a27239e988cdde871cfb30e166"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reservamos memoria para un nuevo objeto. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el objeto creado</dd></dl>
+<p>Reservamos memoria para un nuevo objeto.</p>
+<p>Cabeceras Libc Cabeceras propias </p>
+
+</div>
+</div>
+<a class="anchor" id="a19d6d51fee809e3801893eefc789f4b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruye un objeto. </p>
+<dl class="section date"><dt>Fecha</dt><dd>12-12-2005 </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Error si se ha hecho mal o Ok si se ha liberado correctamente. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a237b4d9d8f98adfb3894fadadf3e107d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* object_Get_Description </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la descripción del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La descripción del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc4e8f388cb414354f458ed8ffaea0df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* object_Get_Description2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la descripción dos del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La descripción del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a29168839c2a8992f47b44c72d77a48d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* object_Get_Graphics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la descripción grafica del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La descripción grafica del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad52af6d2251daef99432eda4a9c6d229"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> object_Get_Hidden </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene si se ha movido el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si se ha movido o no el objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a9c8f85881c32bf25e0eadbba4e0ecb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_Get_Id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el id del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El id del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1a9d55dbfa58c1c964ce79141425dd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> object_Get_Illuminates </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene si se ha iluminado el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si se ha iluminado o no el objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ba698677df7f205780cd925bb614b1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> object_Get_Light </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene si se ha encendido el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si se ha encendido o no el objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9816db91c6d6366dfebc312edfd2d4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> object_Get_Mobile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la movibilidad del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La movibilidad del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5993c22726e9a25b26897486be65b04b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> object_Get_Moved </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene si se ha movido el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si se ha movido o no el objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd58d4ed895aac1d0434a3b85679faf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* object_Get_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el nombre del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El nombre del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa90fb9b63f03825f100afaee9c164a62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_Get_Open </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene si esta abierto el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Si se ha abierto o no el link del objeto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adebb77fb5d33fc70616ab3b2b64c27ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime por pantalla el nombre del objeto y el id. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Imprime por pantalla si OK y da ERROR si lo contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6fcdf085bff38ed634163292aa44eaf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_Set_Description </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la descripción del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">description</td><td>Descripcion que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto con la nueva descripción </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4605a6beaf5889bf9420f88e21cbe981"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_Set_Description2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>desc2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la descripción dos del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">desc2</td><td>Descripcion que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto con la nueva descripción </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f755aea39ed103996a35988bc3364fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_Set_Graphics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>graphics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le asigna al objeto descripción grafica del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">graphics</td><td>La descripción grafica del objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto actualizado o NULL si se produce algun error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e86289cd0eedc29320243cd04e03b59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Hidden </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td>
+          <td class="paramname"><em>hidden</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la situacion del objeto, oculto o no oculto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">hidden</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae51dccb56662554f35c2060c6d1a26e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_Set_Id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>object_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone el id del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">object_id</td><td>Id que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto con el nuevo id </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7c2324a10aa3cbd62ef0091d41ed3858"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Illuminates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td>
+          <td class="paramname"><em>illuminates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la iluminacion del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">illuminates</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e7470ed915bc69304617a4c8344db24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td>
+          <td class="paramname"><em>on</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone el encendido del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">on</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05c9d2710f1300c5d1729d188db1efde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Mobile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td>
+          <td class="paramname"><em>mobile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la disponibilidad de movimiento del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">mobile</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0019840011cc2d5433cf958bf4621d14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Moved </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td>
+          <td class="paramname"><em>moved</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone si se ha mpvido el objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">moved</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e869c0c6741e1ea39480f20aad7d1f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a>* object_Set_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone el nombre del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">name</td><td>Nombre que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El objeto con el nuevo nombre </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c3a3a884f08171d7f0724f5f5aa0aaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> object_Set_Open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object_8h.html#a7f8bbcda919b65ce67f92fba08e0212f">Object</a> *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>open</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la situacion del link del objeto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>El puntero del objeto. </td></tr>
+    <tr><td class="paramname">open</td><td>Estado que recibe para el objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ok si se hace, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

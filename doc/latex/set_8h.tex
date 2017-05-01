@@ -1,0 +1,220 @@
+\hypertarget{set_8h}{\section{Referencia del Archivo include/set.h}
+\label{set_8h}\index{include/set.\-h@{include/set.\-h}}
+}
+
+
+Definicion de los prototipos de las primitivas del T\-A\-D Set.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+\subsection*{'defines'}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{set_8h_abc21882f4958e6b56aaf2f3c18f80d43}{M\-A\-X\-\_\-\-S\-E\-T}~15
+\end{DoxyCompactItemize}
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{typedef struct \-\_\-\-Set \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}}\label{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}
+
+\begin{DoxyCompactList}\small\item\em Definicion de la estructura set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8h_abcc73b7ad3913fc92dd95d366c9c8687}{set\-\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Crea un nuevo conjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{set_8h_a17fa263a49d6fe209c040e9ca5e0132a}{set\-\_\-destroy} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Libera memoria usada por un connjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{set_8h_aab7cec262d8e6e8f50def6d89a9559c0}{set\-\_\-add\-Id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo id al conjunto. \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8h_a83f8e510c61dd0521f51dbda163748cb}{set\-\_\-del\-Id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Borra un id del Set. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\-O\-O\-L} \hyperlink{set_8h_ae82c6cafea8202d01002e09b12f61e98}{set\-\_\-\-Id\-\_\-is\-\_\-in} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Comprueba si un id ya existe en el conjunto;. \end{DoxyCompactList}\item 
+int \hyperlink{set_8h_ab99ec8984c8167364c73606e2d1c23e3}{set\-\_\-get\-Number\-Of\-Ids} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Obtiene el numero de ids del set. \end{DoxyCompactList}\item 
+int \hyperlink{set_8h_a4301a8dbca1e48200b63e358236f3ff8}{set\-\_\-print} (F\-I\-L\-E $\ast$fp, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Imprime el set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Definicion de los prototipos de las primitivas del T\-A\-D Set. \begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+20/03/2017 
+\end{DoxyDate}
+
+
+\subsection{Documentación de los 'defines'}
+\hypertarget{set_8h_abc21882f4958e6b56aaf2f3c18f80d43}{\index{set.\-h@{set.\-h}!M\-A\-X\-\_\-\-S\-E\-T@{M\-A\-X\-\_\-\-S\-E\-T}}
+\index{M\-A\-X\-\_\-\-S\-E\-T@{M\-A\-X\-\_\-\-S\-E\-T}!set.h@{set.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-S\-E\-T~15}}\label{set_8h_abc21882f4958e6b56aaf2f3c18f80d43}
+Número máximo de ids permitidos en un set 
+
+\subsection{Documentación de las funciones}
+\hypertarget{set_8h_aab7cec262d8e6e8f50def6d89a9559c0}{\index{set.\-h@{set.\-h}!set\-\_\-add\-Id@{set\-\_\-add\-Id}}
+\index{set\-\_\-add\-Id@{set\-\_\-add\-Id}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-add\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} set\-\_\-add\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{set_8h_aab7cec262d8e6e8f50def6d89a9559c0}
+
+
+Añade un nuevo id al conjunto. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & Conjunto donde añadir el nuevo id. \\
+\hline
+{\em id} & Id que se tiene que añadir al conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha añadido correctamente el Id o E\-R\-R\-O\-R en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{set_8h_abcc73b7ad3913fc92dd95d366c9c8687}{\index{set.\-h@{set.\-h}!set\-\_\-create@{set\-\_\-create}}
+\index{set\-\_\-create@{set\-\_\-create}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ set\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{set_8h_abcc73b7ad3913fc92dd95d366c9c8687}
+
+
+Crea un nuevo conjunto. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+El nuevo conjunto creadoo o N\-U\-L\-L si no se ha podido cread 
+\end{DoxyReturn}
+\hypertarget{set_8h_a83f8e510c61dd0521f51dbda163748cb}{\index{set.\-h@{set.\-h}!set\-\_\-del\-Id@{set\-\_\-del\-Id}}
+\index{set\-\_\-del\-Id@{set\-\_\-del\-Id}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-del\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ set\-\_\-del\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{set_8h_a83f8e510c61dd0521f51dbda163748cb}
+
+
+Borra un id del Set. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & Conjunto donde borrar el id pasado como parametro \\
+\hline
+{\em id} & Id que se tiene que borrar del conjunto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Conjunto. 
+\end{DoxyReturn}
+\hypertarget{set_8h_a17fa263a49d6fe209c040e9ca5e0132a}{\index{set.\-h@{set.\-h}!set\-\_\-destroy@{set\-\_\-destroy}}
+\index{set\-\_\-destroy@{set\-\_\-destroy}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} set\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8h_a17fa263a49d6fe209c040e9ca5e0132a}
+
+
+Libera memoria usada por un connjunto. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & Conjunto que se tiene que destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado la operación correctamente o E\-R\-R\-O\-R en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{set_8h_ab99ec8984c8167364c73606e2d1c23e3}{\index{set.\-h@{set.\-h}!set\-\_\-get\-Number\-Of\-Ids@{set\-\_\-get\-Number\-Of\-Ids}}
+\index{set\-\_\-get\-Number\-Of\-Ids@{set\-\_\-get\-Number\-Of\-Ids}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-get\-Number\-Of\-Ids}]{\setlength{\rightskip}{0pt plus 5cm}int set\-\_\-get\-Number\-Of\-Ids (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8h_ab99ec8984c8167364c73606e2d1c23e3}
+
+
+Obtiene el numero de ids del set. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & Conjunto del que se quiere saber su numero de ids. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Numero de ids. 
+\end{DoxyReturn}
+\hypertarget{set_8h_ae82c6cafea8202d01002e09b12f61e98}{\index{set.\-h@{set.\-h}!set\-\_\-\-Id\-\_\-is\-\_\-in@{set\-\_\-\-Id\-\_\-is\-\_\-in}}
+\index{set\-\_\-\-Id\-\_\-is\-\_\-in@{set\-\_\-\-Id\-\_\-is\-\_\-in}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-\-Id\-\_\-is\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} set\-\_\-\-Id\-\_\-is\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{set_8h_ae82c6cafea8202d01002e09b12f61e98}
+
+
+Comprueba si un id ya existe en el conjunto;. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & Conjunto en el que buscar el Id \\
+\hline
+{\em id} & Id que se tiene que comprobar si existe\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+T\-R\-U\-E si el Id se encuentra en el conjuto o F\-A\-L\-S\-E en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{set_8h_a4301a8dbca1e48200b63e358236f3ff8}{\index{set.\-h@{set.\-h}!set\-\_\-print@{set\-\_\-print}}
+\index{set\-\_\-print@{set\-\_\-print}!set.h@{set.\-h}}
+\subsubsection[{set\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}int set\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp, }
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8h_a4301a8dbca1e48200b63e358236f3ff8}
+
+
+Imprime el set. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em fp} & Archivo donde imprimir \\
+\hline
+{\em set} & Conjunto a imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El número de caracteres imprimidos 
+\end{DoxyReturn}

@@ -1,0 +1,215 @@
+\hypertarget{inventory_8h}{\section{Referencia del Archivo include/inventory.h}
+\label{inventory_8h}\index{include/inventory.\-h@{include/inventory.\-h}}
+}
+
+
+Define la interfaz pública del T\-A\-D Inventory.  
+
+
+{\ttfamily \#include \char`\"{}set.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{typedef struct \-\_\-\-Inventory \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}}\label{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}
+
+\begin{DoxyCompactList}\small\item\em Definicion de la estructura del inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}{inventory\-\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Crea el inventario e inicializa sus campos. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}{inventory\-\_\-destroy} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Destruye un inventario. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}{inventory\-\_\-add\-\_\-object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Añade un objeto al inventario. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{inventory_8h_ac93ba85d30635a77f71213779a5eb88c}{inventory\-\_\-set\-\_\-max} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, int Num\-Ids)
+\begin{DoxyCompactList}\small\item\em Modifica el numero de objetos del inventario. \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}{inventory\-\_\-get\-\_\-max} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de objetos de un inventario. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}{inventory\-\_\-remove\-\_\-object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Elimina un objeto del inventario. \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{inventory_8h_acbd25032e0e69c343ecae29182a8f70f}{inventory\-\_\-get\-\_\-set} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Devuelve el conjunto de identificadores. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{inventory_8h_a743221b32ac6c372214bb83aaa3fbd74}{inventory\-\_\-print} (F\-I\-L\-E $\ast$fp, \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Imprime los datos de un inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Define la interfaz pública del T\-A\-D Inventory. \begin{DoxyAuthor}{Autor}
+Sandra Benítez y Laura Bernal 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+14-\/03-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-add\-\_\-object@{inventory\-\_\-add\-\_\-object}}
+\index{inventory\-\_\-add\-\_\-object@{inventory\-\_\-add\-\_\-object}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-add\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} inventory\-\_\-add\-\_\-object (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}
+
+
+Añade un objeto al inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario al que se desea añadir objeto \\
+\hline
+{\em id} & Id del objeto a añadir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un array de Ids de los objetos que tiene el jugador 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-create@{inventory\-\_\-create}}
+\index{inventory\-\_\-create@{inventory\-\_\-create}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ inventory\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}
+
+
+Crea el inventario e inicializa sus campos. 
+
+\begin{DoxyAuthor}{Autor}
+Laura Bernal y Sandra Benitez
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+Puntero a inventory 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-destroy@{inventory\-\_\-destroy}}
+\index{inventory\-\_\-destroy@{inventory\-\_\-destroy}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} inventory\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}
+
+
+Destruye un inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario que se desea eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha liberado correctamente, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-get\-\_\-max@{inventory\-\_\-get\-\_\-max}}
+\index{inventory\-\_\-get\-\_\-max@{inventory\-\_\-get\-\_\-max}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-get\-\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}int inventory\-\_\-get\-\_\-max (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}
+
+
+Obtiene el número de objetos de un inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario del que se obtiene el numero maximo de objetos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Número de objetos de un inventario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_acbd25032e0e69c343ecae29182a8f70f}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-get\-\_\-set@{inventory\-\_\-get\-\_\-set}}
+\index{inventory\-\_\-get\-\_\-set@{inventory\-\_\-get\-\_\-set}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-get\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ inventory\-\_\-get\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_acbd25032e0e69c343ecae29182a8f70f}
+
+
+Devuelve el conjunto de identificadores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario del que se desea obtener el conjunto de identificadores \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Conjunto de identificadores 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a743221b32ac6c372214bb83aaa3fbd74}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-print@{inventory\-\_\-print}}
+\index{inventory\-\_\-print@{inventory\-\_\-print}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} inventory\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp, }
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a743221b32ac6c372214bb83aaa3fbd74}
+
+
+Imprime los datos de un inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & \\
+\hline
+{\em fp} & Archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado correctamente, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-remove\-\_\-object@{inventory\-\_\-remove\-\_\-object}}
+\index{inventory\-\_\-remove\-\_\-object@{inventory\-\_\-remove\-\_\-object}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-remove\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} inventory\-\_\-remove\-\_\-object (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}
+
+
+Elimina un objeto del inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario de que eliminar el objeto \\
+\hline
+{\em id} & Id del objeto a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado correctamente, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_ac93ba85d30635a77f71213779a5eb88c}{\index{inventory.\-h@{inventory.\-h}!inventory\-\_\-set\-\_\-max@{inventory\-\_\-set\-\_\-max}}
+\index{inventory\-\_\-set\-\_\-max@{inventory\-\_\-set\-\_\-max}!inventory.h@{inventory.\-h}}
+\subsubsection[{inventory\-\_\-set\-\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} inventory\-\_\-set\-\_\-max (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{int}]{Num\-Ids}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_ac93ba85d30635a77f71213779a5eb88c}
+
+
+Modifica el numero de objetos del inventario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inventory} & Inventario en el que se quiere poner el numero maximo de ids \\
+\hline
+{\em Num\-Ids} & El numero maximo de ids a colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado correctamente, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}

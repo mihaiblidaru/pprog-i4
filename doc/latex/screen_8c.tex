@@ -1,0 +1,173 @@
+\hypertarget{screen_8c}{\section{Referencia del Archivo src/screen.c}
+\label{screen_8c}\index{src/screen.\-c@{src/screen.\-c}}
+}
+
+
+Modulo necesario para imprimir por pantalla las areas del juego.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}screen.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{screen_8c_a9dbb6c251337c03c078dc330caee48d2}{screen\-\_\-init} ()
+\begin{DoxyCompactList}\small\item\em Inicializa los datos para imprimir el juego en pantalla. \end{DoxyCompactList}\item 
+\hypertarget{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}{void \hyperlink{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}{screen\-\_\-destroy} ()}\label{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}
+
+\begin{DoxyCompactList}\small\item\em Destruye los datos usados para imprimir el juego en pantalla. \end{DoxyCompactList}\item 
+\hypertarget{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}{void \hyperlink{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}{screen\-\_\-paint} ()}\label{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}
+
+\begin{DoxyCompactList}\small\item\em Imprime el juego en pantalla. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a57b2f852be623dca59255306c1482eb2}{screen\-\_\-gets} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Obtiene una pantalla. \end{DoxyCompactList}\item 
+\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$ \hyperlink{screen_8c_a194528bec3ed3b57618a8f2df9bea743}{screen\-\_\-area\-\_\-init} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Crea un area. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}{screen\-\_\-area\-\_\-destroy} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Destruye un area. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a0950dc68cba3d491b909a8abaac1c666}{screen\-\_\-area\-\_\-clear} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Despeja un area. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}{screen\-\_\-area\-\_\-reset\-\_\-cursor} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Resetea el cursor en un area. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}{screen\-\_\-area\-\_\-puts} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Escribe texto en un area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Modulo necesario para imprimir por pantalla las areas del juego. \begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+11-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{screen_8c_a0950dc68cba3d491b909a8abaac1c666}{\index{screen.\-c@{screen.\-c}!screen\-\_\-area\-\_\-clear@{screen\-\_\-area\-\_\-clear}}
+\index{screen\-\_\-area\-\_\-clear@{screen\-\_\-area\-\_\-clear}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-area\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-area\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf Area} $\ast$}]{area}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_a0950dc68cba3d491b909a8abaac1c666}
+
+
+Despeja un area. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em area} & Area del cual tiene que quitar el texto \\
+\hline
+\end{DoxyParams}
+\hypertarget{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}{\index{screen.\-c@{screen.\-c}!screen\-\_\-area\-\_\-destroy@{screen\-\_\-area\-\_\-destroy}}
+\index{screen\-\_\-area\-\_\-destroy@{screen\-\_\-area\-\_\-destroy}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-area\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-area\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Area} $\ast$}]{area}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}
+
+
+Destruye un area. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em area} & Area que tiene que destruir \\
+\hline
+\end{DoxyParams}
+\hypertarget{screen_8c_a194528bec3ed3b57618a8f2df9bea743}{\index{screen.\-c@{screen.\-c}!screen\-\_\-area\-\_\-init@{screen\-\_\-area\-\_\-init}}
+\index{screen\-\_\-area\-\_\-init@{screen\-\_\-area\-\_\-init}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-area\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Area}$\ast$ screen\-\_\-area\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_a194528bec3ed3b57618a8f2df9bea743}
+
+
+Crea un area. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Posición x del area \\
+\hline
+{\em y} & Posición y del area \\
+\hline
+{\em width} & Ancho del area \\
+\hline
+{\em height} & Alto del area\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+area creada 
+\end{DoxyReturn}
+\hypertarget{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}{\index{screen.\-c@{screen.\-c}!screen\-\_\-area\-\_\-puts@{screen\-\_\-area\-\_\-puts}}
+\index{screen\-\_\-area\-\_\-puts@{screen\-\_\-area\-\_\-puts}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-area\-\_\-puts}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-area\-\_\-puts (
+\begin{DoxyParamCaption}
+\item[{{\bf Area} $\ast$}]{area, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}
+
+
+Escribe texto en un area. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em area} & Area en el cual escribir \\
+\hline
+{\em str} & Cadena de texto que se quiere imprimir en el area \\
+\hline
+\end{DoxyParams}
+\hypertarget{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}{\index{screen.\-c@{screen.\-c}!screen\-\_\-area\-\_\-reset\-\_\-cursor@{screen\-\_\-area\-\_\-reset\-\_\-cursor}}
+\index{screen\-\_\-area\-\_\-reset\-\_\-cursor@{screen\-\_\-area\-\_\-reset\-\_\-cursor}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-area\-\_\-reset\-\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-area\-\_\-reset\-\_\-cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf Area} $\ast$}]{area}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}
+
+
+Resetea el cursor en un area. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em area} & Area del cual se quiere resetear el cursor \\
+\hline
+\end{DoxyParams}
+\hypertarget{screen_8c_a57b2f852be623dca59255306c1482eb2}{\index{screen.\-c@{screen.\-c}!screen\-\_\-gets@{screen\-\_\-gets}}
+\index{screen\-\_\-gets@{screen\-\_\-gets}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-gets}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-gets (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_a57b2f852be623dca59255306c1482eb2}
+
+
+Obtiene una pantalla. 
+
+Imprime con colores 
+\begin{DoxyParams}{Parámetros}
+{\em str} & Puntero a cadena para indicar que pantalla cojer \\
+\hline
+\end{DoxyParams}
+\hypertarget{screen_8c_a9dbb6c251337c03c078dc330caee48d2}{\index{screen.\-c@{screen.\-c}!screen\-\_\-init@{screen\-\_\-init}}
+\index{screen\-\_\-init@{screen\-\_\-init}!screen.c@{screen.\-c}}
+\subsubsection[{screen\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void screen\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{screen_8c_a9dbb6c251337c03c078dc330caee48d2}
+
+
+Inicializa los datos para imprimir el juego en pantalla. 
+
+Cabeceras Libc 

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Fichero Fuente include/tests/player_test.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4abf8571c1830d727ba746fd6ad81b8d.html">tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">player_test.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player__test_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PLAYER_TEST_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PLAYER_TEST_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#ab29768452373e16bb6aaa1f7998f62fb">test1_player_create</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a9d87c09e6af910d695265e3fd77ae3a2">test1_player_set_name</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a6e7ce8ff791f4bf63749df647a44263f">test2_player_set_name</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a447ebbb4ba2206abeaf4b60200e312da">test3_player_set_name</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a64fa15a235953bea694236b9d7841cbc">test1_player_set_id</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a3695e0896bc3d770290e6a691fa212f7">test2_player_set_id</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a721899e78b1e5e9e483fcc75f44fdf09">test3_player_set_id</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#aec6799a4f46c3f3c471fcb668addcad4">test1_player_set_location</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a2c702753d9e2e3df9ef4abf2d1b9bc8d">test2_player_set_location</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a317c0c84ef6ef843c15d5bab4a6b8a38">test3_player_set_location</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a790a75dc179c00c60c784d3e34c0e5aa">test1_player_get_id</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a9fa80f0c0e46b45eb9f1685b102a5826">test2_player_get_id</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a7c658b9c2f29b7a96c009c059e2884bf">test3_player_get_id</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a94068667d8faa66a4ad293dd2c60f2ef">test1_player_get_name</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a3aa908fd360b74e7786422260e8e16a0">test2_player_get_name</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a47ca2429d85f332295322002954e1c89">test3_player_get_name</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a408a557a0cff748c10fb9a03445af191">test1_player_get_location</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a4c5605fac4bd716e1dfb2744db4fa8a1">test2_player_get_location</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#ac8251a4a8b1f1136da60fbddd03a3526">test3_player_get_location</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a14a3e4867e2ad3287c8efa99cd36904e">test1_player_add_object</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a864d3935cf61953950b10df0e656306d">test2_player_add_object</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#ac984e5292c95002644a7af4fa499d0fb">test3_player_add_object</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a0685839b423f685dcdabb7b9fe411cd1">test1_player_remove_object</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#af9e74e12ad6961761f1ff61afa56be3e">test2_player_remove_object</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#af84155cb375301e75475a91ef522e191">test3_player_remove_object</a>();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#af06159e33746f5d91723626a565e930c">test4_player_remove_object</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a5ea6b684fa6964067d029d5fee042874">test1_player_set_max_objects</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#ae1ed9bdcf1037c295a64cc780cb81dbc">test2_player_set_max_objects</a>();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#aa40042cc9c7916afea057534cf1180a6">test3_player_set_max_objects</a>();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a630dea620571fd2b05e2cbf403cffabc">test4_player_set_max_objects</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#abedc0e75ebffb4e7224f5e5ac0ee3055">test1_player_has_object</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"> * @test Prueba si el jugador tiene un objeto</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * @pre El jugador está sin inicializar</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> * @post La salida debe ser FALSE</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#ae8953d45d8f555a930dbc8aba101d399">test2_player_has_object</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"> * @test Prueba si el jugador tiene un objeto</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment"> * @pre El jugador está inicializado pero no tiene ningun objeto</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"> * @post La salida debe ser FALSE</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player__test_8h.html#a956409720fca92e245d798491200f3d6">test3_player_has_object</a>();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="player__test_8h_html_a3695e0896bc3d770290e6a691fa212f7"><div class="ttname"><a href="player__test_8h.html#a3695e0896bc3d770290e6a691fa212f7">test2_player_set_id</a></div><div class="ttdeci">void test2_player_set_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:156</div></div>
+<div class="ttc" id="player__test_8h_html_a2c702753d9e2e3df9ef4abf2d1b9bc8d"><div class="ttname"><a href="player__test_8h.html#a2c702753d9e2e3df9ef4abf2d1b9bc8d">test2_player_set_location</a></div><div class="ttdeci">void test2_player_set_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:190</div></div>
+<div class="ttc" id="player__test_8h_html_af9e74e12ad6961761f1ff61afa56be3e"><div class="ttname"><a href="player__test_8h.html#af9e74e12ad6961761f1ff61afa56be3e">test2_player_remove_object</a></div><div class="ttdeci">void test2_player_remove_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:367</div></div>
+<div class="ttc" id="player__test_8h_html_a790a75dc179c00c60c784d3e34c0e5aa"><div class="ttname"><a href="player__test_8h.html#a790a75dc179c00c60c784d3e34c0e5aa">test1_player_get_id</a></div><div class="ttdeci">void test1_player_get_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:212</div></div>
+<div class="ttc" id="player__test_8h_html_a6e7ce8ff791f4bf63749df647a44263f"><div class="ttname"><a href="player__test_8h.html#a6e7ce8ff791f4bf63749df647a44263f">test2_player_set_name</a></div><div class="ttdeci">void test2_player_set_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:122</div></div>
+<div class="ttc" id="player__test_8h_html_a14a3e4867e2ad3287c8efa99cd36904e"><div class="ttname"><a href="player__test_8h.html#a14a3e4867e2ad3287c8efa99cd36904e">test1_player_add_object</a></div><div class="ttdeci">void test1_player_add_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:317</div></div>
+<div class="ttc" id="player__test_8h_html_a721899e78b1e5e9e483fcc75f44fdf09"><div class="ttname"><a href="player__test_8h.html#a721899e78b1e5e9e483fcc75f44fdf09">test3_player_set_id</a></div><div class="ttdeci">void test3_player_set_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:166</div></div>
+<div class="ttc" id="player__test_8h_html_a9fa80f0c0e46b45eb9f1685b102a5826"><div class="ttname"><a href="player__test_8h.html#a9fa80f0c0e46b45eb9f1685b102a5826">test2_player_get_id</a></div><div class="ttdeci">void test2_player_get_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:225</div></div>
+<div class="ttc" id="player__test_8h_html_aec6799a4f46c3f3c471fcb668addcad4"><div class="ttname"><a href="player__test_8h.html#aec6799a4f46c3f3c471fcb668addcad4">test1_player_set_location</a></div><div class="ttdeci">void test1_player_set_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:178</div></div>
+<div class="ttc" id="player__test_8h_html_ac8251a4a8b1f1136da60fbddd03a3526"><div class="ttname"><a href="player__test_8h.html#ac8251a4a8b1f1136da60fbddd03a3526">test3_player_get_location</a></div><div class="ttdeci">void test3_player_get_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:305</div></div>
+<div class="ttc" id="player__test_8h_html_a94068667d8faa66a4ad293dd2c60f2ef"><div class="ttname"><a href="player__test_8h.html#a94068667d8faa66a4ad293dd2c60f2ef">test1_player_get_name</a></div><div class="ttdeci">void test1_player_get_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:247</div></div>
+<div class="ttc" id="player__test_8h_html_af06159e33746f5d91723626a565e930c"><div class="ttname"><a href="player__test_8h.html#af06159e33746f5d91723626a565e930c">test4_player_remove_object</a></div><div class="ttdeci">void test4_player_remove_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:389</div></div>
+<div class="ttc" id="player__test_8h_html_a317c0c84ef6ef843c15d5bab4a6b8a38"><div class="ttname"><a href="player__test_8h.html#a317c0c84ef6ef843c15d5bab4a6b8a38">test3_player_set_location</a></div><div class="ttdeci">void test3_player_set_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:200</div></div>
+<div class="ttc" id="player__test_8h_html_a9d87c09e6af910d695265e3fd77ae3a2"><div class="ttname"><a href="player__test_8h.html#a9d87c09e6af910d695265e3fd77ae3a2">test1_player_set_name</a></div><div class="ttdeci">void test1_player_set_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:110</div></div>
+<div class="ttc" id="player__test_8h_html_a408a557a0cff748c10fb9a03445af191"><div class="ttname"><a href="player__test_8h.html#a408a557a0cff748c10fb9a03445af191">test1_player_get_location</a></div><div class="ttdeci">void test1_player_get_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:282</div></div>
+<div class="ttc" id="player__test_8h_html_a447ebbb4ba2206abeaf4b60200e312da"><div class="ttname"><a href="player__test_8h.html#a447ebbb4ba2206abeaf4b60200e312da">test3_player_set_name</a></div><div class="ttdeci">void test3_player_set_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:132</div></div>
+<div class="ttc" id="player__test_8h_html_ab29768452373e16bb6aaa1f7998f62fb"><div class="ttname"><a href="player__test_8h.html#ab29768452373e16bb6aaa1f7998f62fb">test1_player_create</a></div><div class="ttdeci">void test1_player_create()</div><div class="ttdef"><b>Definition:</b> player_test.c:98</div></div>
+<div class="ttc" id="player__test_8h_html_aa40042cc9c7916afea057534cf1180a6"><div class="ttname"><a href="player__test_8h.html#aa40042cc9c7916afea057534cf1180a6">test3_player_set_max_objects</a></div><div class="ttdeci">void test3_player_set_max_objects()</div><div class="ttdef"><b>Definition:</b> player_test.c:428</div></div>
+<div class="ttc" id="player__test_8h_html_abedc0e75ebffb4e7224f5e5ac0ee3055"><div class="ttname"><a href="player__test_8h.html#abedc0e75ebffb4e7224f5e5ac0ee3055">test1_player_has_object</a></div><div class="ttdeci">void test1_player_has_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:450</div></div>
+<div class="ttc" id="player__test_8h_html_a64fa15a235953bea694236b9d7841cbc"><div class="ttname"><a href="player__test_8h.html#a64fa15a235953bea694236b9d7841cbc">test1_player_set_id</a></div><div class="ttdeci">void test1_player_set_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:144</div></div>
+<div class="ttc" id="player__test_8h_html_a4c5605fac4bd716e1dfb2744db4fa8a1"><div class="ttname"><a href="player__test_8h.html#a4c5605fac4bd716e1dfb2744db4fa8a1">test2_player_get_location</a></div><div class="ttdeci">void test2_player_get_location()</div><div class="ttdef"><b>Definition:</b> player_test.c:295</div></div>
+<div class="ttc" id="player__test_8h_html_a47ca2429d85f332295322002954e1c89"><div class="ttname"><a href="player__test_8h.html#a47ca2429d85f332295322002954e1c89">test3_player_get_name</a></div><div class="ttdeci">void test3_player_get_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:270</div></div>
+<div class="ttc" id="player__test_8h_html_a7c658b9c2f29b7a96c009c059e2884bf"><div class="ttname"><a href="player__test_8h.html#a7c658b9c2f29b7a96c009c059e2884bf">test3_player_get_id</a></div><div class="ttdeci">void test3_player_get_id()</div><div class="ttdef"><b>Definition:</b> player_test.c:235</div></div>
+<div class="ttc" id="player__test_8h_html_a956409720fca92e245d798491200f3d6"><div class="ttname"><a href="player__test_8h.html#a956409720fca92e245d798491200f3d6">test3_player_has_object</a></div><div class="ttdeci">void test3_player_has_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:474</div></div>
+<div class="ttc" id="player__test_8h_html_af84155cb375301e75475a91ef522e191"><div class="ttname"><a href="player__test_8h.html#af84155cb375301e75475a91ef522e191">test3_player_remove_object</a></div><div class="ttdeci">void test3_player_remove_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:379</div></div>
+<div class="ttc" id="player__test_8h_html_a630dea620571fd2b05e2cbf403cffabc"><div class="ttname"><a href="player__test_8h.html#a630dea620571fd2b05e2cbf403cffabc">test4_player_set_max_objects</a></div><div class="ttdeci">void test4_player_set_max_objects()</div><div class="ttdef"><b>Definition:</b> player_test.c:438</div></div>
+<div class="ttc" id="player__test_8h_html_a0685839b423f685dcdabb7b9fe411cd1"><div class="ttname"><a href="player__test_8h.html#a0685839b423f685dcdabb7b9fe411cd1">test1_player_remove_object</a></div><div class="ttdeci">void test1_player_remove_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:353</div></div>
+<div class="ttc" id="player__test_8h_html_ac984e5292c95002644a7af4fa499d0fb"><div class="ttname"><a href="player__test_8h.html#ac984e5292c95002644a7af4fa499d0fb">test3_player_add_object</a></div><div class="ttdeci">void test3_player_add_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:340</div></div>
+<div class="ttc" id="player__test_8h_html_a3aa908fd360b74e7786422260e8e16a0"><div class="ttname"><a href="player__test_8h.html#a3aa908fd360b74e7786422260e8e16a0">test2_player_get_name</a></div><div class="ttdeci">void test2_player_get_name()</div><div class="ttdef"><b>Definition:</b> player_test.c:260</div></div>
+<div class="ttc" id="player__test_8h_html_ae1ed9bdcf1037c295a64cc780cb81dbc"><div class="ttname"><a href="player__test_8h.html#ae1ed9bdcf1037c295a64cc780cb81dbc">test2_player_set_max_objects</a></div><div class="ttdeci">void test2_player_set_max_objects()</div><div class="ttdef"><b>Definition:</b> player_test.c:416</div></div>
+<div class="ttc" id="player__test_8h_html_a5ea6b684fa6964067d029d5fee042874"><div class="ttname"><a href="player__test_8h.html#a5ea6b684fa6964067d029d5fee042874">test1_player_set_max_objects</a></div><div class="ttdeci">void test1_player_set_max_objects()</div><div class="ttdef"><b>Definition:</b> player_test.c:403</div></div>
+<div class="ttc" id="player__test_8h_html_ae8953d45d8f555a930dbc8aba101d399"><div class="ttname"><a href="player__test_8h.html#ae8953d45d8f555a930dbc8aba101d399">test2_player_has_object</a></div><div class="ttdeci">void test2_player_has_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:464</div></div>
+<div class="ttc" id="player__test_8h_html_a864d3935cf61953950b10df0e656306d"><div class="ttname"><a href="player__test_8h.html#a864d3935cf61953950b10df0e656306d">test2_player_add_object</a></div><div class="ttdeci">void test2_player_add_object()</div><div class="ttdef"><b>Definition:</b> player_test.c:327</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

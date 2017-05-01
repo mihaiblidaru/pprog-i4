@@ -1,0 +1,1019 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/object_test.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo object_test.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Prueba el módulo Object.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="test_8h_source.html">tests/test.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="object__test_8h_source.html">tests/object_test.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="object_8h_source.html">object.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a3836d69f92ce7149d56bafcaec83f516"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a3836d69f92ce7149d56bafcaec83f516">test1_object_create</a> ()</td></tr>
+<tr class="separator:a3836d69f92ce7149d56bafcaec83f516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e25ad653c4a32b9922fff8e4f916fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a74e25ad653c4a32b9922fff8e4f916fd">test1_object_set_name</a> ()</td></tr>
+<tr class="separator:a74e25ad653c4a32b9922fff8e4f916fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf42b7e7be91ede243f2aaa56c4c9347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#acf42b7e7be91ede243f2aaa56c4c9347">test2_object_set_name</a> ()</td></tr>
+<tr class="separator:acf42b7e7be91ede243f2aaa56c4c9347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56cfa4504ae8275d8c38e543c76412f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ab56cfa4504ae8275d8c38e543c76412f">test1_object_set_graphics</a> ()</td></tr>
+<tr class="separator:ab56cfa4504ae8275d8c38e543c76412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107ab1b077a3949828a5ff42862d06dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a107ab1b077a3949828a5ff42862d06dd">test2_object_set_graphics</a> ()</td></tr>
+<tr class="separator:a107ab1b077a3949828a5ff42862d06dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a8860afca36ca65eea851bf01020d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a55a8860afca36ca65eea851bf01020d3">test1_object_set_Id</a> ()</td></tr>
+<tr class="separator:a55a8860afca36ca65eea851bf01020d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63883336ddb78c64280e2a26a0991a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a63883336ddb78c64280e2a26a0991a99">test2_object_set_Id</a> ()</td></tr>
+<tr class="separator:a63883336ddb78c64280e2a26a0991a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb26b8c66d332354df8bfd57a8033b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#afb26b8c66d332354df8bfd57a8033b8f">test1_object_set_description</a> ()</td></tr>
+<tr class="separator:afb26b8c66d332354df8bfd57a8033b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e32c3642c1d9207cdd84b134c616da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a65e32c3642c1d9207cdd84b134c616da">test2_object_set_description</a> ()</td></tr>
+<tr class="separator:a65e32c3642c1d9207cdd84b134c616da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d3eb94b74ecc8a14bffd09952c858e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a37d3eb94b74ecc8a14bffd09952c858e">test1_object_set_description2</a> ()</td></tr>
+<tr class="separator:a37d3eb94b74ecc8a14bffd09952c858e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b9ccddf68cc2ee637dcfdac21206c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a52b9ccddf68cc2ee637dcfdac21206c9">test2_object_set_description2</a> ()</td></tr>
+<tr class="separator:a52b9ccddf68cc2ee637dcfdac21206c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98804e9d1173f052213804914974f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#af98804e9d1173f052213804914974f7f">test1_object_set_Mobile</a> ()</td></tr>
+<tr class="separator:af98804e9d1173f052213804914974f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551ef3572071200971fc75bbd5373d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a551ef3572071200971fc75bbd5373d8f">test2_object_set_Mobile</a> ()</td></tr>
+<tr class="separator:a551ef3572071200971fc75bbd5373d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a6f27507382d82283872290544df6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ab9a6f27507382d82283872290544df6b">test1_object_set_Moved</a> ()</td></tr>
+<tr class="separator:ab9a6f27507382d82283872290544df6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de46c541146803f15e8a58ad83ab18a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a8de46c541146803f15e8a58ad83ab18a">test2_object_set_Moved</a> ()</td></tr>
+<tr class="separator:a8de46c541146803f15e8a58ad83ab18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34813fd6f6eff843819ab3b2d2381e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ad34813fd6f6eff843819ab3b2d2381e5">test1_object_set_Hidden</a> ()</td></tr>
+<tr class="separator:ad34813fd6f6eff843819ab3b2d2381e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df73347d6e6855a792a098b16cf3687"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a4df73347d6e6855a792a098b16cf3687">test2_object_set_Hidden</a> ()</td></tr>
+<tr class="separator:a4df73347d6e6855a792a098b16cf3687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b7d77914a82f5b8d08f1dd2a385e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ad8b7d77914a82f5b8d08f1dd2a385e4b">test1_object_set_Open</a> ()</td></tr>
+<tr class="separator:ad8b7d77914a82f5b8d08f1dd2a385e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d70593e55ce31aa7f54848e931d05c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a53d70593e55ce31aa7f54848e931d05c">test2_object_set_Open</a> ()</td></tr>
+<tr class="separator:a53d70593e55ce31aa7f54848e931d05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85014cd5037fa334371eb85dcae7efa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a85014cd5037fa334371eb85dcae7efa3">test1_object_set_Illuminates</a> ()</td></tr>
+<tr class="separator:a85014cd5037fa334371eb85dcae7efa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fc992ba4d2c52584ea3f9f6c742e79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a50fc992ba4d2c52584ea3f9f6c742e79">test2_object_set_Illuminates</a> ()</td></tr>
+<tr class="separator:a50fc992ba4d2c52584ea3f9f6c742e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81bad1897f9afe5ca335c30568be601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ac81bad1897f9afe5ca335c30568be601">test1_object_set_Light</a> ()</td></tr>
+<tr class="separator:ac81bad1897f9afe5ca335c30568be601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f16842b4de19b210ce344daa9b1a5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ad4f16842b4de19b210ce344daa9b1a5d">test2_object_set_Light</a> ()</td></tr>
+<tr class="separator:ad4f16842b4de19b210ce344daa9b1a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689d739bb9f7da71a4b1f77f200ac91a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a689d739bb9f7da71a4b1f77f200ac91a">test1_object_Get_Name</a> ()</td></tr>
+<tr class="separator:a689d739bb9f7da71a4b1f77f200ac91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3710b8585155a414ad6b58d068c7db63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a3710b8585155a414ad6b58d068c7db63">test2_object_Get_Name</a> ()</td></tr>
+<tr class="separator:a3710b8585155a414ad6b58d068c7db63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da5a07a844277fd4910a950e4f1fa4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a8da5a07a844277fd4910a950e4f1fa4f">test1_object_Get_Graphics</a> ()</td></tr>
+<tr class="separator:a8da5a07a844277fd4910a950e4f1fa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31533ac9316702e946fcf9736636762b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a31533ac9316702e946fcf9736636762b">test2_object_Get_Graphics</a> ()</td></tr>
+<tr class="separator:a31533ac9316702e946fcf9736636762b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c47b5c3c7f5b6204266822de3f2dd25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a5c47b5c3c7f5b6204266822de3f2dd25">test1_object_Get_Id</a> ()</td></tr>
+<tr class="separator:a5c47b5c3c7f5b6204266822de3f2dd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae971259646fcd6b9269ebafe009085db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ae971259646fcd6b9269ebafe009085db">test2_object_Get_Id</a> ()</td></tr>
+<tr class="separator:ae971259646fcd6b9269ebafe009085db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade15ed0bf4be56983f51a9e0f20fd1ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ade15ed0bf4be56983f51a9e0f20fd1ce">test1_object_Get_Description</a> ()</td></tr>
+<tr class="separator:ade15ed0bf4be56983f51a9e0f20fd1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c550bb28562251fb895df67418c9b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ad8c550bb28562251fb895df67418c9b0">test2_object_Get_Description</a> ()</td></tr>
+<tr class="separator:ad8c550bb28562251fb895df67418c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c5ec06b44924aa68c90ecce5f9f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a38c5ec06b44924aa68c90ecce5f9f6e4">test1_object_Get_Description2</a> ()</td></tr>
+<tr class="separator:a38c5ec06b44924aa68c90ecce5f9f6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6145728b36115c1b215089baa0ea2f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a6145728b36115c1b215089baa0ea2f0b">test2_object_Get_Description2</a> ()</td></tr>
+<tr class="separator:a6145728b36115c1b215089baa0ea2f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0706c45d9fd650fd8cd3d316224dcfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ac0706c45d9fd650fd8cd3d316224dcfd">test1_object_Get_Mobile</a> ()</td></tr>
+<tr class="separator:ac0706c45d9fd650fd8cd3d316224dcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e6d27222478b6bc41d9f7123347c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a06e6d27222478b6bc41d9f7123347c61">test2_object_Get_Mobile</a> ()</td></tr>
+<tr class="separator:a06e6d27222478b6bc41d9f7123347c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad754277594692ac4d2af79bfd42b87e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#ad754277594692ac4d2af79bfd42b87e1">test1_object_Get_Moved</a> ()</td></tr>
+<tr class="separator:ad754277594692ac4d2af79bfd42b87e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f4b87aef3ac6b5b49fa097e95e01be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a61f4b87aef3ac6b5b49fa097e95e01be">test2_object_Get_Moved</a> ()</td></tr>
+<tr class="separator:a61f4b87aef3ac6b5b49fa097e95e01be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacbcd57a70ae828d778590c6f03cb606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#aacbcd57a70ae828d778590c6f03cb606">test1_object_Get_Hidden</a> ()</td></tr>
+<tr class="separator:aacbcd57a70ae828d778590c6f03cb606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ae3e18dbc5071c56597dd6ecffd6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a26ae3e18dbc5071c56597dd6ecffd6e3">test2_object_Get_Hidden</a> ()</td></tr>
+<tr class="separator:a26ae3e18dbc5071c56597dd6ecffd6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8007a1d3bac0b59de9efdfe77924486c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a8007a1d3bac0b59de9efdfe77924486c">test1_object_Get_Open</a> ()</td></tr>
+<tr class="separator:a8007a1d3bac0b59de9efdfe77924486c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ab22a1a2998873748b9d58cb529b11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a40ab22a1a2998873748b9d58cb529b11">test2_object_Get_Open</a> ()</td></tr>
+<tr class="separator:a40ab22a1a2998873748b9d58cb529b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f525ed65f609a8c17eb620de528d42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a19f525ed65f609a8c17eb620de528d42">test1_object_Get_Illuminates</a> ()</td></tr>
+<tr class="separator:a19f525ed65f609a8c17eb620de528d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979585252ddcb56e24411bc3553da84d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a979585252ddcb56e24411bc3553da84d">test2_object_Get_Illuminates</a> ()</td></tr>
+<tr class="separator:a979585252ddcb56e24411bc3553da84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6ecf69ab8d1e663f72e22a70a60d2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#acf6ecf69ab8d1e663f72e22a70a60d2f">test1_object_Get_Light</a> ()</td></tr>
+<tr class="separator:acf6ecf69ab8d1e663f72e22a70a60d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194698b8928e15bd4327503af7a75ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__test_8c.html#a194698b8928e15bd4327503af7a75ad7">test2_object_Get_Light</a> ()</td></tr>
+<tr class="separator:a194698b8928e15bd4327503af7a75ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Prueba el módulo Object. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>2.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>24-04-2017 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a3836d69f92ce7149d56bafcaec83f516"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000158">Prueba:</a></b></dt><dd>Prueba si se crea correctamente un objeto <dl class="section post"><dt>Postcondición</dt><dd>Un puntero no nulo al objeto creado </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ade15ed0bf4be56983f51a9e0f20fd1ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Description </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000187">Prueba:</a></b></dt><dd>Prueba leer la descripcion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la descripcion </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la descripcion asignado antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a38c5ec06b44924aa68c90ecce5f9f6e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Description2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000189">Prueba:</a></b></dt><dd>Prueba leer la descripcion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la descripcion </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la descripcion asignado antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8da5a07a844277fd4910a950e4f1fa4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000183">Prueba:</a></b></dt><dd>Prueba leer los graficos de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al nombre se le ha asignado previamente los graficos "Bryan" </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada son los graficos asignados antes "Bryan" </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aacbcd57a70ae828d778590c6f03cb606"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000195">Prueba:</a></b></dt><dd>Prueba leer si se ha escondido un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la invibisibilidad </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c47b5c3c7f5b6204266822de3f2dd25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000185">Prueba:</a></b></dt><dd>Prueba leer el id de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente el id 12 </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es el id asignado antes (12) </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a19f525ed65f609a8c17eb620de528d42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Illuminates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000199">Prueba:</a></b></dt><dd>Prueba leer si se ha iluminado un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la posibilidad de iluminar </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf6ecf69ab8d1e663f72e22a70a60d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000201">Prueba:</a></b></dt><dd>Prueba leer si se puede iluminar un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la posibilidad de iluminar </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0706c45d9fd650fd8cd3d316224dcfd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Mobile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000191">Prueba:</a></b></dt><dd>Prueba leer la movilidad de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la movilidad </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad754277594692ac4d2af79bfd42b87e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Moved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000193">Prueba:</a></b></dt><dd>Prueba leer si se ha movido un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la movilidad </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a689d739bb9f7da71a4b1f77f200ac91a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000181">Prueba:</a></b></dt><dd>Prueba leer el nombre de un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al nombre se le ha asignado previamente el nombre Bryan </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es el id asignado antes "Bryan" </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8007a1d3bac0b59de9efdfe77924486c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_Get_Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000197">Prueba:</a></b></dt><dd>Prueba leer si se ha abierto el link a un objeto <dl class="section pre"><dt>Precondición</dt><dd>Al objeto se le ha asignado previamente la disponibilidad </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es la movilidad asignada antes </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afb26b8c66d332354df8bfd57a8033b8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_description </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000165">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una descripcion a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La descripcion del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37d3eb94b74ecc8a14bffd09952c858e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_description2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000167">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una descripcion2 a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La descripcion2 del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab56cfa4504ae8275d8c38e543c76412f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000161">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente los graficos a un objeto <dl class="section pre"><dt>Precondición</dt><dd>El nombre del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad34813fd6f6eff843819ab3b2d2381e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000173">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una situacion a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La situacion del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a55a8860afca36ca65eea851bf01020d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000163">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente un Id a un objeto <dl class="section pre"><dt>Precondición</dt><dd>El Id del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85014cd5037fa334371eb85dcae7efa3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Illuminates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000177">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una iluminacion a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La iluminacion del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac81bad1897f9afe5ca335c30568be601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000179">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una iluminacion a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La iluminacion del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af98804e9d1173f052213804914974f7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Mobile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000169">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una movilidad a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La movilidad del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9a6f27507382d82283872290544df6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Moved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000171">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una movilidad a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La movilidad del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a74e25ad653c4a32b9922fff8e4f916fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000159">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente un nombre a un objeto <dl class="section pre"><dt>Precondición</dt><dd>El nombre del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8b7d77914a82f5b8d08f1dd2a385e4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test1_object_set_Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000175">Prueba:</a></b></dt><dd>Prueba si se le asigna correctamente una situacion a un objeto <dl class="section pre"><dt>Precondición</dt><dd>La situacion del objeto </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida tiene que ser el puntero al objeto </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8c550bb28562251fb895df67418c9b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Description </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000188">Prueba:</a></b></dt><dd>Prueba leer la descripcion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6145728b36115c1b215089baa0ea2f0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Description2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000190">Prueba:</a></b></dt><dd>Prueba leer la descripcion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a31533ac9316702e946fcf9736636762b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000184">Prueba:</a></b></dt><dd>Prueba leer los graficos de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26ae3e18dbc5071c56597dd6ecffd6e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000196">Prueba:</a></b></dt><dd>Prueba leer la situacion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es FALSE </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae971259646fcd6b9269ebafe009085db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000186">Prueba:</a></b></dt><dd>Prueba leer el id de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NO_ID </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a979585252ddcb56e24411bc3553da84d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Illuminates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000200">Prueba:</a></b></dt><dd>Prueba leer la situacion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es FALSE </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a194698b8928e15bd4327503af7a75ad7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000202">Prueba:</a></b></dt><dd>Prueba leer la situacion de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es FALSE </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06e6d27222478b6bc41d9f7123347c61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Mobile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000192">Prueba:</a></b></dt><dd>Prueba leer la movilidad de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es FALSE </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a61f4b87aef3ac6b5b49fa097e95e01be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Moved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000194">Prueba:</a></b></dt><dd>Prueba leer la movilidad de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es FALSE </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3710b8585155a414ad6b58d068c7db63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000182">Prueba:</a></b></dt><dd>Prueba leer el nombre de un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a40ab22a1a2998873748b9d58cb529b11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_Get_Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000198">Prueba:</a></b></dt><dd>Prueba leer la situacion del link a un objeto <dl class="section pre"><dt>Precondición</dt><dd>El objeto no ha sido inicializado previamente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida esperada es NO_ID </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65e32c3642c1d9207cdd84b134c616da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_description </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000166">Prueba:</a></b></dt><dd>Prueba asignar una descripcion a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la descripcion es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52b9ccddf68cc2ee637dcfdac21206c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_description2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000168">Prueba:</a></b></dt><dd>Prueba asignar una descripcion2 a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la descripcion2 es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a107ab1b077a3949828a5ff42862d06dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000162">Prueba:</a></b></dt><dd>Prueba asignar graficos a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer los graficos es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4df73347d6e6855a792a098b16cf3687"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000174">Prueba:</a></b></dt><dd>Prueba asignar una situacion a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la situacion es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a63883336ddb78c64280e2a26a0991a99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000164">Prueba:</a></b></dt><dd>Prueba asignar un Id a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer el Id es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50fc992ba4d2c52584ea3f9f6c742e79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Illuminates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000178">Prueba:</a></b></dt><dd>Prueba asignar una iluminacion a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la iluminacion es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4f16842b4de19b210ce344daa9b1a5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000180">Prueba:</a></b></dt><dd>Prueba asignar una iluminacion a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la iluminacion es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a551ef3572071200971fc75bbd5373d8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Mobile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000170">Prueba:</a></b></dt><dd>Prueba asignar una movilidad a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la movilidad es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8de46c541146803f15e8a58ad83ab18a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Moved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000172">Prueba:</a></b></dt><dd>Prueba asignar una movilidad a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la movilidad es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf42b7e7be91ede243f2aaa56c4c9347"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000160">Prueba:</a></b></dt><dd>Prueba asignar un nombre a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer el nombre es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a53d70593e55ce31aa7f54848e931d05c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test2_object_set_Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="test"><dt><b><a class="el" href="test.html#_test000176">Prueba:</a></b></dt><dd>Prueba asignar una situacion a un objeto sin inicializar <dl class="section pre"><dt>Precondición</dt><dd>El objeto al que establecer la situacion es un puntero a NULL </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>La salida debe ser NULL </dd></dl>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

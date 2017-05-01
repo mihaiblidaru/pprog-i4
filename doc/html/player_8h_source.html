@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Fichero Fuente include/player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef PLAYER_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PLAYER_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* Cabeceras propias */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="set_8h.html">set.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="inventory_8h.html">inventory.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="player_8h.html#aa8e7426a60de76746b37967a6a5da8a2">   24</a></span>&#160;<span class="preprocessor">#define PLAYER_INV_LOCATION -65535</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">   29</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_Player <a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="player_8h.html#a2a002f9a122c494520b2d478ce176244">player_create</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="player_8h.html#a68e324aa5064e27d0a2f38aafb6809ad">player_destroy</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="player_8h.html#a3c5d90e12fa0d9cb05a364e79b7a33be">player_Set_Id</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> player_id);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="player_8h.html#a3df7bae0f9b39eac28aa93e8db3cfb07">player_Set_Name</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="player_8h.html#ae635565b4d4f7d151f07b9f5e7e095eb">player_Set_Location</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> location);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* <a class="code" href="player_8h.html#afa0e3fba12d6f77b42e6fee5a9aaf078">player_Set_Max_Objects</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <span class="keywordtype">int</span> max_objects);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="player_8h.html#a051a70ccaad86c89fe606a0291a303eb">player_Get_Id</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="player_8h.html#a63c53ec92d3b036120e50e40eda6e69b">player_Get_Name</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> <a class="code" href="player_8h.html#a0661e6ad8cfde1bbc6854a2600d8ed12">player_Get_Location</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">int</span> <a class="code" href="player_8h.html#ab1781f4f8d7924042cbb0e7e0ab94b86">player_Get_Max_Objects</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="player_8h.html#a398fd999cb35cb2b8a0b442d5f7c9f85">player_Add_Object</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="player_8h.html#aef4471c67dae8dc3c968e7ffed34e7c2">player_Remove_Object</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<a class="code" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> <a class="code" href="player_8h.html#a3f1ec136356c7e33902628cbf35ce461">player_Has_Object</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player, <a class="code" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> <a class="code" href="player_8h.html#a18a5cde058ef2e4fb9a6954cb9ae5cb3">player_Print</a>(<a class="code" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="player_8h_html_a18a5cde058ef2e4fb9a6954cb9ae5cb3"><div class="ttname"><a href="player_8h.html#a18a5cde058ef2e4fb9a6954cb9ae5cb3">player_Print</a></div><div class="ttdeci">STATUS player_Print(Player *player)</div><div class="ttdoc">Imprime por pantalla los datos del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:254</div></div>
+<div class="ttc" id="types_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Define tipos de datos comunes. </div></div>
+<div class="ttc" id="player_8h_html_a398fd999cb35cb2b8a0b442d5f7c9f85"><div class="ttname"><a href="player_8h.html#a398fd999cb35cb2b8a0b442d5f7c9f85">player_Add_Object</a></div><div class="ttdeci">STATUS player_Add_Object(Player *player, Id object_id)</div><div class="ttdoc">Añade un objeto al Inventory del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:205</div></div>
+<div class="ttc" id="types_8h_html_a32c27cc471df37f4fc818d65de0a56c4"><div class="ttname"><a href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a></div><div class="ttdeci">STATUS</div><div class="ttdoc">Definicion de la enumeración STATUS. </div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="set_8h_html"><div class="ttname"><a href="set_8h.html">set.h</a></div><div class="ttdoc">Definicion de los prototipos de las primitivas del TAD Set. </div></div>
+<div class="ttc" id="player_8h_html_a63c53ec92d3b036120e50e40eda6e69b"><div class="ttname"><a href="player_8h.html#a63c53ec92d3b036120e50e40eda6e69b">player_Get_Name</a></div><div class="ttdeci">char * player_Get_Name(Player *player)</div><div class="ttdoc">Obtiene el nombre del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:163</div></div>
+<div class="ttc" id="player_8h_html_a3f1ec136356c7e33902628cbf35ce461"><div class="ttname"><a href="player_8h.html#a3f1ec136356c7e33902628cbf35ce461">player_Has_Object</a></div><div class="ttdeci">BOOL player_Has_Object(Player *player, Id object_id)</div><div class="ttdoc">Comprueba si el jugador tiene un objeto determinado. </div><div class="ttdef"><b>Definition:</b> player.c:239</div></div>
+<div class="ttc" id="player_8h_html_a3df7bae0f9b39eac28aa93e8db3cfb07"><div class="ttname"><a href="player_8h.html#a3df7bae0f9b39eac28aa93e8db3cfb07">player_Set_Name</a></div><div class="ttdeci">Player * player_Set_Name(Player *player, char *name)</div><div class="ttdoc">Pone el nombre del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:103</div></div>
+<div class="ttc" id="inventory_8h_html"><div class="ttname"><a href="inventory_8h.html">inventory.h</a></div><div class="ttdoc">Define la interfaz pública del TAD Inventory. </div></div>
+<div class="ttc" id="player_8h_html_a051a70ccaad86c89fe606a0291a303eb"><div class="ttname"><a href="player_8h.html#a051a70ccaad86c89fe606a0291a303eb">player_Get_Id</a></div><div class="ttdeci">Id player_Get_Id(Player *player)</div><div class="ttdoc">Obtiene el id del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:149</div></div>
+<div class="ttc" id="player_8h_html_a3c5d90e12fa0d9cb05a364e79b7a33be"><div class="ttname"><a href="player_8h.html#a3c5d90e12fa0d9cb05a364e79b7a33be">player_Set_Id</a></div><div class="ttdeci">Player * player_Set_Id(Player *player, Id player_id)</div><div class="ttdoc">Pone el id del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:87</div></div>
+<div class="ttc" id="player_8h_html_a68e324aa5064e27d0a2f38aafb6809ad"><div class="ttname"><a href="player_8h.html#a68e324aa5064e27d0a2f38aafb6809ad">player_destroy</a></div><div class="ttdeci">STATUS player_destroy(Player *player)</div><div class="ttdoc">Destruye un jugador. </div><div class="ttdef"><b>Definition:</b> player.c:72</div></div>
+<div class="ttc" id="player_8h_html_ae635565b4d4f7d151f07b9f5e7e095eb"><div class="ttname"><a href="player_8h.html#ae635565b4d4f7d151f07b9f5e7e095eb">player_Set_Location</a></div><div class="ttdeci">Player * player_Set_Location(Player *player, Id location)</div><div class="ttdoc">Pone la localizacion del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:120</div></div>
+<div class="ttc" id="types_8h_html_a845e604fb28f7e3d97549da3448149d3"><div class="ttname"><a href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Definicion de Id. </div><div class="ttdef"><b>Definition:</b> types.h:30</div></div>
+<div class="ttc" id="player_8h_html_a0661e6ad8cfde1bbc6854a2600d8ed12"><div class="ttname"><a href="player_8h.html#a0661e6ad8cfde1bbc6854a2600d8ed12">player_Get_Location</a></div><div class="ttdeci">Id player_Get_Location(Player *player)</div><div class="ttdoc">Obtiene la localizacion del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:177</div></div>
+<div class="ttc" id="player_8h_html_aef4471c67dae8dc3c968e7ffed34e7c2"><div class="ttname"><a href="player_8h.html#aef4471c67dae8dc3c968e7ffed34e7c2">player_Remove_Object</a></div><div class="ttdeci">STATUS player_Remove_Object(Player *player, Id object_id)</div><div class="ttdoc">Borra un objeto del Inventory del jugador. </div><div class="ttdef"><b>Definition:</b> player.c:222</div></div>
+<div class="ttc" id="player_8h_html_a2a002f9a122c494520b2d478ce176244"><div class="ttname"><a href="player_8h.html#a2a002f9a122c494520b2d478ce176244">player_create</a></div><div class="ttdeci">Player * player_create()</div><div class="ttdoc">Crea un nuevo jugador e inicializa sus campos. </div><div class="ttdef"><b>Definition:</b> player.c:48</div></div>
+<div class="ttc" id="player_8h_html_afa0e3fba12d6f77b42e6fee5a9aaf078"><div class="ttname"><a href="player_8h.html#afa0e3fba12d6f77b42e6fee5a9aaf078">player_Set_Max_Objects</a></div><div class="ttdeci">Player * player_Set_Max_Objects(Player *player, int max_objects)</div><div class="ttdoc">Asigna el número maximo de objetos que puede llevar el jugador. </div><div class="ttdef"><b>Definition:</b> player.c:135</div></div>
+<div class="ttc" id="types_8h_html_a3e5b8192e7d9ffaf3542f1210aec18dd"><div class="ttname"><a href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a></div><div class="ttdeci">BOOL</div><div class="ttdoc">Definicion de la enumeración BOOL. </div><div class="ttdef"><b>Definition:</b> types.h:36</div></div>
+<div class="ttc" id="player_8h_html_ab1781f4f8d7924042cbb0e7e0ab94b86"><div class="ttname"><a href="player_8h.html#ab1781f4f8d7924042cbb0e7e0ab94b86">player_Get_Max_Objects</a></div><div class="ttdeci">int player_Get_Max_Objects(Player *player)</div><div class="ttdoc">Devuelve el número maximo de objetos que puede llevar el jugador. </div><div class="ttdef"><b>Definition:</b> player.c:190</div></div>
+<div class="ttc" id="player_8h_html_af30e2030635a69690f85e48bc6ef202f"><div class="ttname"><a href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a></div><div class="ttdeci">struct _Player Player</div><div class="ttdoc">Definicion de la estructura player. </div><div class="ttdef"><b>Definition:</b> player.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:43 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

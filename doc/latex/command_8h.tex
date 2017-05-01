@@ -1,0 +1,321 @@
+\hypertarget{command_8h}{\section{Referencia del Archivo include/command.h}
+\label{command_8h}\index{include/command.\-h@{include/command.\-h}}
+}
+
+
+Implementa el interpreatador de comandos. Lee los comandos que introduce el usuario parseandolos al tipo de datos T\-\_\-\-Command, para poder trabajar facilmente con estos comandos.  
+
+
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+\subsection*{'defines'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{command_8h_a2b1bd24d2eddf8081d8c541e4cc4fd4b}{\#define \hyperlink{command_8h_a2b1bd24d2eddf8081d8c541e4cc4fd4b}{C\-M\-D\-\_\-\-L\-E\-N\-G\-H\-T}~70}\label{command_8h_a2b1bd24d2eddf8081d8c541e4cc4fd4b}
+
+\begin{DoxyCompactList}\small\item\em Extension del comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \-\_\-\-Command \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}
+\begin{DoxyCompactList}\small\item\em Definicion de la estructura del comando. \end{DoxyCompactList}\item 
+\hypertarget{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{typedef enum \hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50c}{enum\-\_\-\-Command} \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\-\_\-\-Command}}\label{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}
+
+\begin{DoxyCompactList}\small\item\em Define los tipos de comandos que existen en el juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50c}{enum\-\_\-\-Command} \{ \\*
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca785693a1d550a18688638e9124af41d0}{N\-O\-\_\-\-C\-M\-D} = -\/1, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca76bdc8adfd6c6463ab269ff4c06be9b4}{Q\-U\-I\-T}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca7405647410e343caba1bf383e83d4f5f}{T\-A\-K\-E}, 
+\\*
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0}{L\-E\-A\-V\-E}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca2eeb9fef8a6a516fa6437a44a6efbd52}{R\-O\-L\-L}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca50d8e53aac4e002d0fd296c5033ce985}{G\-O}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50caab933f64fcaa285df294e1420f6f1b07}{I\-N\-S\-P\-E\-C\-T}, 
+\\*
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca141759a3bd88e1f969f53ce070705fcd}{T\-U\-R\-N\-O\-N}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca564ee0e901bafdd34855cf0ad96ef60c}{T\-U\-R\-N\-O\-F\-F}, 
+\hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50ca0e0143636c29971736eab47415868eae}{O\-P\-E\-N}, 
+{\bfseries S\-A\-V\-E}, 
+\\*
+{\bfseries L\-O\-A\-D}, 
+{\bfseries D\-I\-R}, 
+{\bfseries H\-E\-L\-P}, 
+{\bfseries A\-T\-T\-A\-C\-K}
+ \}
+\begin{DoxyCompactList}\small\item\em Define los tipos de comandos que existen en el juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8h_a332ed516a605d73018254c8f6e5d1a25}{Command\-\_\-ini} ()
+\begin{DoxyCompactList}\small\item\em Crea e inicializa una estructura tipo Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8h_a492ad103fd0a8abd174cecc1a86dcdf8}{Command\-\_\-destroy} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Libera memoria usada por una estructura Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8h_acfa9a05b602789d69d4b26b04c0cf1fb}{Command\-\_\-set\-\_\-cmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\-\_\-\-Command} cmd)
+\begin{DoxyCompactList}\small\item\em Guarda un comando en la estructura. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8h_a62be88f588be7388a4e88862ac57b926}{Command\-\_\-set\-\_\-cmd\-\_\-arg} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, char $\ast$arg, int index)
+\begin{DoxyCompactList}\small\item\em Guarda un parametro de un comando en la estructura en una posición dada. \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\-\_\-\-Command} \hyperlink{command_8h_a0a46ec28d9377c261485aeed9f5b21f2}{Command\-\_\-get\-\_\-cmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Devuelve el comando guardado en la estructura. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8h_a9bfa89a1c3ba1f8a526a66f997ccd53c}{Command\-\_\-get\-\_\-cmd\-\_\-arg} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager, int index)
+\begin{DoxyCompactList}\small\item\em Devuelve un parametro del comando guardado en la estructura en una posición dada. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8h_a926b4548f30a633eec7c8c17ae90d093}{Command\-\_\-clear} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Limpia los datos de una estructura Command. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{command_8h_a756d09f48ba1599fb9b9b46877ad9d0a}{get\-\_\-user\-\_\-input} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd\-Manager)
+\begin{DoxyCompactList}\small\item\em Lee los comandos de introduce el usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementa el interpreatador de comandos. Lee los comandos que introduce el usuario parseandolos al tipo de datos T\-\_\-\-Command, para poder trabajar facilmente con estos comandos. \begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo y Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+3.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+09/03/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de los 'typedefs'}
+\hypertarget{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{\index{command.\-h@{command.\-h}!Command@{Command}}
+\index{Command@{Command}!command.h@{command.\-h}}
+\subsubsection[{Command}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Command {\bf Command}}}\label{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}
+
+
+Definicion de la estructura del comando. 
+
+Tad Comando. Gestiona la entrada de comandos en el juego 
+
+\subsection{Documentación de las enumeraciones}
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50c}{\index{command.\-h@{command.\-h}!enum\-\_\-\-Command@{enum\-\_\-\-Command}}
+\index{enum\-\_\-\-Command@{enum\-\_\-\-Command}!command.h@{command.\-h}}
+\subsubsection[{enum\-\_\-\-Command}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf enum\-\_\-\-Command}}}\label{command_8h_ace19ba2296a74e4aef53304e0934c50c}
+
+
+Define los tipos de comandos que existen en el juego. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{N\-O\-\_\-\-C\-M\-D@{N\-O\-\_\-\-C\-M\-D}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!N\-O\-\_\-\-C\-M\-D@{N\-O\-\_\-\-C\-M\-D}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca785693a1d550a18688638e9124af41d0}{N\-O\-\_\-\-C\-M\-D}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca785693a1d550a18688638e9124af41d0}
+}]Sin Comando \index{U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca6ce26a62afab55d7606ad4e92428b30c}
+}]Comando desconocido \index{Q\-U\-I\-T@{Q\-U\-I\-T}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!Q\-U\-I\-T@{Q\-U\-I\-T}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca76bdc8adfd6c6463ab269ff4c06be9b4}{Q\-U\-I\-T}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca76bdc8adfd6c6463ab269ff4c06be9b4}
+}]Comando salir \index{T\-A\-K\-E@{T\-A\-K\-E}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!T\-A\-K\-E@{T\-A\-K\-E}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca7405647410e343caba1bf383e83d4f5f}{T\-A\-K\-E}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca7405647410e343caba1bf383e83d4f5f}
+}]Comando coger \index{L\-E\-A\-V\-E@{L\-E\-A\-V\-E}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!L\-E\-A\-V\-E@{L\-E\-A\-V\-E}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0}{L\-E\-A\-V\-E}\label{command_8h_ace19ba2296a74e4aef53304e0934c50cae09e07839103de682cb13fa773793fc0}
+}]Comando dejar \index{R\-O\-L\-L@{R\-O\-L\-L}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!R\-O\-L\-L@{R\-O\-L\-L}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca2eeb9fef8a6a516fa6437a44a6efbd52}{R\-O\-L\-L}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca2eeb9fef8a6a516fa6437a44a6efbd52}
+}]Comando lanzar \index{G\-O@{G\-O}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!G\-O@{G\-O}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca50d8e53aac4e002d0fd296c5033ce985}{G\-O}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca50d8e53aac4e002d0fd296c5033ce985}
+}]Comando ir \index{I\-N\-S\-P\-E\-C\-T@{I\-N\-S\-P\-E\-C\-T}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!I\-N\-S\-P\-E\-C\-T@{I\-N\-S\-P\-E\-C\-T}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50caab933f64fcaa285df294e1420f6f1b07}{I\-N\-S\-P\-E\-C\-T}\label{command_8h_ace19ba2296a74e4aef53304e0934c50caab933f64fcaa285df294e1420f6f1b07}
+}]Comando inspeccionar \index{T\-U\-R\-N\-O\-N@{T\-U\-R\-N\-O\-N}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!T\-U\-R\-N\-O\-N@{T\-U\-R\-N\-O\-N}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca141759a3bd88e1f969f53ce070705fcd}{T\-U\-R\-N\-O\-N}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca141759a3bd88e1f969f53ce070705fcd}
+}]Comando encender \index{T\-U\-R\-N\-O\-F\-F@{T\-U\-R\-N\-O\-F\-F}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!T\-U\-R\-N\-O\-F\-F@{T\-U\-R\-N\-O\-F\-F}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca564ee0e901bafdd34855cf0ad96ef60c}{T\-U\-R\-N\-O\-F\-F}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca564ee0e901bafdd34855cf0ad96ef60c}
+}]Comando apagar \index{O\-P\-E\-N@{O\-P\-E\-N}!command.\-h@{command.\-h}}\index{command.\-h@{command.\-h}!O\-P\-E\-N@{O\-P\-E\-N}}\item[{\em 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50ca0e0143636c29971736eab47415868eae}{O\-P\-E\-N}\label{command_8h_ace19ba2296a74e4aef53304e0934c50ca0e0143636c29971736eab47415868eae}
+}]Comando abrir \end{description}
+\end{Desc}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{command_8h_a926b4548f30a633eec7c8c17ae90d093}{\index{command.\-h@{command.\-h}!Command\-\_\-clear@{Command\-\_\-clear}}
+\index{Command\-\_\-clear@{Command\-\_\-clear}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a926b4548f30a633eec7c8c17ae90d093}
+
+
+Limpia los datos de una estructura Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura Command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha hecho correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8h_a492ad103fd0a8abd174cecc1a86dcdf8}{\index{command.\-h@{command.\-h}!Command\-\_\-destroy@{Command\-\_\-destroy}}
+\index{Command\-\_\-destroy@{Command\-\_\-destroy}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a492ad103fd0a8abd174cecc1a86dcdf8}
+
+
+Libera memoria usada por una estructura Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura command que se tiene que liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha realizado correctamente o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8h_a0a46ec28d9377c261485aeed9f5b21f2}{\index{command.\-h@{command.\-h}!Command\-\_\-get\-\_\-cmd@{Command\-\_\-get\-\_\-cmd}}
+\index{Command\-\_\-get\-\_\-cmd@{Command\-\_\-get\-\_\-cmd}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-get\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-\-Command} Command\-\_\-get\-\_\-cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a0a46ec28d9377c261485aeed9f5b21f2}
+
+
+Devuelve el comando guardado en la estructura. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura Command de la cual leer los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El comando guardado 
+\end{DoxyReturn}
+\hypertarget{command_8h_a9bfa89a1c3ba1f8a526a66f997ccd53c}{\index{command.\-h@{command.\-h}!Command\-\_\-get\-\_\-cmd\-\_\-arg@{Command\-\_\-get\-\_\-cmd\-\_\-arg}}
+\index{Command\-\_\-get\-\_\-cmd\-\_\-arg@{Command\-\_\-get\-\_\-cmd\-\_\-arg}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-get\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Command\-\_\-get\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a9bfa89a1c3ba1f8a526a66f997ccd53c}
+
+
+Devuelve un parametro del comando guardado en la estructura en una posición dada. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & La estructura Command de la cual leer los datos \\
+\hline
+{\em index} & El indice del parametro que se quiere leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El parametro del comando guardado 
+\end{DoxyReturn}
+\hypertarget{command_8h_a332ed516a605d73018254c8f6e5d1a25}{\index{command.\-h@{command.\-h}!Command\-\_\-ini@{Command\-\_\-ini}}
+\index{Command\-\_\-ini@{Command\-\_\-ini}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}$\ast$ Command\-\_\-ini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a332ed516a605d73018254c8f6e5d1a25}
+
+
+Crea e inicializa una estructura tipo Command. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+Una estructura command inicializada o N\-U\-L\-L si hay algun error. 
+\end{DoxyReturn}
+\hypertarget{command_8h_acfa9a05b602789d69d4b26b04c0cf1fb}{\index{command.\-h@{command.\-h}!Command\-\_\-set\-\_\-cmd@{Command\-\_\-set\-\_\-cmd}}
+\index{Command\-\_\-set\-\_\-cmd@{Command\-\_\-set\-\_\-cmd}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-set\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-set\-\_\-cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{{\bf T\-\_\-\-Command}}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{command_8h_acfa9a05b602789d69d4b26b04c0cf1fb}
+
+
+Guarda un comando en la estructura. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo command \\
+\hline
+{\em cmd} & El comando a guardar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha guardado correctamente o error en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8h_a62be88f588be7388a4e88862ac57b926}{\index{command.\-h@{command.\-h}!Command\-\_\-set\-\_\-cmd\-\_\-arg@{Command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{Command\-\_\-set\-\_\-cmd\-\_\-arg@{Command\-\_\-set\-\_\-cmd\-\_\-arg}!command.h@{command.\-h}}
+\subsubsection[{Command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} Command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager, }
+\item[{char $\ast$}]{arg, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a62be88f588be7388a4e88862ac57b926}
+
+
+Guarda un parametro de un comando en la estructura en una posición dada. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo command \\
+\hline
+{\em arg} & El parametro a guardar \\
+\hline
+{\em index} & La posición donde se quiere guardar el parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se ha guardado correctamente o error en caso contrario 
+\end{DoxyReturn}
+\hypertarget{command_8h_a756d09f48ba1599fb9b9b46877ad9d0a}{\index{command.\-h@{command.\-h}!get\-\_\-user\-\_\-input@{get\-\_\-user\-\_\-input}}
+\index{get\-\_\-user\-\_\-input@{get\-\_\-user\-\_\-input}!command.h@{command.\-h}}
+\subsubsection[{get\-\_\-user\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} get\-\_\-user\-\_\-input (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{cmd\-Manager}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a756d09f48ba1599fb9b9b46877ad9d0a}
+
+
+Lee los comandos de introduce el usuario. 
+
+Lee por teclado el comando que introduce el usuario y comprueba que esta en la lista de los comandos permitidos. Guarda en la estructura Command los datos introducidos\-: en cmd guarda el tipo de comando y en arg guarda el argumento que tiene un comando
+
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em cmd\-Manager} & Una estructura tipo Command donde guardar los datos leidos por teclado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si ha leido bien el comando o E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}

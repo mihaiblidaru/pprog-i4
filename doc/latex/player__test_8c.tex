@@ -1,0 +1,590 @@
+\hypertarget{player__test_8c}{\section{Referencia del Archivo src/player\-\_\-test.c}
+\label{player__test_8c}\index{src/player\-\_\-test.\-c@{src/player\-\_\-test.\-c}}
+}
+
+
+Prueba el módulo Player.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tests/test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tests/player\-\_\-test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}player.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{player__test_8c_ab29768452373e16bb6aaa1f7998f62fb}{test1\-\_\-player\-\_\-create} ()
+\item 
+void \hyperlink{player__test_8c_a9d87c09e6af910d695265e3fd77ae3a2}{test1\-\_\-player\-\_\-set\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a6e7ce8ff791f4bf63749df647a44263f}{test2\-\_\-player\-\_\-set\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a447ebbb4ba2206abeaf4b60200e312da}{test3\-\_\-player\-\_\-set\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a64fa15a235953bea694236b9d7841cbc}{test1\-\_\-player\-\_\-set\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_a3695e0896bc3d770290e6a691fa212f7}{test2\-\_\-player\-\_\-set\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_a721899e78b1e5e9e483fcc75f44fdf09}{test3\-\_\-player\-\_\-set\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_aec6799a4f46c3f3c471fcb668addcad4}{test1\-\_\-player\-\_\-set\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_a2c702753d9e2e3df9ef4abf2d1b9bc8d}{test2\-\_\-player\-\_\-set\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_a317c0c84ef6ef843c15d5bab4a6b8a38}{test3\-\_\-player\-\_\-set\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_a790a75dc179c00c60c784d3e34c0e5aa}{test1\-\_\-player\-\_\-get\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_a9fa80f0c0e46b45eb9f1685b102a5826}{test2\-\_\-player\-\_\-get\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_a7c658b9c2f29b7a96c009c059e2884bf}{test3\-\_\-player\-\_\-get\-\_\-id} ()
+\item 
+void \hyperlink{player__test_8c_a94068667d8faa66a4ad293dd2c60f2ef}{test1\-\_\-player\-\_\-get\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a3aa908fd360b74e7786422260e8e16a0}{test2\-\_\-player\-\_\-get\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a47ca2429d85f332295322002954e1c89}{test3\-\_\-player\-\_\-get\-\_\-name} ()
+\item 
+void \hyperlink{player__test_8c_a408a557a0cff748c10fb9a03445af191}{test1\-\_\-player\-\_\-get\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_a4c5605fac4bd716e1dfb2744db4fa8a1}{test2\-\_\-player\-\_\-get\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_ac8251a4a8b1f1136da60fbddd03a3526}{test3\-\_\-player\-\_\-get\-\_\-location} ()
+\item 
+void \hyperlink{player__test_8c_a14a3e4867e2ad3287c8efa99cd36904e}{test1\-\_\-player\-\_\-add\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_a864d3935cf61953950b10df0e656306d}{test2\-\_\-player\-\_\-add\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_ac984e5292c95002644a7af4fa499d0fb}{test3\-\_\-player\-\_\-add\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_a0685839b423f685dcdabb7b9fe411cd1}{test1\-\_\-player\-\_\-remove\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_af9e74e12ad6961761f1ff61afa56be3e}{test2\-\_\-player\-\_\-remove\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_af84155cb375301e75475a91ef522e191}{test3\-\_\-player\-\_\-remove\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_af06159e33746f5d91723626a565e930c}{test4\-\_\-player\-\_\-remove\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_a5ea6b684fa6964067d029d5fee042874}{test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects} ()
+\item 
+void \hyperlink{player__test_8c_ae1ed9bdcf1037c295a64cc780cb81dbc}{test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects} ()
+\item 
+void \hyperlink{player__test_8c_aa40042cc9c7916afea057534cf1180a6}{test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects} ()
+\item 
+void \hyperlink{player__test_8c_a630dea620571fd2b05e2cbf403cffabc}{test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects} ()
+\item 
+void \hyperlink{player__test_8c_abedc0e75ebffb4e7224f5e5ac0ee3055}{test1\-\_\-player\-\_\-has\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_ae8953d45d8f555a930dbc8aba101d399}{test2\-\_\-player\-\_\-has\-\_\-object} ()
+\item 
+void \hyperlink{player__test_8c_a956409720fca92e245d798491200f3d6}{test3\-\_\-player\-\_\-has\-\_\-object} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Prueba el módulo Player. \begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+29-\/03-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{player__test_8c_a14a3e4867e2ad3287c8efa99cd36904e}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-add\-\_\-object@{test1\-\_\-player\-\_\-add\-\_\-object}}
+\index{test1\-\_\-player\-\_\-add\-\_\-object@{test1\-\_\-player\-\_\-add\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-add\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-add\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a14a3e4867e2ad3287c8efa99cd36904e}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000222}{Prueba}]Prueba añadir un objeto a un jugador \begin{DoxyPrecond}{Precondición}
+El jugador está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_ab29768452373e16bb6aaa1f7998f62fb}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-create@{test1\-\_\-player\-\_\-create}}
+\index{test1\-\_\-player\-\_\-create@{test1\-\_\-player\-\_\-create}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_ab29768452373e16bb6aaa1f7998f62fb}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000203}{Prueba}]Prueba si se crea correctamente un jugador \begin{DoxyPostcond}{Postcondición}
+Un puntero no nulo al jugador creado 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a790a75dc179c00c60c784d3e34c0e5aa}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-get\-\_\-id@{test1\-\_\-player\-\_\-get\-\_\-id}}
+\index{test1\-\_\-player\-\_\-get\-\_\-id@{test1\-\_\-player\-\_\-get\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-get\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-get\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a790a75dc179c00c60c784d3e34c0e5aa}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000213}{Prueba}]Prueba leer el id de un jugador \begin{DoxyPrecond}{Precondición}
+Al jugador se le ha asignado previamente el id 12 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es el id asignado antes (12) 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a408a557a0cff748c10fb9a03445af191}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-get\-\_\-location@{test1\-\_\-player\-\_\-get\-\_\-location}}
+\index{test1\-\_\-player\-\_\-get\-\_\-location@{test1\-\_\-player\-\_\-get\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-get\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-get\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a408a557a0cff748c10fb9a03445af191}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000219}{Prueba}]Leer la localización de un jugador \begin{DoxyPrecond}{Precondición}
+Al jugador se le ha asignado previamente la localización 12 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la localización previamente asignada (12) 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a94068667d8faa66a4ad293dd2c60f2ef}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-get\-\_\-name@{test1\-\_\-player\-\_\-get\-\_\-name}}
+\index{test1\-\_\-player\-\_\-get\-\_\-name@{test1\-\_\-player\-\_\-get\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a94068667d8faa66a4ad293dd2c60f2ef}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000216}{Prueba}]Intenta leer el nombre de un jugador \begin{DoxyPrecond}{Precondición}
+Al jugador se le ha asignado previamente el nombre \char`\"{}\-Bob\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es el nombre asignado antes \-: \char`\"{}\-Bob\char`\"{} 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_abedc0e75ebffb4e7224f5e5ac0ee3055}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-has\-\_\-object@{test1\-\_\-player\-\_\-has\-\_\-object}}
+\index{test1\-\_\-player\-\_\-has\-\_\-object@{test1\-\_\-player\-\_\-has\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-has\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-has\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_abedc0e75ebffb4e7224f5e5ac0ee3055}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000233}{Prueba}]Prubea si el jugador tiene un objeto en condiciones normales \begin{DoxyPrecond}{Precondición}
+Se le añade un objeto al jugador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser T\-R\-U\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a0685839b423f685dcdabb7b9fe411cd1}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-remove\-\_\-object@{test1\-\_\-player\-\_\-remove\-\_\-object}}
+\index{test1\-\_\-player\-\_\-remove\-\_\-object@{test1\-\_\-player\-\_\-remove\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-remove\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-remove\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a0685839b423f685dcdabb7b9fe411cd1}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000225}{Prueba}]Prueba quitar un objeto al jugador en condiciones normales \begin{DoxyPrecond}{Precondición}
+Al jugador se le añade un objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es O\-K 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a64fa15a235953bea694236b9d7841cbc}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-set\-\_\-id@{test1\-\_\-player\-\_\-set\-\_\-id}}
+\index{test1\-\_\-player\-\_\-set\-\_\-id@{test1\-\_\-player\-\_\-set\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-set\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-set\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a64fa15a235953bea694236b9d7841cbc}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000207}{Prueba}]Prueba asignar un id a un jugador en condiciones normales \begin{DoxyPrecond}{Precondición}
+Al jugador se le asigna un id cualquiera mayor que cero 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al jugador 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_aec6799a4f46c3f3c471fcb668addcad4}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-set\-\_\-location@{test1\-\_\-player\-\_\-set\-\_\-location}}
+\index{test1\-\_\-player\-\_\-set\-\_\-location@{test1\-\_\-player\-\_\-set\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-set\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-set\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_aec6799a4f46c3f3c471fcb668addcad4}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000210}{Prueba}]Prueba asignarle una localización a un jugador en condiciones \begin{DoxyPrecond}{Precondición}
+El jugador ha sido previamente inicializado y la localización que se le asigna es valida 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida es el puntero al jugador 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a5ea6b684fa6964067d029d5fee042874}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}}
+\index{test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-set\-\_\-max\-\_\-objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a5ea6b684fa6964067d029d5fee042874}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000229}{Prueba}]Prueba poner el número máximo de objetos de un jugador \begin{DoxyPrecond}{Precondición}
+Las condiciones son normales\-: jugador inicializado, número de objeto dentro de limites. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser el puntero al jugador 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a9d87c09e6af910d695265e3fd77ae3a2}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test1\-\_\-player\-\_\-set\-\_\-name@{test1\-\_\-player\-\_\-set\-\_\-name}}
+\index{test1\-\_\-player\-\_\-set\-\_\-name@{test1\-\_\-player\-\_\-set\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-player\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-player\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a9d87c09e6af910d695265e3fd77ae3a2}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000204}{Prueba}]Prueba si se le asigna correctamente un nombre a un jugador \begin{DoxyPrecond}{Precondición}
+El nombre del jugador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al jugador 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a864d3935cf61953950b10df0e656306d}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-add\-\_\-object@{test2\-\_\-player\-\_\-add\-\_\-object}}
+\index{test2\-\_\-player\-\_\-add\-\_\-object@{test2\-\_\-player\-\_\-add\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-add\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-add\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a864d3935cf61953950b10df0e656306d}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000223}{Prueba}]Prueba añadir un objeto a un jugador en condiciones normales \begin{DoxyPrecond}{Precondición}
+El jugador ha sido correctamente inicializado y el id del objeto es valido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser O\-K 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a9fa80f0c0e46b45eb9f1685b102a5826}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-get\-\_\-id@{test2\-\_\-player\-\_\-get\-\_\-id}}
+\index{test2\-\_\-player\-\_\-get\-\_\-id@{test2\-\_\-player\-\_\-get\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-get\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-get\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a9fa80f0c0e46b45eb9f1685b102a5826}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000214}{Prueba}]Prueba leer el id de un jugador \begin{DoxyPrecond}{Precondición}
+El jugador no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a4c5605fac4bd716e1dfb2744db4fa8a1}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-get\-\_\-location@{test2\-\_\-player\-\_\-get\-\_\-location}}
+\index{test2\-\_\-player\-\_\-get\-\_\-location@{test2\-\_\-player\-\_\-get\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-get\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-get\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a4c5605fac4bd716e1dfb2744db4fa8a1}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000220}{Prueba}]Prueba leer la localización del jugador \begin{DoxyPrecond}{Precondición}
+El jugador no ha sido inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a3aa908fd360b74e7786422260e8e16a0}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-get\-\_\-name@{test2\-\_\-player\-\_\-get\-\_\-name}}
+\index{test2\-\_\-player\-\_\-get\-\_\-name@{test2\-\_\-player\-\_\-get\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a3aa908fd360b74e7786422260e8e16a0}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000217}{Prueba}]Prueba leer el nombre de un jugador \begin{DoxyPrecond}{Precondición}
+El jugador está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_ae8953d45d8f555a930dbc8aba101d399}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-has\-\_\-object@{test2\-\_\-player\-\_\-has\-\_\-object}}
+\index{test2\-\_\-player\-\_\-has\-\_\-object@{test2\-\_\-player\-\_\-has\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-has\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-has\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_ae8953d45d8f555a930dbc8aba101d399}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000001}{Prueba}]Prueba si el jugador tiene un objeto \begin{DoxyPrecond}{Precondición}
+El jugador está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_af9e74e12ad6961761f1ff61afa56be3e}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-remove\-\_\-object@{test2\-\_\-player\-\_\-remove\-\_\-object}}
+\index{test2\-\_\-player\-\_\-remove\-\_\-object@{test2\-\_\-player\-\_\-remove\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-remove\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-remove\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_af9e74e12ad6961761f1ff61afa56be3e}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000226}{Prueba}]Prueba quitar un objeto a un jugador \begin{DoxyPrecond}{Precondición}
+Al jugador no se le ha añadido todavía ningun objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a3695e0896bc3d770290e6a691fa212f7}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-set\-\_\-id@{test2\-\_\-player\-\_\-set\-\_\-id}}
+\index{test2\-\_\-player\-\_\-set\-\_\-id@{test2\-\_\-player\-\_\-set\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-set\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-set\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a3695e0896bc3d770290e6a691fa212f7}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000208}{Prueba}]Prueba asignar un id a un jugador sin inicializar \begin{DoxyPrecond}{Precondición}
+El jugador al que establecer el nombre es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a2c702753d9e2e3df9ef4abf2d1b9bc8d}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-set\-\_\-location@{test2\-\_\-player\-\_\-set\-\_\-location}}
+\index{test2\-\_\-player\-\_\-set\-\_\-location@{test2\-\_\-player\-\_\-set\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-set\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-set\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a2c702753d9e2e3df9ef4abf2d1b9bc8d}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000211}{Prueba}]Prueba asignarle una localización a un jugador sin inicializar. \begin{DoxyPrecond}{Precondición}
+El jugador no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_ae1ed9bdcf1037c295a64cc780cb81dbc}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}}
+\index{test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-set\-\_\-max\-\_\-objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_ae1ed9bdcf1037c295a64cc780cb81dbc}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000230}{Prueba}]Prueba poner el número máximo de objetos de un jugador \begin{DoxyPrecond}{Precondición}
+El número de objetos está por encima del limite permitido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a6e7ce8ff791f4bf63749df647a44263f}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test2\-\_\-player\-\_\-set\-\_\-name@{test2\-\_\-player\-\_\-set\-\_\-name}}
+\index{test2\-\_\-player\-\_\-set\-\_\-name@{test2\-\_\-player\-\_\-set\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-player\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-player\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a6e7ce8ff791f4bf63749df647a44263f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000205}{Prueba}]Prueba asignar un nombre a un jugador sin inicializar \begin{DoxyPrecond}{Precondición}
+El jugador al que establecer el nombre es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_ac984e5292c95002644a7af4fa499d0fb}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-add\-\_\-object@{test3\-\_\-player\-\_\-add\-\_\-object}}
+\index{test3\-\_\-player\-\_\-add\-\_\-object@{test3\-\_\-player\-\_\-add\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-add\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-add\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_ac984e5292c95002644a7af4fa499d0fb}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000224}{Prueba}]Prueba añadir un objeto al inventario del jugador \begin{DoxyPrecond}{Precondición}
+El objeto tiene id -\/1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a7c658b9c2f29b7a96c009c059e2884bf}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-get\-\_\-id@{test3\-\_\-player\-\_\-get\-\_\-id}}
+\index{test3\-\_\-player\-\_\-get\-\_\-id@{test3\-\_\-player\-\_\-get\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-get\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-get\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a7c658b9c2f29b7a96c009c059e2884bf}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000215}{Prueba}]Intenta leer el id del jugador \begin{DoxyPrecond}{Precondición}
+Al jugador no se le ha asignado ninguna id todavia 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_ac8251a4a8b1f1136da60fbddd03a3526}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-get\-\_\-location@{test3\-\_\-player\-\_\-get\-\_\-location}}
+\index{test3\-\_\-player\-\_\-get\-\_\-location@{test3\-\_\-player\-\_\-get\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-get\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-get\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_ac8251a4a8b1f1136da60fbddd03a3526}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000221}{Prueba}]Prueba leer la localización del jugador \begin{DoxyPrecond}{Precondición}
+Al jugador no se le ha asignado ninguna localización todavía 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a47ca2429d85f332295322002954e1c89}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-get\-\_\-name@{test3\-\_\-player\-\_\-get\-\_\-name}}
+\index{test3\-\_\-player\-\_\-get\-\_\-name@{test3\-\_\-player\-\_\-get\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a47ca2429d85f332295322002954e1c89}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000218}{Prueba}]Prueba leer el nombre de un jugador \begin{DoxyPrecond}{Precondición}
+Al jugador no se le ha dado ningun nombre previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es una cadena vacía 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a956409720fca92e245d798491200f3d6}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-has\-\_\-object@{test3\-\_\-player\-\_\-has\-\_\-object}}
+\index{test3\-\_\-player\-\_\-has\-\_\-object@{test3\-\_\-player\-\_\-has\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-has\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-has\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a956409720fca92e245d798491200f3d6}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000002}{Prueba}]Prueba si el jugador tiene un objeto \begin{DoxyPrecond}{Precondición}
+El jugador está inicializado pero no tiene ningun objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_af84155cb375301e75475a91ef522e191}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-remove\-\_\-object@{test3\-\_\-player\-\_\-remove\-\_\-object}}
+\index{test3\-\_\-player\-\_\-remove\-\_\-object@{test3\-\_\-player\-\_\-remove\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-remove\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-remove\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_af84155cb375301e75475a91ef522e191}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000227}{Prueba}]Prueba quitar un objeto a un jugador \begin{DoxyPrecond}{Precondición}
+El jugador está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a721899e78b1e5e9e483fcc75f44fdf09}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-set\-\_\-id@{test3\-\_\-player\-\_\-set\-\_\-id}}
+\index{test3\-\_\-player\-\_\-set\-\_\-id@{test3\-\_\-player\-\_\-set\-\_\-id}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-set\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-set\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a721899e78b1e5e9e483fcc75f44fdf09}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000209}{Prueba}]Prueba asignar un id a un jugador \begin{DoxyPrecond}{Precondición}
+El id que se quiere asignar es N\-O\-\_\-\-I\-D 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a317c0c84ef6ef843c15d5bab4a6b8a38}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-set\-\_\-location@{test3\-\_\-player\-\_\-set\-\_\-location}}
+\index{test3\-\_\-player\-\_\-set\-\_\-location@{test3\-\_\-player\-\_\-set\-\_\-location}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-set\-\_\-location}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-set\-\_\-location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a317c0c84ef6ef843c15d5bab4a6b8a38}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000212}{Prueba}]Prueba asignarle una localización invalida a un jugador. \begin{DoxyPrecond}{Precondición}
+La localización que se quiere asignar al jugador es es negativa 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_aa40042cc9c7916afea057534cf1180a6}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}}
+\index{test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-set\-\_\-max\-\_\-objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_aa40042cc9c7916afea057534cf1180a6}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000231}{Prueba}]Prueba poner el número máximo de objetos de un jugador \begin{DoxyPrecond}{Precondición}
+El jugador está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a447ebbb4ba2206abeaf4b60200e312da}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test3\-\_\-player\-\_\-set\-\_\-name@{test3\-\_\-player\-\_\-set\-\_\-name}}
+\index{test3\-\_\-player\-\_\-set\-\_\-name@{test3\-\_\-player\-\_\-set\-\_\-name}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-player\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-player\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a447ebbb4ba2206abeaf4b60200e312da}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000206}{Prueba}]Prueba asignarle un nombre nulo a un jugador \begin{DoxyPrecond}{Precondición}
+La cadena que se quiere asignar es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_af06159e33746f5d91723626a565e930c}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test4\-\_\-player\-\_\-remove\-\_\-object@{test4\-\_\-player\-\_\-remove\-\_\-object}}
+\index{test4\-\_\-player\-\_\-remove\-\_\-object@{test4\-\_\-player\-\_\-remove\-\_\-object}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test4\-\_\-player\-\_\-remove\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}void test4\-\_\-player\-\_\-remove\-\_\-object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_af06159e33746f5d91723626a565e930c}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000228}{Prueba}]Prueba quitar un objeto al jugador \begin{DoxyPrecond}{Precondición}
+El objeto ya ha sido borrado anteriormente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida que se espera es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{player__test_8c_a630dea620571fd2b05e2cbf403cffabc}{\index{player\-\_\-test.\-c@{player\-\_\-test.\-c}!test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}}
+\index{test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects@{test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}!player_test.c@{player\-\_\-test.\-c}}
+\subsubsection[{test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects}]{\setlength{\rightskip}{0pt plus 5cm}void test4\-\_\-player\-\_\-set\-\_\-max\-\_\-objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player__test_8c_a630dea620571fd2b05e2cbf403cffabc}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000232}{Prueba}]Prueba poner el numero máximo de objetos de un jugador \begin{DoxyPrecond}{Precondición}
+El número de objetos es un número negativo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}

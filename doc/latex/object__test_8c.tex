@@ -1,0 +1,794 @@
+\hypertarget{object__test_8c}{\section{Referencia del Archivo src/object\-\_\-test.c}
+\label{object__test_8c}\index{src/object\-\_\-test.\-c@{src/object\-\_\-test.\-c}}
+}
+
+
+Prueba el módulo Object.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tests/test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tests/object\-\_\-test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}object.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}{test1\-\_\-object\-\_\-create} ()
+\item 
+void \hyperlink{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}{test1\-\_\-object\-\_\-set\-\_\-name} ()
+\item 
+void \hyperlink{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}{test2\-\_\-object\-\_\-set\-\_\-name} ()
+\item 
+void \hyperlink{object__test_8c_ab56cfa4504ae8275d8c38e543c76412f}{test1\-\_\-object\-\_\-set\-\_\-graphics} ()
+\item 
+void \hyperlink{object__test_8c_a107ab1b077a3949828a5ff42862d06dd}{test2\-\_\-object\-\_\-set\-\_\-graphics} ()
+\item 
+void \hyperlink{object__test_8c_a55a8860afca36ca65eea851bf01020d3}{test1\-\_\-object\-\_\-set\-\_\-\-Id} ()
+\item 
+void \hyperlink{object__test_8c_a63883336ddb78c64280e2a26a0991a99}{test2\-\_\-object\-\_\-set\-\_\-\-Id} ()
+\item 
+void \hyperlink{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}{test1\-\_\-object\-\_\-set\-\_\-description} ()
+\item 
+void \hyperlink{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}{test2\-\_\-object\-\_\-set\-\_\-description} ()
+\item 
+void \hyperlink{object__test_8c_a37d3eb94b74ecc8a14bffd09952c858e}{test1\-\_\-object\-\_\-set\-\_\-description2} ()
+\item 
+void \hyperlink{object__test_8c_a52b9ccddf68cc2ee637dcfdac21206c9}{test2\-\_\-object\-\_\-set\-\_\-description2} ()
+\item 
+void \hyperlink{object__test_8c_af98804e9d1173f052213804914974f7f}{test1\-\_\-object\-\_\-set\-\_\-\-Mobile} ()
+\item 
+void \hyperlink{object__test_8c_a551ef3572071200971fc75bbd5373d8f}{test2\-\_\-object\-\_\-set\-\_\-\-Mobile} ()
+\item 
+void \hyperlink{object__test_8c_ab9a6f27507382d82283872290544df6b}{test1\-\_\-object\-\_\-set\-\_\-\-Moved} ()
+\item 
+void \hyperlink{object__test_8c_a8de46c541146803f15e8a58ad83ab18a}{test2\-\_\-object\-\_\-set\-\_\-\-Moved} ()
+\item 
+void \hyperlink{object__test_8c_ad34813fd6f6eff843819ab3b2d2381e5}{test1\-\_\-object\-\_\-set\-\_\-\-Hidden} ()
+\item 
+void \hyperlink{object__test_8c_a4df73347d6e6855a792a098b16cf3687}{test2\-\_\-object\-\_\-set\-\_\-\-Hidden} ()
+\item 
+void \hyperlink{object__test_8c_ad8b7d77914a82f5b8d08f1dd2a385e4b}{test1\-\_\-object\-\_\-set\-\_\-\-Open} ()
+\item 
+void \hyperlink{object__test_8c_a53d70593e55ce31aa7f54848e931d05c}{test2\-\_\-object\-\_\-set\-\_\-\-Open} ()
+\item 
+void \hyperlink{object__test_8c_a85014cd5037fa334371eb85dcae7efa3}{test1\-\_\-object\-\_\-set\-\_\-\-Illuminates} ()
+\item 
+void \hyperlink{object__test_8c_a50fc992ba4d2c52584ea3f9f6c742e79}{test2\-\_\-object\-\_\-set\-\_\-\-Illuminates} ()
+\item 
+void \hyperlink{object__test_8c_ac81bad1897f9afe5ca335c30568be601}{test1\-\_\-object\-\_\-set\-\_\-\-Light} ()
+\item 
+void \hyperlink{object__test_8c_ad4f16842b4de19b210ce344daa9b1a5d}{test2\-\_\-object\-\_\-set\-\_\-\-Light} ()
+\item 
+void \hyperlink{object__test_8c_a689d739bb9f7da71a4b1f77f200ac91a}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Name} ()
+\item 
+void \hyperlink{object__test_8c_a3710b8585155a414ad6b58d068c7db63}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Name} ()
+\item 
+void \hyperlink{object__test_8c_a8da5a07a844277fd4910a950e4f1fa4f}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics} ()
+\item 
+void \hyperlink{object__test_8c_a31533ac9316702e946fcf9736636762b}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics} ()
+\item 
+void \hyperlink{object__test_8c_a5c47b5c3c7f5b6204266822de3f2dd25}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Id} ()
+\item 
+void \hyperlink{object__test_8c_ae971259646fcd6b9269ebafe009085db}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Id} ()
+\item 
+void \hyperlink{object__test_8c_ade15ed0bf4be56983f51a9e0f20fd1ce}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description} ()
+\item 
+void \hyperlink{object__test_8c_ad8c550bb28562251fb895df67418c9b0}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description} ()
+\item 
+void \hyperlink{object__test_8c_a38c5ec06b44924aa68c90ecce5f9f6e4}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2} ()
+\item 
+void \hyperlink{object__test_8c_a6145728b36115c1b215089baa0ea2f0b}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2} ()
+\item 
+void \hyperlink{object__test_8c_ac0706c45d9fd650fd8cd3d316224dcfd}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile} ()
+\item 
+void \hyperlink{object__test_8c_a06e6d27222478b6bc41d9f7123347c61}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile} ()
+\item 
+void \hyperlink{object__test_8c_ad754277594692ac4d2af79bfd42b87e1}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved} ()
+\item 
+void \hyperlink{object__test_8c_a61f4b87aef3ac6b5b49fa097e95e01be}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved} ()
+\item 
+void \hyperlink{object__test_8c_aacbcd57a70ae828d778590c6f03cb606}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden} ()
+\item 
+void \hyperlink{object__test_8c_a26ae3e18dbc5071c56597dd6ecffd6e3}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden} ()
+\item 
+void \hyperlink{object__test_8c_a8007a1d3bac0b59de9efdfe77924486c}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Open} ()
+\item 
+void \hyperlink{object__test_8c_a40ab22a1a2998873748b9d58cb529b11}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Open} ()
+\item 
+void \hyperlink{object__test_8c_a19f525ed65f609a8c17eb620de528d42}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates} ()
+\item 
+void \hyperlink{object__test_8c_a979585252ddcb56e24411bc3553da84d}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates} ()
+\item 
+void \hyperlink{object__test_8c_acf6ecf69ab8d1e663f72e22a70a60d2f}{test1\-\_\-object\-\_\-\-Get\-\_\-\-Light} ()
+\item 
+void \hyperlink{object__test_8c_a194698b8928e15bd4327503af7a75ad7}{test2\-\_\-object\-\_\-\-Get\-\_\-\-Light} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Prueba el módulo Object. \begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+24-\/04-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-create@{test1\-\_\-object\-\_\-create}}
+\index{test1\-\_\-object\-\_\-create@{test1\-\_\-object\-\_\-create}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000158}{Prueba}]Prueba si se crea correctamente un objeto \begin{DoxyPostcond}{Postcondición}
+Un puntero no nulo al objeto creado 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ade15ed0bf4be56983f51a9e0f20fd1ce}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Description@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ade15ed0bf4be56983f51a9e0f20fd1ce}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000187}{Prueba}]Prueba leer la descripcion de un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la descripcion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la descripcion asignado antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a38c5ec06b44924aa68c90ecce5f9f6e4}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Description2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a38c5ec06b44924aa68c90ecce5f9f6e4}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000189}{Prueba}]Prueba leer la descripcion de un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la descripcion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la descripcion asignado antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a8da5a07a844277fd4910a950e4f1fa4f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a8da5a07a844277fd4910a950e4f1fa4f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000183}{Prueba}]Prueba leer los graficos de un objeto \begin{DoxyPrecond}{Precondición}
+Al nombre se le ha asignado previamente los graficos \char`\"{}\-Bryan\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada son los graficos asignados antes \char`\"{}\-Bryan\char`\"{} 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_aacbcd57a70ae828d778590c6f03cb606}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_aacbcd57a70ae828d778590c6f03cb606}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000195}{Prueba}]Prueba leer si se ha escondido un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la invibisibilidad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a5c47b5c3c7f5b6204266822de3f2dd25}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Id@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Id}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Id@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Id}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a5c47b5c3c7f5b6204266822de3f2dd25}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000185}{Prueba}]Prueba leer el id de un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente el id 12 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es el id asignado antes (12) 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a19f525ed65f609a8c17eb620de528d42}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a19f525ed65f609a8c17eb620de528d42}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000199}{Prueba}]Prueba leer si se ha iluminado un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la posibilidad de iluminar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_acf6ecf69ab8d1e663f72e22a70a60d2f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Light@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Light}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Light@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Light}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_acf6ecf69ab8d1e663f72e22a70a60d2f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000201}{Prueba}]Prueba leer si se puede iluminar un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la posibilidad de iluminar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ac0706c45d9fd650fd8cd3d316224dcfd}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Mobile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ac0706c45d9fd650fd8cd3d316224dcfd}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000191}{Prueba}]Prueba leer la movilidad de un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la movilidad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ad754277594692ac4d2af79bfd42b87e1}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Moved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ad754277594692ac4d2af79bfd42b87e1}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000193}{Prueba}]Prueba leer si se ha movido un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la movilidad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a689d739bb9f7da71a4b1f77f200ac91a}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Name@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Name}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Name@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Name}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a689d739bb9f7da71a4b1f77f200ac91a}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000181}{Prueba}]Prueba leer el nombre de un objeto \begin{DoxyPrecond}{Precondición}
+Al nombre se le ha asignado previamente el nombre Bryan 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es el id asignado antes \char`\"{}\-Bryan\char`\"{} 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a8007a1d3bac0b59de9efdfe77924486c}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-\-Get\-\_\-\-Open@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Open}}
+\index{test1\-\_\-object\-\_\-\-Get\-\_\-\-Open@{test1\-\_\-object\-\_\-\-Get\-\_\-\-Open}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-\-Get\-\_\-\-Open}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-\-Get\-\_\-\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a8007a1d3bac0b59de9efdfe77924486c}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000197}{Prueba}]Prueba leer si se ha abierto el link a un objeto \begin{DoxyPrecond}{Precondición}
+Al objeto se le ha asignado previamente la disponibilidad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es la movilidad asignada antes 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-description@{test1\-\_\-object\-\_\-set\-\_\-description}}
+\index{test1\-\_\-object\-\_\-set\-\_\-description@{test1\-\_\-object\-\_\-set\-\_\-description}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-description}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000165}{Prueba}]Prueba si se le asigna correctamente una descripcion a un objeto \begin{DoxyPrecond}{Precondición}
+La descripcion del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a37d3eb94b74ecc8a14bffd09952c858e}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-description2@{test1\-\_\-object\-\_\-set\-\_\-description2}}
+\index{test1\-\_\-object\-\_\-set\-\_\-description2@{test1\-\_\-object\-\_\-set\-\_\-description2}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-description2}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-description2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a37d3eb94b74ecc8a14bffd09952c858e}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000167}{Prueba}]Prueba si se le asigna correctamente una descripcion2 a un objeto \begin{DoxyPrecond}{Precondición}
+La descripcion2 del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ab56cfa4504ae8275d8c38e543c76412f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-graphics@{test1\-\_\-object\-\_\-set\-\_\-graphics}}
+\index{test1\-\_\-object\-\_\-set\-\_\-graphics@{test1\-\_\-object\-\_\-set\-\_\-graphics}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-graphics}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ab56cfa4504ae8275d8c38e543c76412f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000161}{Prueba}]Prueba si se le asigna correctamente los graficos a un objeto \begin{DoxyPrecond}{Precondición}
+El nombre del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ad34813fd6f6eff843819ab3b2d2381e5}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Hidden@{test1\-\_\-object\-\_\-set\-\_\-\-Hidden}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Hidden@{test1\-\_\-object\-\_\-set\-\_\-\-Hidden}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ad34813fd6f6eff843819ab3b2d2381e5}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000173}{Prueba}]Prueba si se le asigna correctamente una situacion a un objeto \begin{DoxyPrecond}{Precondición}
+La situacion del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a55a8860afca36ca65eea851bf01020d3}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Id@{test1\-\_\-object\-\_\-set\-\_\-\-Id}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Id@{test1\-\_\-object\-\_\-set\-\_\-\-Id}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a55a8860afca36ca65eea851bf01020d3}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000163}{Prueba}]Prueba si se le asigna correctamente un Id a un objeto \begin{DoxyPrecond}{Precondición}
+El Id del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a85014cd5037fa334371eb85dcae7efa3}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Illuminates@{test1\-\_\-object\-\_\-set\-\_\-\-Illuminates}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Illuminates@{test1\-\_\-object\-\_\-set\-\_\-\-Illuminates}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Illuminates}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Illuminates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a85014cd5037fa334371eb85dcae7efa3}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000177}{Prueba}]Prueba si se le asigna correctamente una iluminacion a un objeto \begin{DoxyPrecond}{Precondición}
+La iluminacion del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ac81bad1897f9afe5ca335c30568be601}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Light@{test1\-\_\-object\-\_\-set\-\_\-\-Light}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Light@{test1\-\_\-object\-\_\-set\-\_\-\-Light}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ac81bad1897f9afe5ca335c30568be601}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000179}{Prueba}]Prueba si se le asigna correctamente una iluminacion a un objeto \begin{DoxyPrecond}{Precondición}
+La iluminacion del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_af98804e9d1173f052213804914974f7f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Mobile@{test1\-\_\-object\-\_\-set\-\_\-\-Mobile}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Mobile@{test1\-\_\-object\-\_\-set\-\_\-\-Mobile}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Mobile}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Mobile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_af98804e9d1173f052213804914974f7f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000169}{Prueba}]Prueba si se le asigna correctamente una movilidad a un objeto \begin{DoxyPrecond}{Precondición}
+La movilidad del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ab9a6f27507382d82283872290544df6b}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Moved@{test1\-\_\-object\-\_\-set\-\_\-\-Moved}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Moved@{test1\-\_\-object\-\_\-set\-\_\-\-Moved}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Moved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ab9a6f27507382d82283872290544df6b}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000171}{Prueba}]Prueba si se le asigna correctamente una movilidad a un objeto \begin{DoxyPrecond}{Precondición}
+La movilidad del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-name@{test1\-\_\-object\-\_\-set\-\_\-name}}
+\index{test1\-\_\-object\-\_\-set\-\_\-name@{test1\-\_\-object\-\_\-set\-\_\-name}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000159}{Prueba}]Prueba si se le asigna correctamente un nombre a un objeto \begin{DoxyPrecond}{Precondición}
+El nombre del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ad8b7d77914a82f5b8d08f1dd2a385e4b}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test1\-\_\-object\-\_\-set\-\_\-\-Open@{test1\-\_\-object\-\_\-set\-\_\-\-Open}}
+\index{test1\-\_\-object\-\_\-set\-\_\-\-Open@{test1\-\_\-object\-\_\-set\-\_\-\-Open}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-object\-\_\-set\-\_\-\-Open}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-object\-\_\-set\-\_\-\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ad8b7d77914a82f5b8d08f1dd2a385e4b}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000175}{Prueba}]Prueba si se le asigna correctamente una situacion a un objeto \begin{DoxyPrecond}{Precondición}
+La situacion del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida tiene que ser el puntero al objeto 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ad8c550bb28562251fb895df67418c9b0}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Description@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ad8c550bb28562251fb895df67418c9b0}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000188}{Prueba}]Prueba leer la descripcion de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a6145728b36115c1b215089baa0ea2f0b}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Description2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a6145728b36115c1b215089baa0ea2f0b}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000190}{Prueba}]Prueba leer la descripcion de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a31533ac9316702e946fcf9736636762b}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a31533ac9316702e946fcf9736636762b}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000184}{Prueba}]Prueba leer los graficos de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a26ae3e18dbc5071c56597dd6ecffd6e3}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a26ae3e18dbc5071c56597dd6ecffd6e3}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000196}{Prueba}]Prueba leer la situacion de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ae971259646fcd6b9269ebafe009085db}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Id@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Id}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Id@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Id}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ae971259646fcd6b9269ebafe009085db}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000186}{Prueba}]Prueba leer el id de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a979585252ddcb56e24411bc3553da84d}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Illuminates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a979585252ddcb56e24411bc3553da84d}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000200}{Prueba}]Prueba leer la situacion de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a194698b8928e15bd4327503af7a75ad7}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Light@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Light}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Light@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Light}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a194698b8928e15bd4327503af7a75ad7}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000202}{Prueba}]Prueba leer la situacion de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a06e6d27222478b6bc41d9f7123347c61}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Mobile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a06e6d27222478b6bc41d9f7123347c61}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000192}{Prueba}]Prueba leer la movilidad de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a61f4b87aef3ac6b5b49fa097e95e01be}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Moved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a61f4b87aef3ac6b5b49fa097e95e01be}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000194}{Prueba}]Prueba leer la movilidad de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es F\-A\-L\-S\-E 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a3710b8585155a414ad6b58d068c7db63}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Name@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Name}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Name@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Name}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a3710b8585155a414ad6b58d068c7db63}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000182}{Prueba}]Prueba leer el nombre de un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a40ab22a1a2998873748b9d58cb529b11}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-\-Get\-\_\-\-Open@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Open}}
+\index{test2\-\_\-object\-\_\-\-Get\-\_\-\-Open@{test2\-\_\-object\-\_\-\-Get\-\_\-\-Open}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-\-Get\-\_\-\-Open}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-\-Get\-\_\-\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a40ab22a1a2998873748b9d58cb529b11}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000198}{Prueba}]Prueba leer la situacion del link a un objeto \begin{DoxyPrecond}{Precondición}
+El objeto no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-I\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-description@{test2\-\_\-object\-\_\-set\-\_\-description}}
+\index{test2\-\_\-object\-\_\-set\-\_\-description@{test2\-\_\-object\-\_\-set\-\_\-description}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-description}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000166}{Prueba}]Prueba asignar una descripcion a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la descripcion es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a52b9ccddf68cc2ee637dcfdac21206c9}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-description2@{test2\-\_\-object\-\_\-set\-\_\-description2}}
+\index{test2\-\_\-object\-\_\-set\-\_\-description2@{test2\-\_\-object\-\_\-set\-\_\-description2}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-description2}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-description2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a52b9ccddf68cc2ee637dcfdac21206c9}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000168}{Prueba}]Prueba asignar una descripcion2 a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la descripcion2 es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a107ab1b077a3949828a5ff42862d06dd}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-graphics@{test2\-\_\-object\-\_\-set\-\_\-graphics}}
+\index{test2\-\_\-object\-\_\-set\-\_\-graphics@{test2\-\_\-object\-\_\-set\-\_\-graphics}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-graphics}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a107ab1b077a3949828a5ff42862d06dd}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000162}{Prueba}]Prueba asignar graficos a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer los graficos es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a4df73347d6e6855a792a098b16cf3687}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Hidden@{test2\-\_\-object\-\_\-set\-\_\-\-Hidden}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Hidden@{test2\-\_\-object\-\_\-set\-\_\-\-Hidden}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a4df73347d6e6855a792a098b16cf3687}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000174}{Prueba}]Prueba asignar una situacion a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la situacion es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a63883336ddb78c64280e2a26a0991a99}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Id@{test2\-\_\-object\-\_\-set\-\_\-\-Id}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Id@{test2\-\_\-object\-\_\-set\-\_\-\-Id}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a63883336ddb78c64280e2a26a0991a99}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000164}{Prueba}]Prueba asignar un Id a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer el Id es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a50fc992ba4d2c52584ea3f9f6c742e79}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Illuminates@{test2\-\_\-object\-\_\-set\-\_\-\-Illuminates}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Illuminates@{test2\-\_\-object\-\_\-set\-\_\-\-Illuminates}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Illuminates}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Illuminates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a50fc992ba4d2c52584ea3f9f6c742e79}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000178}{Prueba}]Prueba asignar una iluminacion a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la iluminacion es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_ad4f16842b4de19b210ce344daa9b1a5d}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Light@{test2\-\_\-object\-\_\-set\-\_\-\-Light}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Light@{test2\-\_\-object\-\_\-set\-\_\-\-Light}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_ad4f16842b4de19b210ce344daa9b1a5d}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000180}{Prueba}]Prueba asignar una iluminacion a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la iluminacion es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a551ef3572071200971fc75bbd5373d8f}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Mobile@{test2\-\_\-object\-\_\-set\-\_\-\-Mobile}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Mobile@{test2\-\_\-object\-\_\-set\-\_\-\-Mobile}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Mobile}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Mobile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a551ef3572071200971fc75bbd5373d8f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000170}{Prueba}]Prueba asignar una movilidad a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la movilidad es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a8de46c541146803f15e8a58ad83ab18a}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Moved@{test2\-\_\-object\-\_\-set\-\_\-\-Moved}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Moved@{test2\-\_\-object\-\_\-set\-\_\-\-Moved}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Moved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a8de46c541146803f15e8a58ad83ab18a}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000172}{Prueba}]Prueba asignar una movilidad a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la movilidad es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-name@{test2\-\_\-object\-\_\-set\-\_\-name}}
+\index{test2\-\_\-object\-\_\-set\-\_\-name@{test2\-\_\-object\-\_\-set\-\_\-name}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000160}{Prueba}]Prueba asignar un nombre a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer el nombre es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{object__test_8c_a53d70593e55ce31aa7f54848e931d05c}{\index{object\-\_\-test.\-c@{object\-\_\-test.\-c}!test2\-\_\-object\-\_\-set\-\_\-\-Open@{test2\-\_\-object\-\_\-set\-\_\-\-Open}}
+\index{test2\-\_\-object\-\_\-set\-\_\-\-Open@{test2\-\_\-object\-\_\-set\-\_\-\-Open}!object_test.c@{object\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-object\-\_\-set\-\_\-\-Open}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-object\-\_\-set\-\_\-\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object__test_8c_a53d70593e55ce31aa7f54848e931d05c}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000176}{Prueba}]Prueba asignar una situacion a un objeto sin inicializar \begin{DoxyPrecond}{Precondición}
+El objeto al que establecer la situacion es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida debe ser N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}

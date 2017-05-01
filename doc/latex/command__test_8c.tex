@@ -1,0 +1,331 @@
+\hypertarget{command__test_8c}{\section{Referencia del Archivo src/command\-\_\-test.c}
+\label{command__test_8c}\index{src/command\-\_\-test.\-c@{src/command\-\_\-test.\-c}}
+}
+
+
+Programa para probar el modulo Command. Progama para probar la correcta funcionalidad del nuevo T\-A\-D Command.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tests/test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tests/command\-\_\-test.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}command.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{command__test_8c_a9e541c3b6b00a48a58936fba822a8375}{test1\-\_\-command\-\_\-ini} ()
+\item 
+void \hyperlink{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}{test1\-\_\-command\-\_\-destroy} ()
+\item 
+void \hyperlink{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}{test2\-\_\-command\-\_\-destroy} ()
+\item 
+void \hyperlink{command__test_8c_ae6bdd5628a9ce9f8dc59f048a63bc34f}{test1\-\_\-command\-\_\-set\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_a6d31d85e0bae80d4b3948a15a5b2b00d}{test2\-\_\-command\-\_\-set\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_a95514b5ec42e57daa0d4899271979e7e}{test3\-\_\-command\-\_\-set\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_a356e3e961908d1ee87abbcd31bd75094}{test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a210152a74338f4aac33cfdc7991e697f}{test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a68ac0c681f8b9ad99fd45c3d3a727058}{test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a615277c7c276a517908a17f3dbc67539}{test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a816316ae397e657bbc52b5b1090d1120}{test1\-\_\-command\-\_\-get\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_ae7f9f291a48473456084f864aaf1e1de}{test2\-\_\-command\-\_\-get\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_a41e0413cb7402808064a47e714418b0e}{test3\-\_\-command\-\_\-get\-\_\-cmd} ()
+\item 
+void \hyperlink{command__test_8c_afd67efd435f709512037b86c40a264ed}{test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a5b62a191da5df0efe3c990570886943c}{test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_abceb78c2c5722e2613166861b2723ba7}{test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg} ()
+\item 
+void \hyperlink{command__test_8c_a236c05756c05095a18d072c510b83d03}{test1\-\_\-command\-\_\-clear} ()
+\item 
+void \hyperlink{command__test_8c_a7085470610e5bf017e80ad91066a3f38}{test2\-\_\-command\-\_\-clear} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa para probar el modulo Command. Progama para probar la correcta funcionalidad del nuevo T\-A\-D Command. \begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+01-\/04-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{command__test_8c_a236c05756c05095a18d072c510b83d03}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-clear@{test1\-\_\-command\-\_\-clear}}
+\index{test1\-\_\-command\-\_\-clear@{test1\-\_\-command\-\_\-clear}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a236c05756c05095a18d072c510b83d03}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000019}{Prueba}]Prueba la función que limpia los campos de un commando \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente y se ha guardado un comando dentro 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-C\-M\-D y una cadena vacia 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-destroy@{test1\-\_\-command\-\_\-destroy}}
+\index{test1\-\_\-command\-\_\-destroy@{test1\-\_\-command\-\_\-destroy}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000004}{Prueba}]Pruba la función que libera memoria usada por un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido previamente inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es O\-K 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a816316ae397e657bbc52b5b1090d1120}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-get\-\_\-cmd@{test1\-\_\-command\-\_\-get\-\_\-cmd}}
+\index{test1\-\_\-command\-\_\-get\-\_\-cmd@{test1\-\_\-command\-\_\-get\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-get\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-get\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a816316ae397e657bbc52b5b1090d1120}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000013}{Prueba}]Prueba la función que devuelve el tipo de comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente y se le ha asignado el comando G\-O 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es G\-O, el comando previamente asignado 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_afd67efd435f709512037b86c40a264ed}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}}
+\index{test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_afd67efd435f709512037b86c40a264ed}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000016}{Prueba}]Prueba la función que devuelve un argumento de un comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente y se le ha asignado un argumento \char`\"{}test\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es \char`\"{}test\char`\"{}, el argumento añadido previamente 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a9e541c3b6b00a48a58936fba822a8375}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-ini@{test1\-\_\-command\-\_\-ini}}
+\index{test1\-\_\-command\-\_\-ini@{test1\-\_\-command\-\_\-ini}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-ini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a9e541c3b6b00a48a58936fba822a8375}
+Número maximo de tests \hypertarget{command__test_8c_ae6bdd5628a9ce9f8dc59f048a63bc34f}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-set\-\_\-cmd@{test1\-\_\-command\-\_\-set\-\_\-cmd}}
+\index{test1\-\_\-command\-\_\-set\-\_\-cmd@{test1\-\_\-command\-\_\-set\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-set\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-set\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_ae6bdd5628a9ce9f8dc59f048a63bc34f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000006}{Prueba}]Prueba la función que guarda el tipo de comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es O\-K 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a356e3e961908d1ee87abbcd31bd75094}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test1\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a356e3e961908d1ee87abbcd31bd75094}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000009}{Prueba}]Prueba la función que guarda un argumento de un comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es O\-K 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a7085470610e5bf017e80ad91066a3f38}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-clear@{test2\-\_\-command\-\_\-clear}}
+\index{test2\-\_\-command\-\_\-clear@{test2\-\_\-command\-\_\-clear}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a7085470610e5bf017e80ad91066a3f38}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000020}{Prueba}]Prueba la función que limpia los campos de un commando \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-destroy@{test2\-\_\-command\-\_\-destroy}}
+\index{test2\-\_\-command\-\_\-destroy@{test2\-\_\-command\-\_\-destroy}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000005}{Prueba}]Pruba la función que libera memoria usada por un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_ae7f9f291a48473456084f864aaf1e1de}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-get\-\_\-cmd@{test2\-\_\-command\-\_\-get\-\_\-cmd}}
+\index{test2\-\_\-command\-\_\-get\-\_\-cmd@{test2\-\_\-command\-\_\-get\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-get\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-get\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_ae7f9f291a48473456084f864aaf1e1de}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000014}{Prueba}]Prueba la función que devuelve el tipo de comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es U\-N\-K\-N\-O\-W\-N, comando desconocido 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a5b62a191da5df0efe3c990570886943c}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}}
+\index{test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a5b62a191da5df0efe3c990570886943c}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000017}{Prueba}]Prueba la función que devuelve un argumento de un comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-U\-L\-L 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a6d31d85e0bae80d4b3948a15a5b2b00d}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-set\-\_\-cmd@{test2\-\_\-command\-\_\-set\-\_\-cmd}}
+\index{test2\-\_\-command\-\_\-set\-\_\-cmd@{test2\-\_\-command\-\_\-set\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-set\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-set\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a6d31d85e0bae80d4b3948a15a5b2b00d}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000007}{Prueba}]Prueba la función que guarda el tipo de comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente pero el comando no es valido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a210152a74338f4aac33cfdc7991e697f}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test2\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a210152a74338f4aac33cfdc7991e697f}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000010}{Prueba}]Prueba la función que guarda un argumento de un comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+La posición en la que se quiere guardar es invalida 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a41e0413cb7402808064a47e714418b0e}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test3\-\_\-command\-\_\-get\-\_\-cmd@{test3\-\_\-command\-\_\-get\-\_\-cmd}}
+\index{test3\-\_\-command\-\_\-get\-\_\-cmd@{test3\-\_\-command\-\_\-get\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-command\-\_\-get\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-command\-\_\-get\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a41e0413cb7402808064a47e714418b0e}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000015}{Prueba}]Prueba la función que devuelve el tipo de comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente pero no se le ha asignado un comando 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es N\-O\-\_\-\-C\-M\-D 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_abceb78c2c5722e2613166861b2723ba7}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}}
+\index{test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg@{test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-command\-\_\-get\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_abceb78c2c5722e2613166861b2723ba7}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000018}{Prueba}]Prueba la función que devuelve un argumento de un comando guardado en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos ha sido inicializado previamente pero no se le ha asignado un argumento 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es una cadena vacia 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a95514b5ec42e57daa0d4899271979e7e}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test3\-\_\-command\-\_\-set\-\_\-cmd@{test3\-\_\-command\-\_\-set\-\_\-cmd}}
+\index{test3\-\_\-command\-\_\-set\-\_\-cmd@{test3\-\_\-command\-\_\-set\-\_\-cmd}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-command\-\_\-set\-\_\-cmd}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-command\-\_\-set\-\_\-cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a95514b5ec42e57daa0d4899271979e7e}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000008}{Prueba}]Prueba la función que guarda el tipo de comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a68ac0c681f8b9ad99fd45c3d3a727058}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test3\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a68ac0c681f8b9ad99fd45c3d3a727058}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000011}{Prueba}]Prueba la función que guarda un argumento de un comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El gestor de comandos no ha sido inicializado previamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}
+\hypertarget{command__test_8c_a615277c7c276a517908a17f3dbc67539}{\index{command\-\_\-test.\-c@{command\-\_\-test.\-c}!test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}}
+\index{test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg@{test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}!command_test.c@{command\-\_\-test.\-c}}
+\subsubsection[{test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void test4\-\_\-command\-\_\-set\-\_\-cmd\-\_\-arg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command__test_8c_a615277c7c276a517908a17f3dbc67539}
+\begin{DoxyRefDesc}{Prueba}
+\item[\hyperlink{test__test000012}{Prueba}]Prueba la función que guarda un argumento de un comando en un gestor de comandos \begin{DoxyPrecond}{Precondición}
+El argumento es un puntero a N\-U\-L\-L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La salida esperada es E\-R\-R\-O\-R 
+\end{DoxyPostcond}
+\end{DoxyRefDesc}

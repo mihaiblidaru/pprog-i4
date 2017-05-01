@@ -1,0 +1,208 @@
+\hypertarget{graphic__engine_8h}{\section{Referencia del Archivo include/graphic\-\_\-engine.h}
+\label{graphic__engine_8h}\index{include/graphic\-\_\-engine.\-h@{include/graphic\-\_\-engine.\-h}}
+}
+
+
+It defines a textual graphic engine.  
+
+
+{\ttfamily \#include \char`\"{}game.\-h\char`\"{}}\\*
+\subsection*{'typedefs'}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{typedef struct \-\_\-\-Graphic\-\_\-engine \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\-\_\-engine}}\label{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}
+
+\begin{DoxyCompactList}\small\item\em Definicion de la estructura de graphic engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\-\_\-engine} $\ast$ \hyperlink{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}{graphic\-\_\-engine\-\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Crea el motor del juego e inicializa las areas donde se va a imprimir por pantalla. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}{graphic\-\_\-engine\-\_\-destroy} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\-\_\-engine} $\ast$ge)
+\begin{DoxyCompactList}\small\item\em Libera la memoria ocupada por un graphic\-\_\-engine. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}{graphic\-\_\-engine\-\_\-paint\-\_\-game} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\-\_\-engine} $\ast$ge, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Imprime el juego por pantalla. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_af723c126dc27bd2f760f5cc3d30ee9db}{graphic\-\_\-engine\-\_\-paint\-\_\-directions} (F\-I\-L\-E $\ast$fp, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Imprime las direcciones adyacentes de una casilla. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a028e60b318703a32d7f42d11658f1a63}{graphic\-\_\-engine\-\_\-paint\-\_\-help} (F\-I\-L\-E $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Imprime la pantalla de ayuda. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a2ad7e480e482a9c0f9eeb1144a31ad2f}{graphic\-\_\-engine\-\_\-play\-\_\-intro} (F\-I\-L\-E $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Imprime la intro del juego. \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_af3df3f1ae34562ff8b5b59771ac0bdf8}{graphic\-\_\-engine\-\_\-game\-\_\-over} (F\-I\-L\-E $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Imprime la panatlla de final de juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+It defines a textual graphic engine. \begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo 
+
+Mihai Blidaru 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+2.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+13-\/03-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+18-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-create@{graphic\-\_\-engine\-\_\-create}}
+\index{graphic\-\_\-engine\-\_\-create@{graphic\-\_\-engine\-\_\-create}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphic\-\_\-engine}$\ast$ graphic\-\_\-engine\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}
+
+
+Crea el motor del juego e inicializa las areas donde se va a imprimir por pantalla. 
+
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Devuelve}
+Un puntero al graphic\-\_\-engine creado
+\end{DoxyReturn}
+Cabeceras Libc Cabeceras propias \hypertarget{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-destroy@{graphic\-\_\-engine\-\_\-destroy}}
+\index{graphic\-\_\-engine\-\_\-destroy@{graphic\-\_\-engine\-\_\-destroy}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphic\-\_\-engine} $\ast$}]{ge}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}
+
+
+Libera la memoria ocupada por un graphic\-\_\-engine. 
+
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em ge} & El graphic\-\_\-engine que se tiene que destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Nada 
+\end{DoxyReturn}
+\hypertarget{graphic__engine_8h_af3df3f1ae34562ff8b5b59771ac0bdf8}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-game\-\_\-over@{graphic\-\_\-engine\-\_\-game\-\_\-over}}
+\index{graphic\-\_\-engine\-\_\-game\-\_\-over@{graphic\-\_\-engine\-\_\-game\-\_\-over}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-game\-\_\-over}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-game\-\_\-over (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_af3df3f1ae34562ff8b5b59771ac0bdf8}
+
+
+Imprime la panatlla de final de juego. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em fp} & Descriptor del fichero donde imprimir \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphic__engine_8h_af723c126dc27bd2f760f5cc3d30ee9db}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-paint\-\_\-directions@{graphic\-\_\-engine\-\_\-paint\-\_\-directions}}
+\index{graphic\-\_\-engine\-\_\-paint\-\_\-directions@{graphic\-\_\-engine\-\_\-paint\-\_\-directions}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-paint\-\_\-directions}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-paint\-\_\-directions (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp, }
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_af723c126dc27bd2f760f5cc3d30ee9db}
+
+
+Imprime las direcciones adyacentes de una casilla. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em fp} & Descriptor del fichero donde imprimir \\
+\hline
+{\em game} & Un puntero a la estructura del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-paint\-\_\-game@{graphic\-\_\-engine\-\_\-paint\-\_\-game}}
+\index{graphic\-\_\-engine\-\_\-paint\-\_\-game@{graphic\-\_\-engine\-\_\-paint\-\_\-game}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-paint\-\_\-game}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-paint\-\_\-game (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphic\-\_\-engine} $\ast$}]{ge, }
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}
+
+
+Imprime el juego por pantalla. 
+
+\begin{DoxyAuthor}{Autor}
+Profesores P\-P\-R\-O\-G 
+
+Javier Bernardo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em ge} & Puntero a un graphic\-\_\-engine \\
+\hline
+{\em game} & Puntero a un juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphic__engine_8h_a028e60b318703a32d7f42d11658f1a63}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-paint\-\_\-help@{graphic\-\_\-engine\-\_\-paint\-\_\-help}}
+\index{graphic\-\_\-engine\-\_\-paint\-\_\-help@{graphic\-\_\-engine\-\_\-paint\-\_\-help}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-paint\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-paint\-\_\-help (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_a028e60b318703a32d7f42d11658f1a63}
+
+
+Imprime la pantalla de ayuda. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em fp} & Descriptor del fichero donde imprimir \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphic__engine_8h_a2ad7e480e482a9c0f9eeb1144a31ad2f}{\index{graphic\-\_\-engine.\-h@{graphic\-\_\-engine.\-h}!graphic\-\_\-engine\-\_\-play\-\_\-intro@{graphic\-\_\-engine\-\_\-play\-\_\-intro}}
+\index{graphic\-\_\-engine\-\_\-play\-\_\-intro@{graphic\-\_\-engine\-\_\-play\-\_\-intro}!graphic_engine.h@{graphic\-\_\-engine.\-h}}
+\subsubsection[{graphic\-\_\-engine\-\_\-play\-\_\-intro}]{\setlength{\rightskip}{0pt plus 5cm}void graphic\-\_\-engine\-\_\-play\-\_\-intro (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{graphic__engine_8h_a2ad7e480e482a9c0f9eeb1144a31ad2f}
+
+
+Imprime la intro del juego. 
+
+\begin{DoxyAuthor}{Autor}
+Mihai Blidaru 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em fp} & Descriptor del fichero donde imprimir \\
+\hline
+\end{DoxyParams}

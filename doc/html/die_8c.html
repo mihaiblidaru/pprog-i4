@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo src/die.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo die.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implememtacion del dado del juego.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="die_8h_source.html">die.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5a93409bf9bfbb9d45f501ed2db0f8b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#a5a93409bf9bfbb9d45f501ed2db0f8b7">die_create</a> (<a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> die_id)</td></tr>
+<tr class="memdesc:a5a93409bf9bfbb9d45f501ed2db0f8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un nuevo dado.  <a href="#a5a93409bf9bfbb9d45f501ed2db0f8b7">Más...</a><br/></td></tr>
+<tr class="separator:a5a93409bf9bfbb9d45f501ed2db0f8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2115999335e58f733d846be485cfb783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#a2115999335e58f733d846be485cfb783">die_destroy</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die)</td></tr>
+<tr class="memdesc:a2115999335e58f733d846be485cfb783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruir un nuevo dado.  <a href="#a2115999335e58f733d846be485cfb783">Más...</a><br/></td></tr>
+<tr class="separator:a2115999335e58f733d846be485cfb783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c260af21820b72accfcb65a3354ce6"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#ad5c260af21820b72accfcb65a3354ce6">die_roll</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die)</td></tr>
+<tr class="memdesc:ad5c260af21820b72accfcb65a3354ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lanza el dado.  <a href="#ad5c260af21820b72accfcb65a3354ce6">Más...</a><br/></td></tr>
+<tr class="separator:ad5c260af21820b72accfcb65a3354ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998644a1c47a078b692bae9cac227dff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#a998644a1c47a078b692bae9cac227dff">die_get_number</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die)</td></tr>
+<tr class="memdesc:a998644a1c47a078b692bae9cac227dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el ultimo valor del dado.  <a href="#a998644a1c47a078b692bae9cac227dff">Más...</a><br/></td></tr>
+<tr class="separator:a998644a1c47a078b692bae9cac227dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be92766b0cf55a713e39b169947963f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#a9be92766b0cf55a713e39b169947963f">die_print</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die)</td></tr>
+<tr class="memdesc:a9be92766b0cf55a713e39b169947963f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprimir el dado.  <a href="#a9be92766b0cf55a713e39b169947963f">Más...</a><br/></td></tr>
+<tr class="separator:a9be92766b0cf55a713e39b169947963f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0825f70760d621134bf5c283950eb64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#aa0825f70760d621134bf5c283950eb64">die_set_faces</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die, int faces)</td></tr>
+<tr class="memdesc:aa0825f70760d621134bf5c283950eb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coloca un numero de caras al dado.  <a href="#aa0825f70760d621134bf5c283950eb64">Más...</a><br/></td></tr>
+<tr class="separator:aa0825f70760d621134bf5c283950eb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9500791d305826659f8669c00a9868a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="die_8c.html#ac9500791d305826659f8669c00a9868a">die_get_faces</a> (<a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *die)</td></tr>
+<tr class="memdesc:ac9500791d305826659f8669c00a9868a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coloca un numero de caras al dado.  <a href="#ac9500791d305826659f8669c00a9868a">Más...</a><br/></td></tr>
+<tr class="separator:ac9500791d305826659f8669c00a9868a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implememtacion del dado del juego. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernando </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>20-02-2017 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a5a93409bf9bfbb9d45f501ed2db0f8b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a>* die_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>die_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un nuevo dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die_id</td><td>Id que define el dado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>dado creado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2115999335e58f733d846be485cfb783"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> die_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruir un nuevo dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die que quieres destruir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se elimina, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac9500791d305826659f8669c00a9868a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int die_get_faces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coloca un numero de caras al dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die que quieres lanzar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El numero de caras del dado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a998644a1c47a078b692bae9cac227dff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int die_get_number </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el ultimo valor del dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die del que quieres saber su valor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor en int de la estructura numero del dado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9be92766b0cf55a713e39b169947963f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int die_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprimir el dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die que quieres imprimir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Impresion por pantalla del dado y su valor </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5c260af21820b72accfcb65a3354ce6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short die_roll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lanza el dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die que quieres lanzar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el valor del dado lanzado con valores entre 1 y 6 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0825f70760d621134bf5c283950eb64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> die_set_faces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="die_8h.html#a892f0b0bf81d69a1f7a14ea238e36dd3">Die</a> *&#160;</td>
+          <td class="paramname"><em>die</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>faces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coloca un numero de caras al dado. </p>
+<dl class="section author"><dt>Autor</dt><dd>Javier Bernardo</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">die</td><td>Die que quieres lanzar </td></tr>
+    <tr><td class="paramname">faces</td><td>Numero de caras del dado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si lo hace bien o ERROR si da algun problema </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

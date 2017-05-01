@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Indiana Jones 2D - En busca del arca perdida: Referencia del Archivo include/player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Indiana Jones 2D - En busca del arca perdida
+   </div>
+   <div id="projectbrief">Iteración&nbsp;4&nbsp;del&nbsp;proyecto&nbsp;de&nbsp;programación.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#typedef-members">'typedefs'</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Define el TAD player y los prototipos de las funciones necesarias para trabajar con este TAD.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="set_8h_source.html">set.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inventory_8h_source.html">inventory.h</a>&quot;</code><br/>
+</div>
+<p><a href="player_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:aa8e7426a60de76746b37967a6a5da8a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8e7426a60de76746b37967a6a5da8a2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#aa8e7426a60de76746b37967a6a5da8a2">PLAYER_INV_LOCATION</a>&#160;&#160;&#160;-65535</td></tr>
+<tr class="memdesc:aa8e7426a60de76746b37967a6a5da8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Localizacion ficticia que corresponde al inventario del jugador. <br/></td></tr>
+<tr class="separator:aa8e7426a60de76746b37967a6a5da8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+'typedefs'</h2></td></tr>
+<tr class="memitem:af30e2030635a69690f85e48bc6ef202f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af30e2030635a69690f85e48bc6ef202f"></a>
+typedef struct _Player&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a></td></tr>
+<tr class="memdesc:af30e2030635a69690f85e48bc6ef202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de la estructura player. <br/></td></tr>
+<tr class="separator:af30e2030635a69690f85e48bc6ef202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a2a002f9a122c494520b2d478ce176244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a2a002f9a122c494520b2d478ce176244">player_create</a> ()</td></tr>
+<tr class="memdesc:a2a002f9a122c494520b2d478ce176244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un nuevo jugador e inicializa sus campos.  <a href="#a2a002f9a122c494520b2d478ce176244">Más...</a><br/></td></tr>
+<tr class="separator:a2a002f9a122c494520b2d478ce176244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e324aa5064e27d0a2f38aafb6809ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a68e324aa5064e27d0a2f38aafb6809ad">player_destroy</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a68e324aa5064e27d0a2f38aafb6809ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruye un jugador.  <a href="#a68e324aa5064e27d0a2f38aafb6809ad">Más...</a><br/></td></tr>
+<tr class="separator:a68e324aa5064e27d0a2f38aafb6809ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5d90e12fa0d9cb05a364e79b7a33be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a3c5d90e12fa0d9cb05a364e79b7a33be">player_Set_Id</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> player_id)</td></tr>
+<tr class="memdesc:a3c5d90e12fa0d9cb05a364e79b7a33be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el id del jugador.  <a href="#a3c5d90e12fa0d9cb05a364e79b7a33be">Más...</a><br/></td></tr>
+<tr class="separator:a3c5d90e12fa0d9cb05a364e79b7a33be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df7bae0f9b39eac28aa93e8db3cfb07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a3df7bae0f9b39eac28aa93e8db3cfb07">player_Set_Name</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, char *name)</td></tr>
+<tr class="memdesc:a3df7bae0f9b39eac28aa93e8db3cfb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el nombre del jugador.  <a href="#a3df7bae0f9b39eac28aa93e8db3cfb07">Más...</a><br/></td></tr>
+<tr class="separator:a3df7bae0f9b39eac28aa93e8db3cfb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae635565b4d4f7d151f07b9f5e7e095eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ae635565b4d4f7d151f07b9f5e7e095eb">player_Set_Location</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> location)</td></tr>
+<tr class="memdesc:ae635565b4d4f7d151f07b9f5e7e095eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone la localizacion del jugador.  <a href="#ae635565b4d4f7d151f07b9f5e7e095eb">Más...</a><br/></td></tr>
+<tr class="separator:ae635565b4d4f7d151f07b9f5e7e095eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0e3fba12d6f77b42e6fee5a9aaf078"><td class="memItemLeft" align="right" valign="top"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#afa0e3fba12d6f77b42e6fee5a9aaf078">player_Set_Max_Objects</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, int max_objects)</td></tr>
+<tr class="memdesc:afa0e3fba12d6f77b42e6fee5a9aaf078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asigna el número maximo de objetos que puede llevar el jugador.  <a href="#afa0e3fba12d6f77b42e6fee5a9aaf078">Más...</a><br/></td></tr>
+<tr class="separator:afa0e3fba12d6f77b42e6fee5a9aaf078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051a70ccaad86c89fe606a0291a303eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a051a70ccaad86c89fe606a0291a303eb">player_Get_Id</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a051a70ccaad86c89fe606a0291a303eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el id del jugador.  <a href="#a051a70ccaad86c89fe606a0291a303eb">Más...</a><br/></td></tr>
+<tr class="separator:a051a70ccaad86c89fe606a0291a303eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c53ec92d3b036120e50e40eda6e69b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a63c53ec92d3b036120e50e40eda6e69b">player_Get_Name</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a63c53ec92d3b036120e50e40eda6e69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el nombre del jugador.  <a href="#a63c53ec92d3b036120e50e40eda6e69b">Más...</a><br/></td></tr>
+<tr class="separator:a63c53ec92d3b036120e50e40eda6e69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0661e6ad8cfde1bbc6854a2600d8ed12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a0661e6ad8cfde1bbc6854a2600d8ed12">player_Get_Location</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a0661e6ad8cfde1bbc6854a2600d8ed12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la localizacion del jugador.  <a href="#a0661e6ad8cfde1bbc6854a2600d8ed12">Más...</a><br/></td></tr>
+<tr class="separator:a0661e6ad8cfde1bbc6854a2600d8ed12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1781f4f8d7924042cbb0e7e0ab94b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ab1781f4f8d7924042cbb0e7e0ab94b86">player_Get_Max_Objects</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:ab1781f4f8d7924042cbb0e7e0ab94b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el número maximo de objetos que puede llevar el jugador.  <a href="#ab1781f4f8d7924042cbb0e7e0ab94b86">Más...</a><br/></td></tr>
+<tr class="separator:ab1781f4f8d7924042cbb0e7e0ab94b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398fd999cb35cb2b8a0b442d5f7c9f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a398fd999cb35cb2b8a0b442d5f7c9f85">player_Add_Object</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id)</td></tr>
+<tr class="memdesc:a398fd999cb35cb2b8a0b442d5f7c9f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un objeto al Inventory del jugador.  <a href="#a398fd999cb35cb2b8a0b442d5f7c9f85">Más...</a><br/></td></tr>
+<tr class="separator:a398fd999cb35cb2b8a0b442d5f7c9f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4471c67dae8dc3c968e7ffed34e7c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#aef4471c67dae8dc3c968e7ffed34e7c2">player_Remove_Object</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id)</td></tr>
+<tr class="memdesc:aef4471c67dae8dc3c968e7ffed34e7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra un objeto del Inventory del jugador.  <a href="#aef4471c67dae8dc3c968e7ffed34e7c2">Más...</a><br/></td></tr>
+<tr class="separator:aef4471c67dae8dc3c968e7ffed34e7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1ec136356c7e33902628cbf35ce461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a3f1ec136356c7e33902628cbf35ce461">player_Has_Object</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> object_id)</td></tr>
+<tr class="memdesc:a3f1ec136356c7e33902628cbf35ce461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si el jugador tiene un objeto determinado.  <a href="#a3f1ec136356c7e33902628cbf35ce461">Más...</a><br/></td></tr>
+<tr class="separator:a3f1ec136356c7e33902628cbf35ce461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a5cde058ef2e4fb9a6954cb9ae5cb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a18a5cde058ef2e4fb9a6954cb9ae5cb3">player_Print</a> (<a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:a18a5cde058ef2e4fb9a6954cb9ae5cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime por pantalla los datos del jugador.  <a href="#a18a5cde058ef2e4fb9a6954cb9ae5cb3">Más...</a><br/></td></tr>
+<tr class="separator:a18a5cde058ef2e4fb9a6954cb9ae5cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Define el TAD player y los prototipos de las funciones necesarias para trabajar con este TAD. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru Pareja 7 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>31-01-2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a398fd999cb35cb2b8a0b442d5f7c9f85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> player_Add_Object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>object_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un objeto al Inventory del jugador. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El jugador al que se quiere añadir un objeto </td></tr>
+    <tr><td class="paramname">object_id</td><td>El id del objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>OK si se hace bien, ERROR en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a002f9a122c494520b2d478ce176244"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un nuevo jugador e inicializa sus campos. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>El nuevo jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68e324aa5064e27d0a2f38aafb6809ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> player_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruye un jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Error si se ha hecho mal o Ok si se ha liberado correctamente. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a051a70ccaad86c89fe606a0291a303eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> player_Get_Id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el id del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El id del jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0661e6ad8cfde1bbc6854a2600d8ed12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a> player_Get_Location </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la localizacion del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La localizacion del jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1781f4f8d7924042cbb0e7e0ab94b86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int player_Get_Max_Objects </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el número maximo de objetos que puede llevar el jugador. </p>
+<dl class="section author"><dt>Autor</dt><dd>Sandra Benitez </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El jugador del que se quiere conocer el numero máximo de objetos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el número máximo de objetos </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a63c53ec92d3b036120e50e40eda6e69b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* player_Get_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el nombre del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El nombre del jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f1ec136356c7e33902628cbf35ce461"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> player_Has_Object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>object_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comprueba si el jugador tiene un objeto determinado. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El jugador que se quiere comprobar </td></tr>
+    <tr><td class="paramname">object_id</td><td>El id del objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>TRUE si el jugador tiene el objeto o FALSE en caso contrario o ERROR </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a18a5cde058ef2e4fb9a6954cb9ae5cb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> player_Print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime por pantalla los datos del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Imprime por pantalla si hay jugador y da ERROR si lo contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef4471c67dae8dc3c968e7ffed34e7c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> player_Remove_Object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>object_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borra un objeto del Inventory del jugador. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El jugador al que se quiere quitar un objeto </td></tr>
+    <tr><td class="paramname">object_id</td><td>El id del objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c5d90e12fa0d9cb05a364e79b7a33be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player_Set_Id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>player_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone el id del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+    <tr><td class="paramname">player_id</td><td>Id del jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae635565b4d4f7d151f07b9f5e7e095eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player_Set_Location </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a845e604fb28f7e3d97549da3448149d3">Id</a>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone la localizacion del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+    <tr><td class="paramname">location</td><td>La localizacion del jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El jugador </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa0e3fba12d6f77b42e6fee5a9aaf078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player_Set_Max_Objects </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_objects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asigna el número maximo de objetos que puede llevar el jugador. </p>
+<dl class="section author"><dt>Autor</dt><dd>Mihai Blidaru </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El jugador al que se le quiere cambiar el numero máximo de objetos </td></tr>
+    <tr><td class="paramname">max_objects</td><td>Número máximo de objetos que puede llevar el jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al jugador si todo ha ido bien o NULL en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3df7bae0f9b39eac28aa93e8db3cfb07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a>* player_Set_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="player_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pone el nombre del jugador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>El puntero del jugador. </td></tr>
+    <tr><td class="paramname">name</td><td>Nombre del jugador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>El jugador </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Lunes, 1 de Mayo de 2017 21:16:44 para Indiana Jones 2D - En busca del arca perdida por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

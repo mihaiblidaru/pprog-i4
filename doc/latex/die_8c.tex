@@ -1,0 +1,201 @@
+\hypertarget{die_8c}{\section{Referencia del Archivo src/die.c}
+\label{die_8c}\index{src/die.\-c@{src/die.\-c}}
+}
+
+
+Implememtacion del dado del juego.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}die.\-h\char`\"{}}\\*
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$ \hyperlink{die_8c_a5a93409bf9bfbb9d45f501ed2db0f8b7}{die\-\_\-create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} die\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Crea un nuevo dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{die_8c_a2115999335e58f733d846be485cfb783}{die\-\_\-destroy} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Destruir un nuevo dado. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{die_8c_ad5c260af21820b72accfcb65a3354ce6}{die\-\_\-roll} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Lanza el dado. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a998644a1c47a078b692bae9cac227dff}{die\-\_\-get\-\_\-number} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Obtiene el ultimo valor del dado. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a9be92766b0cf55a713e39b169947963f}{die\-\_\-print} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Imprimir el dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\-T\-A\-T\-U\-S} \hyperlink{die_8c_aa0825f70760d621134bf5c283950eb64}{die\-\_\-set\-\_\-faces} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die, int faces)
+\begin{DoxyCompactList}\small\item\em Coloca un numero de caras al dado. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_ac9500791d305826659f8669c00a9868a}{die\-\_\-get\-\_\-faces} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Coloca un numero de caras al dado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implememtacion del dado del juego. \begin{DoxyAuthor}{Autor}
+Javier Bernando 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+20-\/02-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{die_8c_a5a93409bf9bfbb9d45f501ed2db0f8b7}{\index{die.\-c@{die.\-c}!die\-\_\-create@{die\-\_\-create}}
+\index{die\-\_\-create@{die\-\_\-create}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Die}$\ast$ die\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{die\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{die_8c_a5a93409bf9bfbb9d45f501ed2db0f8b7}
+
+
+Crea un nuevo dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die\-\_\-id} & Id que define el dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+dado creado 
+\end{DoxyReturn}
+\hypertarget{die_8c_a2115999335e58f733d846be485cfb783}{\index{die.\-c@{die.\-c}!die\-\_\-destroy@{die\-\_\-destroy}}
+\index{die\-\_\-destroy@{die\-\_\-destroy}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} die\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8c_a2115999335e58f733d846be485cfb783}
+
+
+Destruir un nuevo dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die que quieres destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si se elimina, E\-R\-R\-O\-R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{die_8c_ac9500791d305826659f8669c00a9868a}{\index{die.\-c@{die.\-c}!die\-\_\-get\-\_\-faces@{die\-\_\-get\-\_\-faces}}
+\index{die\-\_\-get\-\_\-faces@{die\-\_\-get\-\_\-faces}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-get\-\_\-faces}]{\setlength{\rightskip}{0pt plus 5cm}int die\-\_\-get\-\_\-faces (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8c_ac9500791d305826659f8669c00a9868a}
+
+
+Coloca un numero de caras al dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die que quieres lanzar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El numero de caras del dado 
+\end{DoxyReturn}
+\hypertarget{die_8c_a998644a1c47a078b692bae9cac227dff}{\index{die.\-c@{die.\-c}!die\-\_\-get\-\_\-number@{die\-\_\-get\-\_\-number}}
+\index{die\-\_\-get\-\_\-number@{die\-\_\-get\-\_\-number}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-get\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int die\-\_\-get\-\_\-number (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8c_a998644a1c47a078b692bae9cac227dff}
+
+
+Obtiene el ultimo valor del dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die del que quieres saber su valor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el valor en int de la estructura numero del dado 
+\end{DoxyReturn}
+\hypertarget{die_8c_a9be92766b0cf55a713e39b169947963f}{\index{die.\-c@{die.\-c}!die\-\_\-print@{die\-\_\-print}}
+\index{die\-\_\-print@{die\-\_\-print}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}int die\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8c_a9be92766b0cf55a713e39b169947963f}
+
+
+Imprimir el dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die que quieres imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Impresion por pantalla del dado y su valor 
+\end{DoxyReturn}
+\hypertarget{die_8c_ad5c260af21820b72accfcb65a3354ce6}{\index{die.\-c@{die.\-c}!die\-\_\-roll@{die\-\_\-roll}}
+\index{die\-\_\-roll@{die\-\_\-roll}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-roll}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short die\-\_\-roll (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8c_ad5c260af21820b72accfcb65a3354ce6}
+
+
+Lanza el dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die que quieres lanzar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el valor del dado lanzado con valores entre 1 y 6 
+\end{DoxyReturn}
+\hypertarget{die_8c_aa0825f70760d621134bf5c283950eb64}{\index{die.\-c@{die.\-c}!die\-\_\-set\-\_\-faces@{die\-\_\-set\-\_\-faces}}
+\index{die\-\_\-set\-\_\-faces@{die\-\_\-set\-\_\-faces}!die.c@{die.\-c}}
+\subsubsection[{die\-\_\-set\-\_\-faces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-U\-S} die\-\_\-set\-\_\-faces (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die, }
+\item[{int}]{faces}
+\end{DoxyParamCaption}
+)}}\label{die_8c_aa0825f70760d621134bf5c283950eb64}
+
+
+Coloca un numero de caras al dado. 
+
+\begin{DoxyAuthor}{Autor}
+Javier Bernardo
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em die} & Die que quieres lanzar \\
+\hline
+{\em faces} & Numero de caras del dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+O\-K si lo hace bien o E\-R\-R\-O\-R si da algun problema 
+\end{DoxyReturn}

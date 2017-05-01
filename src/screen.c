@@ -59,9 +59,9 @@
 #define BEGIN_RED ']'
 #define BEGIN_YELlOW '{'
 #define END_COLOR '}'
-#define COLOR_RED     "\x1b[31m"
+#define COLOR_RED     "\x1b[1;31m"
 #define COLOR_GREEN   "\x1b[1;32m"
-#define COLOR_YELLOW  "\x1b[33m"
+#define COLOR_YELLOW  "\x1b[1;33m"
 #define COLOR_RESET   "\x1b[0m"
 
 /*
@@ -148,22 +148,17 @@ void screen_print_colors(char* str){
       for(i=0; i < len; i++){
         if(str[i] == BEGIN_GREEN){
           printf(" %s", COLOR_GREEN);
-          i++;
         }else if(str[i] == BEGIN_RED){
-          printf(" %s", COLOR_GREEN);
-          i++;
+          printf(" %s", COLOR_RED);
         }else if(str[i] == BEGIN_YELlOW){
-          printf(" %s", COLOR_GREEN);
-          i++;
+          printf(" %s", COLOR_YELLOW);
         }else if(str[i] == END_COLOR){
           printf(" %s", COLOR_RESET);
-          i++;
-        }
-        if(i != 0){ /* por si se alcanza el final*/
+        }else{
           putc(str[i],stdout);
         }
       }
-      fprintf(stdout,"\n");
+       fprintf(stdout,"\n");
       /*fprintf(stdout, "%s\n", str);*/
 }
 

@@ -70,7 +70,7 @@ Graphic_engine *graphic_engine_create() {
 
     ge->map = screen_area_init(1, 1, 52, 14);
     ge->descript = screen_area_init(54, 1, 25, 14);
-    ge->banner = screen_area_init(15, 16, 49, 1);
+    ge->banner = screen_area_init(17, 16, 45, 1);
     ge->help = screen_area_init(15, 17, 49, 1);
     ge->feedback = screen_area_init(1, 18, 78, 3);
 
@@ -287,13 +287,13 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
 
     /* Paint the in the banner area */
-    sprintf(str, "%s","@g Indiana Jones 2D: En busca del arca perdido @e");
+    sprintf(str, "%s","{Indiana Jones 2D: En busca del arca perdido}");
     /*sprintf(str, "%s","\33[1;32m Indiana Jones 2D: En busca del arca perdido \33[0m");*/
     screen_area_puts(ge->banner, str);
 
     /* Paint the in the help area */
     screen_area_clear(ge->help);
-    sprintf(str, " Para ver los comandos disponibles escribe: Help ");
+    sprintf(str, " Para ver los comandos disponibles escribe:]Help}");
     screen_area_puts(ge->help, str);
 
     /* Paint the in the feedback area */

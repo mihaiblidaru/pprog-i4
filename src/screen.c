@@ -145,6 +145,10 @@ void screen_paint() {
     }
 }
 
+/**
+ * Imprime con colores
+ * @cond
+ */
 void screen_print_colors(char* str){
       int i;
       int len = 0;
@@ -173,6 +177,9 @@ void screen_print_colors(char* str){
        fprintf(stdout,"\n");
       /*fprintf(stdout, "%s\n", str);*/
 }
+/**
+ * @endcond
+ */
 
 
 /**

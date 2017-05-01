@@ -1,17 +1,17 @@
-/** 
+/**
  * @brief It defines a textual graphic engine
- * 
+ *
  * @file graphic_engine.h
  * @author Profesores PPROG
  * @author Javier Bernardo
  * @author Mihai Blidaru
- * @version 2.0 
+ * @version 2.0
  * @date 13-03-2017
  * @copyright GNU Public License
  */
 
 /**
- * Cabeceras Libc 
+ * Cabeceras Libc
  */
 #include <stdlib.h>
 #include <stdio.h>
@@ -19,7 +19,7 @@
 #include <unistd.h>
 
 /**
- * Cabeceras propias 
+ * Cabeceras propias
  */
 #include "screen.h"
 #include "graphic_engine.h"
@@ -34,8 +34,8 @@
 
 /**
  * @cond
- * @brief Estructura del graphic_engine 
- * 
+ * @brief Estructura del graphic_engine
+ *
  *  Define las 5 areas donde se ha a imprimir por pantalla.
  */
 struct _Graphic_engine {
@@ -52,8 +52,8 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game);
 /**
  * @endcond
  */
- 
-/* 
+
+/*
  * @brief Crea el motor del juego e inicializa las areas donde se va a imprimir
  *         por pantalla
  * @author Profesores PPROG
@@ -70,7 +70,7 @@ Graphic_engine *graphic_engine_create() {
 
     ge->map = screen_area_init(1, 1, 52, 14);
     ge->descript = screen_area_init(54, 1, 25, 14);
-    ge->banner = screen_area_init(17, 16, 45, 1);
+    ge->banner = screen_area_init(15, 16, 49, 1);
     ge->help = screen_area_init(15, 17, 49, 1);
     ge->feedback = screen_area_init(1, 18, 78, 3);
 
@@ -79,7 +79,7 @@ Graphic_engine *graphic_engine_create() {
 
 /*
  * @brief Libera la memoria ocupada por un graphic_engine
- * 
+ *
  * @author Profesores PPROG
  * @param ge El graphic_engine que se tiene que destruir
  * @return Nada
@@ -100,7 +100,7 @@ void graphic_engine_destroy(Graphic_engine *ge) {
 
 /*
  * @brief Imprime el juego por pantalla
- * 
+ *
  * @author Profesores PPROG
  * @author Javier Bernardo
  * @param ge Puntero a un graphic_engine
@@ -128,11 +128,11 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
     int i, j, size;
 
-    
+
     if((game_get_last_inspected_object(game))){
     	graphic_engine_print_inspect_object(stdout, game_get_last_inspected_object(game));
     }
-	
+
 	if((game_get_last_inspected_space(game))){
     	graphic_engine_print_inspect_space(stdout, game);
     }
@@ -157,14 +157,14 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         id_down = link_get_dest_from(game_get_link(game,down_link), id_act);
         obj = game_get_obj_list_as_str(game, space_act);
         player = game_get_player(game);
-        
+
         for(i = 0; (aux_obj = game_get_object_at(game,i)) != NULL; i++){
         	if(player_Has_Object(player, object_Get_Id(aux_obj)) && object_Get_Light(aux_obj)){
         		has_light = TRUE;
         		break;
         	}
         }
-        
+
         screen_area_puts(ge->map, " ");
         if(l_north){
             sprintf(str,"                       ^ %2ld ^ ", link_get_dest_from(l_north, id_act));
@@ -175,7 +175,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         if(link_get_state(l_north) == OPENED && link_get_dest_from(l_north, id_act) != NO_ID){
         	sprintf(str,"        *--------------/    \\--------------*");
         }else{
-			sprintf(str,"        *----------------------------------*");        	
+			sprintf(str,"        *----------------------------------*");
         }
         screen_area_puts(ge->map, str);
         if(id_up != NO_ID)
@@ -184,57 +184,57 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         	sprintf(str,"        |                               %2ld |", id_act);
         screen_area_puts(ge->map, str);
         if(player_Has_Object(game_get_player(game), 7)){
-            sprintf(str,"        | _|'v'|_  %s |", graphics[0]);
+            sprintf(str,"        |[_|'v'|_} %s |", graphics[0]);
         }else{
-            sprintf(str,"        |  .,,,.   %s |", graphics[0]);
+            sprintf(str,"        |[ .,,,.}  %s |", graphics[0]);
         }
         screen_area_puts(ge->map, str);
-        sprintf(str,"        |  | oo|   %s |", graphics[1]);
+        sprintf(str,"        |[ | oo|}  %s |", graphics[1]);
         screen_area_puts(ge->map, str);
         if(link_get_state(l_west) == OPENED){
         	open_left[0][0] = '/';
         	open_left[1][0] = ' ';
         	open_left[2][0] = '\\';
         }
-        
+
         if(link_get_state(l_east) == OPENED){
         	open_right[0][0] = '\\';
         	open_right[1][0] = ' ';
         	open_right[2][0] = '/';
         }
-        
-        sprintf(str,"        %s  \\- /    %s %s", open_left[0], graphics[2], open_right[0]);
+
+        sprintf(str,"        %s[ \\- /}   %s %s", open_left[0], graphics[2], open_right[0]);
         screen_area_puts(ge->map, str);
-        
+
         if(id_west != NO_ID)
         	sprintf(dir_left,"%2ld <", id_west);
         if(id_east != NO_ID)
         	sprintf(dir_right,"> %2ld ", id_east);
-        	
-        sprintf(str,"   %s %s  '||'    %s %s  %s", dir_left, open_left[1], graphics[3], open_right[1], dir_right);
+
+        sprintf(str,"   %s %s[ '||'}   %s %s  %s", dir_left, open_left[1], graphics[3], open_right[1], dir_right);
         screen_area_puts(ge->map, str);
-        sprintf(str,"        %s ' || '   %s %s", open_left[2], graphics[4], open_right[2]);
+        sprintf(str,"        %s[' || '}  %s %s", open_left[2], graphics[4], open_right[2]);
         screen_area_puts(ge->map, str);
-        sprintf(str,"        |  _/\\_    %s |", graphics[5]);
+        sprintf(str,"        |[ _/\\_}   %s |", graphics[5]);
         screen_area_puts(ge->map, str);
         if(id_down != NO_ID)
         	sprintf(str,"        |             Down v: %2ld           |", id_down);
         else
         	sprintf(str,"        |                                  |");
-        
+
         screen_area_puts(ge->map, str);
         if(space_get_iluminated(space_act) == TRUE || has_light == TRUE)
         	sprintf(str,"        |%s|",obj);
         else
         	sprintf(str,"        |##################################|");
-        	
+
         screen_area_puts(ge->map, str);
         if(link_get_state(game_get_link(game, south_link)) == OPENED){
         	sprintf(str,"        *--------------\\    /--------------*");
         }else{
-			sprintf(str,"        *----------------------------------*");        	
+			sprintf(str,"        *----------------------------------*");
         }
-        
+
         free(obj);
         screen_area_puts(ge->map, str);
         if(l_south){
@@ -243,7 +243,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
             sprintf(str," ");
         }
         screen_area_puts(ge->map, str);
-       
+
     }
 
     /* Imprimir la localizacion de los objetos */
@@ -260,14 +260,14 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 	        }
         }
     }
-    
+
 
     /* Imprimir los objetos del Jugador*/
 
 	screen_area_puts(ge->descript, " ");
     sprintf(aux, "  Objetos del jugador: ");
     screen_area_puts(ge->descript, aux);
-    
+
     aux_obj = NULL;
     for (i = 0, j = 0; i < MAX_OBJECTS && (aux_obj = game_get_object_at(game,i)); i++) {
         if (player_Has_Object(game_get_player(game), object_Get_Id(aux_obj)) == TRUE) {
@@ -284,10 +284,11 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         sprintf(str, " Valor del dado: %d", die_get_number(game_get_die(game)));
     	screen_area_puts(ge->descript, str);
     }
-    
+
 
     /* Paint the in the banner area */
-    sprintf(str, "%s"," Indiana Jones 2D: En busca del arca perdido ");
+    sprintf(str, "%s","@g Indiana Jones 2D: En busca del arca perdido @e");
+    /*sprintf(str, "%s","\33[1;32m Indiana Jones 2D: En busca del arca perdido \33[0m");*/
     screen_area_puts(ge->banner, str);
 
     /* Paint the in the help area */
@@ -315,20 +316,20 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 			}
 		}
 		obj = strtok(aux, "\n");
-		
+
 		sprintf(str, " %s", obj);
-		screen_area_puts(ge->feedback, str);	
+		screen_area_puts(ge->feedback, str);
 		while((obj = strtok(NULL, "\n"))){
 			sprintf(str, " %s", obj);
-			screen_area_puts(ge->feedback, str);	
+			screen_area_puts(ge->feedback, str);
 		}
-	
+
 	}else{
 		sprintf(str, " %s", aux);
-		screen_area_puts(ge->feedback, str);	
+		screen_area_puts(ge->feedback, str);
 	}
-	
-	
+
+
     /* Dump to the terminal */
     screen_paint();
     printf("prompt:> ");
@@ -338,7 +339,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
  * @brief Imprime los detalles del ultimo objeto inspeccionado
  * @author Mihai Blidaru
  * @param fp Descriptor del fichero donde imprimir
- * @param game Un puntero a la estructura del 
+ * @param game Un puntero a la estructura del
  * @return OK si todo ha ido bien o ERROR en caso contrario
  */
 STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
@@ -351,16 +352,16 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 	int size;
 	if(!fp || !inspected_object)
 		return ERROR;
-		
+
 	puts("\033[2J"); /*Clear the terminal*/
 	fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "~                                                                              ~\n");
-   	fprintf(fp, "~    Objeto:                                                                   ~\n");	
+   	fprintf(fp, "~    Objeto:                                                                   ~\n");
 	fprintf(fp, "~       Id:           %2ld                                                       ~\n", object_Get_Id(inspected_object));
 	aux = object_Get_Name(inspected_object);
 	fprintf(fp, "~       Nombre:       %s", aux);
 	for(i = 57 - strlen(aux); i > 0; i--, fprintf(fp, " "));
-	
+
 	if(object_Get_Moved(inspected_object) == TRUE){
 		strcpy(str, object_Get_Description2(inspected_object));
 	}else{
@@ -376,37 +377,37 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 			}
 		}
 		aux = strtok(str, "\n");
-		fprintf(fp, "~\n~       Descripcion:  %s", aux);	
+		fprintf(fp, "~\n~       Descripcion:  %s", aux);
 		for(i = 22 +strlen(aux); i < 79; i++, fprintf(fp, " "));
 		aux = strtok(NULL, "\n");
-		fprintf(fp, "~\n~                     %s", aux);	
+		fprintf(fp, "~\n~                     %s", aux);
 		for(i = 22 +strlen(aux); i < 79; i++, fprintf(fp, " "));
 		drawn_lines += 2;
 	}else{
-		fprintf(fp, "~\n~       Descripcion:  %s", str);	
+		fprintf(fp, "~\n~       Descripcion:  %s", str);
 		for(i = 22 +strlen(str); i < 79; i++, fprintf(fp, " "));
 		drawn_lines++;
 	}
-	
+
 	if(object_Get_Mobile(inspected_object) == TRUE)
 		strcpy(str, "SI");
 	else
 		strcpy(str, "NO");
-		
+
 	fprintf(fp, "~\n~       Movible:      %s                                                       ~\n", str);
-	
+
 	if(object_Get_Open(inspected_object) != NO_ID)
 		strcpy(str, "SI");
 	else
 		strcpy(str, "NO");
-		
+
 	fprintf(fp, "~       Abre:         %s                                                       ~\n", str);
-	
+
 	if(object_Get_Illuminates(inspected_object) == TRUE)
 		strcpy(str, "SI");
 	else
 		strcpy(str, "NO");
-		
+
 	fprintf(fp, "~       Ilumina:      %s                                                       ~\n", str);
 	drawn_lines += 3;
 	if(object_Get_Illuminates(inspected_object) == TRUE){
@@ -417,11 +418,11 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 		fprintf(fp, "~       Encendido:    %s                                                       ~\n", str);
 		drawn_lines++;
 	}
-	
+
 	fprintf(fp, "~                                                                              ~\n");
-	drawn_lines++;	
+	drawn_lines++;
 	strncpy(graphics, object_Get_Graphics(inspected_object), WORD_SIZE);
-	
+
 	aux = strtok(graphics, "@");
 	if(aux){
 		fprintf(fp, "~          %s", aux);
@@ -436,15 +437,15 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 			drawn_lines++;
 		}
 	}
-	
+
 	for(i=drawn_lines; i < 21; i ++){
 		fprintf(fp, "~                                                                              ~\n");
 	}
-	
+
 	fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "Press Enter to continue: ");
     fgets(str, 100, stdin);
-    
+
    return OK;
 }
 
@@ -452,7 +453,7 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
  * @brief Imprime los detalles del ultimo espacio inspeccionado
  * @author Mihai Blidaru
  * @param fp Descriptor del fichero donde imprimir
- * @param game Un puntero a la estructura del 
+ * @param game Un puntero a la estructura del
  * @return OK si todo ha ido bien o ERROR en caso contrario
  */
 STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
@@ -465,20 +466,20 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 	char graphics[6][24];
     if(!fp || !game)
     	return ERROR;
-    
+
     inspected_space = game_get_last_inspected_space(game);
     space_get_graphics(inspected_space, graphics);
     puts("\033[2J"); /*Clear the terminal*/
     fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "~                                                                              ~\n");
-    fprintf(fp, "~  Casilla:                                                                    ~\n");	
+    fprintf(fp, "~  Casilla:                                                                    ~\n");
     fprintf(fp, "~                                                                              ~\n");
     fprintf(fp, "~       Id:           %2ld                                                       ~\n", space_get_id(inspected_space));
 	aux = (char*) space_get_name(inspected_space);
 	fprintf(fp, "~       Nombre:       %s", aux);
 	for(i = 57 - strlen(aux); i > 0; i--, fprintf(fp, " "));
-	
-	
+
+
 	if(space_get_iluminated(inspected_space) == TRUE){
 		strcpy(str, (char*) space_get_long_description(inspected_space));
 	}else{
@@ -494,27 +495,27 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 			}
 		}
 		aux = strtok(str, "\n");
-		fprintf(fp, "~\n~       Descripcion:  %s", aux);	
+		fprintf(fp, "~\n~       Descripcion:  %s", aux);
 		for(i = 57 - strlen(aux); i > 0; i--, fprintf(fp, " "));
 		aux = strtok(NULL, "\n");
-		fprintf(fp, "~\n~                     %s", aux);	
+		fprintf(fp, "~\n~                     %s", aux);
 		for(i = 57 - strlen(aux); i > 0; i--, fprintf(fp, " "));
 		drawn_lines += 2;
 	}else{
-		fprintf(fp, "~\n~       Descripcion:  %s", str);	
+		fprintf(fp, "~\n~       Descripcion:  %s", str);
 		for(i = 22 + strlen(str); i < 79; i++, fprintf(fp, " "));
 		drawn_lines++;
 	}
-	
+
 	if(space_get_iluminated(inspected_space) == TRUE)
 		strcpy(str, "SI");
 	else
 		strcpy(str, "NO");
-		
+
 	fprintf(fp, "~\n~       Iluminado:    %s                                                       ~", str);
-	
+
 	drawn_lines++;
-    
+
     fprintf(fp, "\n~       Objetos:      ");
 	for(i = 0; (object = game_get_object_at(game, i)) != NULL; i++){
 		if(object_Get_Hidden(object) == FALSE){
@@ -525,19 +526,19 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 		}
 	}
 	for(i = j+21; i < 78; i++, fprintf(fp, " "));
-	
+
 	drawn_lines++;
-	
+
 	fprintf(fp, "~\n~                                                                              ");
 	fprintf(fp, "~\n~                                                                              ");
 	fprintf(fp, "~\n~                         *************************                            ");
 	for(i=0;i<6;i++){
-	fprintf(fp, "~\n~                         *%s*                            ", graphics[i]);	
+	fprintf(fp, "~\n~                         *%s*                            ", graphics[i]);
 	}
 	fprintf(fp, "~\n~                         *************************                            ");
 	drawn_lines += 10;
-	
-	
+
+
     for(i=drawn_lines; i < 21; i ++){
 		fprintf(fp, "~\n~                                                                              ");
 	}
@@ -561,10 +562,10 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
     char centered_text[100]="\0";
     char aux[100] = "\0";
     int spaces = 0, i;
-    
+
     if(!fp || !game)
 		return;
-    
+
     id_act = game_get_player_location(game);
     space = game_get_space(game, id_act);
     north_link = game_get_link(game, space_get_north(space));
@@ -579,7 +580,7 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
     dest_west = link_get_dest_from(west_link, id_act);
     dest_up = link_get_dest_from(up_link, id_act);
     dest_down = link_get_dest_from(down_link, id_act);
-    
+
     puts("\033[2J"); /*Clear the terminal*/
     fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     if(dest_up != NO_ID){
@@ -599,7 +600,7 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
     if(dest_north != NO_ID){
 	    sprintf(aux, "%2ld : %s", dest_north, space_get_name(game_get_space(game,dest_north)));
 	    spaces = 78 - strlen(aux);
-	    
+
 	    for(i=0; i< (spaces/2); i++){
 	        centered_text[i] = ' ';
 	    }
@@ -624,32 +625,32 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
 		fprintf(fp, "~                              .\\ )    |    ( `.                               ~\n~");
 		sprintf(aux, "%2ld : %s", dest_west, space_get_name(game_get_space(game,dest_west)));
 		for(i = 27- strlen(aux); i > 0 ; i--, fprintf(fp, " "));
-		
+
 	}else{
 		strcpy(aux, "                           ");
 		fprintf(fp, "                                .` )  |  ( `.                                 ~\n");
 		fprintf(fp, "~                              .` )    |    ( `.                               ~\n~");
 	}
 	fprintf(fp, "%s <` W)-----O-----(E `> ", aux);
-	
+
 	if(dest_east != NO_ID){
 		sprintf(aux, "%ld: %s", dest_east, space_get_name(game_get_space(game,dest_east)));
 		fprintf(fp, "%s", aux);
 		for(i=28-strlen(aux); i > 0; i--, fprintf(fp, " "));
 		fprintf(fp, "~\n~                             `.  )    |    (  \\`                              ~\n");
-	    fprintf(fp, "~                               `.  )  |  (  .` -> Enlace: %s", link_get_name(east_link));	
+	    fprintf(fp, "~                               `.  )  |  (  .` -> Enlace: %s", link_get_name(east_link));
 	    for(i = 20- strlen(link_get_name(east_link)); i > 0 ; i--, fprintf(fp, " "));
 	}else{
 		fprintf(fp, "                            ");
 		fprintf(fp, "~\n~                             `.  )    |    (  .`                              ~\n");
 	    fprintf(fp, "~                               `.  )  |  (  .`                                ");
 	}
-	
-	
+
+
 	fprintf(fp, "~\n~                                 `.  )|(  .`                                  ~\n");
 	if(dest_south != NO_ID){
 		fprintf(fp, "~                                   `. S .`->Enlace: %s", link_get_name(south_link));
-		
+
 		for(i=52 + strlen(link_get_name(south_link));i < 78; i++, fprintf(fp, " "));
 		fprintf(fp, "~\n~                                      v                                       ~\n");
 
@@ -658,7 +659,7 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
 	    for(i=0; i< 100; i++){
 	        centered_text[i] = '\0';
 	    }
-	    
+
 	    for(i=0; i< (spaces/2); i++){
 	        centered_text[i] = ' ';
 	    }
@@ -666,14 +667,14 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
 	    while(strlen(centered_text) < 78){
 	        strcat(centered_text, " ");
 	    }
-	    
+
 	    fprintf(fp, "~%s~\n", centered_text);
     }else{
     	fprintf(fp, "~                                   `. S .`                                    ~\n");
 		fprintf(fp, "~                                      v                                       ~\n");
 		fprintf(fp, "~                                                                              ~\n");
     }
-    
+
      if(dest_down != NO_ID){
     	fprintf(fp, "~  Down                                                                        ~\n");
     	fprintf(fp, "~    v -> Enlace: %s", link_get_name(down_link));
@@ -686,11 +687,11 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
 	    fprintf(fp, "~                                                                              ~\n");
 	    fprintf(fp, "~                                                                              ");
     }
-    
-    
+
+
     fprintf(fp, "~\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "Press Enter to continue:> ");
-    
+
     fgets(aux, 100, stdin);
 }
 
@@ -703,7 +704,7 @@ void graphic_engine_paint_help(FILE* fp){
 	char dummy[2];
 	if(!fp)
 		return;
-	
+
 	puts("\033[2J"); /*Clear the terminal*/
 	fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	fprintf(fp, "~                                                                              ~\n");

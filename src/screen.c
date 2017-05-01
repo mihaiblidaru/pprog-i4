@@ -1,5 +1,5 @@
 /** @brief Modulo necesario para imprimir por pantalla las areas del juego.
- * 
+ *
  *  @file screen.c
  *  @author Profesores PPROG
  *  @date 11-01-2017
@@ -7,7 +7,7 @@
  */
 
 /**
- * Cabeceras Libc 
+ * Cabeceras Libc
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,12 +20,12 @@
 
 /**
  * @cond
- * @brief Declaracion de la variable ROWS 
+ * @brief Declaracion de la variable ROWS
  */
 #define ROWS 22
 
 /**
- * @brief Declaracion de la variable COLUMNS 
+ * @brief Declaracion de la variable COLUMNS
  */
 #define COLUMNS 80
 
@@ -35,12 +35,12 @@
 #define TOTAL_DATA (ROWS * COLUMNS) + 1
 
 /**
- * @brief Declaracion de la variable BG_CHAR 
+ * @brief Declaracion de la variable BG_CHAR
  */
 #define BG_CHAR '~'
 
 /**
- * @brief Declaracion de la variable FG_CHAR 
+ * @brief Declaracion de la variable FG_CHAR
  */
 #define FG_CHAR ' '
 
@@ -54,10 +54,20 @@
  */
 #define ACCESS(d, x, y) (d + ((y) * COLUMNS) + (x))
 
+
+#define BEGIN_GREEN '['
+#define BEGIN_RED ']'
+#define BEGIN_YELlOW '{'
+#define END_COLOR '}'
+#define COLOR_RED     "\x1b[31m"
+#define COLOR_GREEN   "\x1b[1;32m"
+#define COLOR_YELLOW  "\x1b[33m"
+#define COLOR_RESET   "\x1b[0m"
+
 /*
  * @brief Estructura de Area
- * 
- * 
+ *
+ *
  */
 struct _Area {
     int x;                   /*!< Variable x */
@@ -79,7 +89,7 @@ char *__data;
 int screen_area_cursor_is_out_of_bounds(Area* area); /*!< @private */
 void screen_area_scroll_up(Area* area); /*!< @private */
 void screen_utils_replaces_special_chars(char* str); /*!< @private */
-
+void screen_print_colors(char* str);/*!< @private */
 /**
  * @endcond
  */
@@ -126,10 +136,37 @@ void screen_paint() {
         puts("\033[2J"); /*Clear the terminal*/
         for (src = __data; src < (__data + TOTAL_DATA - 1); src += COLUMNS) {
             memcpy(dest, src, COLUMNS);
-            printf("%s\n", dest);
+            screen_print_colors(dest);
         }
     }
 }
+
+void screen_print_colors(char* str){
+      int i;
+      int len = 0;
+      len = strlen(str);
+      for(i=0; i < len; i++){
+        if(str[i] == BEGIN_GREEN){
+          printf(" %s", COLOR_GREEN);
+          i++;
+        }else if(str[i] == BEGIN_RED){
+          printf(" %s", COLOR_GREEN);
+          i++;
+        }else if(str[i] == BEGIN_YELlOW){
+          printf(" %s", COLOR_GREEN);
+          i++;
+        }else if(str[i] == END_COLOR){
+          printf(" %s", COLOR_RESET);
+          i++;
+        }
+        if(i != 0){ /* por si se alcanza el final*/
+          putc(str[i],stdout);
+        }
+      }
+      fprintf(stdout,"\n");
+      /*fprintf(stdout, "%s\n", str);*/
+}
+
 
 /**
  * @brief Obtiene una pantalla
@@ -147,7 +184,7 @@ void screen_gets(char *str) {
  * @param y Posición y del area
  * @param width Ancho del area
  * @param height Alto del area
- * 
+ *
  * @return area creada
  */
 Area* screen_area_init(int x, int y, int width, int height) {
@@ -155,9 +192,15 @@ Area* screen_area_init(int x, int y, int width, int height) {
     Area* area = NULL;
     if(x < 1 || y < 1 || width < 1 || height < 1)
         return NULL;
-    
+
     if ((area = (Area*) malloc(sizeof (struct _Area)))) {
-        *area = (struct _Area){x, y, width, height, ACCESS(__data, x, y)};
+      *area = (struct _Area){
+        x,
+        y,
+        width,
+        height,
+        ACCESS(__data, x, y)
+      };
 
         for (i = 0; i < area->height; i++)
             memset(ACCESS(area->cursor, 0, i), (int) FG_CHAR, (size_t) area->width);
@@ -178,7 +221,7 @@ void screen_area_destroy(Area* area) {
 /*
  * @brief Despeja un area
  * @param area Area del cual tiene que quitar el texto
- * 
+ *
  */
 void screen_area_clear(Area* area) {
     int i = 0;
@@ -194,7 +237,7 @@ void screen_area_clear(Area* area) {
 /*
  * @brief Resetea el cursor en un area
  * @param area Area del cual se quiere resetear el cursor
- * 
+ *
  */
 void screen_area_reset_cursor(Area* area) {
     if (area)
@@ -209,7 +252,6 @@ void screen_area_reset_cursor(Area* area) {
 void screen_area_puts(Area* area, char *str) {
     int len = 0;
     char *ptr = NULL;
-
     if (screen_area_cursor_is_out_of_bounds(area))
         screen_area_scroll_up(area);
 
@@ -227,7 +269,7 @@ void screen_area_puts(Area* area, char *str) {
  * @cond
  * @brief Indica un error de cursor fuera del area
  * @param area Area en el cual se hace la comprobación
- * 
+ *
  */
 int screen_area_cursor_is_out_of_bounds(Area* area) {
     return area->cursor > ACCESS(__data,
@@ -241,7 +283,7 @@ int screen_area_cursor_is_out_of_bounds(Area* area) {
  *          el numero de filas del area, se hace un scroll y se descarta lo que
  *          no entra en pantalla.
  * @param area Area en la cual se hace scroll
- * 
+ *
  */
 void screen_area_scroll_up(Area* area) {
     for (area->cursor = ACCESS(__data, area->x, area->y);
@@ -255,7 +297,7 @@ void screen_area_scroll_up(Area* area) {
  * @brief Reemplaza caracteres no imprimibles en una cadena
  * @param str Cadena en la cual sustituir esos caracteres
  * @author Profesores PPROG
- * 
+ *
  */
 void screen_utils_replaces_special_chars(char* str) {
     char *pch = NULL;

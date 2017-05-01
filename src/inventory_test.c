@@ -1,4 +1,4 @@
-/*
+/**
  * @brief Programa para probar el modulo Inventory.
  *       Progama para probar la correcta funcionalidad del
  *       nuevo TAD Inventory.
@@ -16,7 +16,7 @@
 #include <string.h>
 
 /* Cabeceras Propias */
-#include "test.h"
+#include "tests/test.h"
 #include "tests/inventory_test.h"
 #include "inventory.h"
 

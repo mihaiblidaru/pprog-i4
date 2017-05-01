@@ -36,6 +36,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <limits.h>
 
 /* Cabeceras propias */
 #include "graphic_engine.h"
@@ -61,27 +62,27 @@ int main(int argc, char *argv[]) {
     char *stat_to_str[2] = {"ERROR", "OK"};
     BOOL logging = FALSE;
     BOOL noVerbose = FALSE;
+    BOOL no_wait = FALSE;
     FILE* logfile = NULL;
+    T_Command last_command = UNKNOWN;
     int game_rules_run = 0;
     
 
     /* Se parsean los argumentos*/
     if (argc < 5) {
-        fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -l <log_name>\n", argv[0]);
+        fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -no_rule -no_wait -l <log_name>\n", argv[0]);
         return EXIT_FAILURE;
     }
 
     for (i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "-nv")) {
             noVerbose = TRUE;
-            break;
-        }
-    }
-    
-    for (i = 1; i < argc; i++) {
-        if (!strcmp(argv[i], "-l")) {
+        }else if (!strcmp(argv[i], "-l")) {
             logging = TRUE;
-            break;
+        }else if (!strcmp(argv[i], "-no_rule")) {
+            game_rules_run = INT_MIN;
+        }else if (!strcmp(argv[i], "-no_wait")) {
+            no_wait = TRUE;
         }
     }
     
@@ -151,7 +152,7 @@ int main(int argc, char *argv[]) {
         }
     }
     
-    if(noVerbose == FALSE){
+    if(noVerbose == FALSE && no_wait == FALSE){
         graphic_engine_play_intro(stdout);
     }
     while ((Command_get_cmd(command_Manager) != QUIT) && !game_is_over(game)) {
@@ -160,14 +161,21 @@ int main(int argc, char *argv[]) {
         
         Command_clear(command_Manager);
         get_user_input(command_Manager);
-        if(Command_get_cmd(command_Manager) == DIR && noVerbose == FALSE){
+         last_command = Command_get_cmd(command_Manager);
+        if(last_command == DIR && noVerbose == FALSE){
             graphic_engine_paint_directions(stdout, game);
-        }else if(Command_get_cmd(command_Manager) == HELP && noVerbose == FALSE){
+            game_rules_run--;
+        }else if(last_command == HELP && noVerbose == FALSE){
             graphic_engine_paint_help(stdout);
+            game_rules_run--;
+        }
+        
+        if(last_command == SAVE || last_command == LOAD || last_command == INSPECT || last_command == UNKNOWN){
+            game_rules_run--;
         }
         
         result = game_update(game, command_Manager);
-        if(game_rules_run == 2){
+        if(game_rules_run == 3 + 4){
             game_rules_run_random_rule(game);
             game_rules_run = 0;
         }
@@ -177,6 +185,10 @@ int main(int argc, char *argv[]) {
         }
         game_rules_run++;
         
+    }
+    
+    if(game_is_over(game) == TRUE){
+        graphic_engine_game_over(stdout);
     }
 
     if (logging)

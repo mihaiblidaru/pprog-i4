@@ -1,12 +1,12 @@
-#l:1|Puerta-Magica|        1| 2|0|
-#l:2|link2|                1| 3|0|
-#l:3|escaleras|            1| 4|0|
-#l:4|puerta-llave|         4| 5|0|
-#l:5|pasillo oscuro|       4| 6|0|
-#l:6|precipicio|           4|10|0|
-#l:7|likn21|               3| 7|0|
-#l:8|link8|                7| 8|0|
-#l:9|puente viejo|         8| 9|1|
-#l:10|link10|              9| 4|0|
-#l:11|Entrada secreta|     1|10|0|
+#l:1|Puerta-Magica|        1| 2|1|
+#l:2|Tunel tenebroso|      1| 3|0|
+#l:3|Escaleras|            1| 4|0|
+#l:4|Puerta-de-madera|     4| 5|1|
+#l:5|Pasillo oscuro|       4| 6|0|
+#l:6|Precipicio|           4|10|0|
+#l:7|Ascensor|             3| 7|0|
+#l:8|Puente|               7| 8|0|
+#l:9|Puente viejo|         8| 9|1|
+#l:10|Pasadizo secreto|    9| 4|0|
+#l:11|Entrada-secreta|     1|10|1|
 #l:12|Acantilado|          6|10|1|

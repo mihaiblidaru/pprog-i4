@@ -10,7 +10,7 @@ CFLAGS = -c -MMD -MF $(OBJ_DIR)$*.d -g -Wall -ansi -pedantic
 
 COMPILE.c = $(CC) $(CFLAGS) -I$(INC_DIR)
 
-GAME_EXE                 = $(BIN_DIR)game_loop
+GAME_EXE                 = $(BIN_DIR)indiana_jones
 INVENTORY_TEST_EXE       = $(BIN_DIR)inventory_test
 LINK_TEST_EXE            = $(BIN_DIR)link_test
 PLAYER_TEST_EXE          = $(BIN_DIR)player_test
@@ -60,14 +60,18 @@ SCREEN_TEST_OBJ = $(patsubst %.o,$(OBJ_DIR)%.o, screen_test.o screen.o)
 GAME_TEST_OBJ = $(patsubst %.o,$(OBJ_DIR)%.o, game_test.o game.o player.o object.o set.o space.o inventory.o dialogue.o game_management.o command.o link.o die.o)
 GAME_RULES_TEST_OBJ = $(patsubst %.o,$(OBJ_DIR)%.o, game_rules_test.o game_rules.o link.o space.o \
                                  game.o player.o dialogue.o object.o inventory.o set.o game_management.o command.o die.o)
-$(shell mkdir -p $(OBJ_DIR))
+ifeq ($(BIN_DIR),bin/)
 $(shell mkdir -p $(BIN_DIR))
+endif
+$(shell mkdir -p $(OBJ_DIR))
+
 
 
 all: $(EXES) help
 
 help: 
 	@printf "Compilar todo el proyecto:\t\t\33[1;32m make all\33[0m \n"
+	@printf "Compilar todo el proyecto:\t\t\33[1;32m make game\33[0m \n"
 	@printf "Compilar solo los tests:\t\t\33[1;32m make tests\33[0m \n"
 	@printf "Crear documentación html y latex:\t\33[1;32m make doxygen \33[0m \n"
 	@printf "Borrar objetos y ejecutables:\t\t\33[1;32m make clean \33[0m \n"
@@ -76,6 +80,8 @@ help:
 	@printf "Ejecutar juego con valgrind:\t\t\33[1;32m make runv \33[0m \n"
 
 tests: $(TESTS)
+
+game: $(GAME_EXE)
 
 $(GAME_EXE): $(GAME_OBJ)
 	gcc $^ -o $@

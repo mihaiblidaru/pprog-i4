@@ -18,6 +18,9 @@
 #include "set.h"
 #include "inventory.h"
 
+/**
+ * @brief Localizacion ficticia que corresponde al inventario del jugador
+ */
 #define PLAYER_INV_LOCATION -65535
 
 /**

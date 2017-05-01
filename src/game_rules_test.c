@@ -1,10 +1,10 @@
-/*
+/**
  * @brief Programa para probar el modulo game_management.
  *       Progama para probar la correcta funcionalidad del
  *       nuevo TAD Game_management.
  *
- * @file inventory_test.c
- * @author Sandra Benítez 
+ * @file game_rules_test.c
+ * @author Mihai Blidaru
  * @author Laura Bernal
  * @version 1.0
  * @date 24-04-2017
@@ -21,7 +21,7 @@
 #include "game_rules.h"
 #include "game_management.h"
 #include "tests/game_rules_test.h"
-#include "test.h"
+#include "tests/test.h"
 
 /**
  * Número maximo de tests
@@ -66,6 +66,11 @@ int main(int argc, char** argv){
     return 1;
 }
 
+/*
+ * @test Prueba la funcion que ejecuta una regla aleatoria
+ * @pre El juego se ha inicializado previamente
+ * @post La salida esperada es OK
+ */
 void test1_game_rules_run_random_rule(){
     Game* game;
     game = game_create();
@@ -74,6 +79,11 @@ void test1_game_rules_run_random_rule(){
     game_destroy(game);
 }
 
+/*
+ * @test Prueba la funcion que ejecuta una regla aleatoria
+ * @pre El juego no se ha inicializado previamente
+ * @post La salida esperada es ERROR
+ */
 void test2_game_rules_run_random_rule(){
     Game* game = NULL;
     PRINT_TEST_RESULT(game_rules_run_random_rule(game) == ERROR);

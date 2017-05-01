@@ -1,7 +1,7 @@
 /**
  * @brief Implementacion de las reglas del juego
  *
- * @file die.c
+ * @file game_rules.c
  * @author Laura Bernal 
  * @author Sandra Benitez
  * @version 1.0
@@ -12,7 +12,10 @@
 #include "game.h"
 #include "dialogue.h"
 
-#define N_RULES 6
+/**
+ * @cond
+ */
+#define N_RULES 7
 
 typedef STATUS(*game_rule)(Game* game);
 
@@ -30,9 +33,17 @@ static game_rule game_rules_functions[N_RULES] = {
     game_rules_switch_light_space,
     game_rules_hide_object,
     game_rules_lose_object,
-    game_rules_change_last_link
+    game_rules_change_last_link,
+    game_rules_switch_opening_link
 };
 
+int last_rule = 0;
+/* 
+ * @brief Ejecuta una regla aleatoria que está en la lista de reglas
+ * @author Laura Bernal
+ * @param game Un puntero a la estructura del juego
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS game_rules_run_random_rule(Game* game){
     int random_number = 0;
     Die * main_die = NULL;
@@ -41,7 +52,10 @@ STATUS game_rules_run_random_rule(Game* game){
     
     main_die = game_get_die(game);
     die_set_faces(main_die, N_RULES);
-    random_number = (die_roll(main_die) - 1);
+    while((random_number = (die_roll(main_die) - 1)) == last_rule){
+        random_number = (die_roll(main_die) - 1);    
+    }
+    last_rule = random_number;
     (*game_rules_functions[random_number])(game);
     
     return OK;
@@ -108,7 +122,7 @@ STATUS game_rules_switch_light_space(Game* game){
     if (!game)
         return ERROR;
     
-    for (i=0; (aux = game_get_space(game, i)) != NULL; i++);
+    for (i=0; (aux = game_get_space_at(game, i)) != NULL; i++);
     if(i < 1){
         return ERROR;
     }    
@@ -198,23 +212,17 @@ STATUS game_rules_lose_object (Game* game){
  * @param game
  * @return Devuelve OK en caso de que se realice de forma correcta
  */
- /********* Hay que corregir esto  *****************/
+
  
- 
- /*Creo que es mejor para no complicarse tanto la vida,
- ya que sabemos cuales son los enlaces que queremos que se cierren o no
-,no hace falta que lo estemos buscando en el juego y que busquemos los objetos y todo.
-    Los enlaces para los que existen objetos que los pueden abrir son 1, 4, 6, 9
-*/
-STATUS game_rules_switch_opening_link(Game* game){
-    long ids[4] = {1, 4, 6, 9};
+ STATUS game_rules_switch_opening_link(Game* game){
+    long ids[5] = {1, 4, 6, 11, 12};
     Die* die = NULL;
     Link* link = NULL;
     int random_number = 0;
     die = game_get_die(game);
     if (!game)
         return ERROR;
-    die_set_faces(die, 4);
+    die_set_faces(die, 5);
     random_number = (die_roll(die) - 1); 
     link = game_get_link(game,ids[random_number]);
     if(link_get_state(link) == OPENED){
@@ -222,42 +230,26 @@ STATUS game_rules_switch_opening_link(Game* game){
     }else{
         link_set_state(link, OPENED);
     }
+    dialogue_game_rule(game_get_dialogue(game), CLOSE_LINK);
     return OK;
 }
-/* ^ Creo que es una version mucho más facil esta ^*/
 
-
-/*
- STATUS game_rules_switch_opening_link(Game* game){
-    int i, tam;
-    Object* objects[20] = {NULL};
-    Object* aux = NULL;
-    Die* die = NULL;
-    int random_number = 0;
-    
-    for (i=0, tam = 0; (aux = game_get_object_at(game, i)) != NULL; i++){
-        
-        if(object_Get_Open(aux) != NO_ID){
-            objects[tam] = aux;
-            tam++;
-        }
-    }
-    
-    die_set_faces(die, tam);
-    random_number = (die_roll(die) - 1); 
-    
-    object_Set_Open(objects[random_number], );
-    
-    return OK:
-}*/
 
 /* Cambia de sitio la entrada a la ultima sala de la casilla 4 a la casilla 6*/
 STATUS game_rules_change_last_link(Game* game){
     Space* space = NULL;
+    Object* object = NULL;
+    int i;
+    
     Id link_id = NO_ID;
     if(!game)
         return ERROR;
     space = game_get_space(game, 4);
+    for(i = 0; (object =  game_get_object_at(game,i)) != NULL; i++){
+        if(object_Get_Id(object) == 13){
+            break;
+        }
+    }
     if(!space)
         return ERROR;
     link_id = space_get_down(space);
@@ -265,11 +257,17 @@ STATUS game_rules_change_last_link(Game* game){
         space_set_down(space, -2);
         space = game_get_space(game, 6);
         space_set_down(space, 12);
+        object_Set_Open(object, 12);
     }else if(link_id == -2){
         space_set_down(space, 6);
         space = game_get_space(game, 6);
         space_set_down(space, -2);
+        object_Set_Open(object, 6);
     }
     dialogue_game_rule(game_get_dialogue(game), CHANGE_LAST_LINK);
     return OK;
 }
+
+/**
+ * @endcond
+ */

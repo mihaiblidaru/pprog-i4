@@ -8,7 +8,7 @@
 #define OBJECT_TEST_H
 
 
-/* 
+/** 
  * @test Prueba si se crea correctamente un objeto
  * @post Un puntero no nulo al objeto creado
  */ 
@@ -27,6 +27,20 @@ void test1_object_set_name();
  * @post La salida debe ser NULL
  */ 
 void test2_object_set_name();
+
+/** 
+ * @test Prueba si se le asigna correctamente los graficos a un objeto
+ * @pre El nombre del objeto
+ * @post La salida tiene que ser el puntero al objeto
+ */  
+void test1_object_set_graphics();
+
+/** 
+ * @test Prueba asignar graficos a un objeto sin inicializar
+ * @pre El objeto al que establecer los graficos es un puntero a NULL
+ * @post La salida debe ser NULL
+ */ 
+void test2_object_set_graphics();
 
 /** 
  * @test Prueba si se le asigna correctamente un Id a un objeto
@@ -161,6 +175,20 @@ void test1_object_Get_Name();
  * @post La salida esperada es NULL
  */
 void test2_object_Get_Name();
+
+/**
+ * @test Prueba leer los graficos de un objeto
+ * @pre Al nombre se le ha asignado previamente los graficos "Bryan"
+ * @post La salida esperada son los graficos asignados antes "Bryan"
+ */
+void test1_object_Get_Graphics();
+
+/**
+ * @test Prueba leer los graficos de un objeto
+ * @pre El objeto no ha sido inicializado previamente
+ * @post La salida esperada es NULL
+ */
+void test2_object_Get_Graphics();
 
 /**
  * @test Prueba leer el id de un objeto

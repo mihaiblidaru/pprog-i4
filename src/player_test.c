@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "test.h"
+#include "tests/test.h"
 #include "tests/player_test.h"
 #include "player.h"
 

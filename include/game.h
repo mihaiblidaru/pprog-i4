@@ -268,7 +268,13 @@ Id game_get_object_location(Game* game, Object* object);
  */
 void game_print_data(Game* game);
 
-
+/**
+ * @brief  Devuelve un puntero al modulo dialogo del juego
+ * 
+ * @author Mihai Blidaru
+ * @param game Puntero a la estructura del juego.
+ * @return Un puntero al modulo dialogo del juego o NULL si hay algun error
+ */
 Dialogue* game_get_dialogue(Game* game);
 
 

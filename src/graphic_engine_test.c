@@ -1,11 +1,10 @@
-/*
- * @brief Programa para probar el modulo game_management.
+/**
+ * @brief Programa para probar el modulo graphic_engine.
  *       Progama para probar la correcta funcionalidad del
- *       nuevo TAD Game_management.
+ *       nuevo TAD graphic_engine.
  *
- * @file inventory_test.c
- * @author Sandra Benítez 
- * @author Laura Bernal
+ * @file graphic_engine_test.c
+ * @author Mihai Blidaru
  * @version 1.0
  * @date 24-04-2017
  */
@@ -20,8 +19,7 @@
 #include "space.h"
 #include "graphic_engine.h"
 #include "tests/graphic_engine_test.h"
-#include "test.h"
-
+#include "tests/test.h"
 /**
  * Número maximo de tests
  * @cond
@@ -63,7 +61,15 @@ int main(int argc, char** argv){
 
     return 1;
 }
+/**
+ * @endcond
+ */
 
+/*
+ * @test Prueba la función que crea el motor grafico
+ * @pre El motor grafico se reserva
+ * @post La salida esperada es el motor grafico inicializado
+ */
 void test1_graphic_engine_create(){
 	Graphic_engine* ge = NULL;
 	ge = graphic_engine_create();

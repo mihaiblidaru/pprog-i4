@@ -13,7 +13,7 @@
 #include <string.h> 
 #include "space.h"
 #include "tests/space_test.h"
-#include "test.h"
+#include "tests/test.h"
 
 /**
  * Número máximo de pruebas para el módulo space

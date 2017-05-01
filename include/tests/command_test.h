@@ -1,4 +1,4 @@
- /**
+/**
  * @brief Define las funciones para la prueba del modulo Command
  * 
  * @file command_test.h

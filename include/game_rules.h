@@ -12,6 +12,12 @@
 #ifndef GAME_RULES_H
 #define GAME_RULES_H
 
+/** 
+ * @brief Ejecuta una regla aleatoria que está en la lista de reglas
+ * @author Laura Bernal
+ * @param game Un puntero a la estructura del juego
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS game_rules_run_random_rule(Game* game);
 
 #endif /*GAME_RULES_H*/

@@ -42,6 +42,7 @@ Die* die_create(Id die_id) {
         return NULL;
     die->id = die_id;
     die->number = 0;
+    srand(time(NULL));
 
     return die;
 }
@@ -71,7 +72,6 @@ unsigned short die_roll(Die* die) {
     int r = 0;
     if (!die)
         return -1;
-    srand(time(NULL));
     r = rand() % die->faces;
     die->number = (r + 1);
     return (r + 1);

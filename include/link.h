@@ -4,7 +4,7 @@
  * @file link.h
  * @version 1.0
  * 
-*/
+ */
 
 #ifndef LINK_H
 #define LINK_H

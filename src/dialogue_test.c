@@ -1,11 +1,10 @@
-/*
- * @brief Programa para probar el modulo game_management.
+/**
+ * @brief Programa para probar el modulo dialogue.
  *       Progama para probar la correcta funcionalidad del
- *       nuevo TAD Game_management.
+ *       nuevo TAD dialogue.
  *
- * @file inventory_test.c
- * @author Sandra Benítez 
- * @author Laura Bernal
+ * @file dialogue_test.c
+ * @author Javier Bernardo
  * @version 1.0
  * @date 24-04-2017
  */
@@ -20,40 +19,48 @@
 #include "space.h"
 #include "dialogue.h"
 #include "tests/dialogue_test.h"
-#include "test.h"
+#include "tests/test.h"
 
 /**
  * Número maximo de tests
  * @cond
  */
-#define MAX_TESTS 23
+#define MAX_TESTS 31
 
 typedef void(*test_function)();
 
 static test_function tests[MAX_TESTS] = {
-         test1_dialogue_ini,
-         test1_dialogue_get_text,
-         test1_dialogue_get_text,
-         test1_dialogue_go,
-         test2_dialogue_go,
-         test1_dialogue_unknown,
-         test2_dialogue_unknown,
-         test1_dialogue_dir,
-         test2_dialogue_dir,
-         test1_dialogue_help,
-         test2_dialogue_help,
-         test1_dialogue_take,
-         test2_dialogue_take,
-         test1_dialogue_leave,
-         test2_dialogue_leave,
-         test1_dialogue_turn_on,
-         test2_dialogue_turn_on,
-         test1_dialogue_turn_off,
-         test2_dialogue_turn_off,
-         test1_dialogue_inspect,
-         test2_dialogue_inspect,
-         test1_dialogue_save,
-         test2_dialogue_save
+        test1_dialogue_ini,
+        test1_dialogue_get_text,
+        test2_dialogue_get_text,
+        test1_dialogue_go,
+        test2_dialogue_go,
+        test1_dialogue_unknown,
+        test2_dialogue_unknown,
+        test1_dialogue_dir,
+        test2_dialogue_dir,
+        test1_dialogue_take,
+        test2_dialogue_take,
+        test1_dialogue_leave,
+        test2_dialogue_leave,
+        test1_dialogue_save,
+        test2_dialogue_save,
+        test1_dialogue_load,
+        test2_dialogue_load,
+        test1_dialogue_attack,
+        test2_dialogue_attack,
+        test1_dialogue_inspect,
+        test2_dialogue_inspect,
+        test1_dialogue_open,
+        test2_dialogue_open,
+        test1_dialogue_turn_on,
+        test2_dialogue_turn_on,
+        test1_dialogue_turn_off,
+        test2_dialogue_turn_off,
+        test1_dialogue_help,
+        test2_dialogue_help,
+        test1_dialogue_game_rule,
+        test2_dialogue_game_rule
 };
 
 int main(int argc, char** argv){
@@ -86,6 +93,15 @@ int main(int argc, char** argv){
     return 1;
 }
 
+/**
+ * @endcond
+ */
+
+/*
+ * @test Prueba la función que crea un dialogo
+ * @pre Se reserva memoria para el dialogo
+ * @post La salida que se espera es el dialogo inicializado
+ */
 void test1_dialogue_ini(){
     Dialogue* d = NULL;
     d = dialogue_ini();
@@ -93,6 +109,11 @@ void test1_dialogue_ini(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que devuelve el texto del dialogo
+ * @pre El dialogo se ha inicializado antes
+ * @post La salida es un texto no nulo
+ */
 void test1_dialogue_get_text(){
     Dialogue* d = NULL;
     d = dialogue_ini();
@@ -101,14 +122,22 @@ void test1_dialogue_get_text(){
     dialogue_destroy(d);    
 }
 
+/*
+ * @test Prueba la funcion que devuelve el texto del dialogo
+ * @pre El dialogo no se ha inicializado antes
+ * @post La salida esperada es NULL
+ */
 void test2_dialogue_get_text(){
     Dialogue* d = NULL;
-    d = dialogue_ini();
     dialogue_unknown(d);
     PRINT_TEST_RESULT(dialogue_get_text(d) == NULL);
 }
 
-
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando GO
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_go(){
     Dialogue* d = NULL;
     Space* space = NULL;
@@ -122,6 +151,11 @@ void test1_dialogue_go(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando GO
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_go(){
     Dialogue* d = NULL;
     Space* space = NULL;
@@ -133,6 +167,11 @@ void test2_dialogue_go(){
     space_destroy(space);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para comandos desconocidos
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_unknown(){
     Dialogue* d = NULL;
     d = dialogue_ini();
@@ -140,11 +179,21 @@ void test1_dialogue_unknown(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para comandos desconocidos
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_unknown(){
     Dialogue* d = NULL;
     PRINT_TEST_RESULT(dialogue_unknown(d) == ERROR);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando DIR
+ * @pre El dialogo ha sido inicializado
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_dir(){
     Dialogue* d = NULL;
     d = dialogue_ini();
@@ -152,23 +201,21 @@ void test1_dialogue_dir(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando DIR
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_dir(){
     Dialogue* d = NULL;
     PRINT_TEST_RESULT(dialogue_dir(d) == ERROR);
 }
 
-void test1_dialogue_help(){
-    Dialogue* d = NULL;
-    d = dialogue_ini();
-    PRINT_TEST_RESULT(dialogue_help(d) == OK);
-    dialogue_destroy(d);
-}
-
-void test2_dialogue_help(){
-    Dialogue* d = NULL;
-    PRINT_TEST_RESULT(dialogue_help(d) == ERROR);
-}
-
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TAKE
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_take(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -179,6 +226,11 @@ void test1_dialogue_take(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TAKE
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_take(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -187,6 +239,11 @@ void test2_dialogue_take(){
     object_destroy(object);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando LEAVE
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_leave(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -197,6 +254,11 @@ void test1_dialogue_leave(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando LEAVE
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_leave(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -205,41 +267,77 @@ void test2_dialogue_leave(){
     object_destroy(object);
 }
 
-void test1_dialogue_turn_on(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando SAVE
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_save(){
     Dialogue* d = NULL;
-    Object* object = NULL;
     d = dialogue_ini();
-    object = object_create();
-    PRINT_TEST_RESULT(dialogue_turn_on(d, object, "test", TURN_OK) == OK);
-    object_destroy(object);
+    PRINT_TEST_RESULT(dialogue_save(d, "mysave.dat",SAVE_SAVE_OK) == OK);
     dialogue_destroy(d);
 }
 
-void test2_dialogue_turn_on(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando SAVE
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_save(){
     Dialogue* d = NULL;
-    Object* object = NULL;
-    object = object_create();
-    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == ERROR);
-    object_destroy(object);
+    PRINT_TEST_RESULT(dialogue_save(d, "mysave.dat", SAVE_SAVE_OK) == ERROR);
 }
 
-void test1_dialogue_turn_off(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando LOAD
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_load(){
     Dialogue* d = NULL;
-    Object* object = NULL;
-    object = object_create();
-    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == OK);
-    object_destroy(object);
-    dialogue_destroy(d);
+    d = dialogue_ini();
+    PRINT_TEST_RESULT(dialogue_load(d, "mysave.dat",LOAD_OK) == OK);
+    dialogue_destroy(d);   
 }
 
-void test2_dialogue_turn_off(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando LOAD
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_load(){
     Dialogue* d = NULL;
-    Object* object = NULL;
-    object = object_create();
-    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == ERROR);
-    object_destroy(object);
+    PRINT_TEST_RESULT(dialogue_load(d, "mysave.dat",LOAD_OK) == ERROR);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando ATTACK
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_attack(){
+    Dialogue* d = NULL;
+    d = dialogue_ini();
+    PRINT_TEST_RESULT(dialogue_attack(d, NOTHING_TO_ATTACK) == OK);
+    dialogue_destroy(d);   
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando ATTACK
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_attack(){
+    Dialogue* d = NULL;
+    PRINT_TEST_RESULT(dialogue_attack(d, NOTHING_TO_ATTACK) == ERROR);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando INSPECT
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
 void test1_dialogue_inspect(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -253,6 +351,11 @@ void test1_dialogue_inspect(){
     dialogue_destroy(d);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando INSPECT
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
 void test2_dialogue_inspect(){
     Dialogue* d = NULL;
     Object* object = NULL;
@@ -264,16 +367,126 @@ void test2_dialogue_inspect(){
     object_destroy(object);
 }
 
-
-void test1_dialogue_save(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando OPEN
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_open(){
     Dialogue* d = NULL;
     d = dialogue_ini();
-    PRINT_TEST_RESULT(dialogue_save(d, "mysave.dat",SAVE_SAVE_OK) == OK);
+    PRINT_TEST_RESULT(dialogue_open(d, "llave", "puerta", OPEN_OK) == OK);
     dialogue_destroy(d);
 }
 
-void test2_dialogue_save(){
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando OPEN
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_open(){
     Dialogue* d = NULL;
-    PRINT_TEST_RESULT(dialogue_save(d, "mysave.dat", SAVE_SAVE_OK) == ERROR);
+    PRINT_TEST_RESULT(dialogue_open(d, "llave", "puerta", OPEN_OK) == ERROR);
 }
 
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TURN_ON
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_turn_on(){
+    Dialogue* d = NULL;
+    Object* object = NULL;
+    d = dialogue_ini();
+    object = object_create();
+    PRINT_TEST_RESULT(dialogue_turn_on(d, object, "test", TURN_OK) == OK);
+    object_destroy(object);
+    dialogue_destroy(d);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TURN_ON
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_turn_on(){
+    Dialogue* d = NULL;
+    Object* object = NULL;
+    object = object_create();
+    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == ERROR);
+    object_destroy(object);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TURN_OFF
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_turn_off(){
+    Dialogue* d = NULL;
+    Object* object = NULL;
+    d = dialogue_ini();
+    object = object_create();
+    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == OK);
+    object_destroy(object);
+    dialogue_destroy(d);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando TURN_OFF
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_turn_off(){
+    Dialogue* d = NULL;
+    Object* object = NULL;
+    object = object_create();
+    PRINT_TEST_RESULT(dialogue_turn_off(d, object, "test", TURN_OK) == ERROR);
+    object_destroy(object);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando HELP
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_help(){
+    Dialogue* d = NULL;
+    d = dialogue_ini();
+    PRINT_TEST_RESULT(dialogue_help(d) == OK);
+    dialogue_destroy(d);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para el comando HELP
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_help(){
+    Dialogue* d = NULL;
+    PRINT_TEST_RESULT(dialogue_help(d) == ERROR);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para las reglas del juego
+ * @pre Todos los parametros han sido inicializados
+ * @post La salida esperada es OK
+ */
+void test1_dialogue_game_rule(){
+    Dialogue* d = NULL;
+    d = dialogue_ini();
+    PRINT_TEST_RESULT(dialogue_game_rule(d, LOSE_OBJECT) == OK);
+    dialogue_destroy(d);
+}
+
+/*
+ * @test Prueba la funcion que construye el dialogo para las reglas del juego
+ * @pre El dialogo no ha sido inicializado
+ * @post La salida esperada es ERROR
+ */
+void test2_dialogue_game_rule(){
+    Dialogue* d = NULL;
+    d = dialogue_ini();
+    PRINT_TEST_RESULT(dialogue_game_rule(d, LOSE_OBJECT) == OK);
+    dialogue_destroy(d);
+}

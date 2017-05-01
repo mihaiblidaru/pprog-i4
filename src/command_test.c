@@ -1,4 +1,4 @@
-/*
+/**
  * @brief Programa para probar el modulo Command.
  *       Progama para probar la correcta funcionalidad del
  *       nuevo TAD Command.
@@ -15,7 +15,7 @@
 #include <string.h>
 
 /* Cabeceras Propias */
-#include "test.h"
+#include "tests/test.h"
 #include "tests/command_test.h"
 #include "types.h"
 #include "command.h"

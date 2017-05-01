@@ -44,10 +44,33 @@ void graphic_engine_destroy(Graphic_engine* ge);
  */
 void graphic_engine_paint_game(Graphic_engine* ge, Game* game);
 
+/**
+ * @brief Imprime las direcciones adyacentes de una casilla
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ * @param game Un puntero a la estructura del juego
+ */
 void graphic_engine_paint_directions(FILE* fp, Game* game);
 
+/**
+ * @brief Imprime la pantalla de ayuda
+ * @author Javier Bernardo
+ * @param fp Descriptor del fichero donde imprimir
+ */
 void graphic_engine_paint_help(FILE* fp);
 
+/**
+ * @brief Imprime la intro del juego
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ */
 void graphic_engine_play_intro(FILE* fp);
+
+/**
+ * @brief Imprime la panatlla de final de juego
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ */
+void graphic_engine_game_over(FILE* fp);
 
 #endif

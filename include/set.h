@@ -1,4 +1,5 @@
-/** @file set.h
+/** 
+ *  @file set.h
  *  @author Mihai Blidaru
  *  @brief Definicion de los prototipos de las primitivas del TAD Set
  *  @version 1.0

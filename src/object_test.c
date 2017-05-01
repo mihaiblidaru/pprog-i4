@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "test.h"
+#include "tests/test.h"
 #include "tests/object_test.h"
 #include "object.h"
 
@@ -20,7 +20,7 @@
  * Número máximo de Pruebas para el módulo Object
  * 
  */
-#define MAX_TESTS 41
+#define MAX_TESTS 45
 
 /** 
  * @brief Funcion principal de pruebas para el modulo Object.
@@ -89,6 +89,10 @@ int main(int argc, char** argv) {
     if (all || test == 39) test2_object_Get_Illuminates();
     if (all || test == 40) test1_object_Get_Light();
     if (all || test == 41) test2_object_Get_Light();
+    if (all || test == 42) test1_object_set_graphics();
+    if (all || test == 43) test2_object_set_graphics();
+    if (all || test == 44) test1_object_Get_Graphics();
+    if (all || test == 45) test2_object_Get_Graphics();
     PRINT_PASSED_PERCENTAGE;
     return 0;
 }
@@ -127,6 +131,28 @@ void test1_object_set_name() {
 void test2_object_set_name() {
     Object *object = NULL;
     PRINT_TEST_RESULT(object_Set_Name(object, "hola") == NULL);
+}
+
+/* 
+ * @test Prueba si se le asigna correctamente los graficos a un objeto
+ * @pre El nombre del objeto
+ * @post La salida tiene que ser el puntero al objeto
+ */  
+void test1_object_set_graphics() {
+    Object *object;
+    object = object_create();
+    PRINT_TEST_RESULT(object_Set_Graphics(object, "Bob") == object);
+    object_destroy(object);
+}
+
+/* 
+ * @test Prueba asignar graficos a un objeto sin inicializar
+ * @pre El objeto al que establecer los graficos es un puntero a NULL
+ * @post La salida debe ser NULL
+ */ 
+void test2_object_set_graphics() {
+    Object *object = NULL;
+    PRINT_TEST_RESULT(object_Set_Graphics(object, "hola") == NULL);
 }
 
 /* 
@@ -349,6 +375,29 @@ void test1_object_Get_Name(){
 void test2_object_Get_Name(){
     Object *object = NULL;
     PRINT_TEST_RESULT(object_Get_Name(object) == NULL);
+}
+
+/*
+ * @test Prueba leer los graficos de un objeto
+ * @pre Al nombre se le ha asignado previamente los graficos "Bryan"
+ * @post La salida esperada son los graficos asignados antes "Bryan"
+ */
+void test1_object_Get_Graphics(){
+    Object *object = NULL;
+    object = object_create();
+    object_Set_Graphics(object, "Bryan");
+    PRINT_TEST_RESULT(strcmp(object_Get_Graphics(object), "Bryan") == 0);
+    object_destroy(object);
+}
+
+/*
+ * @test Prueba leer los graficos de un objeto
+ * @pre El objeto no ha sido inicializado previamente
+ * @post La salida esperada es NULL
+ */
+void test2_object_Get_Graphics(){
+    Object *object = NULL;
+    PRINT_TEST_RESULT(object_Get_Graphics(object) == NULL);
 }
 
 /*

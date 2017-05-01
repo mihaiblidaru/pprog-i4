@@ -18,7 +18,7 @@
 /**
  * @brief Extension del comando
  */
-#define CMD_LENGHT 30
+#define CMD_LENGHT 70
 
 /**
  * @brief Definicion de la estructura del comando

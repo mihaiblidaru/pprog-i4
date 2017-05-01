@@ -1,4 +1,3 @@
-
 /** 
  * @brief It defines a textual graphic engine
  * 
@@ -71,7 +70,7 @@ Graphic_engine *graphic_engine_create() {
 
     ge->map = screen_area_init(1, 1, 52, 14);
     ge->descript = screen_area_init(54, 1, 25, 14);
-    ge->banner = screen_area_init(2, 16, 43, 1);
+    ge->banner = screen_area_init(17, 16, 45, 1);
     ge->help = screen_area_init(15, 17, 49, 1);
     ge->feedback = screen_area_init(1, 18, 78, 3);
 
@@ -225,7 +224,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         
         screen_area_puts(ge->map, str);
         if(space_get_iluminated(space_act) == TRUE || has_light == TRUE)
-        	sprintf(str,"        |%s                     |",obj);
+        	sprintf(str,"        |%s|",obj);
         else
         	sprintf(str,"        |##################################|");
         	
@@ -249,14 +248,14 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
     /* Imprimir la localizacion de los objetos */
     screen_area_clear(ge->descript);
-    sprintf(str, "  Objetos cercanos: ");
+    sprintf(str, " Objetos cercanos: ");
     screen_area_puts(ge->descript, str);
 
     for (i=0; (aux_obj = game_get_object_at(game,i)); i++){
         objLoc = game_get_object_location(game, aux_obj);
         if(object_Get_Hidden(aux_obj) == FALSE){
-	        if (objLoc == id_act || objLoc == id_east || objLoc == id_west) {
-	            sprintf(str, "   O%ld - %s",object_Get_Id(aux_obj), object_Get_Name(aux_obj));
+	        if (objLoc == id_act) {
+	            sprintf(str, "  O%ld(%ld) - %s",object_Get_Id(aux_obj), objLoc, object_Get_Name(aux_obj));
 	            screen_area_puts(ge->descript, str);
 	        }
         }
@@ -280,15 +279,15 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     if(j==0)
         screen_area_puts(ge->descript, "     None");
     /* Imprimir el valor de la ultima tirada */
-    
+    	screen_area_puts(ge->descript, " ");
     if (die_get_number(game_get_die(game))){
-        sprintf(str, " Last die value: %d", die_get_number(game_get_die(game)));
+        sprintf(str, " Valor del dado: %d", die_get_number(game_get_die(game)));
     	screen_area_puts(ge->descript, str);
     }
     
 
     /* Paint the in the banner area */
-    sprintf(str, "%s","Indiana Jones 2D: En busca del arca perdido");
+    sprintf(str, "%s"," Indiana Jones 2D: En busca del arca perdido ");
     screen_area_puts(ge->banner, str);
 
     /* Paint the in the help area */
@@ -303,9 +302,9 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     dialogue = game_get_dialogue(game);
 	strcpy(aux, dialogue_get_text(dialogue));
 	size = strlen(aux);
-	if(size > 77){
+	if(size > 76){
 		for(i = 0, j = 0; i < size; i++, j++){
-			if(j == 77){
+			if(j == 76){
 				for(i = i; (&(aux[i])) != aux; i--){
 					if(aux[i] == ' '){
 						aux[i] = '\n';
@@ -335,6 +334,13 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     printf("prompt:> ");
 }
 
+/*
+ * @brief Imprime los detalles del ultimo objeto inspeccionado
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ * @param game Un puntero a la estructura del 
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 	char* aux;
 	char str[250] = "\0";
@@ -349,7 +355,7 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 	puts("\033[2J"); /*Clear the terminal*/
 	fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     fprintf(fp, "~                                                                              ~\n");
-   	fprintf(fp, "~  Objectos:                                                                   ~\n");	
+   	fprintf(fp, "~    Objeto:                                                                   ~\n");	
 	fprintf(fp, "~       Id:           %2ld                                                       ~\n", object_Get_Id(inspected_object));
 	aux = object_Get_Name(inspected_object);
 	fprintf(fp, "~       Nombre:       %s", aux);
@@ -362,8 +368,8 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 	}
 	drawn_lines = 5;
     size = strlen(str);
-	if (size > 57){
-		for(i = 57; i >0; i--){
+	if (size > 56){
+		for(i = 56; i >0; i--){
 			if(str[i] == ' '){
 				str[i] = '\n';
 				break;
@@ -371,14 +377,14 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
 		}
 		aux = strtok(str, "\n");
 		fprintf(fp, "~\n~       Descripcion:  %s", aux);	
-		for(i = 58 - strlen(aux); i > 0; i--, fprintf(fp, " "));
+		for(i = 22 +strlen(aux); i < 79; i++, fprintf(fp, " "));
 		aux = strtok(NULL, "\n");
 		fprintf(fp, "~\n~                     %s", aux);	
-		for(i = 57 - strlen(aux); i > 0; i--, fprintf(fp, " "));
+		for(i = 22 +strlen(aux); i < 79; i++, fprintf(fp, " "));
 		drawn_lines += 2;
 	}else{
 		fprintf(fp, "~\n~       Descripcion:  %s", str);	
-		for(i = 57 - strlen(str); i > 0; i--, fprintf(fp, " "));
+		for(i = 22 +strlen(str); i < 79; i++, fprintf(fp, " "));
 		drawn_lines++;
 	}
 	
@@ -442,6 +448,13 @@ STATUS graphic_engine_print_inspect_object(FILE* fp, Object* inspected_object){
    return OK;
 }
 
+/*
+ * @brief Imprime los detalles del ultimo espacio inspeccionado
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ * @param game Un puntero a la estructura del 
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 	Space* inspected_space = NULL;
 	Object* object = NULL;
@@ -534,7 +547,12 @@ STATUS graphic_engine_print_inspect_space(FILE* fp, Game* game){
 	return OK;
 }
 
-
+/*
+ * @brief Imprime las direcciones adyacentes de una casilla
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ * @param game Un puntero a la estructura del juego
+ */
 void graphic_engine_paint_directions(FILE* fp, Game* game){
 	Space* space;
     Link* north_link = NULL, *south_link = NULL, *east_link = NULL, *west_link = NULL, *up_link = NULL, *down_link = NULL;
@@ -676,6 +694,11 @@ void graphic_engine_paint_directions(FILE* fp, Game* game){
     fgets(aux, 100, stdin);
 }
 
+/*
+ * @brief Imprime la pantalla de ayuda
+ * @author Javier Bernardo
+ * @param fp Descriptor del fichero donde imprimir
+ */
 void graphic_engine_paint_help(FILE* fp){
 	char dummy[2];
 	if(!fp)
@@ -695,12 +718,12 @@ void graphic_engine_paint_help(FILE* fp){
     fprintf(fp, "~              turnoff     <nombre del objeto>                                 ~\n");
     fprintf(fp, "~              (o)pen      <link> with <nombre del objeto>                     ~\n");
     fprintf(fp, "~              roll                                                            ~\n");
+    fprintf(fp, "~              attack                                                          ~\n");
     fprintf(fp, "~                                                                              ~\n");
     fprintf(fp, "~      Gestion de la partida:                                                  ~\n");
     fprintf(fp, "~              save        <nombre del archivo>                                ~\n");
     fprintf(fp, "~              load        <nombre del archivo                                 ~\n");
-	fprintf(fp, "~                                                                              ~\n");
-    fprintf(fp, "~      Ayuda:                                                                  ~\n");
+	fprintf(fp, "~      Ayuda:                                                                  ~\n");
     fprintf(fp, "~              help        Aparece esta pantalla de ayuda                      ~\n");
     fprintf(fp, "~                                                                              ~\n");
     fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
@@ -708,6 +731,49 @@ void graphic_engine_paint_help(FILE* fp){
     fgets(dummy, 2, stdin);
 }
 
+
+/*
+ * @brief Imprime la panatlla de final de juego
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ */
+void graphic_engine_game_over(FILE* fp){
+	if(!fp)
+		return;
+		puts("\033[2J"); /*Clear the terminal*/
+		fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		fprintf(fp, "~                                                                             ~\n");
+		fprintf(fp, "~                          _.--.                     !!!FELICIDADES!!!        ~\n");
+		fprintf(fp, "~                      _.-'_:-'||                                             ~\n");
+		fprintf(fp, "~                  _.-'_.-::::'||                 HAS ENCONTRADO EL ARCA      ~\n");
+		fprintf(fp, "~             _.-:'_.-::::::'  ||                PERDIDO Y HAS CONSEGUIDO     ~\n");
+		fprintf(fp, "~           .'`-.-:::::::'     ||              SALIR DE LA PIRAMIDE CON VIDA  ~\n");
+		fprintf(fp, "~          /.'`;|:::::::'      ||_                                            ~\n");
+		fprintf(fp, "~         ||   ||::::::'     _.;._'-._         VUELVE A JUGAR CUANDO QUIERAS  ~\n");
+		fprintf(fp, "~         ||   ||:::::'  _.-!oo @.!-._'-.       PARA EXPLORAR LOS MISTERIOS   ~\n");
+		fprintf(fp, "~         \\'.  ||:::::.-!()oo @!()@.-'_.|      INDESCUBIERTOS DE LA PIRAMIDE  ~\n");
+		fprintf(fp, "~          '.'-;|:.-'.&$@.& ()$%%-'o.'\\U||                                     ~\n");
+		fprintf(fp, "~            `>'-.!@%%()@'@_%%-'_.-o _.|'||                .-\"\"\"\"\"\"-.           ~\n");
+		fprintf(fp, "~             ||-._'-.@.-'_.-' _.-o  |'||              .'          '.         ~\n");
+		fprintf(fp, "~             ||=[ '-._.-\\U/.-'    o |'||             /   O    -=-   \\        ~\n");
+		fprintf(fp, "~             || '-.]=|| |'|      o  |'||            :                :       ~\n");
+		fprintf(fp, "~             ||      || |'|        _| ';            |                |       ~\n");
+		fprintf(fp, "~             ||      || |'|    _.-'_.-'             : ',          ,' :       ~\n");
+		fprintf(fp, "~             |'-._   || |'|_.-'_.-'                  \\  '-......-'  /        ~\n");
+		fprintf(fp, "~              '-._'-.|| |' `_.-'                      '.          .'         ~\n");
+		fprintf(fp, "~                  '-.||_/.-'                            '-......-'           ~\n");
+		fprintf(fp, "~                                                                             ~\n");
+		fprintf(fp, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		fflush(fp);
+		sleep(2);
+		fprintf(fp,"\n");
+}
+
+ /*
+ * @brief Imprime la intro del juego
+ * @author Mihai Blidaru
+ * @param fp Descriptor del fichero donde imprimir
+ */
 void graphic_engine_play_intro(FILE* fp){
 	int i;
 	if(!fp)

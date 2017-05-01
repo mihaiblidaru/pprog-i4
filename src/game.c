@@ -6,6 +6,8 @@
  * @author Profesores PPROG
  * @author Javier Bernardo
  * @author Mihai Blidaru
+ * @author Laura Bernal
+ * @author Sandra Benitez
  * @version 2.0
  * @date 13-01-2015
  * @copyright GNU Public License
@@ -47,7 +49,7 @@ typedef STATUS(*callback_fn)(Game* game, Command* cmd);
 /**
  * Ancho de una casilla
  */
-#define SPACE_DRAW_WIDTH 13
+#define SPACE_DRAW_WIDTH 34
 
 /*
  *
@@ -83,9 +85,9 @@ STATUS game_callback_turn_off(Game* game, Command* cmd); /*!< TURNOFF @private *
 STATUS game_callback_open(Game* game, Command* cmd);/*!< OPEN @private */
 STATUS game_callback_save(Game* game, Command* cmd);/*!< SAVE @private */
 STATUS game_callback_load(Game* game, Command* cmd);/*!< LOAD @private */
-STATUS game_callback_dir(Game* game, Command* cmd);
-STATUS game_callback_help(Game* game, Command* cmd);
-STATUS game_callback_attack(Game* game, Command* cmd);
+STATUS game_callback_dir(Game* game, Command* cmd);/*!< DIR @private */
+STATUS game_callback_help(Game* game, Command* cmd);/*!< HELP @private */
+STATUS game_callback_attack(Game* game, Command* cmd);/*!< ATTACK @private */
 
 void game_clear_inspect (Game *game); /*!< @private */
 Object* game_get_Object_byName(Game* game, char* name); /*!< @private */
@@ -570,6 +572,13 @@ Player* game_get_player(Game* game){
     return game->player;
 }
 
+/*
+ * @brief  Devuelve un puntero al modulo dialogo del juego
+ * 
+ * @author Mihai Blidaru
+ * @param game Puntero a la estructura del juego.
+ * @return Un puntero al modulo dialogo del juego o NULL si hay algun error
+ */
 Dialogue* game_get_dialogue(Game* game){
     if(!game)
         return NULL;
@@ -721,7 +730,14 @@ void game_print_data(Game* game) {
  * @return FALSE
  */
 BOOL game_is_over(Game* game) {
-    return (game == NULL);
+    if(!game)
+        return TRUE;
+    if(game_get_player_location(game) == 1){
+        if(player_Has_Object(game->player, 14) == TRUE){
+            return TRUE;
+        }
+    }
+    return FALSE;
 }
 
 /*
@@ -883,23 +899,22 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
     player_location = game_get_player_location(game);
     space = game_get_space(game, player_location);
     if(strlen(dir) > 0 ){
+       for(i = 0; game->objects[i] != NULL; i++){
+            if(player_Has_Object(game->player, object_Get_Id(game->objects[i])) == TRUE){
+                if(object_Get_Light(game->objects[i]) == TRUE){
+                    player_lights = TRUE; /* Si el jugador tiene un objeto que ilumina */
+                    break;
+                }
+            }
+        }
         if(!strcmp(dir,"space") || !strcmp(dir,"s")){
             if(space){
                 game->last_space = space;
-                for(i = 0; game->objects[i] != NULL; i++){
-                    if(player_Has_Object(game->player, object_Get_Id(game->objects[i])) == TRUE){
-                        if(object_Get_Light(game->objects[i]) == TRUE){
-                            player_lights = TRUE; /* Si el jugador tiene un objeto que ilumina */
-                            break;
-                        }
-                    }
-                }
 
             /* Si el jugador tiene un objeto que ilumina puede desocultar objetos */
-            for(i = 0; game->objects[i] != NULL && (player_lights || space_get_iluminated(space));i++){
+            for(i = 0;  (i < 20 ) && (game->objects[i] != NULL) && (player_lights || space_get_iluminated(space));i++){
                 if(space_contains_object(space, object_Get_Id(game->objects[i])))
                     object_Set_Hidden(game->objects[i], FALSE);
-
             }
                 dialogue_inspect(game->dialogue, object, space, "space", INSPECT_OK);
                 return OK;
@@ -912,7 +927,7 @@ STATUS game_callback_inspect(Game* game, Command* cmd) {
             }
             if(object_Get_Hidden(object) == FALSE){
                 object_id = object_Get_Id(object);
-                if (player_Has_Object(game->player, object_id) || (space_contains_object(space, object_id) && space_get_iluminated(space))){
+                if (player_Has_Object(game->player, object_id) || (space_contains_object(space, object_id) && (space_get_iluminated(space) || player_lights))){
                     game->last_object = object;
                     dialogue_inspect(game->dialogue, object, space, dir, INSPECT_OK);
                     return OK;
@@ -1158,7 +1173,8 @@ STATUS game_callback_turn_off(Game* game, Command* cmd){
  */
 STATUS game_callback_open(Game* game, Command* cmd){
     Space* space = NULL;
-    Link* link = {NULL};
+    Link* link = NULL;
+    Link* aux = NULL;
     char* link_name = NULL;
     char* object_name = NULL;
     Object* object = NULL;
@@ -1171,18 +1187,26 @@ STATUS game_callback_open(Game* game, Command* cmd){
     link_name = Command_get_cmd_arg(cmd, 0);
     object_name = Command_get_cmd_arg(cmd, 2);
 
-    if(strcmp(Command_get_cmd_arg(cmd,1), "with"))
+    if(strcmp(Command_get_cmd_arg(cmd,1), "with")){
+        dialogue_open(game->dialogue, object_name, link_name, WRONG_SYNTAX);
         return ERROR;
+    }
+        
 
     link = game_get_link_byName(game, link_name);
-    if(!link)
+    if(!link){
+        dialogue_open(game->dialogue, object_name, link_name, NO_LINK);
         return ERROR;
+    }
+        
     link_id = link_get_id(link);
 
     object = game_get_Object_byName(game, object_name);
 
-    if(!object)
+    if(!object){
+        dialogue_open(game->dialogue, object_name, link_name, NO_OBJECT);
         return ERROR;
+    }
 
     space = game_get_space(game, game_get_player_location(game));
     if(space){
@@ -1195,11 +1219,23 @@ STATUS game_callback_open(Game* game, Command* cmd){
 
         for(i=0; i < 6; i++){
             if(link_ids[i] == link_id){
-                if(object_Get_Open(object) == link_id){
-                    link_set_state(link, OPENED);
-                    return OK;
-                }
+                aux = link;
+                break;
             }
+        }
+        
+        if(aux){
+            if(object_Get_Open(object) == link_id){
+                link_set_state(link, OPENED);
+                dialogue_open(game->dialogue, object_name, link_name, OPEN_OK);
+                return OK;
+            }else{
+                dialogue_open(game->dialogue, object_name, link_name, NOT_SAME_ID);       
+                return ERROR;
+            }
+        }else{
+            dialogue_open(game->dialogue, object_name, link_name, NO_LINK);    
+            return ERROR;
         }
     }
 
@@ -1245,6 +1281,7 @@ STATUS game_callback_save(Game* game, Command* cmd){
 STATUS game_callback_load(Game* game, Command* cmd){
     int i;
     int numSpaces, numLinks, numObjects;
+    STATUS status = UNDEFINED;
     Object **objects;
     Space **spaces;
     Link **links;
@@ -1281,23 +1318,33 @@ STATUS game_callback_load(Game* game, Command* cmd){
 
         player = game->player;
         game->player = NULL;
-        if(game_management_load(game, name) == OK){
-            for(i=0; i < numSpaces; i++){
-                space_destroy(spaces[i]);
+        
+        status = game_management_load(game, name);
+        if(status == OK){
+            if(game->player != NULL && game->spaces[0] != NULL){
+                for(i=0; i < numSpaces; i++){
+                    space_destroy(spaces[i]);
+                }
+    
+                for(i=0; i < numObjects; i++){
+                    object_destroy(objects[i]);
+                }
+    
+                for(i=0; i < numLinks; i++){
+                    link_destroy(links[i]);
+                }
+                player_destroy(player);
+                free(links);
+                free(objects);
+                free(spaces);
+                dialogue_load(game->dialogue, name, LOAD_OK);
+                return OK;
+            }else{
+                status = ERROR;
             }
-
-            for(i=0; i < numObjects; i++){
-                object_destroy(objects[i]);
-            }
-
-            for(i=0; i < numLinks; i++){
-                link_destroy(links[i]);
-            }
-            player_destroy(player);
-            free(links);
-            free(objects);
-            free(spaces);
-        }else{
+        }
+        
+        if(status == ERROR){
             for(i=0; i < numSpaces; i++){
                 game->spaces[i] = spaces[i];
             }
@@ -1313,16 +1360,24 @@ STATUS game_callback_load(Game* game, Command* cmd){
             free(links);
             free(objects);
             free(spaces);
+            dialogue_load(game->dialogue, name, LOAD_ERROR);
             return ERROR;
         }
     } else{
+        dialogue_load(game->dialogue, name, GLOBAL_NO_ARGS);
         return ERROR;
     }
 
     return OK;
 }
 
-
+/* @brief Implementa el comando DIR que muestra las conexiones de una casilla
+ * 
+ * @author Javier Bernardo
+ * @param game Una estructura del juego
+ * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS game_callback_dir(Game* game, Command* cmd){
     if(!game || !cmd)
         return ERROR;
@@ -1330,6 +1385,13 @@ STATUS game_callback_dir(Game* game, Command* cmd){
     return OK;
 }
 
+/* @brief Implementa el comando Ayuda que muestra los comandos disponibles
+ * 
+ * @author Javier Bernardo
+ * @param game Una estructura del juego
+ * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS game_callback_help(Game* game, Command* cmd){
     if(!game || !cmd)
         return ERROR;
@@ -1337,6 +1399,13 @@ STATUS game_callback_help(Game* game, Command* cmd){
     return OK;
 }
 
+/* @brief Implementa el comando atacar
+ * 
+ * @author Javier Bernardo
+ * @param game Una estructura del juego
+ * @param cmd Una estructura tipo Command para leer los parametros de un comando cuando sea necesario
+ * @return OK si todo ha ido bien o ERROR en caso contrario
+ */
 STATUS game_callback_attack(Game* game, Command* cmd){
     Space* space = NULL;
     Link* link = NULL;
@@ -1362,19 +1431,27 @@ STATUS game_callback_attack(Game* game, Command* cmd){
         return ERROR;
 
     space = game_get_space(game, game_get_player_location(game));
-    if(space_get_id(space) == 8){
+    link = game_get_link(game,9);
+    if(space_get_id(space) == 8 && link_get_state(link) == CLOSED){
       if(player_Has_Object(game->player, 4)){
-        link = game_get_link(game,9);
         link_set_state(link, OPENED);
         space_set_graphics(space, graphics);
+        dialogue_attack(game->dialogue, BOSS1_OK);
+      }else{
+          dialogue_attack(game->dialogue, WRONG_WEAPON);
       }
-    }else if(space_get_id(space) == 10){
+    }else if(space_get_id(space) == 10 && game_get_object_location(game,game_get_object(game,14)) == NO_ID){
       if(player_Has_Object(game->player, 3)){
         if(player_Add_Object(game->player, 14) == ERROR){
           space_add_object(space, 14);
         }
         space_set_graphics(space, graphics2);
+        dialogue_attack(game->dialogue, BOSS2_OK);
+      }else{
+          dialogue_attack(game->dialogue, WRONG_WEAPON);
       }
+    }else{
+        dialogue_attack(game->dialogue, NOTHING_TO_ATTACK);
     }
     return OK;
 }

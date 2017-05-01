@@ -1,3 +1,14 @@
+/** 
+ * @brief Este modulo se encarga de cargar los datos del juego. Carga las casillas
+ *      los enlaces, los objetos y los datos del jugador. Tambié incluye la función de guardado
+ * @file game_management.c
+ * @author Javier Bernardo 
+ * @author Mihai Blidaru
+ * @version 2.2 
+ * @date 29-04-2017
+ * @copyright GNU Public License
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,13 +18,20 @@
 #include "game_management.h"
 
 /* Funciones privadas */
+
+/**
+ * @cond
+ */
 STATUS game_load_object(Game* game, char* line);
 STATUS game_load_player(Game* game, char* line);
 STATUS game_load_space(Game* game, char* line);
 STATUS game_load_link(Game* game, char* line);
 
 char protected_files[4][100];
-
+/**
+ * @endcond
+ */
+ 
 /* @brief Carga los datos del juego desde un archivo 
 
  * @author Javier Bernardo
@@ -173,7 +191,10 @@ STATUS game_management_load(Game* game, char* filename){
     fclose(fp);
     return OK;
 }
-
+/**
+ * @cond
+ */
+ 
 /*
  * @brief Carga los espacio del juego 
  *  
@@ -445,3 +466,6 @@ STATUS game_load_player(Game* game, char* line){
 
     return OK;
 }
+/**
+ * @endcond
+ */

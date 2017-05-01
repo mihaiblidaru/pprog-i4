@@ -44,9 +44,17 @@ typedef enum {
     ERROR, OK, UNDEFINED
 } STATUS;
 
-
+/**
+ * @brief Direciones en las que puede ir en jugador
+ */
 typedef enum {
-    NORTH, SOUTH, EAST, WEST, UP, DOWN, UNKNOWN_DIRECTION
+    NORTH,
+    SOUTH,
+    EAST,
+    WEST,
+    UP,
+    DOWN, 
+    UNKNOWN_DIRECTION
 } DIRECTION;
 
 #endif

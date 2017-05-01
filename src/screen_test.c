@@ -1,11 +1,10 @@
-/*
- * @brief Programa para probar el modulo game_management.
+/**
+ * @brief Programa para probar el modulo screen.
  *       Progama para probar la correcta funcionalidad del
- *       nuevo TAD Game_management.
+ *       nuevo TAD screen.
  *
- * @file inventory_test.c
- * @author Sandra Benítez 
- * @author Laura Bernal
+ * @file screen_test.c
+ * @author Javier Bernardo y Mihai Blidaru
  * @version 1.0
  * @date 24-04-2017
  */
@@ -18,8 +17,7 @@
 /* Cabeceras Propias */
 #include "screen.h"
 #include "tests/screen_test.h"
-#include "test.h"
-
+#include "tests/test.h"
 /**
  * Número maximo de tests
  * @cond
@@ -66,7 +64,15 @@ int main(int argc, char** argv){
     return 1;
 }
 
-
+/**
+ * @endcond
+ */
+ 
+/*
+ * @test Prueba la función que inicializa un area
+ * @pre Todos los parametros son correctos
+ * @post La salida esperada es el area inicializado
+ */
 void test1_screen_area_init(){
     Area* area = NULL;
     int x = 54;
@@ -78,6 +84,11 @@ void test1_screen_area_init(){
     screen_area_destroy(area);
 }
 
+/*
+ * @test Prueba la función que inicializa un area
+ * @pre La posición x es negativa
+ * @post La salida esperada es NULL
+ */
 void test2_screen_area_init(){
     Area* area = NULL;
     int x = -1;
@@ -89,6 +100,11 @@ void test2_screen_area_init(){
     screen_area_destroy(area);
 }
 
+/*
+ * @test Prueba la función que inicializa un area
+ * @pre La posición y es negativa
+ * @post La salida esperada es NULL
+ */
 void test3_screen_area_init(){
     Area* area = NULL;
     int x = 10;
@@ -100,6 +116,11 @@ void test3_screen_area_init(){
     screen_area_destroy(area);
 }
 
+/*
+ * @test Prueba la función que inicializa un area
+ * @pre El ancho del area es negativo
+ * @post La salida esperada es NULL
+ */
 void test4_screen_area_init(){
     Area* area = NULL;
     int x = 10;
@@ -111,6 +132,11 @@ void test4_screen_area_init(){
     screen_area_destroy(area);
 }
 
+/*
+ * @test Prueba la función que inicializa un area
+ * @pre El alto del area es negativo
+ * @post La salida esperada es NULL
+ */
 void test5_screen_area_init(){
     Area* area = NULL;
     int x = 10;

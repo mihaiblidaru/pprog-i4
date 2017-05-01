@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /*
  * Cabeceras propias
@@ -28,7 +29,7 @@
  * @cond
  * Longitud maxima del comando 
  */
-#define CMD_LENGHT 30
+#define CMD_LENGHT 70
 /**
  * Numero maximo de comandos 
  */
@@ -186,9 +187,12 @@ STATUS get_user_input(Command* cmdManager) {
             /* Borra el ultimo caracter del input (\n)*/
             if(input[strlen(input) - 1] == '\n')
                 input[strlen(input) - 1] = 0;
+            for(i = 0; (input[i] != 0 && input[i] != ' '); i++){
+                input[i] = tolower(input[i]);
+            }
 
 
-            /* Separa el input en 2 trozos */
+            /* Separa el input en varios trozos */
             if ((toks = strtok(input, " ")))
                 strcpy(command, toks);
             for(i = 0; (i < 4) && (toks = strtok(NULL, " ")) != NULL;i++){

@@ -109,18 +109,18 @@ Object* object_Set_Name(Object* object, char *name) {
 
 }
 
-/* Mihai */
-
+/*
+ * @brief Le asigna al objeto descripción grafica del objeto
+ *
+ * @param object El puntero del objeto.
+ * @return El objeto actualizado o NULL si se produce algun error
+ */
 Object* object_Set_Graphics(Object* object, char *graphics) {
     if (!object || !graphics)
         return NULL;
     strncpy(object->graphics, graphics, WORD_SIZE);
     return object;
 }
-
-/* Mihai */
-
-
 
 /*
  * @brief Pone la descripción  del objeto
@@ -263,19 +263,17 @@ char* object_Get_Name(Object* object) {
     return object->name;
 }
 
-/* Mihai */
-
+/*
+ * @brief Obtiene la descripción grafica del objeto
+ *
+ * @param object El puntero del objeto.
+ * @return La descripción grafica del objeto
+ */
 char* object_Get_Graphics(Object* object) {
     if (!object)
         return NULL;
     return object->graphics;
 }
-
-/* Mihai */
-
-
-
-
 
 /*
  * @brief Obtiene la descripción del objeto

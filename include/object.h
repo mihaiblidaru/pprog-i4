@@ -202,6 +202,7 @@ BOOL object_Get_Illuminates(const Object *object);
  * @return Si se ha encendido o no el objeto
  */
 BOOL object_Get_Light(const Object *object);
+
 /**
  * @brief Imprime por pantalla el nombre del objeto y el id
  *
@@ -210,8 +211,21 @@ BOOL object_Get_Light(const Object *object);
  */
 STATUS object_print(Object* object);
 
+/**
+ * @brief Le asigna al objeto descripción grafica del objeto
+ *
+ * @param object El puntero del objeto.
+ * @param graphics La descripción grafica del objeto
+ * @return El objeto actualizado o NULL si se produce algun error
+ */
 Object* object_Set_Graphics(Object* object, char *graphics);
 
+/**
+ * @brief Obtiene la descripción grafica del objeto
+ *
+ * @param object El puntero del objeto.
+ * @return La descripción grafica del objeto
+ */
 char* object_Get_Graphics(Object* object);
 
 #endif

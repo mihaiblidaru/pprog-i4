@@ -9,7 +9,7 @@
 #include <string.h> 
 #include "link.h"
 #include "tests/link_test.h"
-#include "test.h"
+#include "tests/test.h"
 /**
  * Número máximo de tests
  * @cond

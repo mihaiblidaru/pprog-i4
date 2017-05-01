@@ -1,9 +1,9 @@
-/*
+/**
  * @brief Programa para probar el modulo game_management.
  *       Progama para probar la correcta funcionalidad del
  *       nuevo TAD Game_management.
  *
- * @file inventory_test.c
+ * @file game_management_test.c
  * @author Sandra Benítez 
  * @author Laura Bernal
  * @version 1.0
@@ -20,7 +20,7 @@
 #include "space.h"
 #include "game_management.h"
 #include "tests/game_management_test.h"
-#include "test.h"
+#include "tests/test.h"
 
 /**
  * Número maximo de tests
@@ -56,6 +56,10 @@ int main(int argc, char** argv){
     return 1;
 }
 
+/**
+ * @endcond
+ */
+ 
 /*
  * @test Prueba la función que carga los datos del juego desde un archivo 
  * @pre  Se lee de forma correcta los archivos
@@ -89,18 +93,19 @@ void test2_game_management_start_from_file(){
 
 /*
  * @test Prueba que la función guarde los datos de la partida con el mismo formato que los ficheros de carga
- * @pre 
+ * @pre El juego se ha creado correctamente y el nombre del archivo es valido
  * @post La salida esperada es OK
  */
 void test1_game_management_save(){
     Game * game = NULL;
     game = game_create();
     PRINT_TEST_RESULT(game_management_save(game, "/tmp/tmp_save.dat") == SAVE_OK);
+    game_destroy(game);
 }
 
  /*
  * @test Prueba que la función guarde los datos de la partida con el mismo formato que los ficheros de carga
- * @pre 
+ * @pre El juego no ha sido inicializado y el nombre del archivo es nulo
  * @post La salida esperada es ERROR
  */
 void test2_game_management_save(){
@@ -111,8 +116,8 @@ void test2_game_management_save(){
  
  /*
  * @test Prueba la función que carga los datos del juego desde un archivo
- * @pre 
- * @post La salida esperada es LOAD_OK
+ * @pre El nombre del fichero desde donde cargar los datos
+ * @post La salida esperada es OK
  */
 void test1_game_management_load(){
     Game * game = NULL;
@@ -123,7 +128,7 @@ void test1_game_management_load(){
  
  /*
  * @test Prueba la función que carga los datos del juego desde un archivo
- * @pre 
+ * @pre El juego está sin inicializar
  * @post La salida esperada es ERROR
  */
 void test2_game_management_load(){

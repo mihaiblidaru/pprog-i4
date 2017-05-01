@@ -144,7 +144,7 @@ doxygen:
 	doxygen Doxyfile
 
 pdf-latex: doxygen
-	echo "El pdf no se va a generar si no tienes instalado \33[1;32m texlive \33[0m y todos los extras"
+	@echo "El pdf no se va a generar si no tienes instalado \33[1;32m texlive \33[0m y todos los extras"
 	-$(MAKE) -C doc/latex 
 
 dist:

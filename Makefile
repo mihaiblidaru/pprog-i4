@@ -148,7 +148,7 @@ pdf-latex: doxygen
 	-$(MAKE) -C doc/latex 
 
 dist:
-	tar -cvzf source.tar.gz src/*.c include/*.h include/tests/*.h *.dat Makefile Doxyfile doc/
+	tar -cvzf source.tar.gz src/*.c include/*.h include/tests/*.h *.dat Makefile Doxyfile doc/ Documentos/
 
 clean: 
 	$(RM) -f $(OBJ_DIR)*.o $(OBJ_DIR)*.d $(EXES)
@@ -156,6 +156,5 @@ clean:
 clear:
 	$(RM) -f $(OBJ_DIR)*.o
 
-
-runv:
+runv: game
 	valgrind --leak-check=full --track-origins=yes -v ./$(GAME_EXE) spaces.dat objects.dat links.dat player.dat -no_wait

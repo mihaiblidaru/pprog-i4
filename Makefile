@@ -80,9 +80,9 @@ help:
 	@printf "Crear tar con los fuentes:\t\t\33[1;32m make dist \33[0m \n"
 	@printf "Ejecutar juego con valgrind:\t\t\33[1;32m make runv \33[0m \n"
 
-tests: $(TESTS)
+tests: $(TESTS) help
 
-game: $(GAME_EXE)
+game: $(GAME_EXE) help
 
 $(GAME_EXE): $(GAME_OBJ)
 	gcc $^ -o $@

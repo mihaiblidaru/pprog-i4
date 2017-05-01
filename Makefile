@@ -158,4 +158,4 @@ clear:
 
 
 runv:
-	valgrind --leak-check=full --track-origins=yes -v ./$(GAME_EXE) spaces.dat objects.dat links.dat player.dat
+	valgrind --leak-check=full --track-origins=yes -v ./$(GAME_EXE) spaces.dat objects.dat links.dat player.dat -no_wait

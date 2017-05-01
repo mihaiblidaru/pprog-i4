@@ -1,0 +1,38 @@
+go down
+take linterna
+go up
+turnon linterna
+inspect space
+c
+take llave
+go down
+open puerta-de-madera with llave
+go west
+inspect space
+c
+leave llave
+take Libro-magico
+go east
+go up
+open Puerta-Magica with Libro-magico
+go west
+leave cantimplora
+leave libro-magico
+take escopeta
+take espada
+go east
+go east
+go down
+go west
+attack
+go west
+inspect space
+take cuerda
+leave mapa
+go up
+open precipicio with cuerda
+go down
+attack
+open entrada-secreta with arca-tesoro
+go south
+quit

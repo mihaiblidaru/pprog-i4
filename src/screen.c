@@ -58,12 +58,16 @@
 #define BEGIN_GREEN '['
 #define BEGIN_RED ']'
 #define BEGIN_YELlOW '{'
+#define BEGIN_CYAN '&'
 #define END_COLOR '}'
 #define COLOR_RED     "\x1b[1;31m"
 #define COLOR_GREEN   "\x1b[1;32m"
 #define COLOR_YELLOW  "\x1b[1;33m"
 #define COLOR_RESET   "\x1b[0m"
-
+#define COLOR_BLUE    "\x1b[34m"
+#define COLOR_MAGENTA "\x1b[35m"
+#define COLOR_CYAN    "\x1b[1;36m"
+#define COLOR_RESET   "\x1b[0m"
 /*
  * @brief Estructura de Area
  *
@@ -152,9 +156,17 @@ void screen_print_colors(char* str){
           printf(" %s", COLOR_RED);
         }else if(str[i] == BEGIN_YELlOW){
           printf(" %s", COLOR_YELLOW);
+        }else if(str[i] == BEGIN_CYAN){
+          printf(" %s", COLOR_CYAN);
         }else if(str[i] == END_COLOR){
           printf(" %s", COLOR_RESET);
-        }else{
+        }
+#ifdef PAINTGB        
+        else if(str[i] == BG_CHAR && (str[i+1] == BG_CHAR || str[i+1] == ' ' || str[i+1] == '\0'|| str[i+1] == 27 )){
+          printf("%s%c%s",COLOR_CYAN, BG_CHAR, COLOR_RESET);
+        }
+#endif
+        else{
           putc(str[i],stdout);
         }
       }

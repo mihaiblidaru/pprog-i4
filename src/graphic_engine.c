@@ -119,8 +119,8 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     Id objLoc = NO_ID;
     char str[WORD_SIZE];
     char aux[WORD_SIZE];
-    char dir_left[5] = "    ";
-    char dir_right[5] = "    ";
+    char dir_left[8] = "    ";
+    char dir_right[8] = "    ";
     char open_left[3][2] = {"|","|", "|"};
     char open_right[3][2] = {"|","|", "|"};
     char* obj;
@@ -167,7 +167,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
         screen_area_puts(ge->map, " ");
         if(l_north){
-            sprintf(str,"                       ^ %2ld ^ ", link_get_dest_from(l_north, id_act));
+            sprintf(str,"                      &^ %2ld ^} ", link_get_dest_from(l_north, id_act));
         }else{
             sprintf(str," ");
         }
@@ -179,9 +179,9 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         }
         screen_area_puts(ge->map, str);
         if(id_up != NO_ID)
-        	sprintf(str,"        |            Up ^: %2ld           %2ld |", id_up, id_act);
+        	sprintf(str,"        |           &Up ^: %2ld}         [%2ld}|", id_up, id_act);
         else
-        	sprintf(str,"        |                               %2ld |", id_act);
+        	sprintf(str,"        |                              [%2ld}|", id_act);
         screen_area_puts(ge->map, str);
         if(player_Has_Object(game_get_player(game), 7)){
             sprintf(str,"        |[_|'v'|_} %s |", graphics[0]);
@@ -209,16 +209,16 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         if(id_west != NO_ID)
         	sprintf(dir_left,"%2ld <", id_west);
         if(id_east != NO_ID)
-        	sprintf(dir_right,"> %2ld ", id_east);
+        	sprintf(dir_right,"> %2ld", id_east);
 
-        sprintf(str,"   %s %s[ '||'}   %s %s  %s", dir_left, open_left[1], graphics[3], open_right[1], dir_right);
+        sprintf(str,"  &%s}%s[ '||'}   %s %s&%s}", dir_left, open_left[1], graphics[3], open_right[1], dir_right);
         screen_area_puts(ge->map, str);
         sprintf(str,"        %s[' || '}  %s %s", open_left[2], graphics[4], open_right[2]);
         screen_area_puts(ge->map, str);
         sprintf(str,"        |[ _/\\_}   %s |", graphics[5]);
         screen_area_puts(ge->map, str);
         if(id_down != NO_ID)
-        	sprintf(str,"        |             Down v: %2ld           |", id_down);
+        	sprintf(str,"        |            &Down v: %2ld}          |", id_down);
         else
         	sprintf(str,"        |                                  |");
 
@@ -238,7 +238,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         free(obj);
         screen_area_puts(ge->map, str);
         if(l_south){
-            sprintf(str,"                       v %2ld v ", link_get_dest_from(l_south, id_act));
+            sprintf(str,"                      &v %2ld v}", link_get_dest_from(l_south, id_act));
         }else{
             sprintf(str," ");
         }
@@ -248,7 +248,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
     /* Imprimir la localizacion de los objetos */
     screen_area_clear(ge->descript);
-    sprintf(str, " Objetos cercanos: ");
+    sprintf(str, "{Objetos cercanos:} ");
     screen_area_puts(ge->descript, str);
 
     for (i=0; (aux_obj = game_get_object_at(game,i)); i++){
@@ -265,7 +265,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
     /* Imprimir los objetos del Jugador*/
 
 	screen_area_puts(ge->descript, " ");
-    sprintf(aux, "  Objetos del jugador: ");
+    sprintf(aux, " {Objetos del jugador:} ");
     screen_area_puts(ge->descript, aux);
 
     aux_obj = NULL;
@@ -277,11 +277,11 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
         }
     }
     if(j==0)
-        screen_area_puts(ge->descript, "     None");
+        screen_area_puts(ge->descript, "    [None}");
     /* Imprimir el valor de la ultima tirada */
     	screen_area_puts(ge->descript, " ");
     if (die_get_number(game_get_die(game))){
-        sprintf(str, " Valor del dado: %d", die_get_number(game_get_die(game)));
+        sprintf(str, " {Valor del dado:}[%d}", die_get_number(game_get_die(game)));
     	screen_area_puts(ge->descript, str);
     }
 
@@ -332,7 +332,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game) {
 
     /* Dump to the terminal */
     screen_paint();
-    printf("prompt:> ");
+    printf("\33[1;36mprompt:> \33[0m");
 }
 
 /*

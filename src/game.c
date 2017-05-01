@@ -632,7 +632,7 @@ char* game_get_obj_list_as_str(Game* game, Space* space) {
     if (!game || !space)
         return NULL;
 
-    if (!(string = calloc(30, sizeof (char))))
+    if (!(string = calloc(100, sizeof (char))))
         return NULL;
 
     strcat(string, " ");

@@ -65,7 +65,10 @@ int main(int argc, char** argv){
 
     return 1;
 }
-
+/**
+ * Número maximo de tests
+ * @endcond
+ */
 /*
  * @test Prueba la funcion que ejecuta una regla aleatoria
  * @pre El juego se ha inicializado previamente

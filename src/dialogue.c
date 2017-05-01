@@ -28,8 +28,8 @@ struct _Dialogue{
     char text[WORD_SIZE];
 };
 /* Funciones privadas */
-BOOL dialogue_check_consecutive_error(Dialogue* d);
-STATUS dialogue_set_text(Dialogue *d, char* txt);
+BOOL dialogue_check_consecutive_error(Dialogue* d);/*!< @private */
+STATUS dialogue_set_text(Dialogue *d, char* txt); /*!< @private */
 
 /*
  * @brief Inicializa un modulo dialogo

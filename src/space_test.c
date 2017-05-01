@@ -19,7 +19,7 @@
  * Número máximo de pruebas para el módulo space
  * @cond
  */
-#define MAX_TESTS 58
+#define MAX_TESTS 82
 
 /** 
  * @brief Funcion principal de pruebas para el modulo Space. 
@@ -41,72 +41,94 @@ int main(int argc, char** argv) {
         test = atoi(argv[1]);
         all = 0;
         printf("Running test %d:\t", test);
-	if (test < 1 && test > MAX_TESTS) {
+	if (test < 1 || test > MAX_TESTS) {
 	  printf("Error: unknown test %d\t", test);
-	  exit(EXIT_SUCCESS);
+    	  return 1;
         }
     }
 
-    if (all || test == 1) test1_space_create();
-    if (all || test == 2) test2_space_create();
-    if (all || test == 3) test3_space_create();
-    if (all || test == 4) test1_space_set_name();
-    if (all || test == 5) test2_space_set_name();
-    if (all || test == 6) test3_space_set_name();
-    if (all || test == 7) test1_space_set_description();
-    if (all || test == 8) test2_space_set_description();
-    if (all || test == 9) test3_space_set_description();
-    if (all || test == 10) test1_space_set_graphics();
-    if (all || test == 11) test2_space_set_graphics();
-    if (all || test == 12) test1_space_set_north();
-    if (all || test == 13) test2_space_set_north();
-    if (all || test == 14) test3_space_set_north();
-    if (all || test == 15) test1_space_set_south();
-    if (all || test == 16) test2_space_set_south();
-    if (all || test == 17) test3_space_set_south();
-    if (all || test == 18) test1_space_set_east();
-    if (all || test == 19) test2_space_set_east();
-    if (all || test == 20) test3_space_set_east();
-    if (all || test == 21) test1_space_set_west();
-    if (all || test == 22) test2_space_set_west();
-    if (all || test == 23) test3_space_set_west();
-    if (all || test == 24) test1_space_get_id();
-    if (all || test == 25) test2_space_get_id();
-    if (all || test == 26) test1_space_get_name();
-    if (all || test == 27) test2_space_get_name();
-    if (all || test == 28) test3_space_get_name();
-    if (all || test == 29) test1_space_get_description();
-    if (all || test == 30) test2_space_get_description();
-    if (all || test == 31) test3_space_get_description();
-    if (all || test == 32) test1_space_get_graphics();
-    if (all || test == 33) test2_space_get_graphics();
-    if (all || test == 34) test1_space_get_objects();
-    if (all || test == 35) test1_space_get_objects();
-    if (all || test == 36) test1_space_get_north();
-    if (all || test == 37) test2_space_get_north();
-    if (all || test == 38) test3_space_get_north();
-    if (all || test == 39) test1_space_get_south();
-    if (all || test == 40) test2_space_get_south();
-    if (all || test == 41) test3_space_get_south();
-    if (all || test == 42) test1_space_get_east();
-    if (all || test == 43) test2_space_get_east();
-    if (all || test == 44) test3_space_get_east();
-    if (all || test == 45) test1_space_get_west();
-    if (all || test == 46) test2_space_get_west();
-    if (all || test == 47) test3_space_get_west();
-    if (all || test == 48) test1_space_add_object();
-    if (all || test == 49) test2_space_add_object();
-    if (all || test == 50) test3_space_add_object();
-    if (all || test == 51) test1_space_remove_object();
-    if (all || test == 52) test2_space_remove_object();
-    if (all || test == 53) test3_space_remove_object();
-    if (all || test == 54) test4_space_remove_object();
-    if (all || test == 55) test1_space_contains_object();
-    if (all || test == 56) test2_space_contains_object();
-    if (all || test == 57) test3_space_contains_object();
-    if (all || test == 58) test1_space_graphics_areEmpty();
-    if (all || test == 59) test2_space_graphics_areEmpty();
-    if (all || test == 60) test3_space_graphics_areEmpty();
+    if(all || test == 1) test1_space_create();
+    if(all || test == 2) test2_space_create();
+    if(all || test == 3) test3_space_create();
+    if(all || test == 4) test1_space_set_name();
+    if(all || test == 5) test2_space_set_name();
+    if(all || test == 6) test3_space_set_name();
+    if(all || test == 7) test1_space_set_description();
+    if(all || test == 8) test2_space_set_description();
+    if(all || test == 9) test3_space_set_description();
+    if(all || test == 10) test1_space_set_long_description();
+    if(all || test == 11) test2_space_set_long_description();
+    if(all || test == 12) test3_space_set_long_description();
+    if(all || test == 13) test1_space_set_graphics();
+    if(all || test == 14) test2_space_set_graphics();
+    if(all || test == 15) test1_space_set_north();
+    if(all || test == 16) test2_space_set_north();
+    if(all || test == 17) test3_space_set_north();
+    if(all || test == 18) test1_space_set_south();
+    if(all || test == 19) test2_space_set_south();
+    if(all || test == 20) test3_space_set_south();
+    if(all || test == 21) test1_space_set_east();
+    if(all || test == 22) test2_space_set_east();
+    if(all || test == 23) test3_space_set_east();
+    if(all || test == 24) test1_space_set_west();
+    if(all || test == 25) test2_space_set_west();
+    if(all || test == 26) test3_space_set_west();
+    if(all || test == 27) test1_space_set_up();
+    if(all || test == 28) test2_space_set_up();
+    if(all || test == 29) test3_space_set_up();
+    if(all || test == 30) test1_space_set_down();
+    if(all || test == 31) test2_space_set_down();
+    if(all || test == 32) test3_space_set_down();
+    if(all || test == 33) test1_space_get_id();
+    if(all || test == 34) test2_space_get_id();
+    if(all || test == 35) test1_space_get_name();
+    if(all || test == 36) test2_space_get_name();
+    if(all || test == 37) test3_space_get_name();
+    if(all || test == 38) test1_space_get_description();
+    if(all || test == 39) test2_space_get_description();
+    if(all || test == 40) test3_space_get_description();
+    if(all || test == 41) test1_space_get_long_description();
+    if(all || test == 42) test2_space_get_long_description();
+    if(all || test == 43) test3_space_get_long_description();
+    if(all || test == 44) test1_space_get_graphics();
+    if(all || test == 45) test2_space_get_graphics();
+    if(all || test == 46) test1_space_get_objects();
+    if(all || test == 47) test2_space_get_objects();
+    if(all || test == 48) test1_space_get_north();
+    if(all || test == 49) test2_space_get_north();
+    if(all || test == 50) test3_space_get_north();
+    if(all || test == 51) test1_space_get_south();
+    if(all || test == 52) test2_space_get_south();
+    if(all || test == 53) test3_space_get_south();
+    if(all || test == 54) test1_space_get_east();
+    if(all || test == 55) test2_space_get_east();
+    if(all || test == 56) test3_space_get_east();
+    if(all || test == 57) test1_space_get_west();
+    if(all || test == 58) test2_space_get_west();
+    if(all || test == 59) test3_space_get_west();
+    if(all || test == 60) test1_space_get_up();
+    if(all || test == 61) test2_space_get_up();
+    if(all || test == 62) test3_space_get_up();
+    if(all || test == 63) test1_space_get_down();
+    if(all || test == 64) test2_space_get_down();
+    if(all || test == 65) test3_space_get_down();
+    if(all || test == 66) test1_space_add_object();
+    if(all || test == 67) test2_space_add_object();
+    if(all || test == 68) test3_space_add_object();
+    if(all || test == 69) test1_space_remove_object();
+    if(all || test == 70) test2_space_remove_object();
+    if(all || test == 71) test3_space_remove_object();
+    if(all || test == 72) test4_space_remove_object();
+    if(all || test == 73) test1_space_contains_object();
+    if(all || test == 74) test2_space_contains_object();
+    if(all || test == 75) test3_space_contains_object();
+    if(all || test == 76) test1_space_graphics_areEmpty();
+    if(all || test == 77) test2_space_graphics_areEmpty();
+    if(all || test == 78) test3_space_graphics_areEmpty();
+    if(all || test == 79) test1_space_set_iluminated();
+    if(all || test == 80) test2_space_set_iluminated();
+    if(all || test == 81) test1_space_get_iluminated();
+    if(all || test == 82) test2_space_get_iluminated();
     PRINT_PASSED_PERCENTAGE;
 
     return 1;
@@ -222,6 +244,40 @@ void test3_space_set_description() {
 }
 
 /*
+ * @test Prueba la función para establecer la descripción larga de un espacio
+ * @pre Nombre que establecer al espacio
+ * @post La salida debe ser OK
+ */
+void test1_space_set_long_description() {
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_long_description(s, "hola") == OK);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función para establecer la descripción larga de un espacio
+ * @pre El espacio al que establecer la descripción es un puntero a NULL
+ * @post La salida debe ser ERROR
+ */
+void test2_space_set_long_description() {
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_set_long_description(s, "hola") == ERROR);
+}
+
+/*
+ * @test Prueba la función para establecer la descripción larga de un espacio
+ * @pre El espacio es un puntero no NULL, pero la descripción a establecer es NULL
+ * @post La salida debe ser ERROR
+ */
+void test3_space_set_long_description() {
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_long_description(s, NULL) == ERROR);
+    space_destroy(s);
+}
+
+/*
  * @test Prueba la función que establece los graficos de una casilla
  * @pre Unos graficos aleatorios
  * @post La salida esperada es un puntero al espacio
@@ -328,7 +384,7 @@ void test1_space_set_east() {
 /*
  * @test Prueba la función que establece el enlace este de un espacio
  * @pre El espacio al que establecer el enclace es un puntero a NULL
- * @post
+ * @post La saida esperada es ERROR
  */
 void test2_space_set_east() {
     Space *s = NULL;
@@ -377,7 +433,75 @@ void test2_space_set_west() {
 void test3_space_set_west(){
     Space *s = NULL;
     s = space_create(5);
+    PRINT_TEST_RESULT(space_set_up(s, NO_ID) == ERROR);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que establece el enlace superior de un espacio
+ * @pre A la función se le pasa el identificador 4
+ * @post La salida esperada es OK
+ */
+void test1_space_set_up() {
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_up(s, 4) == OK);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que establece el enlace superior de un espacio
+ * @pre El espacio al que establecer el enclace es un puntero a NULL
+ * @post La salida esperada es ERROR
+ */
+void test2_space_set_up() {
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_set_up(s, 4) == ERROR);
+}
+
+/*
+ * @test Prueba la función que establece el enlace superior de un espacio
+ * @pre El id que se le pasa a la función es NO_ID
+ * @post La salida esperada es ERROR
+ */ 
+void test3_space_set_up(){
+    Space *s = NULL;
+    s = space_create(5);
     PRINT_TEST_RESULT(space_set_west(s, NO_ID) == ERROR);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que establece el enlace inferior de un espacio
+ * @pre A la función se le pasa el identificador 4
+ * @post La salida esperada es OK
+ */
+void test1_space_set_down() {
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_down(s, 4) == OK);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que establece el enlace inferior de un espacio
+ * @pre El espacio al que establecer el enclace es un puntero a NULL
+ * @post La salida esperada es ERROR
+ */
+void test2_space_set_down() {
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_set_down(s, 4) == ERROR);
+}
+
+/*
+ * @test Prueba la función que establece el enlace inferior de un espacio
+ * @pre El id que se le pasa a la función es NO_ID
+ * @post La salida esperada es ERROR
+ */ 
+void test3_space_set_down(){
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_down(s, NO_ID) == ERROR);
     space_destroy(s);
 }
 
@@ -470,6 +594,41 @@ void test3_space_get_description(){
     Space *s = NULL;
     s = space_create(5);
     PRINT_TEST_RESULT(strcmp(space_get_description(s), "") == 0);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que devuelve la descripción larga de una casilla
+ * @pre Al espacio se le ha establecido una descripción previamente
+ * @post La salda debe ser la descripción previamente establecida
+ */
+void test1_space_get_long_description(){
+    Space *s = NULL;
+    s = space_create(5);
+    space_set_description(s,"Casilla");
+    PRINT_TEST_RESULT(strcmp(space_get_long_description(s), "Casilla") == 0);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que devuelve la descripción larga de una casilla
+ * @pre El espacio es un puntero a NULL
+ * @post La salda debe ser un puntero a NULL
+ */
+void test2_space_get_long_description(){
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_get_long_description(s) == NULL);
+}
+
+/*
+ * @test Prueba la función que devuelve la descripción larga de una casilla
+ * @pre El espacio ha sido inicializado pero no se le ha establecido ninguna descripción
+ * @post La salida debe ser una cadena vacila
+ */
+void test3_space_get_long_description(){
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(strcmp(space_get_long_description(s), "") == 0);
     space_destroy(s);
 }
 
@@ -666,6 +825,76 @@ void test3_space_get_west(){
 }
 
 /*
+ * @test Prueba la función que devuelve el enlace superior de una casilla
+ * @pre Se ha añadido previamente un enlace on id 7
+ * @post La salida debe ser el id del enlace 7
+ */
+void test1_space_get_up(){
+    Space *s = NULL;
+    s = space_create(5);
+    space_set_up(s, 7);
+    PRINT_TEST_RESULT(space_get_up(s) == 7);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que devuelve el enlace superior de una casilla
+ * @pre El espacio es un puntero a NULL.
+ * @post La salida debe ser NO_ID.
+ */
+void test2_space_get_up(){
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_get_up(s) == NO_ID);
+}
+
+/*
+ * @test Prueba la función que devuelve el enlace superior de una casilla
+ * @pre No se ha establecido ningun enlace previamente
+ * @post La salida debe ser NO_ID.
+ */ 
+void test3_space_get_up(){
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_get_up(s) == NO_ID);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que devuelve el enlace inferior de una casilla
+ * @pre Se ha añadido previamente un enlace on id 7
+ * @post La salida debe ser el id del enlace 7
+ */
+void test1_space_get_down(){
+    Space *s = NULL;
+    s = space_create(5);
+    space_set_down(s, 7);
+    PRINT_TEST_RESULT(space_get_down(s) == 7);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la función que devuelve el enlace inferior de una casilla
+ * @pre El espacio es un puntero a NULL.
+ * @post La salida debe ser NO_ID.
+ */
+void test2_space_get_down(){
+    Space *s = NULL;
+    PRINT_TEST_RESULT(space_get_down(s) == NO_ID);
+}
+
+/*
+ * @test Prueba la función que devuelve el enlace inferior de una casilla
+ * @pre No se ha establecido ningun enlace previamente
+ * @post La salida debe ser NO_ID.
+ */ 
+void test3_space_get_down(){
+    Space *s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_get_down(s) == NO_ID);
+    space_destroy(s);
+}
+
+/*
  * @test Prueba la función que añade un objeto a una casilla
  * @pre El espacio es un puntero a NULL.
  * @post La salida debe ser ERROR.
@@ -817,4 +1046,50 @@ void test3_space_graphics_areEmpty(){
     s = space_create(5);
     PRINT_TEST_RESULT(space_graphics_areEmpty(s) == TRUE);   
     space_destroy(s);
+}
+
+/*
+ * @test Prueba la funcion que pone el estado de la iluminacion en una casilla
+ * @pre Se ha creado una casiilla con id 5
+ * @post La salida esperada es OK
+ */
+void test1_space_set_iluminated(){
+    Space* s = NULL;
+    s = space_create(5);
+    PRINT_TEST_RESULT(space_set_iluminated(s, TRUE) == OK);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la funcion que pone el estado de la iluminacion en una casilla
+ * @pre No se ha creado la casilla
+ * @post La salida esperada es ERROR
+ */
+void test2_space_set_iluminated(){
+    Space* s = NULL;
+    PRINT_TEST_RESULT(space_set_iluminated(s, TRUE) == ERROR);
+}
+
+/*
+ * @test Prueba la funcion que devuelve el estado de la iluminacion en una casilla
+ * @pre Se ha creado e iluminado la casilla
+ * @post La salida esperada es TRUE
+ */
+void test1_space_get_iluminated(){
+    Space* s = NULL;
+    s = space_create(5);
+    space_set_iluminated(s, TRUE);
+    PRINT_TEST_RESULT(space_get_iluminated(s) == TRUE);
+    space_destroy(s);
+}
+
+/*
+ * @test Prueba la funcion que devuelve el estado de la iluminacion en una casilla
+ * @pre No se ha creado la casilla
+ * @post La salida esperada es FALSE
+ */
+void test2_space_get_iluminated(){
+    Space* s = NULL;
+    space_set_iluminated(s, TRUE);
+    PRINT_TEST_RESULT(space_get_iluminated(s) == FALSE);
 }

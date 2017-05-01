@@ -74,6 +74,7 @@ help:
 	@printf "Compilar todo el proyecto:\t\t\33[1;32m make game\33[0m \n"
 	@printf "Compilar solo los tests:\t\t\33[1;32m make tests\33[0m \n"
 	@printf "Crear documentación html y latex:\t\33[1;32m make doxygen \33[0m \n"
+	@printf "Crear documentación PDF latex:\t\t\33[1;32m make pdf-latex \33[0m \n"
 	@printf "Borrar objetos y ejecutables:\t\t\33[1;32m make clean \33[0m \n"
 	@printf "Borrar solo los objetos:\t\t\33[1;32m make clear \33[0m \n"
 	@printf "Crear tar con los fuentes:\t\t\33[1;32m make dist \33[0m \n"
@@ -137,10 +138,14 @@ $(OBJ_DIR)%.d: ;
 
 .PRECIOUS: $(OBJ_DIR)/%.d
 
-.PHONY: clean clear doxygen dist runv
+.PHONY: clean clear doxygen dist runv help pdf-latex tests game 
 
 doxygen:
 	doxygen Doxyfile
+
+pdf-latex: doxygen
+	echo "El pdf no se va a generar si no tienes instalado \33[1;32m texlive \33[0m y todos los extras"
+	-$(MAKE) -C doc/latex 
 
 dist:
 	tar -cvzf source.tar.gz src/*.c include/*.h include/tests/*.h *.dat Makefile Doxyfile doc/

@@ -25,6 +25,7 @@ int main(){
 	}else{
 		printf("OK\n");
 	}
+	die_set_faces(die, 6);
 	printf("\nImprimiendo el dado: \n");
 	die_print(die);
 	

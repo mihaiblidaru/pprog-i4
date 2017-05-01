@@ -38,7 +38,7 @@ int main(int argc, char** argv){
         test = atoi(argv[1]);
         all = 0;
         printf("Running test %d:\t", test);
-    if (test < 1 && test > MAX_TESTS) {
+    if (test < 1 || test > MAX_TESTS) {
       printf("Error: unknown test %d\t", test);
       exit(EXIT_SUCCESS);
         }
@@ -73,6 +73,7 @@ void test1_game_management_start_from_file(){
     char* playersFile = "player.dat";
     game = game_create();
     PRINT_TEST_RESULT(game_management_start_from_file(game, spacesFile, objectsFile, linksfile, playersFile) == OK);
+    game_destroy(game);
 }
 
 /*
@@ -124,6 +125,7 @@ void test1_game_management_load(){
     game = game_create();
     
     PRINT_TEST_RESULT(game_management_load(game, "player.dat") == OK);
+    game_destroy(game);
 }
  
  /*

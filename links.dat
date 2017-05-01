@@ -3,7 +3,7 @@
 #l:3|Escaleras|            1| 4|0|
 #l:4|Puerta-de-madera|     4| 5|1|
 #l:5|Pasillo oscuro|       4| 6|0|
-#l:6|Precipicio|           4|10|0|
+#l:6|Precipicio|           4|10|1|
 #l:7|Ascensor|             3| 7|0|
 #l:8|Puente|               7| 8|0|
 #l:9|Puente viejo|         8| 9|1|

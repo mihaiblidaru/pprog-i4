@@ -9,18 +9,17 @@
  * @copyright GNU Public License
  */
 
-/** @mainpage Juego de la Oca - Tercera Iteración del Proyecto (I3): Prototipo de Juego Conversacional
- * En la tercera iteración (I3) se continúa con el desarrollo del
+/** @mainpage Indiana Jones 2D - Juego Conversacional
+ * En la cuarta iteración (I4) se continúa con el desarrollo del
  * proyecto y de las habilidades y los conceptos necesarios para <br>
  * ello, así como con la introducción y uso  de herramientas apropiadas 
  * para dicha actividad. En esta iteración se abandonará <br>
  * el Juego de la Oca como referencia para el desarrollo, 
  * puesto que deja de ser un modelo adecuado para ilustrar las <br>
  * funcionalidades adicionales necesarias para completar un sistema 
- * que soporte Aventuras Conversacionales. Sin embargo, se demostrará <br>
- * la versatilidad del sistema conseguido, creando una nueva edición 
- * del Juego de la Oca  que  utilice  las nuevas versiones de los <br>
- * módulos  del  proyecto obtenidas  como  resultado de esta iteración.
+ * que soporte Aventuras Conversacionales. Se creará un nuevo juego<br>
+ * que demostrara las habilidades adquiridas por el equipo. <br>
+
  *  @section dev Desarolladores
  * - Javier Bernardo
  * - Laura Bernal
@@ -61,6 +60,10 @@ int main(int argc, char *argv[]) {
     extern char *cmd_to_str[];
     char *stat_to_str[2] = {"ERROR", "OK"};
     BOOL logging = FALSE;
+    int log_argc = 0;
+    int nv_argc = 0;
+    int nr_argc = 0;
+    int nw_argc = 0;
     BOOL noVerbose = FALSE;
     BOOL no_wait = FALSE;
     FILE* logfile = NULL;
@@ -74,33 +77,37 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
-    for (i = 1; i < argc; i++) {
+    for (i = 1, log_argc = 0; i < argc; i++) {
         if (!strcmp(argv[i], "-nv")) {
             noVerbose = TRUE;
+            nv_argc = i;
         }else if (!strcmp(argv[i], "-l")) {
             logging = TRUE;
+            log_argc = i;
         }else if (!strcmp(argv[i], "-no_rule")) {
             game_rules_run = INT_MIN;
+            nr_argc = i;
         }else if (!strcmp(argv[i], "-no_wait")) {
             no_wait = TRUE;
+            nw_argc = 0;
         }
     }
     
     if(noVerbose == TRUE && logging == FALSE){
         fprintf(stderr, "You can't use -nv (No verbose) without -l (log)\n");
-        fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -l <log_name>\n", argv[0]);
+        fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -no_rule -no_wait -l <log_name>\n", argv[0]);
         return EXIT_FAILURE;
     }
 
     if (logging) {
         if (i == argc - 1) {
-            fprintf(stderr, "Use: %s <spaces_file> <objects_file> <links_file> <player_file> -nv -l <log_name>\n", argv[0]);
+            fprintf(stderr, "Use: %s <spaces_file> <objects_file> <links_file> <player_file> -nv -no_rule -no_wait -l <log_name>\n", argv[0]);
             return EXIT_FAILURE;
         }
         
-        if(!strcmp(argv[i+1], "-nv")){
-            fprintf(stderr, "Token -nv is reserved, chose other name for the logdfile\n");
-            fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -l <log_name>\n", argv[0]);
+        if((log_argc == (nv_argc - 1)) || (log_argc == (nr_argc - 1)) || (log_argc == (nw_argc - 1)) ){
+            fprintf(stderr, "You can't use that filename. Chose other.\n");
+            fprintf(stderr, "Use: %s <spaces_file> <objects_data_file> <links_file> <player_file> -nv -no_rule -no_wait -l <log_name>\n", argv[0]);
             return EXIT_FAILURE;
         }
         
@@ -110,7 +117,7 @@ int main(int argc, char *argv[]) {
             return EXIT_FAILURE;
         }
 
-        if (!(logfile = fopen(argv[i + 1], "w"))) {
+        if (!(logfile = fopen(argv[log_argc + 1], "w"))) {
             fprintf(stderr, "Could not create log file. Make sure you have permisions.\n");
             return EXIT_FAILURE;
         }

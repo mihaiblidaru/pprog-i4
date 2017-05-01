@@ -72,7 +72,7 @@ Space* space_create(Id space_id) {
     newSpace->name[0] = '\0';
     newSpace->description[0] = '\0';
     newSpace->longDescription[0] = '\0';
-    
+    newSpace->iluminated = FALSE;
     newSpace->north = NO_ID;
     newSpace->south = NO_ID;
     newSpace->east = NO_ID;
@@ -80,9 +80,12 @@ Space* space_create(Id space_id) {
     newSpace->up = NO_ID;
     newSpace->down = NO_ID;
     
-    strcpy(newSpace->graphics[0],"       ");
-    strcpy(newSpace->graphics[1],"       ");
-    strcpy(newSpace->graphics[2],"       ");
+    strcpy(newSpace->graphics[0],"                       ");
+    strcpy(newSpace->graphics[1],"                       ");
+    strcpy(newSpace->graphics[2],"                       ");
+    strcpy(newSpace->graphics[3],"                       ");
+    strcpy(newSpace->graphics[4],"                       ");
+    strcpy(newSpace->graphics[5],"                       ");
 
     newSpace->objects = set_create();
 

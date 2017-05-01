@@ -38,7 +38,7 @@ struct _Inventory{
 Inventory* inventory_create(){
     Inventory* inventory = NULL;
     
-    inventory = (Inventory*)malloc(sizeof(Inventory));
+    inventory = (Inventory*)calloc(1, sizeof(Inventory));
     if(!inventory)
         return NULL;
     inventory->identificadores = set_create();

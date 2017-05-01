@@ -51,10 +51,12 @@ struct _Object {
  */
 Object* object_create() {
     Object *object = NULL;
-    object = (Object*) malloc(sizeof (Object));
+    object = (Object*) calloc(1, sizeof (Object));
 
     object->id = NO_ID;
     object->name[0] = '\0';
+    object->desc[0] = '\0';
+    object->desc2[0] = '\0';
     object->graphics[0] = '\0';
     object->mobile = FALSE;
     object->moved = FALSE;
@@ -62,6 +64,7 @@ Object* object_create() {
     object->open = NO_ID;
     object->illuminates = FALSE;
     object->light_on = FALSE;
+    object->graphics[0] = '\0';
 
     return object;
 }

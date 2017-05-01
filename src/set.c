@@ -35,7 +35,7 @@ Set* set_create() {
     int i;
     Set* newSet = NULL;
 
-    if (!(newSet = (Set*) malloc(sizeof (Set))))
+    if (!(newSet = (Set*) calloc(1, sizeof (Set))))
         return NULL;
     for (i = 0; i < MAX_SET; i++) {
         newSet->ids[i] = NO_ID;

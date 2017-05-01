@@ -162,7 +162,7 @@ STATUS dialogue_go(Dialogue*d, DIRECTION direction, Space* space, STATUS status,
 STATUS dialogue_unknown(Dialogue* d){
     if(!d)
         return ERROR;
-    dialogue_set_text(d, "Esta no es una accion valida. Usa ""help"" para verlos comandos disponibles e intentalo de nuevo.");
+    dialogue_set_text(d, "Esta no es una accion valida. Usa \"]help}\" para verlos comandos disponibles e intentalo de nuevo.");
     strcpy(d->last_text, d->text);
     return OK;
 }
@@ -175,7 +175,7 @@ STATUS dialogue_unknown(Dialogue* d){
 STATUS dialogue_dir(Dialogue* d){
     if(!d)
         return ERROR;
-    dialogue_set_text(d, "Acabas de ver las conexiones de esta casilla. Si quieres volver a verlas usa el comando \"dir\"");
+    dialogue_set_text(d, "Acabas de ver las conexiones de esta casilla. Si quieres volver a verlas usa el comando \"]dir}\"");
     strcpy(d->last_text, d->text);
     return OK;
 }
@@ -194,11 +194,11 @@ STATUS dialogue_take(Dialogue* d, Object* object, char* name, TAKE_STATUS status
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == TAKE_OK){
-        strcat(d->text, "Te has llevado el objeto: ");
+        strcat(d->text, "Te has llevado el objeto:[");
         strcat(d->text, object_Get_Name(object));
-        strcat(d->text,". Para ver mas detalles usa inspect.");
+        strcat(d->text,"}. Para ver mas detalles usa inspect.");
     }else if(status == NOT_IN_SPACE || status == NO_OBJ){
-        sprintf(aux,"Para llevarte un objeto(%s) tienes que estar en la misma casilla.", name);
+        sprintf(aux,"Para llevarte un objeto([%s}) tienes que estar en la misma casilla.", name);
         strcat(d->text, aux);
     }else if(status == NOT_MOBILE){    
         strcat(d->text, "Ese objeto no se puede mover, no te lo puedes llevar.");
@@ -225,11 +225,11 @@ STATUS dialogue_leave(Dialogue* d, Object*object, char* name, LEAVE_STATUS statu
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == LEAVE_OK){
-        strcat(d->text, "Has dejado el objeto: ");
+        strcat(d->text, "Has dejado el objeto:[");
         strcat(d->text, object_Get_Name(object));
-        strcat(d->text,". Para volver a cogerlo usa \"take\".");
+        strcat(d->text,"}. Para volver a cogerlo usa \"]take}\".");
     }else if(status == NOT_IN_INV){
-        sprintf(aux,"Para dejar un objeto(%s) tiene que estar en tu inventario.", name);
+        sprintf(aux,"Para dejar un objeto([%s}) tiene que estar en tu inventario.", name);
         strcat(d->text, aux);
     }else if(status == GLOBAL_NO_ARGS){
         strcat(d->text, "Tienes que especificar el objeto que quieres dejar.");
@@ -252,11 +252,11 @@ STATUS dialogue_save(Dialogue * d, char* name, DIALOGUE_SAVE_STATUS status){
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == SAVE_SAVE_OK){
-        strcat(d->text, "He ha guardado la partida con exito en: ");
+        strcat(d->text, "He ha guardado la partida con exito en:[");
         strcat(d->text, name);
-        strcat(d->text,". Para cargar usa \"load\".");
+        strcat(d->text,"}. Para cargar usa \"]load}\".");
     }else if(status == SAVE_PROTECTED_FILE){
-        sprintf(aux,"No se puede guardar en \"%s\", es un archivo protegido del juego.", name);
+        sprintf(aux,"No se puede guardar en \"[%s}\", es un archivo protegido del juego.", name);
         strcat(d->text, aux);
     }else if(status == SAVE_WRITE_FAILED){
         strcat(d->text, "No se ha podido guardar la partida. Tienes que especificar donde quieres guardar.");
@@ -280,11 +280,11 @@ STATUS dialogue_load(Dialogue *d, char* name, DIALOGUE_LOAD_STATUS status){
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == LOAD_OK){
-        strcat(d->text, "He ha cargado la partida con exito desde: ");
+        strcat(d->text, "He ha cargado la partida con exito desde:[");
         strcat(d->text, name);
-        strcat(d->text,". Para guardar partidas luego usa \"save\".");
+        strcat(d->text,"}. Para guardar partidas luego usa \"]save}\".");
     }else if(status == LOAD_ERROR){
-        sprintf(aux,"No se puede cargar la partida desde \"%s\".", name);
+        sprintf(aux,"No se puede cargar la partida desde \"[%s}\".", name);
         strcat(d->text, aux);
     }else if(status == GLOBAL_NO_ARGS){
         strcat(d->text, "No se ha podido cargar la partida. Tienes que especificar desde donde quieres cargar.");
@@ -336,16 +336,16 @@ STATUS dialogue_inspect(Dialogue* d, Object* object, Space* space, char* name, I
     memset(d->text, 0, WORD_SIZE);
     
     if(strcmp(name, "space") == 0){
-        strcat(d->text, "Acabas de ver los detalles de: ");
+        strcat(d->text, "Acabas de ver los detalles de:[");
         strcat(d->text, space_get_name(space));
-        strcat(d->text,". Para volver a verlos usa \"inspect\".");
+        strcat(d->text,"}. Para volver a verlos usa \"]inspect}\".");
     }else{
         if(status == INSPECT_OK){
             strcat(d->text, "Has inspeccionado el objeto: ");
             strcat(d->text, object_Get_Name(object));
-            strcat(d->text,". Para volver sus detalles usa \"inspect\".");
+            strcat(d->text,". Para volver sus detalles usa \"]inspect}\".");
         }else if(status == INSPECT_NO_OBJ){
-            sprintf(aux,"Para inspecionar un objeto(%s) tiene que estar en tu inventario o en la casilla actual.", name);
+            sprintf(aux,"Para inspecionar un objeto([%s}) tiene que estar en tu inventario o en la casilla actual.", name);
             strcat(d->text, aux);
         }else if(status == GLOBAL_NO_ARGS){
             strcat(d->text, "Tienes que especificar lo que quieres inspeccinar.");
@@ -376,9 +376,9 @@ STATUS dialogue_open(Dialogue* d, char* objName, char* linkName, OPEN_STATUS sta
     }else if(status == NO_OBJECT){
         sprintf(d->text, "Para abrir un enlace tiene que pertenecer a esta casilla. ");
     }else if(status == NOT_SAME_ID){
-        sprintf(d->text, "No puedes abrir %s usando %s. ", linkName, objName);
+        sprintf(d->text, "No puedes abrir[%s}usando[%s}. ", linkName, objName);
     }else if(status == OPEN_OK){
-        sprintf(d->text, "Ya puedes pasar por %s. ", linkName);
+        sprintf(d->text, "Ya puedes pasar por[%s}. ", linkName);
     }
     
     dialogue_check_consecutive_error(d);
@@ -400,17 +400,17 @@ STATUS dialogue_turn_on(Dialogue* d, Object*object, char* name, TURN_STATUS stat
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == TURN_OK){
-        strcat(d->text, "Has encendido el objeto: ");
+        strcat(d->text, "Has encendido el objeto:[");
         strcat(d->text, object_Get_Name(object));
-        strcat(d->text,". Para apagarlo usa \"turnoff\".");
+        strcat(d->text,"}. Para apagarlo usa \"]turnoff}\".");
     }else if(status == TURN_NOT_IN_INV){
-        sprintf(aux,"Para encender un objeto(%s) tiene que estar en tu inventario.", name);
+        sprintf(aux,"Para encender un objeto([%s}) tiene que estar en tu inventario.", name);
         strcat(d->text, aux);
     }else if(status == TURN_NO_LIGHT){
-        sprintf(aux,"Este objeto(%s) no puede iluminar. No se puede apagar o encender", name);
+        sprintf(aux,"Este objeto([%s}) no puede iluminar. No se puede apagar o encender", name);
         strcat(d->text, aux);
     }else if(status == TURN_ALREADY){
-        sprintf(aux,"Este objeto(%s) ya esta encendido. No hace falta que lo enciendas de nuevo.", name);
+        sprintf(aux,"Este objeto([%s}) ya esta encendido. No hace falta que lo enciendas de nuevo.", name);
         strcat(d->text, aux);
     }else if(status == GLOBAL_NO_ARGS){
         strcat(d->text, "Tienes que especificar el objeto que quieres encender.");
@@ -434,17 +434,17 @@ STATUS dialogue_turn_off(Dialogue* d, Object*object, char* name, TURN_STATUS sta
         return ERROR;
     memset(d->text, 0, WORD_SIZE);
     if(status == TURN_OK){
-        strcat(d->text, "Has apagado el objeto: ");
+        strcat(d->text, "Has apagado el objeto:[");
         strcat(d->text, object_Get_Name(object));
-        strcat(d->text,". Para encenderlo otra vez usa \"turnon\".");
+        strcat(d->text,"}. Para encenderlo otra vez usa \"]turnon}\".");
     }else if(status == TURN_NOT_IN_INV){
-        sprintf(aux,"Para apagar un objeto(%s) tiene que estar en tu inventario.", name);
+        sprintf(aux,"Para apagar un objeto([%s}) tiene que estar en tu inventario.", name);
         strcat(d->text, aux);
     }else if(status == TURN_NO_LIGHT){
-        sprintf(aux,"Este objeto(%s) no puede iluminar. No se puede apagar o encender", name);
+        sprintf(aux,"Este objeto([%s}) no puede iluminar. No se puede apagar o encender", name);
         strcat(d->text, aux);
     }else if(status == TURN_ALREADY){
-        sprintf(aux,"Este objeto(%s) ya esta apagado. No puedes apagarlo dos veces.", name);
+        sprintf(aux,"Este objeto([%s}) ya esta apagado. No puedes apagarlo dos veces.", name);
         strcat(d->text, aux);
     }else if(status == GLOBAL_NO_ARGS){
         strcat(d->text, "Tienes que especificar el objeto que quieres apagar.");
@@ -462,7 +462,7 @@ STATUS dialogue_turn_off(Dialogue* d, Object*object, char* name, TURN_STATUS sta
 STATUS dialogue_help(Dialogue *d){
     if(!d)
         return ERROR;
-    dialogue_set_text(d, "Acabas de ver la pantalla de ayuda. Si se te olvida algun comando siempre puedes volver a mirar con \"help\".");
+    dialogue_set_text(d, "Acabas de ver la pantalla de ayuda. Si se te olvida algun comando siempre puedes volver a mirar con \"]help}\".");
     strcpy(d->last_text, d->text);
     return OK;
 }

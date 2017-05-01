@@ -38,7 +38,7 @@ Link *link_create (){
     
     Link * link = NULL;
     
-    link = (Link*)malloc(sizeof(Link));
+    link = (Link*)calloc(1, sizeof(Link));
     
     if(!link)   
         return NULL;

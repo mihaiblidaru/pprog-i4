@@ -37,7 +37,7 @@ struct _Die {
  * @return dado creado
  */
 Die* die_create(Id die_id) {
-    Die* die = (Die*) malloc(sizeof (Die));
+    Die* die = (Die*) calloc(1, sizeof (Die));
     if (!die)
         return NULL;
     die->id = die_id;

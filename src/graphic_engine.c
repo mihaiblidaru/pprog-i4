@@ -66,7 +66,7 @@ Graphic_engine *graphic_engine_create() {
         return ge;
 
     screen_init();
-    ge = (Graphic_engine *) malloc(sizeof (Graphic_engine));
+    ge = (Graphic_engine *) calloc(1, sizeof (Graphic_engine));
 
     ge->map = screen_area_init(1, 1, 52, 14);
     ge->descript = screen_area_init(54, 1, 25, 14);

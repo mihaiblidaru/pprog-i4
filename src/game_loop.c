@@ -176,13 +176,13 @@ int main(int argc, char *argv[]) {
             graphic_engine_paint_help(stdout);
             game_rules_run--;
         }
-        
+        sleep(1);
         if(last_command == SAVE || last_command == LOAD || last_command == INSPECT || last_command == UNKNOWN){
             game_rules_run--;
         }
         
         result = game_update(game, command_Manager);
-        if(game_rules_run == 3 + 4){
+        if(game_rules_run == 2){
             game_rules_run_random_rule(game);
             game_rules_run = 0;
         }
